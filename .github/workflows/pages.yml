@@ -1,0 +1,54 @@
+# Inerte hasta subir el repo a GitHub y activar Pages (Settings -> Pages -> Source: GitHub Actions)
+name: Publicar en GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - "assets/**"
+      - "data/**"
+      - "content/**"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      # `path: .` publicaría TODO el repo, incluidos los .md crudos de
+      # content/summaries/ (con [[PENDIENTE]] o texto de IA sin revisar que
+      # build_summaries.py deliberadamente deja fuera de data/summaries.json),
+      # scripts/, tests/fixtures/ y el README (hallazgo de verificación). Se
+      # arma un _site/ solo con lo que el frontend realmente sirve.
+      - name: Armar _site con solo lo público
+        run: |
+          set -e
+          rm -rf _site
+          mkdir -p _site/assets _site/data _site/content
+          cp index.html favicon.svg _site/
+          cp -r assets/. _site/assets/
+          cp -r data/. _site/data/
+          cp content/site.json _site/content/site.json
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

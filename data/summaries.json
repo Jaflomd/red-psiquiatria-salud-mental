@@ -1,0 +1,758 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-14T17:27:15Z",
+  "count": 4,
+  "items": [
+    {
+      "slug": "2026-09-14-experiencias-psicoticas-riesgo-suicida",
+      "title": "Las experiencias psicóticas se asocian con mayor riesgo de ideación y conducta suicida",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "draft",
+      "example": true,
+      "ai_draft": true,
+      "author": "Borrador de ejemplo generado con IA",
+      "tags": [
+        "psychosis",
+        "suicide",
+        "epidemiology"
+      ],
+      "study_design": {
+        "id": "systematic_review_meta",
+        "confidence": "draft"
+      },
+      "sample_size": {
+        "value": 81861,
+        "confidence": "draft"
+      },
+      "one_liner": "Un metaanálisis de estudios poblacionales de seguimiento encuentra que reportar experiencias psicóticas se asocia con odds entre 1.9 y 3 veces mayores de ideación o intento suicida posterior, y hasta 4.4 veces mayores de muerte por suicidio (este último, con un solo estudio disponible).",
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Un metaanálisis de estudios poblacionales de seguimiento encuentra que reportar experiencias psicóticas se asocia con odds entre 1.9 y 3 veces mayores de ideación o intento suicida posterior, y hasta 4.4 veces mayores de muerte por suicidio (este último, con un solo estudio disponible)."
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Las experiencias psicóticas —como oír voces que otros no oyen o sostener creencias no compartidas por el entorno— predicen la aparición posterior de pensamientos y conductas suicidas en población general, y ese riesgo se explica solo por la psicopatología que suele acompañarlas?"
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Es una revisión sistemática con metaanálisis de estudios poblacionales de seguimiento en el tiempo. Los autores buscaron en PubMed, Embase, CINAHL y PsycINFO desde el inicio de cada base hasta julio de 2023, evaluaron la calidad de los estudios con la escala Newcastle-Ottawa y combinaron los resultados con modelos de efectos aleatorios para calcular razones de momios (OR) agrupadas."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Veinte estudios provenientes de 18 muestras distintas, con un total de 81 861 personas.",
+                "Comparación del riesgo total, por grupo de edad (niñez, adolescencia, adultez) y ajustando por psicopatología concurrente."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Las personas con experiencias psicóticas tuvieron más ideación suicida posterior (12 estudios, OR = 1.90; IC 95%: 1.65–2.19).",
+                "También más intentos de suicidio (13 estudios, OR = 2.95; IC 95%: 2.21–3.94) y más probabilidad de pasar de la ideación al intento (3 estudios, OR = 2.83; IC 95%: 1.60–4.99).",
+                "El riesgo de muerte por suicidio también fue mayor, aunque basado en un solo estudio (OR = 4.39; IC 95%: 1.63–11.80).",
+                "El riesgo se mantuvo estable en la niñez, la adolescencia y la adultez. Para los intentos de suicidio en particular, la asociación persistió incluso ajustando por psicopatología concurrente (8 estudios, OR = 2.85; IC 95%: 2.06–3.95); los autores no reportan ese ajuste para la ideación suicida en general."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "El estimado de riesgo de muerte por suicidio se basa en un solo estudio primario, así que es menos preciso que los demás resultados.",
+                "Los estudios incluidos son observacionales: la asociación no demuestra que las experiencias psicóticas causen por sí solas la conducta suicida.",
+                "La búsqueda no incorpora estudios publicados después de julio de 2023."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Los autores concluyen que las experiencias psicóticas son un marcador de riesgo suicida que se suma al de la psicopatología habitual, y que son particularmente relevantes para distinguir, entre quienes ya tienen ideación suicida, a los que tienen mayor probabilidad de pasar al intento. El artículo no evalúa dónde ni cómo debería preguntarse por estas experiencias en la práctica clínica; esa aplicación queda pendiente de investigación futura, según señalan los propios autores."
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
+            }
+          ]
+        }
+      ],
+      "word_count": 470,
+      "reading_minutes": 2,
+      "source_file": "content/summaries/2026-09-14-experiencias-psicoticas-riesgo-suicida.md",
+      "paper": {
+        "key": "MED:39550208",
+        "epmc_id": "39550208",
+        "source": "MED",
+        "pmid": "39550208",
+        "pmcid": "PMC12809804",
+        "doi": "10.1093/schbul/sbae197",
+        "title": "Psychotic Experiences and Risk of Suicidal Thoughts and Behaviors: A Systematic Review and Meta-Analysis of Longitudinal Population Studies.",
+        "authors": "O'Hare K, Fadiloglu K, Lång U, Healy C, Cannon M, DeVylder J, Kelleher I.",
+        "journal": "Schizophrenia bulletin",
+        "journal_abbrev": "Schizophr Bull",
+        "pub_year": 2026,
+        "first_publication_date": "2026-01-01",
+        "first_index_date": null,
+        "pub_types": [
+          "Meta-Analysis",
+          "Research Support, Non-U.S. Gov't",
+          "Systematic Review",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by-nc",
+          "license_label": "CC BY-NC",
+          "source": "europepmc",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1093/schbul/sbae197",
+          "europepmc": "https://europepmc.org/article/MED/39550208",
+          "fulltext_html": "https://europepmc.org/articles/PMC12809804",
+          "pdf": "https://europepmc.org/articles/PMC12809804?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "systematic_review_meta",
+          "confidence": "draft"
+        },
+        "sample_size": {
+          "value": 81861,
+          "confidence": "draft"
+        },
+        "tags": [
+          "psychosis",
+          "suicide",
+          "epidemiology"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-redes-sintomas-adolescentes-longitudinal",
+      "title": "La preocupación y la insatisfacción corporal conectan distintos síntomas de salud mental en la adolescencia",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "draft",
+      "example": true,
+      "ai_draft": true,
+      "author": "Borrador de ejemplo generado con IA",
+      "tags": [
+        "symptom_networks",
+        "depression",
+        "anxiety",
+        "child_adolescent"
+      ],
+      "study_design": {
+        "id": "cohort",
+        "confidence": "draft"
+      },
+      "sample_size": {
+        "value": 1186,
+        "confidence": "draft"
+      },
+      "one_liner": "Un estudio con redes de síntomas en 1186 adolescentes suizos halla que la preocupación, la insatisfacción corporal y la baja autoestima son los síntomas más centrales; en el tiempo, la preocupación, la insatisfacción corporal y la preocupación por el peso predicen síntomas de otros dominios.",
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Un estudio con redes de síntomas en 1186 adolescentes suizos halla que la preocupación, la insatisfacción corporal y la baja autoestima son los síntomas más centrales; en el tiempo, la preocupación, la insatisfacción corporal y la preocupación por el peso predicen síntomas de otros dominios."
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Cómo se organizan y se conectan entre sí, a lo largo de un año, los síntomas de distintos trastornos mentales en adolescentes de la población general que todavía no tienen un diagnóstico psiquiátrico, y qué síntomas predicen la aparición de otros?"
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Estudio prospectivo de un año con una muestra poblacional de adolescentes suizos de 11 a 17 años, sin trastorno mental actual ni pasado al inicio, con recolección de datos entre febrero de 2021 y marzo de 2024. Los participantes respondieron cuestionarios en línea sobre 29 síntomas de siete trastornos mentales en cinco momentos distintos. Los autores usaron modelos de vector autorregresivo gráfico en panel (Panel GVAR) para estimar redes de síntomas contemporáneas (dentro del mismo momento) y temporales (de un momento al siguiente), y calcularon medidas de centralidad e influencia puente entre síntomas."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "1186 adolescentes (edad promedio 14.19 años, DE 1.90; 56.5% mujeres)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "En la red contemporánea, la preocupación excesiva (influencia esperada = 1.08), la insatisfacción corporal (1.03) y la baja autoestima (1.01) fueron los síntomas más centrales.",
+                "La irritabilidad y la baja autoestima actuaron como síntomas puente entre distintos dominios diagnósticos.",
+                "En la red temporal, la preocupación incontrolable predijo la aparición posterior de síntomas de ansiedad y depresión (β = 0.71).",
+                "La insatisfacción corporal (β = 1.09) y la preocupación por el peso (β = 1.04) predijeron síntomas en varios dominios, incluyendo ansiedad, depresión, síntomas psicóticos, bipolares y obsesivo-compulsivos."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "La muestra proviene de un solo país (Suiza) y de adolescentes sin diagnóstico psiquiátrico al inicio, por lo que los resultados podrían no aplicar igual a poblaciones clínicas o de otros contextos culturales, incluido el peruano.",
+                "El seguimiento se basa en cuestionarios de autorreporte en cinco momentos, sin una entrevista diagnóstica estructurada en cada punto.",
+                "Los modelos de red muestran asociaciones predictivas entre síntomas y no permiten establecer causalidad."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Identificar qué síntomas —como la preocupación excesiva o la insatisfacción corporal— actúan como puente entre distintos dominios diagnósticos en la adolescencia podría orientar estrategias de detección temprana y de prevención transdiagnóstica, en lugar de programas dirigidos a un solo trastorno. Esto es relevante para el diseño de intervenciones escolares o comunitarias dirigidas a adolescentes en riesgo, antes de que aparezca un cuadro clínico establecido."
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
+            }
+          ]
+        }
+      ],
+      "word_count": 459,
+      "reading_minutes": 2,
+      "source_file": "content/summaries/2026-09-14-redes-sintomas-adolescentes-longitudinal.md",
+      "paper": {
+        "key": "MED:42416623",
+        "epmc_id": "42416623",
+        "source": "MED",
+        "pmid": "42416623",
+        "pmcid": "PMC13339512",
+        "doi": "10.1002/jcv2.70118",
+        "title": "Transdiagnostic symptom networks in adolescent psychopathology: A longitudinal panel network analysis.",
+        "authors": "Häfeli XA, Morosan L, Hirsig A, Schmidt SJ.",
+        "journal": "JCPP advances",
+        "journal_abbrev": "JCPP Adv",
+        "pub_year": 2026,
+        "first_publication_date": "2026-04-06",
+        "first_index_date": null,
+        "pub_types": [
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1002/jcv2.70118",
+          "europepmc": "https://europepmc.org/article/MED/42416623",
+          "fulltext_html": "https://europepmc.org/articles/PMC13339512",
+          "pdf": "https://europepmc.org/articles/PMC13339512?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "cohort",
+          "confidence": "draft"
+        },
+        "sample_size": {
+          "value": 1186,
+          "confidence": "draft"
+        },
+        "tags": [
+          "symptom_networks",
+          "depression",
+          "anxiety",
+          "child_adolescent"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-tdah-adulto-intervencion-digital-tcc",
+      "title": "Un programa digital de terapia cognitivo-conductual reduce los síntomas de TDAH en adultos",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "draft",
+      "example": true,
+      "ai_draft": true,
+      "author": "Borrador de ejemplo generado con IA",
+      "tags": [
+        "adhd",
+        "digital",
+        "psychotherapy"
+      ],
+      "study_design": {
+        "id": "rct",
+        "confidence": "draft"
+      },
+      "sample_size": {
+        "value": 337,
+        "confidence": "draft"
+      },
+      "one_liner": "Un ensayo clínico aleatorizado pragmático encuentra que un programa digital autoguiado basado en terapia cognitivo-conductual, sumado al tratamiento habitual, reduce más los síntomas de TDAH en adultos que el tratamiento habitual solo.",
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Un ensayo clínico aleatorizado pragmático encuentra que un programa digital autoguiado basado en terapia cognitivo-conductual, sumado al tratamiento habitual, reduce más los síntomas de TDAH en adultos que el tratamiento habitual solo."
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "En personas adultas con diagnóstico confirmado de TDAH que ya reciben tratamiento habitual, ¿añadir un programa digital autoguiado basado en terapia cognitivo-conductual y mindfulness reduce más la gravedad de los síntomas que continuar solo con el tratamiento habitual?"
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Ensayo clínico aleatorizado pragmático. Se asignó al azar a personas adultas con TDAH confirmado a recibir el programa digital attexis más tratamiento habitual, o solo tratamiento habitual. El desenlace principal fue la gravedad de los síntomas de TDAH por autorreporte, medida a los 3 meses; también se evaluaron el funcionamiento, los síntomas depresivos, la autoestima y la calidad de vida relacionada con la salud, con un seguimiento adicional a los 6 meses."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "337 personas adultas con TDAH confirmado fueron aleatorizadas.",
+                "Análisis por intención de tratar."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "A los 3 meses, el grupo con attexis tuvo una gravedad de síntomas de TDAH significativamente menor que el grupo de tratamiento habitual (diferencia de medias ajustada = -5.0 puntos; d = 0.85; p < .001).",
+                "Los desenlaces secundarios —funcionamiento, síntomas depresivos, autoestima y calidad de vida— también mejoraron de forma significativa.",
+                "Las mejoras se mantuvieron estables a los 6 meses de seguimiento.",
+                "El efecto fue consistente entre sexos, uso de medicación, estar o no en psicoterapia y cambios de tratamiento durante el estudio.",
+                "No se reportaron eventos adversos relacionados con el uso de attexis."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "El estudio fue financiado por GAIA, la empresa que desarrolla, posee y fabrica attexis, y dos de los nueve autores son empleados de GAIA.",
+                "El diseño no tuvo cegamiento: los participantes sabían a qué grupo fueron asignados, no hubo evaluadores externos de los desenlaces (todo se midió por autorreporte) y el grupo control fue solo tratamiento habitual, sin una intervención control que igualara el contacto y la atención recibida.",
+                "La atrición fue mayor en el grupo attexis que en el grupo control (9.1% frente a 3.5% a los 3 meses; 13.4% frente a 8.1% a los 6 meses)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Un ensayo financiado por el fabricante del programa, con participantes y desenlaces no ciegos, sugiere un beneficio a 3 y 6 meses en síntomas de TDAH cuando attexis se suma al tratamiento habitual. Antes de considerarlo una alternativa con evidencia sólida, hace falta una réplica independiente con un grupo control que iguale el contacto y la atención recibida."
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
+            }
+          ]
+        }
+      ],
+      "word_count": 456,
+      "reading_minutes": 2,
+      "source_file": "content/summaries/2026-09-14-tdah-adulto-intervencion-digital-tcc.md",
+      "paper": {
+        "key": "MED:41810578",
+        "epmc_id": "41810578",
+        "source": "MED",
+        "pmid": "41810578",
+        "pmcid": "PMC13079232",
+        "doi": "10.1017/s0033291726103390",
+        "title": "Effectiveness of attexis, a digital intervention based on cognitive behavioral therapy for adults with ADHD: a randomized controlled trial.",
+        "authors": "D'Amelio R, Betz LT, Jow SM, Retz W, Philipsen A, Klein JP, Fassbinder E, Jacob GA, Retz-Junginger P.",
+        "journal": "Psychological medicine",
+        "journal_abbrev": "Psychol Med",
+        "pub_year": 2026,
+        "first_publication_date": "2026-03-11",
+        "first_index_date": null,
+        "pub_types": [
+          "Research Support, Non-U.S. Gov't",
+          "Randomized Controlled Trial",
+          "Pragmatic Clinical Trial",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1017/s0033291726103390",
+          "europepmc": "https://europepmc.org/article/MED/41810578",
+          "fulltext_html": "https://europepmc.org/articles/PMC13079232",
+          "pdf": "https://europepmc.org/articles/PMC13079232?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "rct",
+          "confidence": "draft"
+        },
+        "sample_size": {
+          "value": 337,
+          "confidence": "draft"
+        },
+        "tags": [
+          "adhd",
+          "digital",
+          "psychotherapy"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-tdcs-trastorno-por-consumo-de-alcohol",
+      "title": "La estimulación transcraneal por corriente directa reduce modestamente los días de consumo intenso de alcohol",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "draft",
+      "example": true,
+      "ai_draft": true,
+      "author": "Borrador de ejemplo generado con IA",
+      "tags": [
+        "alcohol",
+        "neuroscience"
+      ],
+      "study_design": {
+        "id": "rct",
+        "confidence": "draft"
+      },
+      "sample_size": {
+        "value": 337,
+        "confidence": "draft"
+      },
+      "one_liner": "Un ensayo clínico aleatorizado triple ciego con 337 personas con trastorno por consumo de alcohol encuentra que la estimulación transcraneal activa redujo, de forma modesta, los días de consumo intenso frente a la estimulación simulada.",
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Un ensayo clínico aleatorizado triple ciego con 337 personas con trastorno por consumo de alcohol encuentra que la estimulación transcraneal activa redujo, de forma modesta, los días de consumo intenso frente a la estimulación simulada."
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "En personas adultas con trastorno por consumo de alcohol, ¿la estimulación transcraneal por corriente directa activa, aplicada sobre la corteza prefrontal, reduce más el consumo de alcohol que una estimulación simulada (placebo)?"
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "REDSTIM es un ensayo clínico aleatorizado, controlado con estimulación simulada y triple ciego, realizado en catorce centros de Francia y Mónaco entre octubre de 2015 y enero de 2022. Los participantes recibieron dos sesiones diarias de estimulación (ánodo en F4, cátodo en F3, 2 mA) durante cinco días consecutivos, activa o simulada, y fueron seguidos cada 4 semanas durante 24 semanas. Los desenlaces principales fueron el cambio en los días de consumo intenso de alcohol y en el consumo total de alcohol."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "356 personas fueron evaluadas para elegibilidad y 337 fueron aleatorizadas 1:1 a estimulación activa o simulada.",
+                "El grupo aleatorizado fue mayoritariamente masculino (60.5%), con una edad promedio de 51.3 años (DE 11.3)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "A las 24 semanas, el grupo con estimulación activa tuvo una reducción significativamente mayor de los días de consumo intenso de alcohol frente al grupo simulado (-2.45 días cada 4 semanas; IC 97.5%: -4.86 a -0.05; p = 0.022).",
+                "La reducción del consumo total de alcohol no alcanzó significación estadística (-5.96 g/día; IC 97.5%: -15.18 a 3.26; p = 0.147).",
+                "En desenlaces secundarios exploratorios (definidos así por los propios autores, a diferencia de los dos co-primarios anteriores), el craving de alcohol fue menor en el grupo activo (-0.36; IC 95%: -0.65 a -0.07; p = 0.016), al igual que los niveles de transferrina deficiente en carbohidratos (-0.33; IC 95%: -0.65 a -0.01; p = 0.045), un marcador biológico de consumo.",
+                "Presentaron uno o más eventos adversos 69 personas del grupo activo (41.1%) y 62 del grupo simulado (36.7%), con 6 abandonos del estudio en total."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Los propios autores señalan que la interpretación de los resultados debe considerar la proporción de datos faltantes por diarios de consumo incompletos y por pérdidas durante el seguimiento.",
+                "El efecto sobre el consumo total de alcohol no fue estadísticamente significativo, por lo que el beneficio observado se limita a los días de consumo intenso.",
+                "El resumen no detalla si hubo diferencias en el tratamiento farmacológico o psicosocial recibido en paralelo por ambos grupos."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Las opciones de tratamiento para el trastorno por consumo de alcohol siguen siendo limitadas, y este ensayo aporta evidencia controlada y con una muestra relativamente grande sobre una técnica de neuroestimulación no invasiva como posible complemento terapéutico. El efecto modesto sobre los días de consumo intenso, junto con la buena tolerancia reportada, sugiere una vía de investigación clínica a seguir explorando, más que un cambio inmediato en la práctica."
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
+            }
+          ]
+        }
+      ],
+      "word_count": 518,
+      "reading_minutes": 3,
+      "source_file": "content/summaries/2026-09-14-tdcs-trastorno-por-consumo-de-alcohol.md",
+      "paper": {
+        "key": "MED:42091052",
+        "epmc_id": "42091052",
+        "source": "MED",
+        "pmid": "42091052",
+        "pmcid": "PMC13357871",
+        "doi": "10.1111/add.70461",
+        "title": "Efficacy and safety of transcranial direct current stimulation in alcohol use disorder: A randomized controlled triple-blind trial.",
+        "authors": "Trojak B, Sauvaget A, El Hage W, Wallenhorst T, Rolland B, Nubukpo P, Harika-Germaneau G, Szekely D, Giustiniani J, Auriacombe M, Brousse G, Guillaume S, Bubrovszky M, Petit B, Cabelguen C, El Ayoubi H, Rankin S, Soudry-Faure A, Goueslard K, Demina A.",
+        "journal": "Addiction (Abingdon, England)",
+        "journal_abbrev": "Addiction",
+        "pub_year": 2026,
+        "first_publication_date": "2026-05-06",
+        "first_index_date": null,
+        "pub_types": [
+          "Research Support, Non-U.S. Gov't",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1111/add.70461",
+          "europepmc": "https://europepmc.org/article/MED/42091052",
+          "fulltext_html": "https://europepmc.org/articles/PMC13357871",
+          "pdf": "https://europepmc.org/articles/PMC13357871?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "rct",
+          "confidence": "draft"
+        },
+        "sample_size": {
+          "value": 337,
+          "confidence": "draft"
+        },
+        "tags": [
+          "alcohol",
+          "neuroscience"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    }
+  ],
+  "labels": {
+    "tags": {
+      "psychosis": "Psicosis y esquizofrenia",
+      "depression": "Depresión",
+      "anxiety": "Ansiedad",
+      "symptom_networks": "Redes de síntomas",
+      "suicide": "Suicidio y autolesión",
+      "adhd": "TDAH",
+      "bipolar": "Trastorno bipolar",
+      "bpd": "Trastorno límite de la personalidad",
+      "alcohol": "Alcohol",
+      "substances": "Otras sustancias",
+      "ptsd": "Trauma y TEPT",
+      "ocd": "TOC",
+      "eating": "Conducta alimentaria",
+      "child_adolescent": "Niñez y adolescencia",
+      "older_adults": "Adultos mayores",
+      "public_mental_health": "Salud mental pública",
+      "peru_latam": "Perú y América Latina",
+      "medical_education": "Educación médica",
+      "digital": "Salud digital",
+      "psychopharmacology": "Psicofarmacología",
+      "psychotherapy": "Psicoterapia",
+      "neuroscience": "Neurociencia y biomarcadores",
+      "epidemiology": "Epidemiología"
+    },
+    "designs": {
+      "protocol": "Protocolo de estudio",
+      "systematic_review_meta": "Revisión sistemática y metaanálisis",
+      "meta_analysis": "Metaanálisis",
+      "systematic_review": "Revisión sistemática",
+      "scoping_review": "Revisión de alcance",
+      "rct": "Ensayo clínico aleatorizado",
+      "nonrandomized_trial": "Ensayo clínico no aleatorizado",
+      "cohort": "Cohorte / longitudinal",
+      "case_control": "Casos y controles",
+      "mixed_methods": "Métodos mixtos",
+      "qualitative": "Cualitativo",
+      "cross_sectional": "Transversal",
+      "case_report": "Reporte / serie de casos",
+      "pilot": "Piloto / factibilidad",
+      "modelling": "Modelado / economía de la salud",
+      "guideline": "Guía / consenso",
+      "narrative_review": "Revisión narrativa"
+    }
+  }
+}

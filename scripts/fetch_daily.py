@@ -1,0 +1,403 @@
+"""Descarga el feed diario de Europe PMC y lo normaliza a data/daily/.
+
+Ver 3.A A4 del plan de implementación y las enmiendas 5, 6, 7, 9, 12, 27.
+"""
+
+from __future__ import annotations
+
+import argparse
+import datetime
+import glob
+import json
+import os
+import re
+import sys
+import time
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+import common
+import epmc_client
+
+
+def _log(msg, quiet=False):
+    print(f"[fetch_daily] {msg}", file=sys.stderr)
+
+
+_RETRACTION_TYPES = {"Retraction in", "Expression of concern in"}
+_TITLE_REJECT_RE = re.compile(
+    r"(?i)^(correction|erratum|corrigendum|retraction|retracted|expression of concern)\b"
+)
+
+
+def _local_filter_reason(rec, paper, config):
+    if rec.get("isOpenAccess") != "Y":
+        return "not_oa"
+    if not common.license_allowed((paper.get("open_access") or {}).get("license")):
+        return "no_license"
+    title = (paper.get("title") or "").strip()
+    if not title:
+        return "empty_title"
+    excl = {p.lower() for p in config.get("exclude_pub_types_local", [])}
+    norm_types = [(t or "").lower() for t in paper.get("pub_types") or []]
+    if any(t in excl for t in norm_types):
+        return "pub_type"
+    if _TITLE_REJECT_RE.match(title):
+        return "title_pattern"
+    cc_list = (rec.get("commentCorrectionList") or {}).get("commentCorrection") or []
+    if any(cc.get("type") in _RETRACTION_TYPES for cc in cc_list):
+        return "retraction_notice"
+    return None
+
+
+def _iso_now(now_fn):
+    return now_fn().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _load_day_file(path):
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def _days_for_run(args, today):
+    if args.date:
+        if not common.validate_date(args.date):
+            raise ValueError(f"--date inválida: {args.date}")
+        return [args.date]
+    n = args.days
+    return [str(today - datetime.timedelta(days=i)) for i in range(n - 1, -1, -1)]
+
+
+def _build_existing_index(daily_dir, exclude_dates):
+    """key/pmcid/doi -> date, para todos los días en disco salvo exclude_dates."""
+    idx = {"key": {}, "pmcid": {}, "doi": {}}
+    for path in sorted(glob.glob(os.path.join(daily_dir, "????-??-??.json"))):
+        date = os.path.basename(path)[: -len(".json")]
+        if date in exclude_dates:
+            continue
+        data = _load_day_file(path)
+        if not data:
+            continue
+        for it in data.get("items", []):
+            idx["key"][it["key"]] = date
+            if it.get("pmcid"):
+                idx["pmcid"][it["pmcid"].lower()] = date
+            if it.get("doi"):
+                idx["doi"][it["doi"].lower()] = date
+    return idx
+
+
+def _register_day_in_index(idx, date, items):
+    for it in items:
+        idx["key"][it["key"]] = date
+        if it.get("pmcid"):
+            idx["pmcid"][it["pmcid"].lower()] = date
+        if it.get("doi"):
+            idx["doi"][it["doi"].lower()] = date
+
+
+def _is_cross_day_duplicate(paper, idx, date):
+    k = idx["key"].get(paper["key"])
+    if k is not None and k != date:
+        return True
+    if paper.get("pmcid"):
+        d = idx["pmcid"].get(paper["pmcid"].lower())
+        if d is not None and d != date:
+            return True
+    if paper.get("doi"):
+        d = idx["doi"].get(paper["doi"].lower())
+        if d is not None and d != date:
+            return True
+    return False
+
+
+def _process_day(date, config, daily_dir, existing_idx, *, fetch_fn, sleep_fn, now_fn, quiet):
+    query = epmc_client.build_daily_query(config, date)
+    try:
+        records, hit_count, truncated = epmc_client.search_all(
+            query,
+            page_size=config.get("page_size", 100),
+            max_pages=config.get("max_pages", 10),
+            sort=config.get("sort"),
+            fetch_fn=fetch_fn,
+            sleep_fn=sleep_fn,
+        )
+    except epmc_client.EpmcError as e:
+        _log(f"{date}: fallo de red/API ({e.kind}): {e.msg}", quiet)
+        return None, "failure"
+
+    if truncated:
+        # Enmienda 5 / hallazgo de verificación: un día truncado (más
+        # resultados que page_size*max_pages) no representa el conjunto
+        # completo de ese día. Escribirlo pisaría los ítems ya guardados con
+        # un subconjunto parcial y los "retiraría" por error. Se deja el
+        # D.json existente intacto y el día cuenta como fallo (exit 1).
+        _log(
+            f"{date}: TRUNCADO (hitCount={hit_count} > page_size*max_pages); "
+            "no se escribe (sube --max-pages o reduce la ventana)",
+            quiet,
+        )
+        return None, "failure"
+
+    checked_at = _iso_now(now_fn)
+    discard_counts = {}
+    candidates = []
+    seen_keys = set()
+    for rec in records:
+        paper = common.normalize_record(rec, config, checked_at)
+        reason = _local_filter_reason(rec, paper, config)
+        if reason:
+            discard_counts[reason] = discard_counts.get(reason, 0) + 1
+            continue
+        if paper["key"] in seen_keys:
+            continue
+        seen_keys.add(paper["key"])
+        candidates.append(paper)
+
+    final_items = []
+    omitted_cross_day = 0
+    for paper in candidates:
+        if _is_cross_day_duplicate(paper, existing_idx, date):
+            omitted_cross_day += 1
+            continue
+        final_items.append(paper)
+
+    old_day = _load_day_file(os.path.join(daily_dir, f"{date}.json"))
+    old_items_by_key = {it["key"]: it for it in (old_day or {}).get("items", [])}
+
+    new_count = 0
+    existing_count = 0
+    for paper in final_items:
+        old = old_items_by_key.get(paper["key"])
+        if old is not None:
+            existing_count += 1
+            old_abstract = (old.get("abstract") or {}).get("text")
+            new_abstract = (paper.get("abstract") or {}).get("text")
+            if old.get("ai_summary") and old_abstract == new_abstract:
+                paper["ai_summary"] = old["ai_summary"]
+        else:
+            new_count += 1
+
+    retired = len(set(old_items_by_key.keys()) - {p["key"] for p in final_items})
+
+    common.apply_relevance(final_items, config)
+
+    day_obj = {
+        "schema_version": 1,
+        "date": date,
+        "timezone": config.get("timezone", "America/Lima"),
+        "fetched_at": _iso_now(now_fn),
+        "source": {
+            "name": "Europe PMC",
+            "endpoint": epmc_client.BASE_URL,
+            "date_field": config.get("date_field", "FIRST_IDATE"),
+            "query": query,
+            "hit_count": hit_count,
+            "accepted": len(final_items),
+            "query_version": config.get("query_version"),
+        },
+        "items": final_items,
+    }
+
+    total_discarded = sum(discard_counts.values())
+    if not quiet:
+        parts = ", ".join(f"{v} {k}" for k, v in sorted(discard_counts.items()))
+        print(
+            f"{date}: {hit_count} hits · {len(final_items)} aceptados · {new_count} nuevos · "
+            f"{existing_count} existentes · {total_discarded} descartados"
+            + (f" ({parts})" if parts else "")
+            + (f" · {omitted_cross_day} omitidos por duplicado de otro día" if omitted_cross_day else "")
+            + (f" · {retired} retirados" if retired else "")
+        )
+    return day_obj, "ok"
+
+
+def _complete_as_of_fetch(date, fetched_at_iso):
+    """True si `date` ya había terminado (hora de Lima) en el momento en que
+    ESE día se consultó (`fetched_at`), no en el momento de reconstruir el
+    índice (hallazgo de verificación: usar `today` de la reconstrucción hace
+    que un día parcial se declare "completo" tras una re-consulta fallida
+    posterior, sin que Europe PMC haya terminado de indexarlo)."""
+    if not common.validate_date(date) or not fetched_at_iso:
+        return False
+    try:
+        fetched_dt = datetime.datetime.strptime(fetched_at_iso, "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=datetime.timezone.utc
+        )
+    except ValueError:
+        return False
+    try:
+        from zoneinfo import ZoneInfo
+
+        lima_dt = fetched_dt.astimezone(ZoneInfo("America/Lima"))
+    except Exception:
+        lima_dt = fetched_dt.astimezone(datetime.timezone(datetime.timedelta(hours=-5)))
+    return date < str(lima_dt.date())
+
+
+def _rebuild_index(daily_dir, index_path, config, today, now_fn):
+    days = []
+    total_items = 0
+    for path in sorted(glob.glob(os.path.join(daily_dir, "????-??-??.json"))):
+        date = os.path.basename(path)[: -len(".json")]
+        data = _load_day_file(path)
+        if not data:
+            continue
+        items = data.get("items", [])
+        ai_count = sum(1 for it in items if it.get("ai_summary"))
+        complete = _complete_as_of_fetch(date, data.get("fetched_at"))
+        days.append(
+            {
+                "date": date,
+                "count": len(items),
+                "ai_count": ai_count,
+                "file": f"daily/{date}.json",
+                "fetched_at": data.get("fetched_at"),
+                "complete": complete,
+            }
+        )
+        total_items += len(items)
+    days.sort(key=lambda d: d["date"], reverse=True)
+
+    latest = None
+    for d in days:
+        if d["complete"] and d["count"] > 0:
+            latest = d["date"]
+            break
+    if latest is None:
+        for d in days:
+            if d["count"] > 0:
+                latest = d["date"]
+                break
+    if latest is None and days:
+        latest = days[0]["date"]
+
+    new_index = {
+        "schema_version": 1,
+        "generated_at": _iso_now(now_fn),
+        "timezone": config.get("timezone", "America/Lima"),
+        "query_version": config.get("query_version"),
+        "latest": latest,
+        "total_items": total_items,
+        "days": days,
+        "labels": {"tags": common.TAGS, "designs": common.DESIGNS},
+    }
+
+    old_index = _load_day_file(index_path)
+    if old_index:
+        old_copy = dict(old_index)
+        new_copy = dict(new_index)
+        old_copy.pop("generated_at", None)
+        new_copy.pop("generated_at", None)
+        if old_copy == new_copy:
+            new_index["generated_at"] = old_index["generated_at"]
+
+    return new_index
+
+
+def build_arg_parser():
+    p = argparse.ArgumentParser()
+    g = p.add_mutually_exclusive_group()
+    g.add_argument("--days", type=int, default=None)
+    g.add_argument("--date", type=str, default=None)
+    p.add_argument("--summarize", action="store_true")
+    p.add_argument("--max-ai", type=int, default=20)
+    p.add_argument("--model", default=None)
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--config", default="scripts/feed_config.json")
+    p.add_argument("--data-dir", default="data")
+    p.add_argument("--quiet", action="store_true")
+    return p
+
+
+def run(args, *, fetch_fn=None, post_fn=None, now_fn=None, today_fn=None, sleep_fn=None):
+    now_fn = now_fn or (lambda: datetime.datetime.now(datetime.timezone.utc))
+    today_fn = today_fn or common.lima_today
+    # Antes: `sleep_fn or (lambda s: None)` apagaba TODO backoff (2s/5s entre
+    # reintentos y 0.3s entre páginas) también en producción, porque el
+    # default siempre era una lambda "truthy" que nunca cedía a time.sleep.
+    sleep_fn = sleep_fn or time.sleep
+
+    if args.summarize and not os.environ.get("ANTHROPIC_API_KEY"):
+        _log("--summarize requiere ANTHROPIC_API_KEY")
+        return 3
+
+    with open(args.config, "r", encoding="utf-8") as f:
+        config = json.load(f)
+
+    today = today_fn()
+    days_n = args.days if args.days is not None else config.get("default_days", 2)
+    args_for_days = argparse.Namespace(date=args.date, days=days_n)
+    try:
+        days = _days_for_run(args_for_days, today)
+    except ValueError as e:
+        _log(str(e), args.quiet)
+        return 2
+
+    daily_dir = os.path.join(args.data_dir, "daily")
+    os.makedirs(daily_dir, exist_ok=True)
+    index_path = os.path.join(daily_dir, "index.json")
+
+    existing_idx = _build_existing_index(daily_dir, exclude_dates=set(days))
+
+    failures = []
+    written_days = []
+    for date in days:
+        day_obj, status = _process_day(
+            date,
+            config,
+            daily_dir,
+            existing_idx,
+            fetch_fn=fetch_fn,
+            sleep_fn=sleep_fn,
+            now_fn=now_fn,
+            quiet=args.quiet,
+        )
+        if status == "failure":
+            failures.append(date)
+            continue
+        _register_day_in_index(existing_idx, date, day_obj["items"])
+        if not args.dry_run:
+            common.atomic_write_json(os.path.join(daily_dir, f"{date}.json"), day_obj)
+        written_days.append(date)
+
+    if args.summarize and not args.dry_run:
+        import summarize_ai
+
+        model = args.model or os.environ.get("ANTHROPIC_MODEL") or summarize_ai.DEFAULT_MODEL
+        api_key = os.environ["ANTHROPIC_API_KEY"]
+        for date in written_days:
+            path = os.path.join(daily_dir, f"{date}.json")
+            day_obj = _load_day_file(path)
+            if not day_obj:
+                continue
+            items_sorted = sorted(
+                day_obj["items"],
+                key=lambda p: -((p.get("relevance") or {}).get("score") or 0),
+            )
+            added = summarize_ai.summarize_items(
+                items_sorted, args.max_ai, model, api_key, post_fn=post_fn, sleep_fn=sleep_fn, now_fn=now_fn
+            )
+            if added:
+                common.atomic_write_json(path, day_obj)
+
+    if not args.dry_run:
+        new_index = _rebuild_index(daily_dir, index_path, config, today, now_fn)
+        common.atomic_write_json(index_path, new_index)
+
+    return 1 if failures else 0
+
+
+def main(argv):
+    parser = build_arg_parser()
+    args = parser.parse_args(argv)
+    return run(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

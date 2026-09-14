@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-14",
+  "timezone": "America/Lima",
+  "fetched_at": "2026-09-14T17:50:16Z",
+  "source": {
+    "name": "Europe PMC",
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "date_field": "FIRST_IDATE",
+    "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-14 TO 2026-09-14] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "hit_count": 9,
+    "accepted": 9,
+    "query_version": "2026-09-14.1"
+  },
+  "items": [
+    {
+      "key": "PMC:PMC13571159",
+      "epmc_id": "PMC13571159",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571159",
+      "doi": null,
+      "title": "Longitudinal Study on Post‐Traumatic Stress Disorder, Anxiety, and Depression Among Medical Staff in China",
+      "authors": "Chen Z, Cai R, Liu Y, Tao N, Fei Y, Wen J, Zhang P, Lu Y, Zhang J, Wang J, Zou L, Fu W.",
+      "journal": "Health care science",
+      "journal_abbrev": "Health Care Sci",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-13",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571159",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571159",
+        "pdf": "https://europepmc.org/articles/PMC13571159?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cohort",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety",
+        "ptsd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Anxiety",
+        "Medical Staff",
+        "Post‐traumatic Stress Disorder",
+        "Cross‐lagged Model"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13571128",
+      "epmc_id": "PMC13571128",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571128",
+      "doi": null,
+      "title": "Cytokine and C-reactive protein concentrations over 6 months of treatment with clozapine in treatment resistant schizophrenia",
+      "authors": null,
+      "journal": "Brain, behavior, & immunity - health",
+      "journal_abbrev": "Brain Behav Immun Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571128",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571128",
+        "pdf": "https://europepmc.org/articles/PMC13571128?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13570906",
+      "epmc_id": "PMC13570906",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13570906",
+      "doi": null,
+      "title": "Co-occurring Symptoms of ADHD, Autism, Oppositional Defiant Disorder, and Academic Impairment in Referred and Community Children",
+      "authors": "Mayes S, Villalongo Andino M, Mattison R, Waschbusch D.",
+      "journal": "Journal of psychopathology and behavioral assessment",
+      "journal_abbrev": "J Psychopathol Behav Assess",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13570906",
+        "fulltext_html": "https://europepmc.org/articles/PMC13570906",
+        "pdf": "https://europepmc.org/articles/PMC13570906?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd",
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13571855",
+      "epmc_id": "PMC13571855",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571855",
+      "doi": null,
+      "title": "Elevated Plasma DISC1 Levels Are Associated With Motivational Deficits in Medication‐Free Patients With Major Depressive Disorder: An Exploratory Study",
+      "authors": "Zhu Z, Yin X, Huang J, Wang Y, Qi Q, Wang P, Lui S, Hui L, Chan R.",
+      "journal": "Psych Journal",
+      "journal_abbrev": null,
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-13",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571855",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571855",
+        "pdf": "https://europepmc.org/articles/PMC13571855?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Plasma Biomarker",
+        "Major Depressive Disorder",
+        "Disc1",
+        "Cains",
+        "Motivation And Pleasure"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13571240",
+      "epmc_id": "PMC13571240",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571240",
+      "doi": null,
+      "title": "Changing Patterns of Recent Substance Use in Emerging Adulthood and Their Associations With Cognitive Functions and Mental Health",
+      "authors": "Eggenberger L, Janousch C, Johnson-Ferguson L, Baumgartner M, Binz T, Ribeaud D, Eisner M, Shanahan L, Quednow B.",
+      "journal": "Biological psychiatry global open science",
+      "journal_abbrev": "Biol Psychiatry Glob Open Sci",
+      "pub_year": 2026,
+      "first_publication_date": "2026-07-24",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571240",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571240",
+        "pdf": "https://europepmc.org/articles/PMC13571240?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "substances"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "neuropsychology",
+        "Addiction",
+        "Ecstasy",
+        "Substance Use Disorder",
+        "Recreational Use",
+        "Hair Toxicology"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13571419",
+      "epmc_id": "PMC13571419",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571419",
+      "doi": null,
+      "title": "A remote and avatar-based approach for social cognitive impairments in psychotic disorders: A Canadian adaptation of RC2S",
+      "authors": "Thibaudeau E, Peyroux E, Franck N, Prost Z, Lepage M.",
+      "journal": "Schizophrenia research. Cognition",
+      "journal_abbrev": "Schizophr Res Cogn",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571419",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571419",
+        "pdf": "https://europepmc.org/articles/PMC13571419?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Feasibility",
+        "Social Cognition",
+        "Acceptability",
+        "Cognitive Remediation",
+        "Schizophrenia Spectrum Disorders",
+        "Social Cognitive Training"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13571105",
+      "epmc_id": "PMC13571105",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571105",
+      "doi": null,
+      "title": "The Effectiveness of Short-Term Cognitive Behavioral Group Therapy, Pharmaceutical Therapy, and Combined Treatment on the Mental Health of Drug Users at Harm Reduction Centers in Ahvaz",
+      "authors": "Davasaz Irani R, Sharifi T.",
+      "journal": "Addiction & health",
+      "journal_abbrev": "Addict Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571105",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571105",
+        "pdf": "https://europepmc.org/articles/PMC13571105?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychotherapy"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Addiction",
+        "Pharmaceutical therapy",
+        "Cognitive-behavioral Therapy",
+        "Harm Reduction Centers"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13571009",
+      "epmc_id": "PMC13571009",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571009",
+      "doi": null,
+      "title": "PROTOCOL: The Impact of Long Asylum Application Processing Time on Asylum Seekers and Refugees’ Mental Health and Social Functioning: A Systematic Review",
+      "authors": "Filges T, Kildemoes M, Møller T.",
+      "journal": "Campbell systematic reviews",
+      "journal_abbrev": "Campbell Syst Rev",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571009",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571009",
+        "pdf": "https://europepmc.org/articles/PMC13571009?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "protocol",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Meta-analysis",
+        "Systematic review",
+        "Asylum Seekers",
+        "Process Time"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      }
+    },
+    {
+      "key": "PMC:PMC13571571",
+      "epmc_id": "PMC13571571",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571571",
+      "doi": null,
+      "title": "Telehealth Use and Satisfaction in Primary and Mental Health Care Across 9 High-Income Countries",
+      "authors": "Ambade P, Zimmerman C, Haddad C, Miller M, Gunja M, MacKinnon N.",
+      "journal": "Mayo Clinic proceedings. Digital health",
+      "journal_abbrev": "Mayo Clin Proc Digit Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-06",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:50:16Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571571",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571571",
+        "pdf": "https://europepmc.org/articles/PMC13571571?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      }
+    }
+  ]
+}

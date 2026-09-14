@@ -1,0 +1,851 @@
+{
+  "version": "6.9",
+  "hitCount": 123,
+  "nextCursorMark": "AoJw9cqazqADKDU2NDA1OTM4",
+  "nextPageUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-13 TO 2026-09-13] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")&cursorMark=AoJw9cqazqADKDU2NDA1OTM4&resultType=core&pageSize=5&sort=FIRST_IDATE_D desc&format=json",
+  "request": {
+    "queryString": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-13 TO 2026-09-13] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "resultType": "core",
+    "cursorMark": "%2A",
+    "pageSize": 5,
+    "sort": "FIRST_IDATE_D desc",
+    "synonym": false
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "PMC13570700",
+        "source": "PMC",
+        "pmcid": "PMC13570700",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13570700"
+          ]
+        },
+        "title": "Trends and Projections of Suicide and Medical Causes in India: A 56-Year Retrospective Analysis and Forecast (1966–2032) Using ARIMA Modelling",
+        "authorString": "Vivekanandan N, Daniel R, Yuvraj S, Varadharajulu P, Ganesh R, Upadhyay S.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Vivekanandan N",
+              "firstName": "Nivethitha",
+              "lastName": "Vivekanandan",
+              "initials": "N",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Assistant Professor, Manipal Institute of Technology, Manipal Academy of Higher Education, Bengaluru Campus, India"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Daniel R",
+              "firstName": "Roy A.",
+              "lastName": "Daniel",
+              "initials": "R",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Community Medicine, ESIC Medical College and Hospital, Rajajinagar, Bengaluru, India"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yuvraj S",
+              "firstName": "Sahanaa",
+              "lastName": "Yuvraj",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Community Medicine, Chettinad Hospital and Research Institute, Chettinad Academy of Research and Education, Kelambakkam, Tamil Nadu, India"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Varadharajulu P",
+              "firstName": "Premanand",
+              "lastName": "Varadharajulu",
+              "initials": "P",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Assistant Professor, Manipal Institute of Technology, Manipal Academy of Higher Education, Bengaluru Campus, India"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Ganesh R",
+              "firstName": "Ragul",
+              "lastName": "Ganesh",
+              "initials": "R",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, JIPMER, Puducherry, India"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Upadhyay S",
+              "firstName": "Siddharth",
+              "lastName": "Upadhyay",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Assistant Professor, Manipal Institute of Technology, Manipal Academy of Higher Education, Bengaluru Campus, India"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "journalInfo": {
+          "journalIssueId": 4261621,
+          "dateOfPublication": "2026 Jan",
+          "monthOfPublication": 1,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-01-01",
+          "journal": {
+            "title": "International Journal of Preventive Medicine",
+            "issn": "2008-7802"
+          }
+        },
+        "pubYear": "2026",
+        "language": "eng",
+        "pubModel": "Undetermined",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "India",
+            "Mental health",
+            "Drug Addiction",
+            "Chronic Illness",
+            "Suicide Prevention",
+            "Arima Model",
+            "Suicide Trends"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570700/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570700/pdf/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570700"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570700?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "N",
+        "hasTextMinedTerms": "N",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by-nc-nd",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-09-13",
+        "firstIndexDate": "2026-09-13",
+        "fullTextReceivedDate": "2026-09-13",
+        "dateOfRevision": "2026-09-13",
+        "electronicPublicationDate": "2026-01-01",
+        "firstPublicationDate": "2026-01-01"
+      },
+      {
+        "id": "PMC13570528",
+        "source": "PMC",
+        "pmcid": "PMC13570528",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13570528"
+          ]
+        },
+        "title": "Post-traumatic stress disorder following intensive care for COVID-19: a single-center retrospective follow-up study",
+        "authorString": "Zeiner C, Schmitt P, Weise J, Rixecker T, Bals R, Lepper P.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Zeiner C",
+              "firstName": "Carsten",
+              "lastName": "Zeiner",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Kirrbergerstraße 100, Homburg/Saar, 66421 Germany"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Schmitt P",
+              "firstName": "Pascal D.",
+              "lastName": "Schmitt",
+              "initials": "P",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Kirrbergerstraße 100, Homburg/Saar, 66421 Germany"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Weise J",
+              "firstName": "Julius J.",
+              "lastName": "Weise",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Homburg/Saar, Germany"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Rixecker T",
+              "firstName": "Torben M.",
+              "lastName": "Rixecker",
+              "initials": "T",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Kirrbergerstraße 100, Homburg/Saar, 66421 Germany"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Bals R",
+              "firstName": "Robert",
+              "lastName": "Bals",
+              "initials": "R",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Kirrbergerstraße 100, Homburg/Saar, 66421 Germany"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Lepper P",
+              "firstName": "Philipp M.",
+              "lastName": "Lepper",
+              "initials": "P",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Bielefeld, Germany"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "26",
+          "journalIssueId": 4110588,
+          "dateOfPublication": "2026 Jan",
+          "monthOfPublication": 1,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-01-01",
+          "journal": {
+            "title": "BMC anesthesiology",
+            "medlineAbbreviation": "BMC Anesthesiol",
+            "isoabbreviation": "BMC Anesthesiol",
+            "nlmid": "100968535",
+            "essn": "1471-2253",
+            "issn": "1471-2253"
+          }
+        },
+        "pubYear": "2026",
+        "language": "eng",
+        "pubModel": "Undetermined",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Follow-up",
+            "Critical illness",
+            "Mental health",
+            "risk factors",
+            "Post-traumatic Stress Disorder",
+            "Extracorporeal Membrane Oxygenation",
+            "Covid-19"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570528/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570528/pdf/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570528"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570528?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "N",
+        "hasTextMinedTerms": "N",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-09-13",
+        "firstIndexDate": "2026-09-13",
+        "fullTextReceivedDate": "2026-09-13",
+        "dateOfRevision": "2026-09-13",
+        "electronicPublicationDate": "2026-01-01",
+        "firstPublicationDate": "2026-01-01"
+      },
+      {
+        "id": "PMC13570513",
+        "source": "PMC",
+        "pmcid": "PMC13570513",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13570513"
+          ]
+        },
+        "title": "Introduction of home-based mobile specialist psychiatric nursing teams: Experiences of mental healthcare professionals",
+        "authorString": "Arnell S, Schröder A, Nilsagård Y, Ryen L, Fogelkvist M.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Arnell S",
+              "firstName": "Susann",
+              "lastName": "Arnell",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Örebro, Sweden"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Schröder A",
+              "firstName": "Agneta",
+              "lastName": "Schröder",
+              "initials": "A",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Örebro, Sweden"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Nilsagård Y",
+              "firstName": "Ylva",
+              "lastName": "Nilsagård",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Örebro, Sweden"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Ryen L",
+              "firstName": "Linda",
+              "lastName": "Ryen",
+              "initials": "L",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Örebro, Sweden"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Fogelkvist M",
+              "firstName": "Maria",
+              "lastName": "Fogelkvist",
+              "initials": "M",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Örebro, Sweden"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "20",
+          "journalIssueId": 4120283,
+          "dateOfPublication": "2026 Jan",
+          "monthOfPublication": 1,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-01-01",
+          "journal": {
+            "title": "International journal of mental health systems",
+            "medlineAbbreviation": "Int J Ment Health Syst",
+            "isoabbreviation": "Int J Ment Health Syst",
+            "nlmid": "101294224",
+            "essn": "1752-4458",
+            "issn": "1752-4458"
+          }
+        },
+        "pubYear": "2026",
+        "language": "eng",
+        "pubModel": "Undetermined",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Home Treatment",
+            "Healthcare Professionals",
+            "Mobile Team",
+            "Psychiatric Nursing Team"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570513/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570513/pdf/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570513"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570513?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "N",
+        "hasTextMinedTerms": "N",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-09-13",
+        "firstIndexDate": "2026-09-13",
+        "fullTextReceivedDate": "2026-09-13",
+        "dateOfRevision": "2026-09-13",
+        "electronicPublicationDate": "2026-01-01",
+        "firstPublicationDate": "2026-01-01"
+      },
+      {
+        "id": "PMC13570547",
+        "source": "PMC",
+        "pmcid": "PMC13570547",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13570547"
+          ]
+        },
+        "title": "Correction: Participatory systems modelling to improve mental health systems in Bogotá, Colombia: stakeholders’ perspectives, experiences and networks",
+        "authorString": "Martin Hilber A, Camacho S, Sánchez Nítola M, Shambo-Rodríguez D, Lee G, Ospina-Pinillos L, Occhipinti J.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Martin Hilber A",
+              "firstName": "Adriane",
+              "lastName": "Martin Hilber",
+              "initials": "A",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Kreuzstrasse 2, Allschwil, Basel, 4123 Switzerland"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Camacho S",
+              "firstName": "Salvador",
+              "lastName": "Camacho",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Kreuzstrasse 2, Allschwil, Basel, 4123 Switzerland"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Sánchez Nítola M",
+              "firstName": "Mónica Natalí",
+              "lastName": "Sánchez Nítola",
+              "initials": "M",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Bogota, Colombia"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Shambo-Rodríguez D",
+              "firstName": "Dèbora L.",
+              "lastName": "Shambo-Rodríguez",
+              "initials": "D",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Bogota, Colombia"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Lee G",
+              "firstName": "Grace Yeeun",
+              "lastName": "Lee",
+              "initials": "G",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "94 Mallett Street, Camperdown New South Wales 2050, Sydney, Australia"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Ospina-Pinillos L",
+              "firstName": "Laura",
+              "lastName": "Ospina-Pinillos",
+              "initials": "L",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Bogota, Colombia"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Occhipinti J",
+              "firstName": "Jo-An",
+              "lastName": "Occhipinti",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Computer Simulation & Advanced Research Technologies (CSART), Sydney, Australia"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "20",
+          "journalIssueId": 4120283,
+          "dateOfPublication": "2026 Jan",
+          "monthOfPublication": 1,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-01-01",
+          "journal": {
+            "title": "International journal of mental health systems",
+            "medlineAbbreviation": "Int J Ment Health Syst",
+            "isoabbreviation": "Int J Ment Health Syst",
+            "nlmid": "101294224",
+            "essn": "1752-4458",
+            "issn": "1752-4458"
+          }
+        },
+        "pubYear": "2026",
+        "language": "eng",
+        "pubModel": "Undetermined",
+        "pubTypeList": {
+          "pubType": [
+            "correction",
+            "Corrected and Republished Article"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570547/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13570547/pdf/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570547"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13570547?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "citedByCount": 0,
+        "hasData": "N",
+        "hasReferences": "N",
+        "hasTextMinedTerms": "N",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by-nc-nd",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-09-13",
+        "firstIndexDate": "2026-09-13",
+        "fullTextReceivedDate": "2026-09-13",
+        "dateOfRevision": "2026-09-13",
+        "electronicPublicationDate": "2026-01-01",
+        "firstPublicationDate": "2026-01-01"
+      },
+      {
+        "id": "PMC13565555",
+        "source": "PMC",
+        "pmcid": "PMC13565555",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13565555"
+          ]
+        },
+        "title": "Factors Associated with Appointment Cancellation on a Commercial Digital Mental Health Platform: A Retrospective Cohort Study in Saudi Arabia",
+        "journalInfo": {
+          "issue": "17",
+          "volume": "14",
+          "journalIssueId": 4261574,
+          "dateOfPublication": "2026 Aug",
+          "monthOfPublication": 8,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-08-01",
+          "journal": {
+            "title": "Healthcare (Basel, Switzerland)",
+            "medlineAbbreviation": "Healthcare (Basel)",
+            "isoabbreviation": "Healthcare (Basel)",
+            "nlmid": "101666525",
+            "essn": "2227-9032",
+            "issn": "2227-9032"
+          }
+        },
+        "pubYear": "2026",
+        "language": "eng",
+        "pubModel": "Undetermined",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Logistic regression",
+            "Cohort study",
+            "Saudi Arabia",
+            "Health Services",
+            "Telemental Health",
+            "No-show",
+            "Digital Mental Health",
+            "Appointment Cancellation"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13565555/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13565555/pdf/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13565555"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13565555?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "N",
+        "hasTextMinedTerms": "N",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-09-13",
+        "firstIndexDate": "2026-09-13",
+        "fullTextReceivedDate": "2026-09-13",
+        "dateOfRevision": "2026-09-13",
+        "electronicPublicationDate": "2026-08-22",
+        "firstPublicationDate": "2026-08-22"
+      }
+    ]
+  }
+}

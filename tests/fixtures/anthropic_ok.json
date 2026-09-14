@@ -1,0 +1,18 @@
+{
+  "id": "msg_fixture_01",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-haiku-4-5",
+  "content": [
+    {
+      "type": "text",
+      "text": "Los participantes que completaron la intervención digital basada en TCC mostraron una reducción de los síntomas nucleares de TDAH frente al grupo de lista de espera. El estudio incluyó 100 adultos y usó cuestionarios autoaplicados. Los autores reportan buena adherencia y aceptabilidad del programa. Se necesitan estudios con seguimiento más largo para confirmar la duración del efecto."
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 420,
+    "output_tokens": 88
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "version": "6.9",
+  "hitCount": 1,
+  "request": {
+    "queryString": "EXT_ID:PPR1309022 AND SRC:PPR",
+    "internalQuery": "EXT_ID:PPR1309022 AND SRC:PPR",
+    "resultType": "CORE",
+    "cursorMark": "%2A",
+    "pageSize": 3,
+    "sort": "",
+    "synonym": false
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "PPR1309022",
+        "source": "PPR",
+        "doi": "10.64898/2026.08.28.26361680",
+        "title": "Longitudinal Brain Correlates of Cognitive Performance in Early Psychosis",
+        "authorString": "Mignondje KA, Connolly JG, Beermann A, Crabtree E, Vandekar S, Roeske M, Biernacki K, Coleman MJ, Shenton ME, Brady RO, Lewandowski KE, Ward HB.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Mignondje KA",
+              "firstName": "Kossivi Armel",
+              "lastName": "Mignondje",
+              "initials": "KA"
+            },
+            {
+              "fullName": "Connolly JG",
+              "firstName": "Jillian",
+              "lastName": "Connolly",
+              "initials": "JG"
+            },
+            {
+              "fullName": "Beermann A",
+              "firstName": "Adam",
+              "lastName": "Beermann",
+              "initials": "A"
+            },
+            {
+              "fullName": "Crabtree E",
+              "firstName": "Ella",
+              "lastName": "Crabtree",
+              "initials": "E"
+            },
+            {
+              "fullName": "Vandekar S",
+              "firstName": "Simon",
+              "lastName": "Vandekar",
+              "initials": "S"
+            },
+            {
+              "fullName": "Roeske M",
+              "firstName": "Maxwell",
+              "lastName": "Roeske",
+              "initials": "M"
+            },
+            {
+              "fullName": "Biernacki K",
+              "firstName": "Kathryn",
+              "lastName": "Biernacki",
+              "initials": "K"
+            },
+            {
+              "fullName": "Coleman MJ",
+              "firstName": "Michael",
+              "lastName": "Coleman",
+              "initials": "MJ"
+            },
+            {
+              "fullName": "Shenton ME",
+              "firstName": "Martha",
+              "lastName": "Shenton",
+              "initials": "ME"
+            },
+            {
+              "fullName": "Brady RO",
+              "firstName": "Roscoe",
+              "lastName": "Brady",
+              "initials": "RO"
+            },
+            {
+              "fullName": "Lewandowski KE",
+              "firstName": "Kathryn",
+              "lastName": "Lewandowski",
+              "initials": "KE"
+            },
+            {
+              "fullName": "Ward HB",
+              "firstName": "Heather Burrell",
+              "lastName": "Ward",
+              "initials": "HB"
+            }
+          ]
+        },
+        "pubYear": "2026",
+        "abstractText": "<h4>Background</h4>  Cognitive impairment is the leading cause of disability in schizophrenia with limited treatments. A major barrier to treatment development is the absence of reproducible, mechanistically grounded neural targets. Cross-sectional studies have identified dorsomedial prefrontal cortex (DMPFC)-somatomotor connectivity as a neural marker of cognitive performance on the Auditory Continuous performance task (ACPT), a measure of attention. To test the stability of this marker, we tested the relationship between DMPFC-somatomotor connectivity and ACPT performance in a longitudinal psychosis sample. <h4>Methods</h4>  Individuals with early psychosis (n=251) and matched controls (n=90) were enrolled and underwent resting-state neuroimaging and neurocognitive assessment. A subset completed longitudinal assessments over 2-4 years. We calculated DMPFC-somatomotor resting-state functional connectivity using a previously identified DMPFC region and a seed in the somatomotor cortex. We performed linear mixed effects models to predict ACPT performance based on connectivity, time, psychosis type, and their interaction. <h4>Results</h4>  In the psychosis sample, time (p=.0037) and affective psychosis diagnosis (p<.0001) predicted better ACPT performance. In a model predicting ACPT performance, we observed a significant interaction effect of DMPFC-somatomotor connectivity*psychosis subtype (p=.0079) such that DMPFC-somatomotor connectivity predicted ACPT performance only in individuals with non-affective psychosis (p=.0051). We then tested the specificity of this connectivity-cognitive performance relationship. In a model predicting DMPFC-somatomotor connectivity, only ACPT performance (p=.017), but not fluid cognition, was a significant predictor. <h4>Conclusions</h4>  DMPFC-somatomotor connectivity is longitudinally associated with cognitive performance in early psychosis. This relationship is strongest in nonaffective psychosis, suggesting a novel, reliable target for intervention for cognitive deficits in early psychosis.",
+        "pubTypeList": {
+          "pubType": [
+            "Preprint"
+          ]
+        },
+        "bookOrReportDetails": {
+          "publisher": "medRxiv",
+          "yearOfPublication": 2026
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "K23DA059690",
+              "agency": "NIH",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01 MH116170",
+              "agency": "NIH",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01 MH117012",
+              "agency": "NIH",
+              "orderIn": 0
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.64898/2026.08.28.26361680"
+            }
+          ]
+        },
+        "isOpenAccess": "N",
+        "inEPMC": "N",
+        "inPMC": "N",
+        "hasPDF": "N",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "citedByCount": 0,
+        "hasData": "N",
+        "hasReferences": "N",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by-nc-nd",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-09-01",
+        "firstIndexDate": "2026-09-01",
+        "firstPublicationDate": "2026-08-31"
+      }
+    ]
+  }
+}

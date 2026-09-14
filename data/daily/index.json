@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-14T17:50:16Z",
+  "timezone": "America/Lima",
+  "query_version": "2026-09-14.1",
+  "latest": "2026-09-13",
+  "total_items": 481,
+  "days": [
+    {
+      "date": "2026-09-14",
+      "count": 9,
+      "ai_count": 0,
+      "file": "daily/2026-09-14.json",
+      "fetched_at": "2026-09-14T17:50:16Z",
+      "complete": false
+    },
+    {
+      "date": "2026-09-13",
+      "count": 121,
+      "ai_count": 0,
+      "file": "daily/2026-09-13.json",
+      "fetched_at": "2026-09-14T17:50:15Z",
+      "complete": true
+    },
+    {
+      "date": "2026-09-12",
+      "count": 94,
+      "ai_count": 0,
+      "file": "daily/2026-09-12.json",
+      "fetched_at": "2026-09-14T17:50:09Z",
+      "complete": true
+    },
+    {
+      "date": "2026-09-11",
+      "count": 103,
+      "ai_count": 0,
+      "file": "daily/2026-09-11.json",
+      "fetched_at": "2026-09-14T17:50:07Z",
+      "complete": true
+    },
+    {
+      "date": "2026-09-10",
+      "count": 78,
+      "ai_count": 0,
+      "file": "daily/2026-09-10.json",
+      "fetched_at": "2026-09-14T17:50:01Z",
+      "complete": true
+    },
+    {
+      "date": "2026-09-09",
+      "count": 75,
+      "ai_count": 0,
+      "file": "daily/2026-09-09.json",
+      "fetched_at": "2026-09-14T17:49:58Z",
+      "complete": true
+    },
+    {
+      "date": "2026-09-08",
+      "count": 1,
+      "ai_count": 0,
+      "file": "daily/2026-09-08.json",
+      "fetched_at": "2026-09-14T17:49:55Z",
+      "complete": true
+    }
+  ],
+  "labels": {
+    "tags": {
+      "psychosis": "Psicosis y esquizofrenia",
+      "depression": "Depresión",
+      "anxiety": "Ansiedad",
+      "symptom_networks": "Redes de síntomas",
+      "suicide": "Suicidio y autolesión",
+      "adhd": "TDAH",
+      "bipolar": "Trastorno bipolar",
+      "bpd": "Trastorno límite de la personalidad",
+      "alcohol": "Alcohol",
+      "substances": "Otras sustancias",
+      "ptsd": "Trauma y TEPT",
+      "ocd": "TOC",
+      "eating": "Conducta alimentaria",
+      "child_adolescent": "Niñez y adolescencia",
+      "older_adults": "Adultos mayores",
+      "public_mental_health": "Salud mental pública",
+      "peru_latam": "Perú y América Latina",
+      "medical_education": "Educación médica",
+      "digital": "Salud digital",
+      "psychopharmacology": "Psicofarmacología",
+      "psychotherapy": "Psicoterapia",
+      "neuroscience": "Neurociencia y biomarcadores",
+      "epidemiology": "Epidemiología"
+    },
+    "designs": {
+      "protocol": "Protocolo de estudio",
+      "systematic_review_meta": "Revisión sistemática y metaanálisis",
+      "meta_analysis": "Metaanálisis",
+      "systematic_review": "Revisión sistemática",
+      "scoping_review": "Revisión de alcance",
+      "rct": "Ensayo clínico aleatorizado",
+      "nonrandomized_trial": "Ensayo clínico no aleatorizado",
+      "cohort": "Cohorte / longitudinal",
+      "case_control": "Casos y controles",
+      "mixed_methods": "Métodos mixtos",
+      "qualitative": "Cualitativo",
+      "cross_sectional": "Transversal",
+      "case_report": "Reporte / serie de casos",
+      "pilot": "Piloto / factibilidad",
+      "modelling": "Modelado / economía de la salud",
+      "guideline": "Guía / consenso",
+      "narrative_review": "Revisión narrativa"
+    }
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "version": "6.9",
+  "hitCount": 1,
+  "request": {
+    "queryString": "DOI:\"10.1001/jamapsychiatry.2026.2410\"",
+    "resultType": "core",
+    "cursorMark": "%2A",
+    "pageSize": 3,
+    "sort": "",
+    "synonym": false
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "42584912",
+        "source": "MED",
+        "pmid": "42584912",
+        "pmcid": "PMC13470429",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13470429"
+          ]
+        },
+        "doi": "10.1001/jamapsychiatry.2026.2410",
+        "title": "Predicting US Army Soldier Suicide-Related Behaviors at the Time of Periodic Health Assessments.",
+        "authorString": "Edwards ER, Borowski S, Nock MK, Benedek DM, Bentley KH, Geraci J, Gildea SM, Goodman M, Gupta A, Kennedy CJ, King AJ, Kleiman EM, Liu H, Luedtke A, Maggio S, Naifeh JA, Nassif TH, Paine C, Sampson NA, Zainal NH, Wagner J, Stein MB, Capaldi VF, Ursano RJ, Kessler RC.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Edwards ER",
+              "firstName": "Emily R",
+              "lastName": "Edwards",
+              "initials": "ER",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0003-1030-6380"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Veterans Integrated Service Network 2, Mental Illness Research, Education and Clinical Center, Department of Veterans Affairs, Bronx, New York."
+                  },
+                  {
+                    "affiliation": "Department of Psychiatry, Icahn School of Medicine at Mount Sinai, New York, New York."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Borowski S",
+              "firstName": "Shelby",
+              "lastName": "Borowski",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Health Care Policy, Harvard Medical School, Boston, Massachusetts."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Nock MK",
+              "firstName": "Matthew K",
+              "lastName": "Nock",
+              "initials": "MK",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychology, Harvard University, Cambridge, Massachusetts."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Benedek DM",
+              "firstName": "David M",
+              "lastName": "Benedek",
+              "initials": "DM",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Uniformed Services University of the Health Sciences, Bethesda, Maryland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Bentley KH",
+              "firstName": "Kate H",
+              "lastName": "Bentley",
+              "initials": "KH",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Massachusetts General Hospital/Harvard Medical School, Boston."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Geraci J",
+              "firstName": "Joseph",
+              "lastName": "Geraci",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Veterans Integrated Service Network 2, Mental Illness Research, Education and Clinical Center, Department of Veterans Affairs, Bronx, New York."
+                  },
+                  {
+                    "affiliation": "Department of Psychiatry, Icahn School of Medicine at Mount Sinai, New York, New York."
+                  },
+                  {
+                    "affiliation": "Center of Excellence for Research on Returning War Veterans, Veterans Integrated Service Network 17, Doris Miller VA Medical Center, Waco, Texas."
+                  },
+                  {
+                    "affiliation": "Resilience Center for Veterans & Families, Teachers College, Columbia University, New York, New York."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Gildea SM",
+              "firstName": "Sarah M",
+              "lastName": "Gildea",
+              "initials": "SM",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Health Care Policy, Harvard Medical School, Boston, Massachusetts."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Goodman M",
+              "firstName": "Marianne",
+              "lastName": "Goodman",
+              "initials": "M",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Veterans Integrated Service Network 2, Mental Illness Research, Education and Clinical Center, Department of Veterans Affairs, Bronx, New York."
+                  },
+                  {
+                    "affiliation": "Department of Psychiatry, Icahn School of Medicine at Mount Sinai, New York, New York."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Gupta A",
+              "firstName": "Amit",
+              "lastName": "Gupta",
+              "initials": "A",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Carl R. Darnall Army Medical Center, Fort Hood, Texas."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Kennedy CJ",
+              "firstName": "Chris J",
+              "lastName": "Kennedy",
+              "initials": "CJ",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Massachusetts General Hospital/Harvard Medical School, Boston."
+                  },
+                  {
+                    "affiliation": "Center for Precision Psychiatry, Massachusetts General Hospital, Boston."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "King AJ",
+              "firstName": "Andrew J",
+              "lastName": "King",
+              "initials": "AJ",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Health Care Policy, Harvard Medical School, Boston, Massachusetts."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Kleiman EM",
+              "firstName": "Evan M",
+              "lastName": "Kleiman",
+              "initials": "EM",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychology, Rutgers, The State University of New Jersey, New Brunswick."
+                  },
+                  {
+                    "affiliation": "Department of Health Behavior, Society and Policy, Rutgers, The State University of New Jersey, School of Public Health, Piscataway."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Liu H",
+              "firstName": "Howard",
+              "lastName": "Liu",
+              "initials": "H",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Health Care Policy, Harvard Medical School, Boston, Massachusetts."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Luedtke A",
+              "firstName": "Alex",
+              "lastName": "Luedtke",
+              "initials": "A",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Health Care Policy, Harvard Medical School, Boston, Massachusetts."
+                  },
+                  {
+                    "affiliation": "Department of Statistics, Faculty of Arts and Sciences, Harvard University, Cambridge, Massachusetts."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Maggio S",
+              "firstName": "Sarah",
+              "lastName": "Maggio",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Uniformed Services University of the Health Sciences, Bethesda, Maryland."
+                  },
+                  {
+                    "affiliation": "Henry M. Jackson Foundation for the Advancement of Military Medicine Inc, Bethesda, Maryland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Naifeh JA",
+              "firstName": "James A",
+              "lastName": "Naifeh",
+              "initials": "JA",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Uniformed Services University of the Health Sciences, Bethesda, Maryland."
+                  },
+                  {
+                    "affiliation": "Henry M. Jackson Foundation for the Advancement of Military Medicine Inc, Bethesda, Maryland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Nassif TH",
+              "firstName": "Thomas H",
+              "lastName": "Nassif",
+              "initials": "TH",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Uniformed Services University of the Health Sciences, Bethesda, Maryland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Paine C",
+              "firstName": "Chris",
+              "lastName": "Paine",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Uniformed Services University of the Health Sciences, Bethesda, Maryland."
+                  },
+                  {
+                    "affiliation": "Henry M. Jackson Foundation for the Advancement of Military Medicine Inc, Bethesda, Maryland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Sampson NA",
+              "firstName": "Nancy A",
+              "lastName": "Sampson",
+              "initials": "NA",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Health Care Policy, Harvard Medical School, Boston, Massachusetts."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zainal NH",
+              "firstName": "Nur Hani",
+              "lastName": "Zainal",
+              "initials": "NH",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychology, National University of Singapore, Singapore."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wagner J",
+              "firstName": "James",
+              "lastName": "Wagner",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Survey Research Center, Institute for Social Research, University of Michigan-Ann Arbor, Ann Arbor."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Stein MB",
+              "firstName": "Murray B",
+              "lastName": "Stein",
+              "initials": "MB",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "VA San Diego Healthcare System, San Diego, California."
+                  },
+                  {
+                    "affiliation": "Department of Psychiatry, University of California San Diego, La Jolla."
+                  },
+                  {
+                    "affiliation": "School of Public Health, University of California San Diego, La Jolla."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Capaldi VF 2nd",
+              "firstName": "Vincent F",
+              "lastName": "Capaldi",
+              "initials": "VF",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Uniformed Services University of the Health Sciences, Bethesda, Maryland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Ursano RJ",
+              "firstName": "Robert J",
+              "lastName": "Ursano",
+              "initials": "RJ",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Uniformed Services University of the Health Sciences, Bethesda, Maryland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Kessler RC",
+              "firstName": "Ronald C",
+              "lastName": "Kessler",
+              "initials": "RC",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Health Care Policy, Harvard Medical School, Boston, Massachusetts."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0003-1030-6380"
+            }
+          ]
+        },
+        "journalInfo": {
+          "journalIssueId": 4239147,
+          "dateOfPublication": "2026 Aug",
+          "monthOfPublication": 8,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-08-01",
+          "journal": {
+            "title": "JAMA psychiatry",
+            "medlineAbbreviation": "JAMA Psychiatry",
+            "isoabbreviation": "JAMA Psychiatry",
+            "nlmid": "101589550",
+            "essn": "2168-6238",
+            "issn": "2168-622X"
+          }
+        },
+        "pubYear": "2026",
+        "abstractText": "<h4>Importance</h4>Suicide is the leading cause of death among active-duty US Army soldiers. Evidence-based preventive interventions exist but need to be targeted to be cost-effective.<h4>Objectives</h4>To develop machine learning models using administrative data available during periodic health assessments (PHAs) to determine eligibility for a remote group dialectical behavior therapy-based skills training intervention for soldiers with elevated risk of suicide or nonfatal suicide attempt.<h4>Design, setting, and participants</h4>From regular US Army soldier PHAs completed from 2015 to 2019, separate 70% training samples were created for suicides and SAs. Each training sample contained all cases and a stratified equal-probability sample of 10 times as many controls, with inverse-probability of selection weights applied to controls. Model performance was evaluated in the remaining 30% test sample. Data analysis was conducted September 2025 through January 2026.<h4>Main outcomes and measures</h4>Suicides were recorded in the National Death Index for soldiers either still in or out of active service. SAs were recorded in US Army records only for soldiers still in active service. A 24-month risk horizon was used because successive PHAs, though designed to occur annually, are sometimes separated by this much time. A loss to follow-up weight was used in the SA model to adjust for leaving service within 24 months.<h4>Results</h4>PHA data were available from 668 684 regular US Army soldiers. A total of 1 932 243 PHAs (including 85.5% by male soldiers, 46.7% by soldiers aged 28 years or older, and 58.1% by married soldiers) completed during the 2015 to 2019 period were included in analyses. Over 24 months, suicide prevalence was 66.7 per 100 000 (SE = 3.6) and SA prevalence was 704.1 per 100 000 (SE = 14.7) adjusted for loss to follow-up. Test sample area under the receiver operating characteristic curve (AUROC) for suicide was 0.72 (SE = 0.17), with Integrated Calibration Index (ICI) of 0.0003 and Brier score of 0.0007. Test sample AUROC for SA was 0.81 (SE = 0.02), with ICI of 0.0014 and Brier score of 0.0070. Suicide prevalence was meaningfully elevated (at least twice that expected by chance) only in the 5% of PHAs with highest predicted risk (sensitivity = 18.6%; SE = 2.0%). SA risk was elevated only in the 10% of PHAs with highest predicted risk (sensitivity = 46.5%; SE = 1.0%). Predicted probabilities of suicide and SA were correlated (Pearson r = 0.29; t = 233.8; P < .001). Overall, 11.9% of PHAs revealed US Army soldiers at elevated risk of either suicide or SA, and 3.1% were at elevated risk of both outcomes.<h4>Conclusions and relevance</h4>Results of this prognostic study suggest that as suicides and SAs have distinct predictors, an attempt to optimize resource allocation will require thoughtful postintervention considerations of costs and benefits of interventions to optimize net benefit.",
+        "affiliation": "Veterans Integrated Service Network 2, Mental Illness Research, Education and Clinical Center, Department of Veterans Affairs, Bronx, New York.",
+        "publicationStatus": "aheadofprint",
+        "language": "eng",
+        "pubModel": "Print-Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "U01 MH087981",
+              "agency": "NIMH NIH HHS",
+              "acronym": "MH",
+              "orderIn": 0
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1001/jamapsychiatry.2026.2410"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13470429"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13470429?pdf=render"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1001/jamapsychiatry.2026.2410"
+            }
+          ]
+        },
+        "isOpenAccess": "N",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "hasEvaluations": "N",
+        "authMan": "Y",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "Y",
+        "manuscriptId": "NIHMS2204127",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-08-12",
+        "firstIndexDate": "2026-08-15",
+        "fullTextReceivedDate": "2026-09-11",
+        "dateOfRevision": "2026-09-03",
+        "electronicPublicationDate": "2026-08-12",
+        "firstPublicationDate": "2026-08-12"
+      }
+    ]
+  }
+}

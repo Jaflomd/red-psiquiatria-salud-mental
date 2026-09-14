@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-08",
+  "timezone": "America/Lima",
+  "fetched_at": "2026-09-14T17:49:55Z",
+  "source": {
+    "name": "Europe PMC",
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "date_field": "FIRST_IDATE",
+    "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-08 TO 2026-09-08] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "hit_count": 1,
+    "accepted": 1,
+    "query_version": "2026-09-14.1"
+  },
+  "items": [
+    {
+      "key": "PPR:PPR1313962",
+      "epmc_id": "PPR1313962",
+      "source": "PPR",
+      "pmid": null,
+      "pmcid": null,
+      "doi": "10.64898/2026.09.02.26362049",
+      "title": "Genetic and epigenetic architecture of mass spectrometry-derived lipids in blood and their role in lifetime Major Depressive Disorder",
+      "authors": "Smith HM, Richmond A, Adams MJ, Wretlind A, Marioni RE, Legido-Quigley C, McIntosh AM.",
+      "journal": null,
+      "journal_abbrev": null,
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-06",
+      "first_index_date": "2026-09-08",
+      "pub_types": [
+        "Preprint"
+      ],
+      "language": null,
+      "is_preprint": true,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-14T17:49:55Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.64898/2026.09.02.26362049",
+        "europepmc": "https://europepmc.org/article/PPR/PPR1313962",
+        "fulltext_html": "https://europepmc.org/article/PPR/PPR1313962",
+        "pdf": null
+      },
+      "abstract": {
+        "lang": null,
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Major depressive disorder (MDD) is a highly prevalent psychiatric disorder that remains challenging to treat effectively. Difficulty predicting who will develop the disorder and which individuals will respond to treatment is most likely due to our limited mechanistic understanding and the lack of reliable biomarkers. The current literature suggests that lipid profiles differ in MDD; however, most studies do not integrate other omics layers to elucidate their potential causal relationship at the molecular level. Using phenotypic, genetic, epigenetic and mass-spectrometry lipid data from a Scottish-based cohort of approximately 1,000 participants, we examined associations with individual lipid species. We identified 77 common genetic variant associations (β range = -0.46 to 0.69, p < 3.1x10 -10 ) and 82 genome-wide DNA methylation associations (β range = -1.88 to 1.39, p < 2.2x10 -10 ). We identified 23 lipid species associated with lifetime MDD (β range = - 0.23 to 0.2, p < 0.05), including lipid classes such as lysophosphatidylcholine (LPC), diacylglycerol (DG) and phosphatidylcholine (PC). Our integration analysis showed that genetic variants and DNA methylation at sites annotated to the FADS gene cluster were linked with lipid species that were also associated with lifetime MDD status, including LPC(14:1) (β = 0.15, p = 0.03) and PC(19:0)/(20:4) (β = -0.14, p < 0.05). Our findings provide further support for the role of the FADS gene cluster in lipid metabolism and its association with MDD, while introducing DNA methylation as an additional molecular layer supporting this link."
+          }
+        ],
+        "text": "Major depressive disorder (MDD) is a highly prevalent psychiatric disorder that remains challenging to treat effectively. Difficulty predicting who will develop the disorder and which individuals will respond to treatment is most likely due to our limited mechanistic understanding and the lack of reliable biomarkers. The current literature suggests that lipid profiles differ in MDD; however, most studies do not integrate other omics layers to elucidate their potential causal relationship at the molecular level. Using phenotypic, genetic, epigenetic and mass-spectrometry lipid data from a Scottish-based cohort of approximately 1,000 participants, we examined associations with individual lipid species. We identified 77 common genetic variant associations (β range = -0.46 to 0.69, p < 3.1x10 -10 ) and 82 genome-wide DNA methylation associations (β range = -1.88 to 1.39, p < 2.2x10 -10 ). We identified 23 lipid species associated with lifetime MDD (β range = - 0.23 to 0.2, p < 0.05), including lipid classes such as lysophosphatidylcholine (LPC), diacylglycerol (DG) and phosphatidylcholine (PC). Our integration analysis showed that genetic variants and DNA methylation at sites annotated to the FADS gene cluster were linked with lipid species that were also associated with lifetime MDD status, including LPC(14:1) (β = 0.15, p = 0.03) and PC(19:0)/(20:4) (β = -0.14, p < 0.05). Our findings provide further support for the role of the FADS gene cluster in lipid metabolism and its association with MDD, while introducing DNA methylation as an additional molecular layer supporting this link."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": null,
+        "section": "abstract_tail",
+        "text": "Our integration analysis showed that genetic variants and DNA methylation at sites annotated to the FADS gene cluster were linked with lipid species that were also associated with lifetime MDD status, including LPC(14:1) (β = 0.15, p = 0.03) and PC(19:0)/(20:4) (β = -0.14, p < 0.05). Our findings provide further support for the role of the FADS gene cluster in lipid metabolism and its association with MDD, while introducing DNA methylation as an additional molecular layer supporting this link.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": {
+        "value": 1000,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "depression",
+        "neuroscience",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      }
+    }
+  ]
+}

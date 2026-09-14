@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red de Investigación de Psiquiatría y Salud Mental</title>
+  <meta name="description" content="Resúmenes curados en español y feed diario de papers open access en psiquiatría y salud mental.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>try{var t=localStorage.getItem("red-psm-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}</script>
+</head>
+<body>
+<!-- snapshot:start -->
+<div id="app">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#/">Red de Investigación de Psiquiatría y Salud Mental</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#/papers">Papers del día</a>
+        <a href="#/resumenes">Resúmenes</a>
+        <a href="#/acerca">Acerca de</a>
+        <button type="button" id="theme-toggle" class="btn">Tema: sistema</button>
+      </nav>
+    </div>
+  </header>
+  <p id="status" role="status" class="visually-hidden"></p>
+  <main id="main" tabindex="-1">
+    <div class="container">
+      <p class="state">Cargando…</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fuente de datos: <a href="https://europepmc.org/" target="_blank" rel="noopener noreferrer">Europe PMC</a> · <a href="#/acerca">Política de open access</a></p>
+      <p>Prototipo — Red de Investigación de Psiquiatría y Salud Mental</p>
+    </div>
+  </footer>
+</div>
+<!-- snapshot:end -->
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+name: Feed diario Europe PMC
+
+on:
+  schedule:
+    - cron: "0 11 * * *"     # 11:00 UTC = 06:00 America/Lima
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Días hacia atrás a consultar"
+        default: "2"
+        required: false
+      summarize:
+        description: "Generar resúmenes con IA (requiere secret ANTHROPIC_API_KEY)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: daily-feed
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/Lima
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tests offline
+        run: python3 -m unittest discover -s tests
+
+      # ANTHROPIC_API_KEY solo vive en el entorno de este paso, no a nivel de job,
+      # para que los tests y el resto de pasos nunca la vean ni la necesiten.
+      - name: Fetch feed
+        id: fetch
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DAYS: ${{ github.event.inputs.days || '2' }}
+          SUMMARIZE: ${{ github.event.inputs.summarize || 'false' }}
+        run: |
+          [[ "$DAYS" =~ ^[0-9]{1,2}$ ]] || { echo "DAYS invalido: $DAYS"; exit 3; }
+          FLAGS="--days $DAYS"
+          if [ "$SUMMARIZE" = "true" ] && [ -n "$ANTHROPIC_API_KEY" ]; then
+            FLAGS="$FLAGS --summarize"
+          fi
+          python3 scripts/fetch_daily.py $FLAGS
+
+      - name: Build summaries
+        id: build_summaries
+        continue-on-error: true
+        run: python3 scripts/build_summaries.py --verify-oa
+
+      - name: Commit si hay cambios
+        id: commit
+        if: always()
+        run: |
+          git config user.name "red-psm-bot"
+          git config user.email "red-psm-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "feed: $(date -u +%F)"
+          git pull --rebase origin main
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Un push hecho con GITHUB_TOKEN no dispara otros workflows por su cuenta,
+      # así que se lanza pages.yml explícitamente cuando hubo cambios que publicar.
+      - name: Disparar despliegue de Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
+
+      # Antes solo se miraba steps.fetch: si --verify-oa rechazaba un artículo
+      # que perdió el acceso abierto o fue retractado, build_summaries fallaba
+      # (exit 2/1) pero el job quedaba en verde y data/summaries.json vigente
+      # (con el artículo problemático) seguía publicado sin ninguna alerta
+      # (hallazgo de verificación).
+      - name: Marcar fallo si el fetch o build_summaries fallaron
+        if: steps.fetch.outcome == 'failure' || steps.build_summaries.outcome == 'failure'
+        run: |
+          echo "fetch: ${{ steps.fetch.outcome }} · build_summaries: ${{ steps.build_summaries.outcome }}" >> "$GITHUB_STEP_SUMMARY"
+          exit 1

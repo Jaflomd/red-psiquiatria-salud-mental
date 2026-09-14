@@ -1,0 +1,349 @@
+{
+  "version": "6.9",
+  "hitCount": 1,
+  "request": {
+    "queryString": "PMCID:PMC12809804",
+    "internalQuery": "PMCID:PMC12809804",
+    "resultType": "CORE",
+    "cursorMark": "%2A",
+    "pageSize": 3,
+    "sort": "",
+    "synonym": false
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "39550208",
+        "source": "MED",
+        "pmid": "39550208",
+        "pmcid": "PMC12809804",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC12809804"
+          ]
+        },
+        "doi": "10.1093/schbul/sbae197",
+        "title": "Psychotic Experiences and Risk of Suicidal Thoughts and Behaviors: A Systematic Review and Meta-Analysis of Longitudinal Population Studies.",
+        "authorString": "O'Hare K, Fadiloglu K, Lång U, Healy C, Cannon M, DeVylder J, Kelleher I.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "O'Hare K",
+              "firstName": "Kirstie",
+              "lastName": "O'Hare",
+              "initials": "K",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-1166-9792"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Centre for Clinical Brain Sciences, University of Edinburgh, EH16 4SB Edinburgh, United Kingdom."
+                  },
+                  {
+                    "affiliation": "School of Clinical Medicine, Discipline of Psychiatry and Mental Health, University of New South Wales, 2031 Sydney, Australia."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Fadiloglu K",
+              "firstName": "Kubra",
+              "lastName": "Fadiloglu",
+              "initials": "K",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Centre for Clinical Brain Sciences, University of Edinburgh, EH16 4SB Edinburgh, United Kingdom."
+                  },
+                  {
+                    "affiliation": "Child and Adolescent Mental Health Services, NHS Lothian, EH16 4TJ Edinburgh, United Kingdom."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Lång U",
+              "firstName": "Ulla",
+              "lastName": "Lång",
+              "initials": "U",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Centre for Clinical Brain Sciences, University of Edinburgh, EH16 4SB Edinburgh, United Kingdom."
+                  },
+                  {
+                    "affiliation": "Department of Public Health and Welfare, Finnish Institute for Health and Welfare, 00271 Helsinki, Finland."
+                  },
+                  {
+                    "affiliation": "Research Unit of Clinical Medicine, Faculty of Medicine, University of Oulu, 90230 Oulu, Finland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Healy C",
+              "firstName": "Colm",
+              "lastName": "Healy",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Centre for Clinical Brain Sciences, University of Edinburgh, EH16 4SB Edinburgh, United Kingdom."
+                  },
+                  {
+                    "affiliation": "School of Medicine, University College Dublin, Dublin 4, Dublin, Ireland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Cannon M",
+              "firstName": "Mary",
+              "lastName": "Cannon",
+              "initials": "M",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Psychiatry, Royal College of Surgeons in Ireland, University of Medicine and Health Sciences, Dublin 9, Dublin, Ireland."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "DeVylder J",
+              "firstName": "Jordan",
+              "lastName": "DeVylder",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Silver School of Social Work, New York University, 10003 New York, NY, United States."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Kelleher I",
+              "firstName": "Ian",
+              "lastName": "Kelleher",
+              "initials": "I",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Centre for Clinical Brain Sciences, University of Edinburgh, EH16 4SB Edinburgh, United Kingdom."
+                  },
+                  {
+                    "affiliation": "Research Unit of Clinical Medicine, Faculty of Medicine, University of Oulu, 90230 Oulu, Finland."
+                  },
+                  {
+                    "affiliation": "School of Medicine, University College Dublin, Dublin 4, Dublin, Ireland."
+                  },
+                  {
+                    "affiliation": "St. John of God Hospitaller Services Group, A94 FH92 Dublin, Ireland."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0002-1166-9792"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "52",
+          "journalIssueId": 4094795,
+          "dateOfPublication": "2026 Jan",
+          "monthOfPublication": 1,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-01-01",
+          "journal": {
+            "title": "Schizophrenia bulletin",
+            "medlineAbbreviation": "Schizophr Bull",
+            "isoabbreviation": "Schizophr Bull",
+            "nlmid": "0236760",
+            "essn": "1745-1701",
+            "issn": "1787-9965"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "sbae197",
+        "abstractText": "<h4>Background and hypothesis</h4>Since a prior systematic review and meta-analysis reported an association between psychotic experiences (PEs) and suicidal thoughts and behaviors, a large number of new studies have been published on the topic, including several novel studies on the association between PEs and transition from suicidal ideation to attempt.<h4>Study design</h4>Two authors independently searched PubMed, Embase, CINAHL, and PsycINFO databases from inception until July 2023, conducted data extraction, and assessed study quality using the Newcastle-Ottawa Quality Assessment Scale. Random-effects models were used to calculate pooled odds ratios (ORs) for the association of PEs and subsequent suicide ideation, suicide attempts, suicide death, and transition from suicidal ideation to attempt, first for the total population, and second stratified by age group. Secondary analyses assessed the mediating role of co-occurring psychopathology.<h4>Study results</h4>Twenty studies from 18 different samples (n = 81,861) were identified. Individuals who reported PEs had increased odds of subsequent suicidal ideation (k = 12, OR = 1.90, 95% CI = 1.65-2.19), suicide attempt (k = 13, OR = 2.95, 95% CI = 2.21-3.94), transition from suicidal ideation to suicide attempt (k = 3, OR = 2.83, 95% CI = 1.60-4.99), and suicide death (k = 1, OR = 4.39, 95% CI = 1.63-11.80). This heightened risk was stable across childhood, adolescence, and adulthood. PEs predicted suicide attempts over and above co-occurring psychopathology (k = 8, OR = 2.85, 95% CI = 2.06-3.95).<h4>Conclusions</h4>Individuals reporting PEs are at increased risk of all types of suicidal thoughts and behaviors. In addition, PEs are particularly important risk markers for future suicidal behaviors, including in individuals already reporting suicidal ideation. This risk is in excess of what is explained by co-occurring psychopathology.",
+        "affiliation": "Centre for Clinical Brain Sciences, University of Edinburgh, EH16 4SB Edinburgh, United Kingdom.",
+        "publicationStatus": "ppublish",
+        "language": "eng",
+        "pubModel": "Print",
+        "pubTypeList": {
+          "pubType": [
+            "Meta-Analysis",
+            "Research Support, Non-U.S. Gov't",
+            "research-article",
+            "Systematic Review",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "APR8\\1005",
+              "agency": "Academy of Medical Sciences",
+              "acronym": "AMS_",
+              "orderIn": 0
+            },
+            {
+              "grantId": "ECSA-2020-005",
+              "agency": "Health Research Board",
+              "orderIn": 0
+            },
+            {
+              "agency": "UK Department for Business, Energy and Industrial Strategy",
+              "orderIn": 0
+            },
+            {
+              "grantId": "ECSA-2020-005",
+              "agency": "The Health Research Board",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Longitudinal Studies"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Suicide, Attempted",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "SN",
+                    "qualifierName": "statistics & numerical data",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Psychotic Disorders",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "EP",
+                    "qualifierName": "epidemiology",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Adult"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Suicidal Ideation"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Suicide, Completed",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "SN",
+                    "qualifierName": "statistics & numerical data",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Suicide",
+            "Psychosis",
+            "Suicide Attempt",
+            "Suicidal Ideation",
+            "Ideation To Attempt"
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1093/schbul/sbae197"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12809804"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12809804?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 10,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "Y",
+        "license": "cc by-nc",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-01-16",
+        "dateOfCreation": "2024-11-16",
+        "firstIndexDate": "2024-11-18",
+        "fullTextReceivedDate": "2026-01-17",
+        "dateOfRevision": "2026-04-15",
+        "firstPublicationDate": "2026-01-01"
+      }
+    ]
+  }
+}
