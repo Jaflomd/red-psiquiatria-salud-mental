@@ -1,0 +1,12 @@
+{
+  "id": "https://openalex.org/W4409999999",
+  "doi": "https://doi.org/10.1000/not-oa.doi",
+  "title": "A study with no confirmed open access location",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "best_oa_location": null
+}

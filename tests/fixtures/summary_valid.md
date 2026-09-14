@@ -7,6 +7,7 @@ ai_draft: true
 author: "Borrador de ejemplo generado con IA"
 tags: ["bipolar", "digital"]
 study_design: "pilot"
+summary_type: "empirico"
 paper_title: "Empowering Quality of Life Monitoring and Self-Management in Bipolar Disorder: Pilot Evaluation of the PolarUs App."
 paper_authors: "Michalak EE, Morton EE, Meyer D, Murray G, O Brien HL, Barnes SJ."
 paper_journal: "Bipolar disorders"
@@ -42,7 +43,7 @@ El equipo condujo una evaluación piloto de la aplicación PolarUs en un grupo d
 - El estudio reporta datos de aceptabilidad y factibilidad de la herramienta.
 
 ## Limitaciones
-- Al ser un piloto, la muestra es pequeña y no permite conclusiones sobre eficacia clínica.
+- Muestra: al ser un piloto, la muestra es pequeña y no permite conclusiones sobre eficacia clínica.
 
 ## Por qué importa para la clínica
 Las herramientas digitales de automonitoreo pueden complementar el seguimiento clínico del trastorno bipolar entre consultas.

@@ -52,6 +52,26 @@
   /* Roles de borde/radio (asignados por rol, no estampados) */
   --radius-control: 2px;
   --radius-card: 0;
+
+  /* Galería de resúmenes */
+  --radius-gallery: 6px;
+  --gcard-bg: #FFFFFF;
+  --gcard-bg-hover: #FFFFFF;
+  --gcard-shadow: 0 1px 2px rgba(23, 36, 32, .08);
+  --gcard-shadow-hover: 0 3px 8px rgba(23, 36, 32, .14);
+
+  /* Pills de propiedades: fondo + texto por familia (todas ≥ 5.4:1 texto/fondo) */
+  --pill-gray-bg: #E4E7E5;   --pill-gray-fg: #3B4540;
+  --pill-brown-bg: #EFE2D9;  --pill-brown-fg: #5A3A25;
+  --pill-orange-bg: #FBE1CB; --pill-orange-fg: #7A3E0C;
+  --pill-yellow-bg: #FBEDC6; --pill-yellow-fg: #6B4A0A;
+  --pill-green-bg: #DCEEDC;  --pill-green-fg: #23522F;
+  --pill-blue-bg: #D6E6F1;   --pill-blue-fg: #1E4766;
+  --pill-purple-bg: #E9DFF0; --pill-purple-fg: #4E2C6B;
+  --pill-pink-bg: #F6DFE8;   --pill-pink-fg: #6E2A4A;
+  --pill-red-bg: #FBDFDB;    --pill-red-fg: #7A2018;
+  --pill-teal-bg: #D6EBE6;   --pill-teal-fg: #0F4F49;
+  --pill-ai-bg: #FBEBD3;     --pill-ai-fg: #8A5210;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,6 +88,22 @@
     --oa: #E9A24F;            /* Ámbar OA nocturno */
     --oa-ink: #E9A24F;        /* 8.29:1 en oscuro: no hace falta oscurecerlo más */
     --tint: #1F312C;          /* Resalte nocturno */
+
+    --gcard-bg: #1C2623;
+    --gcard-bg-hover: #222E2A;
+    --gcard-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+    --gcard-shadow-hover: 0 3px 10px rgba(0, 0, 0, .5);
+    --pill-gray-bg: #2E3835;   --pill-gray-fg: #C9D4CF;
+    --pill-brown-bg: #4A3529;  --pill-brown-fg: #E8C9B5;
+    --pill-orange-bg: #543214; --pill-orange-fg: #F5C89A;
+    --pill-yellow-bg: #4E3D12; --pill-yellow-fg: #F3D98A;
+    --pill-green-bg: #1F3D28;  --pill-green-fg: #A9DDB3;
+    --pill-blue-bg: #1C3A50;   --pill-blue-fg: #A8CDEA;
+    --pill-purple-bg: #3B2A4F; --pill-purple-fg: #D3BFE8;
+    --pill-pink-bg: #4E2438;   --pill-pink-fg: #EFB9D0;
+    --pill-red-bg: #4F1F1A;    --pill-red-fg: #F2B3AB;
+    --pill-teal-bg: #1F3A36;   --pill-teal-fg: #8AD6CB;
+    --pill-ai-bg: #4A3312;     --pill-ai-fg: #E9A24F;
   }
 }
 
@@ -84,6 +120,22 @@
   --oa: #E9A24F;
   --oa-ink: #E9A24F;
   --tint: #1F312C;
+
+  --gcard-bg: #1C2623;
+  --gcard-bg-hover: #222E2A;
+  --gcard-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+  --gcard-shadow-hover: 0 3px 10px rgba(0, 0, 0, .5);
+  --pill-gray-bg: #2E3835;   --pill-gray-fg: #C9D4CF;
+  --pill-brown-bg: #4A3529;  --pill-brown-fg: #E8C9B5;
+  --pill-orange-bg: #543214; --pill-orange-fg: #F5C89A;
+  --pill-yellow-bg: #4E3D12; --pill-yellow-fg: #F3D98A;
+  --pill-green-bg: #1F3D28;  --pill-green-fg: #A9DDB3;
+  --pill-blue-bg: #1C3A50;   --pill-blue-fg: #A8CDEA;
+  --pill-purple-bg: #3B2A4F; --pill-purple-fg: #D3BFE8;
+  --pill-pink-bg: #4E2438;   --pill-pink-fg: #EFB9D0;
+  --pill-red-bg: #4F1F1A;    --pill-red-fg: #F2B3AB;
+  --pill-teal-bg: #1F3A36;   --pill-teal-fg: #8AD6CB;
+  --pill-ai-bg: #4A3312;     --pill-ai-fg: #E9A24F;
 }
 
 /* ---------- Reset mínimo ---------- */
@@ -447,16 +499,8 @@ details.abstract-original .abs-note { margin-top: var(--space-3); color: var(--i
   color: var(--ink);
 }
 
-/* Tarjetas de resumen (Inicio / lista de resúmenes) */
-.summary-card {
-  padding-block: var(--space-6);
-  border-bottom: 1px solid var(--line);
-}
-.summary-card:first-child { padding-top: 0; }
-/* .badges se usa tanto en las tarjetas de resumen como en la cabecera del
-   detalle (fuera de .summary-card); el selector calificado solo aplicaba en
-   el primer caso y en el detalle los badges quedaban sin flex/gap, pegados
-   entre sí y al h1 (hallazgo de verificación). */
+/* .badges se usa en la cabecera del detalle de resumen (fuera de la
+   galería). */
 .badges { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-3); }
 .badge {
   font-size: var(--fs-0);
@@ -467,24 +511,185 @@ details.abstract-original .abs-note { margin-top: var(--space-3); color: var(--i
   border-radius: var(--radius-control);
   padding: 0 var(--space-2);
 }
-.summary-card h3 { font-size: var(--fs-3); }
-.summary-card h3 a { text-decoration: none; color: var(--ink); }
-.summary-card h3 a:hover { color: var(--accent); }
-.summary-card .card-date {
-  margin-top: var(--space-2);
+
+/* ---------- Galería de resúmenes (Inicio y #/resumenes) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-4);                 /* 16px */
+  align-items: stretch;                /* alturas alineadas por fila */
+}
+.card-grid > .state { grid-column: 1 / -1; }
+.card-grid + p { margin-top: var(--space-5); } /* "Ver todos los resúmenes →" en Inicio */
+
+.gcard {
+  position: relative;                  /* contenedor del stretched link */
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--gcard-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-gallery);
+  box-shadow: var(--gcard-shadow);
+  overflow: hidden;
+  transition: background-color 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+@media (hover: hover) {
+  .gcard:hover {
+    background: var(--gcard-bg-hover);
+    box-shadow: var(--gcard-shadow-hover);
+    border-color: color-mix(in srgb, var(--line), var(--ink) 25%);
+  }
+  .gcard:hover .gcard-title a { color: var(--accent); }
+}
+/* Foco: el anillo se dibuja en toda la tarjeta, no solo en el texto del
+   título, y solo con foco de teclado — :focus-within también se activaba
+   con un clic de ratón normal y quedaba pintado tras un Cmd/Ctrl+clic que
+   abre pestaña nueva (hallazgo de verificación). */
+@supports selector(:has(*)) {
+  .gcard:has(.gcard-link:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+}
+@supports not selector(:has(*)) {
+  .gcard:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+}
+.gcard-link:focus-visible { outline: none; }
+
+/* Cover: inicio del contenido sobre tinte de la etiqueta principal. El
+   recorte usa -webkit-line-clamp con elipsis en vez de un degradado: a
+   anchos donde el one_liner ya cabía completo, el degradado tapaba con
+   bajo contraste una última línea que no estaba recortada (hallazgo de
+   verificación). order:-1 lo mantiene visualmente arriba aunque en el DOM
+   vaya después de .gcard-body (ver nota de accesibilidad más abajo). */
+.gcard-cover {
+  order: -1;
+  height: 118px;
+  padding: var(--space-3) var(--space-4);
+  overflow: hidden;
+  background: var(--cover-bg, var(--tint));
+}
+/* Etiqueta del cover ("Principio" / "En una frase"): antes el texto salía
+   sin decir de qué sección venía; con dos fuentes posibles (principio o
+   one_liner) el rótulo evita que el lector confunda una tesis con un dato
+   crudo del paper. */
+.gcard-cover-label {
+  color: var(--ink-2);
+  margin-bottom: var(--space-1);
+}
+.gcard-cover-text {
+  font-size: var(--fs-0);
+  line-height: 1.45;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;               /* 5 cuando no hay label encima; con el
+                                           label, 4 líneas caben mejor en los
+                                           118px fijos del cover */
+  overflow: hidden;
+}
+.gcard-cover-text.is-pending { color: var(--ink-2); font-style: italic; }
+.pc-gray   { --cover-bg: var(--pill-gray-bg); }
+.pc-brown  { --cover-bg: var(--pill-brown-bg); }
+.pc-orange { --cover-bg: var(--pill-orange-bg); }
+.pc-yellow { --cover-bg: var(--pill-yellow-bg); }
+.pc-green  { --cover-bg: var(--pill-green-bg); }
+.pc-blue   { --cover-bg: var(--pill-blue-bg); }
+.pc-purple { --cover-bg: var(--pill-purple-bg); }
+.pc-pink   { --cover-bg: var(--pill-pink-bg); }
+.pc-red    { --cover-bg: var(--pill-red-bg); }
+.pc-teal   { --cover-bg: var(--pill-teal-bg); }
+
+/* Cuerpo */
+.gcard-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  min-width: 0;
+}
+.gcard-title {
+  font-size: var(--fs-2);
+  font-weight: 600;
+  line-height: 1.3;
+  text-wrap: wrap;                     /* anula el balance global de h3 para que el clamp sea predecible */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;               /* 3 recortaba afirmaciones científicas en columnas
+                                           medias (~890-1070px); 4 como red de seguridad */
+  overflow: hidden;                    /* no recorta el ::after: el h3 no está posicionado */
+}
+.gcard-title a { color: var(--ink); text-decoration: none; }
+.gcard-link::after { content: ""; position: absolute; inset: 0; } /* stretched link */
+
+.gcard-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) 6px;
+  min-width: 0;
+}
+.gcard-tags { list-style: none; margin: 0; padding: 0; }
+.gcard-date {
+  font-family: var(--font-body);       /* anula el mono global de time */
+  font-size: var(--fs-0);
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+.gcard-n {
+  font-family: var(--font-body);       /* var(--font-mono) se leía como código junto a los pills */
+  font-variant-numeric: tabular-nums;
   font-size: var(--fs-0);
   color: var(--ink-2);
 }
-.summary-card .one-liner {
-  margin-top: var(--space-3);
-  font-size: var(--fs-2);
-  max-width: var(--measure);
-}
 
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
+/* Pills (multi-select / select) */
+.pill {
+  display: inline-block;
+  max-width: 100%;
+  padding: 1px var(--space-2);
+  border-radius: 3px;
+  font-size: var(--fs-0);
+  line-height: 1.5;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  background: var(--pill-gray-bg);
+  color: var(--pill-gray-fg);
+}
+.pill-c-gray   { background: var(--pill-gray-bg);   color: var(--pill-gray-fg); }
+.pill-c-brown  { background: var(--pill-brown-bg);  color: var(--pill-brown-fg); }
+.pill-c-orange { background: var(--pill-orange-bg); color: var(--pill-orange-fg); }
+.pill-c-yellow { background: var(--pill-yellow-bg); color: var(--pill-yellow-fg); }
+.pill-c-green  { background: var(--pill-green-bg);  color: var(--pill-green-fg); }
+.pill-c-blue   { background: var(--pill-blue-bg);   color: var(--pill-blue-fg); }
+.pill-c-purple { background: var(--pill-purple-bg); color: var(--pill-purple-fg); }
+.pill-c-pink   { background: var(--pill-pink-bg);   color: var(--pill-pink-fg); }
+.pill-c-red    { background: var(--pill-red-bg);    color: var(--pill-red-fg); }
+.pill-c-teal   { background: var(--pill-teal-bg);   color: var(--pill-teal-fg); }
+/* pill-ai/pill-preprint: contorno, no relleno. Con relleno (--pill-ai-bg)
+   el ámbar quedaba a un ΔE ~5-8 de los pills naranja/amarillo reales
+   (etiquetas TDAH/Ansiedad) y se leía como una etiqueta temática más en
+   vez de una marca de integridad científica; el contorno además iguala el
+   lenguaje visual con .badge de la cabecera del detalle, que es el mismo
+   estado (hallazgo de verificación). */
+.pill-ai       { background: transparent; color: var(--oa-ink); box-shadow: inset 0 0 0 1px var(--oa-ink); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.pill-preprint { background: transparent; color: var(--pill-red-fg); box-shadow: inset 0 0 0 1px var(--pill-red-fg); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.pill-outline  { background: transparent; color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
+/* Tipo de resumen (empírico/conceptual): contorno en --accent, distinto del
+   ámbar de integridad (.pill-ai) y del gris neutro (.pill-outline) — es una
+   clasificación editorial, no una marca de estado. */
+.pill-type     { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.pill-strength { font-weight: 600; }
+/* El ::after de .gcard-link (stretched link) cubre toda la tarjeta y sin
+   esto tapaba el pill de estado/diseño: el title (significado completo)
+   nunca se veía en hover con ratón (hallazgo de verificación). Levantar
+   estos pills sobre el ::after deja esa pequeña zona sin navegar, lo cual
+   es aceptable frente a perder el tooltip. */
+.gcard .pill-ai, .gcard .pill-preprint, .gcard .pill[title] {
+  position: relative;
+  z-index: 1;
+  cursor: help;
 }
 
 /* Detalle de resumen */
@@ -512,6 +717,134 @@ details.abstract-original .abs-note { margin-top: var(--space-3); color: var(--i
 .detail-sections section .section-body { margin-top: var(--space-3); }
 .detail-sections section .section-body p + p { margin-top: var(--space-3); }
 .detail-sections section .pending-note { color: var(--ink-2); font-style: italic; }
+.detail-sections > .principle { margin-top: var(--space-6); }
+
+/* Ficha rápida: 2 columnas (etiqueta | valor) desde 600px, apiladas debajo. */
+.kv-grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--space-3);
+}
+.kv-grid dt { color: var(--ink-2); }
+.kv-grid dd { margin: 0; }
+@media (min-width: 600px) {
+  .kv-grid {
+    grid-template-columns: max-content 1fr;
+    column-gap: var(--space-5);
+  }
+  .kv-grid dt { grid-column: 1; padding-top: 2px; }
+  .kv-grid dd { grid-column: 2; }
+}
+
+/* kv genérico (nota completa y secciones sin componente propio) */
+.kv-list { margin: 0; }
+.kv-list dt {
+  color: var(--ink-2);
+  margin-top: var(--space-3);
+  font-size: var(--fs-0);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.kv-list dt:first-child { margin-top: 0; }
+.kv-list dd { margin: 0; }
+
+/* El principio: destacado con el acento del sitio, no una tarjeta genérica. */
+.principle {
+  border-left: 3px solid var(--accent);
+  background: var(--tint);
+  padding: var(--space-4);
+  max-width: var(--measure);
+}
+.principle h2 { font-size: var(--fs-3); }
+.principle-statement {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--fs-3);
+  line-height: var(--lh-tight);
+}
+.principle-meta { margin-top: var(--space-4); font-size: var(--fs-1); }
+.principle-meta dt {
+  margin-top: var(--space-3);
+  color: var(--ink-2);
+  font-size: var(--fs-0);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.principle-meta dt:first-child { margin-top: 0; }
+.principle-meta dd { margin: var(--space-1) 0 0; }
+.principle-note { margin-top: var(--space-4); font-size: var(--fs-0); color: var(--ink-2); font-style: italic; }
+
+/* El argumento: numeración nativa del <ol>, sin contadores decorativos. */
+.argument-steps { margin-top: var(--space-3); }
+.argument-steps li { margin-top: var(--space-2); }
+.argument-steps li:first-child { margin-top: 0; }
+
+/* Limitaciones: la categoría se resalta, el resto sigue como prosa. */
+.limitations { list-style: none; padding: 0; margin: 0; }
+.limitations li { margin-top: var(--space-3); }
+.limitations li:first-child { margin-top: 0; }
+.limitations .lim-cat { font-weight: 600; color: var(--ink); }
+
+/* Aplicaciones clínicas: el caveat "Límite: …" en tono atenuado. */
+.applications { list-style: none; padding: 0; margin: var(--space-3) 0 0; }
+.applications li { margin-top: var(--space-3); }
+.applications li:first-child { margin-top: 0; }
+.applications .app-limit { color: var(--ink-2); font-style: italic; }
+
+/* Glosario / Lecturas recomendadas: mismo patrón plegable que
+   details.abstract-original. */
+details.fold { margin-top: var(--space-4); max-width: var(--measure); }
+details.fold summary { cursor: pointer; color: var(--accent); font-size: var(--fs-1); }
+details.fold dl, details.fold .readings { margin-top: var(--space-3); }
+details.fold dt { color: var(--ink-2); margin-top: var(--space-3); font-size: var(--fs-0); }
+details.fold dt:first-child { margin-top: 0; }
+details.fold dd { margin: 0; }
+
+.readings { list-style: none; padding: 0; margin: 0; }
+.reading-item { margin-top: var(--space-4); overflow-wrap: anywhere; }
+.reading-item:first-child { margin-top: 0; }
+.reading-item .reading-why { margin-top: var(--space-1); color: var(--ink-2); font-size: var(--fs-0); }
+
+.provenance-line { margin-top: var(--space-3); font-size: var(--fs-0); color: var(--ink-2); }
+
+/* ---------- Nota completa (solo empírico): capa a ancho completo ---------- */
+.full-note-wrap {
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-6);
+}
+.full-note-wrap h2 { font-size: var(--fs-4); }
+details.full-note { margin-top: var(--space-4); }
+details.full-note summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: var(--fs-2);
+  font-weight: 600;
+}
+.full-note-index { margin-top: var(--space-5); max-width: var(--measure); }
+.full-note-index li { margin-top: var(--space-1); }
+.full-note-section {
+  margin-top: var(--space-7);
+  max-width: var(--measure);
+  scroll-margin-top: var(--space-5);
+}
+.full-note-section h3 { font-size: var(--fs-3); }
+.full-note-section dl,
+.full-note-section ul,
+.full-note-section ol,
+.full-note-section p { margin-top: var(--space-3); }
+.full-note-section dt {
+  margin-top: var(--space-3);
+  color: var(--ink-2);
+  font-size: var(--fs-0);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.full-note-section dt:first-child { margin-top: 0; }
+.full-note-section dd { margin: 0; }
+.full-note-back { display: inline-block; margin-top: var(--space-4); font-size: var(--fs-0); }
+.full-note-note { margin-top: var(--space-5); color: var(--ink-2); font-size: var(--fs-0); font-style: italic; }
 
 .ficha {
   border-top: 1px solid var(--line);
@@ -602,10 +935,14 @@ h1 + .section-block { margin-top: var(--space-5); }
        verificación. */
     margin-top: var(--space-7);
   }
+  /* aside.ficha va primero en el DOM (capa "Paper" antes que "Nota resumen"
+     en móvil y lectores de pantalla); en este ancho se manda de vuelta a la
+     columna derecha explícitamente, sin depender del orden de los hijos. */
+  .two-col.has-sidebar > .ficha { grid-column: 2; grid-row: 1; }
+  .two-col.has-sidebar > .detail-main { grid-column: 1; grid-row: 1; }
   /* El gap ya lo da el margin-top del grid de arriba; sin anularlo aquí, la
      columna principal (que además tiene el margin-top propio de
      .detail-sections) quedaría con el doble de espacio que la ficha. */
   .two-col.has-sidebar > .detail-main > .detail-sections { margin-top: 0; }
   .ficha { border-top: none; padding-top: 0; border-left: 1px solid var(--line); padding-left: var(--space-6); }
-  .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 }

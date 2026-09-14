@@ -1,6 +1,8 @@
 """Crea el .md de un resumen curado a partir de un identificador de Europe PMC.
 
-Ver 3.A A6 del plan de implementación y las enmiendas 2, 4, 16, 17, 26.
+Ver 3.A A6 del plan de implementación y las enmiendas 2, 4, 16, 17, 26, y el
+contrato "tipología de resúmenes v2" (--type, plantillas empírico/conceptual,
+OA v2 con OpenAlex).
 """
 
 from __future__ import annotations
@@ -17,8 +19,16 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common
 import epmc_client
 
-BODY_TEMPLATE = """## En una frase
+# Todas las secciones del tipo, opcionales incluidas, en [[PENDIENTE]]. Los
+# marcadores narrativos (los que --summarize puede rellenar) quedan como una
+# única línea "[[PENDIENTE]]" bajo su encabezado para poder sustituirlos con
+# un simple str.replace (_apply_ai_sections); el resto lleva "- [[PENDIENTE]]"
+# como pista visual de que se espera una lista (nunca los toca la IA).
+BODY_TEMPLATE_EMPIRICO = """## En una frase
 [[PENDIENTE]]
+
+## Ficha rápida
+- [[PENDIENTE]]
 
 ## Pregunta
 [[PENDIENTE]]
@@ -27,14 +37,123 @@ BODY_TEMPLATE = """## En una frase
 [[PENDIENTE]]
 
 ## Hallazgos clave
-- [[PENDIENTE]]
+[[PENDIENTE]]
 
 ## Limitaciones
+[[PENDIENTE]]
+
+## El principio
 - [[PENDIENTE]]
 
 ## Por qué importa para la clínica
 [[PENDIENTE]]
+
+## Glosario
+- [[PENDIENTE]]
+
+## Lecturas recomendadas
+- [[PENDIENTE]]
+
+## Nota del curador
+[[PENDIENTE]]
+
+## Nota completa
+
+### Información del estudio
+- [[PENDIENTE]]
+
+### Introducción en tres frases
+- [[PENDIENTE]]
+
+### Pregunta de investigación
+- [[PENDIENTE]]
+
+### Método
+[[PENDIENTE]]
+
+### Diseño
+- [[PENDIENTE]]
+
+### Unidad de análisis
+[[PENDIENTE]]
+
+### Muestra
+[[PENDIENTE]]
+
+### Muestreo
+[[PENDIENTE]]
+
+### Procedimientos
+- [[PENDIENTE]]
+
+### Variables dependientes
+- [[PENDIENTE]]
+
+### Variables independientes
+- [[PENDIENTE]]
+
+### Análisis de datos
+- [[PENDIENTE]]
+
+### Hallazgos principales
+[[PENDIENTE]]
+
+### Datos por hallazgo
+- [[PENDIENTE]]
+
+### Discusión
+- [[PENDIENTE]]
+
+### Limitaciones según los autores
+- [[PENDIENTE]]
+
+### Investigación futura
+- [[PENDIENTE]]
 """
+
+BODY_TEMPLATE_CONCEPTUAL = """## En una frase
+[[PENDIENTE]]
+
+## Ficha rápida
+- [[PENDIENTE]]
+
+## Pregunta
+[[PENDIENTE]]
+
+## El argumento
+[[PENDIENTE]]
+
+## Ideas clave
+[[PENDIENTE]]
+
+## Limitaciones
+[[PENDIENTE]]
+
+## El principio
+- [[PENDIENTE]]
+
+## Por qué importa para la clínica
+[[PENDIENTE]]
+
+## Glosario
+- [[PENDIENTE]]
+
+## Lecturas recomendadas
+- [[PENDIENTE]]
+
+## Nota del curador
+[[PENDIENTE]]
+"""
+
+BODY_TEMPLATE_BY_TYPE = {"empirico": BODY_TEMPLATE_EMPIRICO, "conceptual": BODY_TEMPLATE_CONCEPTUAL}
+
+# Secciones narrativas que --summarize puede rellenar con IA, por tipo. Nunca
+# incluye ficha_rapida, principio, glosario, lecturas ni nota_completa: "La
+# IA de add_paper nunca inventa lecturas ni redacta el principio".
+NARRATIVE_IDS_BY_TYPE = {
+    "empirico": ["en_una_frase", "pregunta", "metodos", "hallazgos", "limitaciones", "clinica"],
+    "conceptual": ["en_una_frase", "pregunta", "argumento", "ideas", "limitaciones", "clinica"],
+}
 
 
 def _log(msg):
@@ -74,9 +193,11 @@ _FRONTMATTER_KEY_ORDER = [
     "status",
     "example",
     "ai_draft",
+    "adapted_with_ai",
     "author",
     "tags",
     "study_design",
+    "summary_type",
     "sample_size",
     "paper_title",
     "paper_authors",
@@ -93,6 +214,7 @@ _FRONTMATTER_KEY_ORDER = [
     "paper_pub_types",
     "paper_preprint",
     "paper_oa_verified",
+    "paper_oa_source",
     "paper_oa_checked",
     "updated",
 ]
@@ -115,8 +237,9 @@ def _reject_not_oa(rec, identifier):
     )
     _log(
         f"Rechazado: Europe PMC no lo marca como open access (isOpenAccess="
-        f"{rec.get('isOpenAccess')}). 'Free' o 'gratis para leer' no es open access con "
-        f"licencia. Este sitio solo publica resúmenes de artículos OA verificados.\n"
+        f"{rec.get('isOpenAccess')}), y no se pudo confirmar por la ruta B (OpenAlex). 'Free' o "
+        f"'gratis para leer' no es open access con licencia. Este sitio solo publica resúmenes de "
+        f"artículos OA verificados.\n"
         f"título: {rec.get('title')}\n"
         f"source: {rec.get('source')}\n"
         f"license: {rec.get('license')}\n"
@@ -124,19 +247,42 @@ def _reject_not_oa(rec, identifier):
     )
 
 
-def _ai_draft_sections(rec, model, api_key, post_fn=None, sleep_fn=None):
-    """Genera un borrador de las 6 secciones vía IA. Nunca se ejecuta sin API key."""
+def _apply_ai_sections(template, ai_sections):
+    """Sustituye, para cada sección narrativa que la IA devolvió, el
+    '[[PENDIENTE]]' bajo su encabezado por el texto generado. Las secciones
+    no devueltas (o no narrativas) quedan intactas."""
+    body = template
+    for section_id, text in ai_sections.items():
+        heading = common.SECTION_HEADING_LABEL.get(section_id)
+        if not heading:
+            continue
+        old = f"## {heading}\n[[PENDIENTE]]"
+        new = f"## {heading}\n{text}"
+        if old in body:
+            body = body.replace(old, new, 1)
+    return body
+
+
+def _ai_draft_sections(rec, model, api_key, summary_type, post_fn=None, sleep_fn=None):
+    """Genera un borrador de las secciones narrativas (según `summary_type`)
+    vía IA. Nunca se ejecuta sin API key. Devuelve {section_id: texto} o None
+    si falla o la respuesta no trae todas las secciones esperadas."""
     import summarize_ai
 
     title = common.strip_html(rec.get("title") or "")
     abstract = common.parse_abstract(rec.get("abstractText"))
     abstract_text = abstract["text"] if abstract else ""
+    narrative_ids = NARRATIVE_IDS_BY_TYPE[summary_type]
+    headings = [common.SECTION_HEADING_LABEL[i] for i in narrative_ids]
     prompt = (
-        "Redacta un borrador en español latinoamericano de estas 6 secciones, cada una "
-        "empezando exactamente con '## <encabezado>' en su propia línea, en este orden: "
-        "En una frase, Pregunta, Métodos, Hallazgos clave, Limitaciones, "
-        "Por qué importa para la clínica. Usa solo la información del resumen recibido, "
-        "sin inventar cifras ni conclusiones.\n\n"
+        "Redacta un borrador en español latinoamericano de estas secciones, cada una empezando "
+        "exactamente con '## <encabezado>' en su propia línea, en este orden: "
+        + ", ".join(headings)
+        + ". En las secciones de lista ('Hallazgos clave'/'Ideas clave' y 'Limitaciones') usa líneas "
+        "'- item'; en 'Limitaciones' cada ítem debe empezar con una categoría y ': ' (Diseño, Muestra, "
+        "Medición, Análisis, Generalización, Confusión, Conflicto de interés, Alcance u Otra). Usa solo "
+        "la información del resumen recibido, sin inventar cifras ni conclusiones. No redactes 'El "
+        "principio' ni 'Lecturas recomendadas': no los pidas ni los incluyas.\n\n"
         f"Título: {title}\n\nResumen original (inglés):\n{abstract_text}"
     )
     headers = {
@@ -163,18 +309,12 @@ def _ai_draft_sections(rec, model, api_key, post_fn=None, sleep_fn=None):
         heading = parts[i].strip()
         body_text = parts[i + 1].strip()
         section_id = common.HEADING_TO_ID.get(heading)
-        if section_id:
+        if section_id in narrative_ids:
             sections[section_id] = body_text
         i += 2
-    if len(sections) < len(common.REQUIRED_SECTION_IDS):
+    if len(sections) < len(narrative_ids):
         return None
-    out_lines = []
-    for section_id in common.REQUIRED_SECTION_IDS:
-        heading = dict(common.SECTION_HEADINGS)[section_id]
-        out_lines.append(f"## {heading}")
-        out_lines.append(sections[section_id])
-        out_lines.append("")
-    return "\n".join(out_lines)
+    return sections
 
 
 def build_arg_parser():
@@ -184,6 +324,10 @@ def build_arg_parser():
     p.add_argument("--title", default=None)
     p.add_argument("--tags", default=None)
     p.add_argument("--design", default=None)
+    p.add_argument(
+        "--type", dest="type", default=None, choices=sorted(common.SUMMARY_TYPES),
+        help="summary_type; por defecto se sugiere a partir de --design/study_design detectado",
+    )
     p.add_argument("--sample-size", type=int, default=None)
     p.add_argument("--date", default=None)
     p.add_argument("--out-dir", default="content/summaries")
@@ -215,17 +359,43 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
         _log(f"No encontrado en Europe PMC: {args.identifier}")
         return 2
 
-    if rec.get("isOpenAccess") != "Y":
-        _reject_not_oa(rec, args.identifier)
-        return 2
-
     license_raw = (rec.get("license") or "").strip().lower() or None
-    if not common.license_allowed(license_raw):
+    paper_oa_source = "europepmc"
+    route_a_ok = rec.get("isOpenAccess") == "Y" and common.license_allowed(license_raw)
+    if not route_a_ok:
+        if not common.license_allowed(license_raw):
+            # Sin licencia CC en Europe PMC: rechazo directo, sin consultar
+            # OpenAlex (la licencia es el gate que nunca se salta).
+            _log(
+                f"Rechazado: Europe PMC no declara licencia abierta para {args.identifier} "
+                f"(license={rec.get('license')!r})."
+            )
+            return 2
+        doi_for_oa = rec.get("doi")
+        if not doi_for_oa:
+            _reject_not_oa(rec, args.identifier)
+            return 2
+        try:
+            work = epmc_client.openalex_lookup(doi_for_oa, fetch_fn=fetch_fn, sleep_fn=sleep_fn)
+        except epmc_client.EpmcError as e:
+            _log(f"fallo de red/API consultando OpenAlex (ruta B de OA v2): {e.msg}")
+            return 1
+        if work is None:
+            _reject_not_oa(rec, args.identifier)
+            return 2
+        ok, license_norm, reason = common.openalex_oa_verdict(work)
+        if not ok or license_norm != license_raw:
+            _log(
+                f"Rechazado: Europe PMC no marca isOpenAccess=Y para {args.identifier} y OpenAlex no "
+                f"confirma acceso abierto con licencia CC coincidente ({reason or 'licencia distinta a la declarada'})."
+            )
+            return 2
+        paper_oa_source = "europepmc+openalex"
         _log(
-            f"Rechazado: Europe PMC no declara licencia abierta para {args.identifier} "
-            f"(license={rec.get('license')!r})."
+            "Europe PMC no marca isOpenAccess=Y, pero declara una licencia CC y OpenAlex confirma open "
+            "access con la licencia de la versión publicada; se acepta con "
+            "paper_oa_source: europepmc+openalex"
         )
-        return 2
 
     import json
 
@@ -302,6 +472,13 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
             _log("sin diseño detectado automáticamente; se usa 'cross_sectional'")
             design_id = "cross_sectional"
 
+    suggested_type = common.SUMMARY_TYPE_BY_DESIGN.get(design_id, "empirico")
+    _log(
+        f"summary_type sugerido: {suggested_type} (por study_design={design_id}); "
+        "cámbialo con --type o en el frontmatter"
+    )
+    summary_type = args.type or suggested_type
+
     if args.sample_size is not None and args.sample_size <= 0:
         _log(f"--sample-size debe ser > 0 (recibido: {args.sample_size})")
         return 2
@@ -328,9 +505,11 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
         "status": "draft",
         "example": False,
         "ai_draft": bool(args.summarize),
+        "adapted_with_ai": False,
         "author": "Red de Investigación",
         "tags": tags,
         "study_design": design_id,
+        "summary_type": summary_type,
         "sample_size": args.sample_size,
         "paper_title": paper_title,
         "paper_authors": rec.get("authorString"),
@@ -347,20 +526,21 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
         "paper_pub_types": pub_types,
         "paper_preprint": is_preprint,
         "paper_oa_verified": True,
+        "paper_oa_source": paper_oa_source,
         "paper_oa_checked": str(today_fn()),
         "updated": None,
     }
 
-    body = BODY_TEMPLATE
+    body = BODY_TEMPLATE_BY_TYPE[summary_type]
     if args.summarize:
         model = args.model or os.environ.get("ANTHROPIC_MODEL") or "claude-haiku-4-5"
         try:
-            draft = _ai_draft_sections(rec, model, api_key, post_fn=post_fn, sleep_fn=sleep_fn)
+            ai_sections = _ai_draft_sections(rec, model, api_key, summary_type, post_fn=post_fn, sleep_fn=sleep_fn)
         except Exception as e:  # noqa: BLE001 - cualquier fallo cae a la plantilla, nunca aborta
             _log(f"fallo generando el borrador IA ({e}); se usa la plantilla con [[PENDIENTE]]")
-            draft = None
-        if draft:
-            body = draft
+            ai_sections = None
+        if ai_sections:
+            body = _apply_ai_sections(body, ai_sections)
         else:
             _log("no se pudo generar el borrador IA; se usa la plantilla con [[PENDIENTE]]")
 
@@ -373,7 +553,7 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
     # (hallazgo de verificación).
     try:
         fm_check, body_check = common.parse_frontmatter(content, out_path)
-        common.parse_body(body_check, fm_check["status"], out_path)
+        common.parse_body(body_check, fm_check["status"], out_path, fm_check["summary_type"])
     except common.SummaryFormatError as e:
         _log(f"el .md generado no pasa su propia validación: {e}")
         return 2

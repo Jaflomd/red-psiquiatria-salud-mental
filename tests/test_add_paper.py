@@ -49,6 +49,7 @@ class AddPaperTestCase(unittest.TestCase):
             title=None,
             tags=None,
             design=None,
+            type=None,
             sample_size=None,
             date=None,
             out_dir=self.out_dir,

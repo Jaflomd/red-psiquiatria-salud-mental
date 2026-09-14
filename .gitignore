@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 .DS_Store
 *.tmp
+
+# Resúmenes originales (fuente de conversión, no se publican)
+content/_fuentes/

@@ -7,6 +7,7 @@ ai_draft: false
 author: "Red de Investigación"
 tags: ["depression"]
 study_design: "cross_sectional"
+summary_type: "empirico"
 paper_title: "A study that is not open access."
 paper_authors: "Doe J, Smith A."
 paper_journal: "Some Journal"
@@ -33,7 +34,7 @@ Texto de prueba.
 - Texto de prueba.
 
 ## Limitaciones
-- Texto de prueba.
+- Otra: texto de prueba.
 
 ## Por qué importa para la clínica
 Texto de prueba.

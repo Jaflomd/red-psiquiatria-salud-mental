@@ -264,6 +264,37 @@ def lookup(identifier, fetch_fn=None, sleep_fn=None):
     return results[0]
 
 
+OPENALEX_BASE_URL = "https://api.openalex.org/works/doi:"
+CROSSREF_BASE_URL = "https://api.crossref.org/works/"
+
+
+def openalex_lookup(doi, fetch_fn=None, sleep_fn=None, timeout=30):
+    """GET https://api.openalex.org/works/doi:<doi> (sin email). Devuelve el
+    dict del 'work', o None si OpenAlex responde 404 (no está indexado) — un
+    404 NO es un fallo de red (enmienda OA v2: "no está en OpenAlex", no
+    exit 1). Cualquier otro EpmcError (5xx agotados, 429, etc.) se propaga."""
+    url = OPENALEX_BASE_URL + urllib.parse.quote(doi, safe="/:;()._-")
+    try:
+        return http_get_json(url, timeout=timeout, fetch_fn=fetch_fn, sleep_fn=sleep_fn)
+    except EpmcError as e:
+        if e.kind == "api" and "404" in e.msg:
+            return None
+        raise
+
+
+def crossref_lookup(doi, fetch_fn=None, sleep_fn=None, timeout=30):
+    """GET https://api.crossref.org/works/<doi>. Devuelve el dict interno
+    `message`, o None si Crossref no conoce el DOI (404)."""
+    url = CROSSREF_BASE_URL + urllib.parse.quote(doi, safe="/:;()._-")
+    try:
+        data = http_get_json(url, timeout=timeout, fetch_fn=fetch_fn, sleep_fn=sleep_fn)
+    except EpmcError as e:
+        if e.kind == "api" and "404" in e.msg:
+            return None
+        raise
+    return data.get("message")
+
+
 def build_daily_query(config, day):
     from common import validate_date  # import local para evitar ciclo en tests
 

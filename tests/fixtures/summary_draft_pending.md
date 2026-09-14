@@ -7,6 +7,7 @@ ai_draft: false
 author: "Red de Investigación"
 tags: ["depression"]
 study_design: "cross_sectional"
+summary_type: "empirico"
 paper_title: "A cross-sectional study of something interesting."
 paper_authors: "Doe J, Smith A."
 paper_journal: "Journal of Affective Disorders"

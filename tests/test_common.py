@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 import unittest
@@ -5,6 +6,8 @@ import unittest
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 import common as c
+
+FIXTURES_DIR = os.path.join(os.path.dirname(__file__), "fixtures")
 
 
 class TestStripHtml(unittest.TestCase):
@@ -233,7 +236,7 @@ class TestFrontmatter(unittest.TestCase):
             c.parse_frontmatter(text, "x.md")
 
     def test_list_with_quoted_commas(self):
-        text = '---\ntitle: "Un titulo de prueba suficientemente largo"\ndate: "2026-09-14"\nstatus: "draft"\ntags: [depression]\nstudy_design: "cross_sectional"\npaper_title: "T"\npaper_authors: "A"\npaper_journal: "J"\npaper_year: 2026\npaper_source: "MED"\npaper_epmc_id: "1"\npaper_doi: "10.1/x"\npaper_license: "cc by"\npaper_oa_verified: true\npaper_oa_checked: "2026-09-14"\npaper_pub_types: ["Research Support, Non-U.S. Gov\'t", "Journal Article"]\n---\n\n## En una frase\nTexto.\n\n## Pregunta\nTexto.\n\n## Métodos\nTexto.\n\n## Hallazgos clave\n- Texto.\n\n## Limitaciones\n- Texto.\n\n## Por qué importa para la clínica\nTexto.\n'
+        text = '---\ntitle: "Un titulo de prueba suficientemente largo"\ndate: "2026-09-14"\nstatus: "draft"\ntags: [depression]\nstudy_design: "cross_sectional"\nsummary_type: "empirico"\npaper_title: "T"\npaper_authors: "A"\npaper_journal: "J"\npaper_year: 2026\npaper_source: "MED"\npaper_epmc_id: "1"\npaper_doi: "10.1/x"\npaper_license: "cc by"\npaper_oa_verified: true\npaper_oa_checked: "2026-09-14"\npaper_pub_types: ["Research Support, Non-U.S. Gov\'t", "Journal Article"]\n---\n\n## En una frase\nTexto.\n\n## Pregunta\nTexto.\n\n## Métodos\nTexto.\n\n## Hallazgos clave\n- Texto.\n\n## Limitaciones\n- Otra: texto.\n\n## Por qué importa para la clínica\nTexto.\n'
         fm, body = c.parse_frontmatter(text, "x.md")
         self.assertEqual(fm["paper_pub_types"][0], "Research Support, Non-U.S. Gov't")
 
@@ -272,7 +275,7 @@ class TestParseBody(unittest.TestCase):
         with open(path, encoding="utf-8") as f:
             text = f.read()
         fm, body = c.parse_frontmatter(text, "x.md")
-        sections = c.parse_body(body, fm["status"], "x.md")
+        sections = c.parse_body(body, fm["status"], "x.md", fm["summary_type"])
         by_id = {s["id"]: s for s in sections}
         self.assertTrue(by_id["en_una_frase"]["pending"])
         self.assertEqual(by_id["en_una_frase"]["blocks"], [])
@@ -283,12 +286,12 @@ class TestParseBody(unittest.TestCase):
         with open(path, encoding="utf-8") as f:
             text = f.read()
         with self.assertRaises(c.SummaryFormatError):
-            c.parse_body(text.split("---\n", 2)[2], "published", "x.md")
+            c.parse_body(text.split("---\n", 2)[2], "published", "x.md", "empirico")
 
     def test_missing_heading_errors(self):
         body = "\n## En una frase\nTexto.\n\n## Pregunta\nTexto.\n"
         with self.assertRaises(c.SummaryFormatError):
-            c.parse_body(body, "draft", "x.md")
+            c.parse_body(body, "draft", "x.md", "empirico")
 
     def test_unknown_heading_errors(self):
         body = (
@@ -296,7 +299,7 @@ class TestParseBody(unittest.TestCase):
             "## Limitaciones\n- T.\n\n## Por qué importa para la clínica\nT.\n\n## Encabezado inventado\nT.\n"
         )
         with self.assertRaises(c.SummaryFormatError):
-            c.parse_body(body, "draft", "x.md")
+            c.parse_body(body, "draft", "x.md", "empirico")
 
     def test_html_in_body_raises_summary_format_error_not_value_error(self):
         # Antes, un <i> u otra etiqueta HTML en el cuerpo levantaba ValueError
@@ -307,7 +310,7 @@ class TestParseBody(unittest.TestCase):
             "## Por qué importa para la clínica\nT.\n"
         )
         with self.assertRaises(c.SummaryFormatError) as ctx:
-            c.parse_body(body, "draft", "x.md")
+            c.parse_body(body, "draft", "x.md", "empirico")
         self.assertEqual(ctx.exception.path, "x.md")
         self.assertGreater(ctx.exception.line, 1)
 
@@ -317,7 +320,7 @@ class TestParseBody(unittest.TestCase):
             "## Limitaciones\n- T.\n\n## Por qué importa para la clínica\nT.\n"
         )
         with self.assertRaises(c.SummaryFormatError):
-            c.parse_body(body, "draft", "x.md")
+            c.parse_body(body, "draft", "x.md", "empirico")
 
 
 class TestInlineToPlain(unittest.TestCase):
@@ -469,6 +472,285 @@ class TestValidators(unittest.TestCase):
         self.assertEqual(c.license_label("cc by-nc"), "CC BY-NC")
         self.assertEqual(c.license_label(None), "Licencia no declarada")
         self.assertEqual(c.license_label("weird license"), "WEIRD LICENSE")
+
+
+class TestParseKvBlock(unittest.TestCase):
+    def test_valid(self):
+        items = c.parse_kv_block(["- Población: 100 adultos", "- Comparador: No aplica"], "x.md", 1)
+        self.assertEqual(
+            items,
+            [{"key": "Población", "value": "100 adultos"}, {"key": "Comparador", "value": "No aplica"}],
+        )
+
+    def test_missing_colon_errors(self):
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_kv_block(["- solo texto sin separador"], "x.md", 1)
+
+    def test_continuation_line(self):
+        items = c.parse_kv_block(["- Clave: valor largo", "  que continúa en la siguiente línea"], "x.md", 1)
+        self.assertEqual(items[0]["value"], "valor largo que continúa en la siguiente línea")
+
+
+class TestOlAndH3Restrictions(unittest.TestCase):
+    def test_ol_forbidden_outside_argumento(self):
+        body = (
+            "\n## En una frase\nT.\n\n## Pregunta\nT.\n\n## Métodos\n1. paso uno\n2. paso dos\n\n"
+            "## Hallazgos clave\n- T.\n- T2.\n\n## Limitaciones\n- Otra: T.\n\n"
+            "## Por qué importa para la clínica\nT.\n"
+        )
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_body(body, "draft", "x.md", "empirico")
+
+    def test_h3_forbidden_outside_nota_completa(self):
+        body = (
+            "\n## En una frase\nT.\n\n## Pregunta\nT.\n\n## Métodos\nT.\n\n"
+            "## Hallazgos clave\n- T.\n- T2.\n\n## Limitaciones\n- Otra: T.\n\n"
+            "## Por qué importa para la clínica\nT.\n\n### Encabezado suelto\nT.\n"
+        )
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_body(body, "draft", "x.md", "empirico")
+
+
+class TestArgumentoAllowsOl(unittest.TestCase):
+    def test_conceptual_argumento_with_ol(self):
+        body = (
+            "\n## En una frase\nT.\n\n## Pregunta\nT.\n\n"
+            "## El argumento\nT.\n\n1. paso uno\n2. paso dos\n\n"
+            "## Ideas clave\n- T.\n- T2.\n\n## Limitaciones\n- Otra: T.\n\n"
+            "## Por qué importa para la clínica\nT.\n"
+        )
+        sections = c.parse_body(body, "draft", "x.md", "conceptual")
+        by_id = {s["id"]: s for s in sections}
+        self.assertEqual(by_id["argumento"]["blocks"][-1]["type"], "ol")
+        self.assertEqual(len(by_id["argumento"]["blocks"][-1]["items"]), 2)
+
+
+class TestFullNoteParsing(unittest.TestCase):
+    def test_full_note_from_fixture_parses(self):
+        path = os.path.join(FIXTURES_DIR, "summary_empirico_full_note.md")
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+        fm, body = c.parse_frontmatter(text, path)
+        sections = c.parse_body(body, fm["status"], path, fm["summary_type"])
+        by_id = {s["id"]: s for s in sections}
+        nc = by_id["nota_completa"]
+        self.assertFalse(nc["pending"])
+        ids = [s["id"] for s in nc["full_note_sections"]]
+        self.assertEqual(ids, c.FULL_NOTE_ORDER)
+
+    def test_conceptual_forbids_nota_completa(self):
+        body = (
+            "\n## En una frase\nT.\n\n## Pregunta\nT.\n\n## El argumento\nT.\n\n"
+            "## Ideas clave\n- T.\n- T2.\n\n## Limitaciones\n- Otra: T.\n\n"
+            "## Por qué importa para la clínica\nT.\n\n## Nota completa\n[[PENDIENTE]]\n"
+        )
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_body(body, "draft", "x.md", "conceptual")
+
+    def test_nc_datos_item_count_must_match_nc_hallazgos_markers(self):
+        path = os.path.join(FIXTURES_DIR, "summary_empirico_full_note.md")
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+        text = text.replace(
+            "3. El análisis fue exploratorio: no se reportan índices de ajuste confirmatorio "
+            "(por ejemplo, CFI o RMSEA) para la estructura resultante.\n",
+            "",
+        )
+        fm, body = c.parse_frontmatter(text, "x.md")
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_body(body, fm["status"], "x.md", fm["summary_type"])
+
+
+class TestValidatePrinciple(unittest.TestCase):
+    def _kv(self, **overrides):
+        base = {
+            "Enunciado": "La terapia mejora el funcionamiento diario de las personas con el trastorno.",
+            "Fundamento": "El diseño y la muestra grande sostienen la inferencia.",
+            "Evidencia": "mejora de 12.4 puntos (IC95% 8.1-16.7) frente al grupo control",
+            "Fuerza": "moderada",
+            "Transferencia": "clínica, investigación",
+            "Límite": "no aplica a formas graves ni a pacientes hospitalizados.",
+            "Procedencia": "autores",
+        }
+        base.update(overrides)
+        return [{"key": k, "value": v} for k, v in base.items()]
+
+    def test_valid_empirico(self):
+        corpus = "Se observó una mejora de 12.4 puntos (IC95% 8.1-16.7) frente al grupo control."
+        out = c.validate_principle(self._kv(), "empirico", "rct", corpus)
+        self.assertEqual(out["strength"], "moderada")
+        self.assertEqual(out["transfer"], ["clínica", "investigación"])
+
+    def test_wrong_key_order_errors(self):
+        kv = self._kv()
+        kv[0], kv[1] = kv[1], kv[0]
+        with self.assertRaises(ValueError):
+            c.validate_principle(kv, "empirico", "rct", "cualquier texto")
+
+    def test_forbidden_word_errors(self):
+        with self.assertRaises(ValueError):
+            c.validate_principle(
+                self._kv(Enunciado="Esta terapia siempre mejora el funcionamiento diario."),
+                "empirico", "rct", "x",
+            )
+
+    def test_digit_in_statement_errors(self):
+        with self.assertRaises(ValueError):
+            c.validate_principle(
+                self._kv(Enunciado="La terapia mejora en un 30% el funcionamiento diario."),
+                "empirico", "rct", "x",
+            )
+
+    def test_strength_over_cap_errors(self):
+        with self.assertRaises(ValueError):
+            c.validate_principle(
+                self._kv(Fuerza="alta"), "empirico", "cohort",
+                "mejora de 12.4 puntos (IC95% 8.1-16.7) frente al grupo control",
+            )
+
+    def test_conceptual_requires_argumental(self):
+        with self.assertRaises(ValueError):
+            c.validate_principle(
+                self._kv(Fuerza="moderada", Evidencia="Argumento sin cifras."),
+                "conceptual", "narrative_review", "x",
+            )
+
+    def test_conceptual_argumental_ok(self):
+        out = c.validate_principle(
+            self._kv(Fuerza="argumental", Evidencia="Argumento sin cifras."),
+            "conceptual", "narrative_review", "x",
+        )
+        self.assertEqual(out["strength"], "argumental")
+
+    def test_causal_word_on_observational_design_errors(self):
+        kv = self._kv(Enunciado="El tratamiento causa una mejora del funcionamiento diario.")
+        with self.assertRaises(ValueError):
+            c.validate_principle(kv, "empirico", "cohort", "x")
+
+    def test_evidence_number_absent_from_corpus_errors(self):
+        with self.assertRaises(ValueError):
+            c.validate_principle(self._kv(), "empirico", "rct", "no hay ninguna cifra parecida aquí")
+
+
+class TestFindLongQuotes(unittest.TestCase):
+    def test_short_quote_not_flagged(self):
+        self.assertEqual(c.find_long_quotes('El autor dice "esto es corto".'), [])
+
+    def test_long_quote_flagged(self):
+        text = 'El autor escribe: "' + " ".join(["palabra"] * 15) + '".'
+        violations = c.find_long_quotes(text)
+        self.assertEqual(len(violations), 1)
+        self.assertEqual(violations[0][0], 15)
+
+    def test_typographic_quotes(self):
+        text = "Se afirma: “" + " ".join(["palabra"] * 16) + "”."
+        violations = c.find_long_quotes(text)
+        self.assertEqual(len(violations), 1)
+
+
+class TestValidateLimitationsFn(unittest.TestCase):
+    def test_valid(self):
+        c.validate_limitations(["Muestra: pequeña.", "Diseño: transversal."], c.LIMITATION_CATEGORIES)
+
+    def test_missing_colon_errors(self):
+        with self.assertRaises(ValueError):
+            c.validate_limitations(["sin categoría"], c.LIMITATION_CATEGORIES)
+
+    def test_unknown_category_errors(self):
+        with self.assertRaises(ValueError):
+            c.validate_limitations(["Marketing: no es una categoría válida."], c.LIMITATION_CATEGORIES)
+
+    def test_full_note_categories_are_different(self):
+        c.validate_limitations(["Selección: sesgo de autoselección."], c.FULL_NOTE_LIMITATION_CATEGORIES)
+        with self.assertRaises(ValueError):
+            c.validate_limitations(["Muestra: no aplica a nota completa."], c.FULL_NOTE_LIMITATION_CATEGORIES)
+
+
+class TestParseReadingsItemFn(unittest.TestCase):
+    def test_valid_doi(self):
+        item = c.parse_readings_item(
+            "Kotov R (2017). HiTOP. J Abnorm Psychol · doi:10.1037/abn0000258 · Paper fundacional."
+        )
+        self.assertEqual(item["doi"], "10.1037/abn0000258")
+        self.assertIsNone(item["pmid"])
+
+    def test_valid_pmid(self):
+        item = c.parse_readings_item("Autor A (2020). Título. Revista · PMID:12345678 · Por qué leerla.")
+        self.assertEqual(item["pmid"], "12345678")
+
+    def test_wrong_separator_count_errors(self):
+        with self.assertRaises(ValueError):
+            c.parse_readings_item("Cita sin separador correcto · doi:10.1037/abn0000258")
+
+    def test_bad_identifier_prefix_errors(self):
+        with self.assertRaises(ValueError):
+            c.parse_readings_item("Cita · issn:1234-5678 · Por qué.")
+
+    def test_malformed_doi_errors(self):
+        with self.assertRaises(ValueError):
+            c.parse_readings_item("Cita · doi:not-a-doi · Por qué.")
+
+
+class TestOpenAlexHelpers(unittest.TestCase):
+    def test_normalize_license(self):
+        self.assertEqual(c.normalize_openalex_license("cc-by-nc"), "cc by-nc")
+        self.assertEqual(c.normalize_openalex_license("cc-by"), "cc by")
+        self.assertEqual(c.normalize_openalex_license("cc0"), "cc0")
+        self.assertIsNone(c.normalize_openalex_license(None))
+
+    def test_verdict_accepted(self):
+        with open(os.path.join(FIXTURES_DIR, "openalex_work_hybrid_ccby.json"), encoding="utf-8") as f:
+            work = json.load(f)
+        ok, license_norm, reason = c.openalex_oa_verdict(work)
+        self.assertTrue(ok)
+        self.assertEqual(license_norm, "cc by")
+        self.assertIsNone(reason)
+
+    def test_verdict_closed_rejected(self):
+        with open(os.path.join(FIXTURES_DIR, "openalex_work_closed.json"), encoding="utf-8") as f:
+            work = json.load(f)
+        ok, license_norm, reason = c.openalex_oa_verdict(work)
+        self.assertFalse(ok)
+        self.assertIsNotNone(reason)
+
+
+class TestSummaryTypeFrontmatter(unittest.TestCase):
+    def _valid_text(self):
+        path = os.path.join(FIXTURES_DIR, "summary_valid.md")
+        with open(path, encoding="utf-8") as f:
+            return f.read()
+
+    def test_missing_summary_type_errors(self):
+        text = self._valid_text().replace('summary_type: "empirico"\n', "")
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_frontmatter(text, "x.md")
+
+    def test_unknown_summary_type_errors(self):
+        text = self._valid_text().replace('summary_type: "empirico"', 'summary_type: "mixto"')
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_frontmatter(text, "x.md")
+
+    def test_empirico_with_narrative_review_design_errors(self):
+        text = self._valid_text().replace('study_design: "pilot"', 'study_design: "narrative_review"')
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_frontmatter(text, "x.md")
+
+    def test_ai_draft_and_adapted_with_ai_both_true_published_errors(self):
+        text = self._valid_text()
+        text = text.replace('status: "draft"', 'status: "published"')
+        text = text.replace("ai_draft: true", "ai_draft: true\nadapted_with_ai: true")
+        text = text.replace(
+            'author: "Borrador de ejemplo generado con IA"', 'author: "Javier Flores"'
+        )
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_frontmatter(text, "x.md")
+
+    def test_invalid_paper_oa_source_errors(self):
+        text = self._valid_text().replace(
+            'summary_type: "empirico"', 'summary_type: "empirico"\npaper_oa_source: "wikipedia"'
+        )
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_frontmatter(text, "x.md")
 
 
 if __name__ == "__main__":

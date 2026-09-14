@@ -1,0 +1,30 @@
+{
+  "version": "6.9",
+  "hitCount": 1,
+  "resultList": {
+    "result": [
+      {
+        "id": "42080848",
+        "source": "MED",
+        "pmid": "42080848",
+        "doi": "10.1037/abn0001125",
+        "title": "Rebuilding HiTOP from the ground up using individual symptoms.",
+        "authorString": "Forbes MK, Pham T, Roberts M, Johnco CJ.",
+        "journalInfo": {
+          "journal": {
+            "title": "Journal of psychopathology and clinical science",
+            "isoabbreviation": "J Psychopathol Clin Sci"
+          }
+        },
+        "pubYear": "2026",
+        "abstractText": "A cross-sectional study of 14762 adults reconstructing the HiTOP hierarchy from individual symptoms.",
+        "language": "eng",
+        "pubTypeList": {"pubType": ["research-article", "Journal Article"]},
+        "isOpenAccess": "N",
+        "license": "cc by",
+        "firstPublicationDate": "2026-05-04",
+        "fullTextUrlList": {"fullTextUrl": []}
+      }
+    ]
+  }
+}

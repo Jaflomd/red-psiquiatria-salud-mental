@@ -62,6 +62,30 @@
     "cc0": "CC0"
   };
 
+  /* ---------------- Colores de pills (familias fijas; la clase nunca sale del dato) ---------------- */
+  var PILL_FAMILIES = ["gray", "brown", "orange", "yellow", "green", "blue", "purple", "pink", "red", "teal"];
+  var TAG_COLOR = {
+    psychosis: "purple",        depression: "blue",          anxiety: "yellow",
+    symptom_networks: "teal",   suicide: "red",              adhd: "orange",
+    bipolar: "purple",          bpd: "pink",                 alcohol: "brown",
+    substances: "brown",        ptsd: "yellow",              ocd: "yellow",
+    eating: "pink",             child_adolescent: "green",   older_adults: "green",
+    public_mental_health: "gray", peru_latam: "green",       medical_education: "gray",
+    digital: "teal",            psychopharmacology: "orange", psychotherapy: "blue",
+    neuroscience: "purple",     epidemiology: "gray"
+  };
+  var DESIGN_COLOR = {
+    systematic_review_meta: "blue", meta_analysis: "blue", systematic_review: "blue", scoping_review: "blue",
+    rct: "green", nonrandomized_trial: "green", pilot: "green",
+    cohort: "orange", case_control: "orange", cross_sectional: "orange", case_report: "orange",
+    qualitative: "purple", mixed_methods: "purple",
+    protocol: "gray", modelling: "gray", guideline: "gray", narrative_review: "gray"
+  };
+  function pillFamily(map, id) {
+    var f = Object.prototype.hasOwnProperty.call(map, id) ? map[id] : null;
+    return PILL_FAMILIES.indexOf(f) !== -1 ? f : "gray";
+  }
+
   var DOW = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
   var MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
   var MONTHS_ABBR = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
@@ -207,6 +231,24 @@
     if (LICENSE_LABELS[key]) return LICENSE_LABELS[key];
     return String(raw).toUpperCase();
   }
+
+  /* ---------------- Tipología v2: tipo de resumen / principio ---------------- */
+  var SUMMARY_TYPE_LABEL_DEFAULT = { empirico: "Empírico", conceptual: "Conceptual" };
+  function summaryTypeLabel(id, labelsMap) {
+    if (labelsMap && labelsMap.summary_types && Object.prototype.hasOwnProperty.call(labelsMap.summary_types, id)) return labelsMap.summary_types[id];
+    return SUMMARY_TYPE_LABEL_DEFAULT[id] || id;
+  }
+  var STRENGTH_LABEL_DEFAULT = { alta: "Alta", moderada: "Moderada", baja: "Baja", "muy baja": "Muy baja", argumental: "Argumental" };
+  function strengthLabel(id, labelsMap) {
+    if (labelsMap && labelsMap.strengths && Object.prototype.hasOwnProperty.call(labelsMap.strengths, id)) return labelsMap.strengths[id];
+    return STRENGTH_LABEL_DEFAULT[id] || id;
+  }
+  // Familias de pill (mismo vocabulario cerrado que PILL_FAMILIES) para el
+  // nivel de Fuerza del principio: alta > moderada > baja > muy baja, y
+  // argumental (conceptual) en gris neutro, sin implicar un rango numérico.
+  var STRENGTH_COLOR = { alta: "green", moderada: "teal", baja: "yellow", "muy baja": "orange", argumental: "gray" };
+  var PROVENANCE_LABEL = { autores: "según los autores", curador: "lectura del curador" };
+
   function idsInCanonicalOrder(present, orderTable) {
     var out = orderTable.map(function (t) { return t[0]; }).filter(function (id) { return present[id]; });
     Object.keys(present).forEach(function (id) {
@@ -352,7 +394,7 @@
   // heurístico llevaba el calificativo y el diseño nunca (hallazgo de
   // verificación).
   // "draft" no lleva sufijo en esta fila: solo aparece en tarjetas de
-  // resúmenes que ya muestran el badge "Borrador de ejemplo · IA", y la ficha
+  // resúmenes que ya muestran el pill de estado de la tarjeta, y la ficha
   // del detalle conserva el calificativo completo.
   function _confidenceSuffix(confidence) {
     if (confidence === "heuristic") return " (estimado)";
@@ -484,7 +526,12 @@
     if (!links) return null;
     var items = [];
     var fullText = links.fulltext_html || links.europepmc;
-    var a1 = extLinkStrict("Texto completo en Europe PMC", fullText);
+    // fulltext_html apunta a la revista (vía DOI) cuando el paper no tiene
+    // PMCID (regla OA v2, ruta B); el rótulo debe reflejar el destino real
+    // del enlace, no asumir siempre Europe PMC.
+    var fullTextLabel = (typeof fullText === "string" && fullText.indexOf("europepmc.org") !== -1)
+      ? "Texto completo en Europe PMC" : "Texto completo en la revista";
+    var a1 = extLinkStrict(fullTextLabel, fullText);
     var a2 = extLinkStrict("PDF", links.pdf);
     var a3 = extLinkStrict("DOI", links.doi);
     [a1, a2, a3].forEach(function (a) { if (a) items.push(a); });
@@ -531,44 +578,124 @@
   }
 
   function buildBadges(item) {
-    // Antes, un borrador de ejemplo con ai_draft mostraba dos badges ámbar
-    // seguidos ("Borrador de ejemplo" + "Borrador IA · pendiente de
-    // revisión", repitiendo "borrador"), ocupando 2 líneas en móvil antes
-    // del título (hallazgo de verificación). Se unifican en uno solo.
+    // {short: texto visible en pill de galería, full: texto completo (detalle + texto accesible)}
     var badges = [];
+    function add(short, full) { badges.push({ short: short, full: full }); }
     if (item.example && item.status === "draft" && item.ai_draft) {
-      badges.push("Borrador de ejemplo · IA · sin revisión humana");
+      add("Borrador IA · ejemplo", "Borrador de ejemplo · IA · sin revisión humana");
     } else {
-      if (item.example) badges.push("Borrador de ejemplo");
+      if (item.example) add("Ejemplo", "Borrador de ejemplo");
       if (item.status === "draft") {
-        badges.push(item.ai_draft ? "Borrador IA · pendiente de revisión" : "Borrador");
+        if (item.ai_draft) add("Borrador IA", "Borrador IA · pendiente de revisión");
+        else add("Borrador", "Borrador");
       } else if (item.status === "published" && item.ai_draft) {
-        badges.push("Redactado con asistencia de IA y revisado por " + (item.author || ""));
+        add("Asistido por IA", "Redactado con asistencia de IA y revisado por " + (item.author || ""));
+      } else if (item.status === "published" && item.adapted_with_ai) {
+        // Distinto de "Asistido por IA": aquí el texto es del autor humano y
+        // la IA solo lo adaptó al formato del sitio (nunca lo redactó), y son
+        // excluyentes por contrato (ai_draft y adapted_with_ai no pueden ser
+        // ambos true en published).
+        add("Adaptado con IA", "Resumen de " + (item.author || "") + " · adaptado al formato del sitio con asistencia de IA");
       }
     }
     return badges;
   }
 
+  function buildStatusPill(badge, id) {
+    var attrs = { class: "pill pill-ai", title: badge.full };
+    if (id) attrs.id = id;
+    return el("span", attrs, [
+      el("span", { "aria-hidden": "true" }, badge.short),
+      el("span", { class: "visually-hidden" }, badge.full)
+    ]);
+  }
+
   function buildSummaryCard(item, labelsMap) {
-    var badges = buildBadges(item);
-    var card = el("article", { class: "summary-card" });
-    if (badges.length) {
-      var br = el("div", { class: "badges" });
-      badges.forEach(function (b) { br.appendChild(el("span", { class: "badge" }, b)); });
-      card.appendChild(br);
-    }
-    card.appendChild(el("h3", {}, el("a", { href: "#/resumenes/" + item.slug }, item.title)));
-    card.appendChild(el("p", { class: "card-date" }, formatDateLong(item.date)));
-    var dRow = buildDesignRow({
-      isPreprint: item.paper && item.paper.is_preprint,
-      design: item.study_design, sampleSize: item.sample_size, labelsMap: labelsMap
+    var tags = item.tags || [];
+    // aria-labelledby en el article: sin esto, el article no tenía nombre
+    // accesible (hallazgo de verificación).
+    var titleId = "gcard-title-" + item.slug;
+    var card = el("article", { class: "gcard", "aria-labelledby": titleId });
+
+    var body = el("div", { class: "gcard-body" });
+
+    // Fila 1: estado de borrador IA / preprint + fecha. Se construye antes
+    // que el título para poder enlazar el pill de estado al enlace vía
+    // aria-describedby: antes, quien navegaba por Tab o por la lista de
+    // enlaces del lector de pantalla oía solo el título, sin "sin revisión
+    // humana" (hallazgo de verificación).
+    var statusRow = el("div", { class: "gcard-row" });
+    var describedBy = [];
+    buildBadges(item).forEach(function (b, i) {
+      var pid = "gcard-status-" + item.slug + (i ? "-" + i : "");
+      describedBy.push(pid);
+      statusRow.appendChild(buildStatusPill(b, pid));
     });
-    if (dRow) card.appendChild(dRow);
-    var tRow = buildTagsRow(item.tags, labelsMap, false);
-    if (tRow) card.appendChild(tRow);
-    if (item.one_liner) card.appendChild(el("p", { class: "one-liner" }, item.one_liner));
-    var reg = buildRegLine(item.paper);
-    if (reg) card.appendChild(reg);
+    if (item.paper && item.paper.is_preprint) {
+      var preprintId = "gcard-preprint-" + item.slug;
+      describedBy.push(preprintId);
+      statusRow.appendChild(el("span", { class: "pill pill-preprint", id: preprintId }, "Preprint · sin revisión por pares"));
+    }
+    if (item.date) statusRow.appendChild(el("time", { class: "gcard-date", datetime: item.date }, formatDateShort(item.date)));
+
+    var linkAttrs = { class: "gcard-link", href: "#/resumenes/" + item.slug };
+    if (describedBy.length) linkAttrs["aria-describedby"] = describedBy.join(" ");
+    body.appendChild(el("h3", { class: "gcard-title", id: titleId }, el("a", linkAttrs, item.title)));
+    if (statusRow.childNodes.length) body.appendChild(statusRow);
+
+    // Fila 2: etiquetas (multi-select)
+    if (tags.length) {
+      var ul = el("ul", { class: "gcard-row gcard-tags", "aria-label": "Etiquetas" });
+      tags.forEach(function (id) {
+        ul.appendChild(el("li", { class: "pill pill-c-" + pillFamily(TAG_COLOR, id) }, tagLabel(id, labelsMap)));
+      });
+      body.appendChild(ul);
+    }
+
+    // Fila 3: tipo de resumen · diseño (select) · N · licencia
+    var metaRow = el("div", { class: "gcard-row" });
+    metaRow.appendChild(el("span", { class: "pill pill-type" }, [
+      el("span", { class: "visually-hidden" }, "Tipo de resumen: "),
+      summaryTypeLabel(item.summary_type, labelsMap)
+    ]));
+    var dsg = item.study_design;
+    if (dsg && dsg.id) {
+      var dPill = el("span", { class: "pill pill-c-" + pillFamily(DESIGN_COLOR, dsg.id) }, [
+        el("span", { class: "visually-hidden" }, "Diseño: "),
+        designLabel(dsg.id, labelsMap) + _confidenceSuffix(dsg.confidence)
+      ]);
+      if (dsg.confidence === "heuristic") dPill.setAttribute("title", "Detectado automáticamente a partir del resumen; puede ser impreciso");
+      metaRow.appendChild(dPill);
+    }
+    var ss = item.sample_size;
+    if (ss && typeof ss.value === "number") {
+      var nSpan = el("span", { class: "gcard-n" },
+        (ss.confidence === "heuristic" ? "N ≈ " : "N = ") + Number(ss.value).toLocaleString("es-PE") + _confidenceSuffix(ss.confidence));
+      if (ss.confidence === "heuristic") nSpan.setAttribute("title", "Estimado automáticamente a partir del resumen; puede ser impreciso");
+      metaRow.appendChild(nSpan);
+    }
+    var oa = (item.paper && item.paper.open_access) || {};
+    var lic = oa.license_label || (oa.license ? licenseLabel(oa.license) : null);
+    if (lic) metaRow.appendChild(el("span", { class: "pill pill-outline" }, [el("span", { class: "visually-hidden" }, "Licencia: "), lic]));
+    if (metaRow.childNodes.length) body.appendChild(metaRow);
+
+    // Cover: inicio del contenido (one_liner) sobre el tinte de la etiqueta
+    // principal. Va después de .gcard-body en el DOM (order:-1 en CSS lo
+    // sube visualmente): antes el one_liner se leía en voz alta ANTES que
+    // el título de la tarjeta (hallazgo de verificación).
+    var cover = el("div", { class: "gcard-cover" + (tags.length ? " pc-" + pillFamily(TAG_COLOR, tags[0]) : "") });
+    if (item.principle && item.principle.statement) {
+      cover.appendChild(el("p", { class: "gcard-cover-label label-upper" }, "Principio"));
+      cover.appendChild(el("p", { class: "gcard-cover-text" }, item.principle.statement));
+    } else if (item.one_liner) {
+      cover.appendChild(el("p", { class: "gcard-cover-label label-upper" }, "En una frase"));
+      cover.appendChild(el("p", { class: "gcard-cover-text" }, item.one_liner));
+    } else {
+      cover.appendChild(el("p", { class: "gcard-cover-text is-pending" }, "Sección pendiente de redacción."));
+    }
+
+    card.appendChild(body);
+    card.appendChild(cover);
     return card;
   }
 
@@ -582,6 +709,7 @@
       dl.appendChild(el("dt", { class: "label-upper" }, term));
       dl.appendChild(el("dd", {}, valueNode));
     }
+    row("Tipo de resumen", item.summary_type ? summaryTypeLabel(item.summary_type, labelsMap) : null);
     var fichaTitleAttrs = { class: "ficha-en" };
     var fichaTitleLang = paperTitleLangAttr(paper);
     if (fichaTitleLang) fichaTitleAttrs.lang = fichaTitleLang;
@@ -612,7 +740,12 @@
     // sin revisión) eso es exactamente lo que la Enmienda 1 prohíbe sugerir
     // (hallazgo de verificación).
     var provenanceNote;
-    if (item.ai_draft && item.status === "draft") {
+    if (item.adapted_with_ai && item.status === "published" && !item.ai_draft) {
+      // El texto es del autor humano; la IA solo lo adaptó al formato del
+      // sitio. No afirma que el autor revisó esa adaptación (Enmienda de
+      // integridad del contrato v2).
+      provenanceNote = "Resumen de " + item.author + " · adaptado al formato del sitio con asistencia de IA. No reemplaza la lectura del original.";
+    } else if (item.ai_draft && item.status === "draft") {
       provenanceNote = "Borrador redactado con IA a partir del resumen del artículo; pendiente de revisión humana. No reemplaza la lectura del original.";
     } else if (item.ai_draft) {
       provenanceNote = "Redactado con asistencia de IA y revisado por " + (item.author || "el curador") +
@@ -624,27 +757,294 @@
     return aside;
   }
 
-  function buildDetailSections(sections) {
-    var wrap = el("div", { class: "detail-sections" });
-    (sections || []).forEach(function (sec) {
-      var s = el("section", {});
-      s.appendChild(el("h2", {}, sec.heading));
-      var body = el("div", { class: "section-body" });
-      if (sec.pending) {
-        body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
-      } else {
-        (sec.blocks || []).forEach(function (b) {
-          if (b.type === "p") { body.appendChild(el("p", {}, b.text)); }
-          else if (b.type === "ul") {
-            var ul = el("ul", {});
-            (b.items || []).forEach(function (it) { ul.appendChild(el("li", {}, it)); });
-            body.appendChild(ul);
-          }
+  // Bloques planos (p/ul/ol/kv) tal como los define el esquema v2; se usa
+  // tanto en el dispatch genérico de ## como en las subsecciones ### de la
+  // nota completa (mismo vocabulario de bloques en ambos niveles).
+  function appendBlocksGeneric(container, blocks) {
+    (blocks || []).forEach(function (b) {
+      if (b.type === "p") {
+        container.appendChild(el("p", {}, b.text));
+      } else if (b.type === "ul") {
+        var ul = el("ul", {});
+        (b.items || []).forEach(function (it) { ul.appendChild(el("li", {}, it)); });
+        container.appendChild(ul);
+      } else if (b.type === "ol") {
+        var ol = el("ol", {});
+        (b.items || []).forEach(function (it) { ol.appendChild(el("li", {}, it)); });
+        container.appendChild(ol);
+      } else if (b.type === "kv") {
+        var dl = el("dl", { class: "kv-list" });
+        (b.items || []).forEach(function (kvItem) {
+          dl.appendChild(el("dt", {}, kvItem.key));
+          dl.appendChild(el("dd", {}, kvItem.value));
         });
+        container.appendChild(dl);
       }
-      s.appendChild(body);
-      wrap.appendChild(s);
     });
+  }
+
+  function buildSectionShell(heading) {
+    var s = el("section", {});
+    s.appendChild(el("h2", {}, heading));
+    var body = el("div", { class: "section-body" });
+    s.appendChild(body);
+    return { section: s, body: body };
+  }
+
+  function buildGenericSection(sec) {
+    var shell = buildSectionShell(sec.heading);
+    if (sec.pending) shell.body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    else appendBlocksGeneric(shell.body, sec.blocks);
+    return shell.section;
+  }
+
+  // Ficha rápida: dl.kv-grid a partir de item.quick_facts (el accesor
+  // estructurado; sec.blocks trae el mismo contenido como kv plano, pero
+  // aquí conviene el tipado).
+  function buildFichaRapidaSection(sec, item) {
+    var shell = buildSectionShell(sec.heading);
+    var facts = item.quick_facts;
+    if (sec.pending || !facts || !facts.length) {
+      shell.body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    } else {
+      var dl = el("dl", { class: "kv-grid" });
+      facts.forEach(function (f) {
+        dl.appendChild(el("dt", { class: "label-upper" }, f.key));
+        dl.appendChild(el("dd", {}, f.value));
+      });
+      shell.body.appendChild(dl);
+    }
+    return shell.section;
+  }
+
+  // El argumento (conceptual): párrafo(s) + a lo más un ol de pasos, con la
+  // numeración nativa del <ol> (nunca "01/02/03" decorativo).
+  function buildArgumentoSection(sec) {
+    var shell = buildSectionShell(sec.heading);
+    if (sec.pending) {
+      shell.body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    } else {
+      (sec.blocks || []).forEach(function (b) {
+        if (b.type === "p") {
+          shell.body.appendChild(el("p", {}, b.text));
+        } else if (b.type === "ol") {
+          var ol = el("ol", { class: "argument-steps" });
+          (b.items || []).forEach(function (it) { ol.appendChild(el("li", {}, it)); });
+          shell.body.appendChild(ol);
+        }
+      });
+    }
+    return shell.section;
+  }
+
+  // Limitaciones: cada ítem trae un prefijo "Categoría: texto"; se separa en
+  // el primer ": " para resaltar solo la categoría (span.lim-cat).
+  function buildLimitacionesSection(sec) {
+    var shell = buildSectionShell(sec.heading);
+    if (sec.pending) {
+      shell.body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    } else {
+      var ulBlock = (sec.blocks || []).filter(function (b) { return b.type === "ul"; })[0];
+      var ul = el("ul", { class: "limitations" });
+      (ulBlock ? ulBlock.items : []).forEach(function (raw) {
+        var idx = raw.indexOf(": ");
+        var li = el("li", {});
+        if (idx > -1) {
+          li.appendChild(el("span", { class: "lim-cat" }, raw.slice(0, idx)));
+          li.appendChild(document.createTextNode(": " + raw.slice(idx + 2)));
+        } else {
+          li.appendChild(document.createTextNode(raw));
+        }
+        ul.appendChild(li);
+      });
+      shell.body.appendChild(ul);
+    }
+    return shell.section;
+  }
+
+  // Por qué importa para la clínica: párrafo(s) interpretativos + un ul
+  // opcional de aplicaciones, cada una con un fragmento "Límite: …" resaltado.
+  function buildClinicaSection(sec) {
+    var shell = buildSectionShell(sec.heading);
+    if (sec.pending) {
+      shell.body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    } else {
+      (sec.blocks || []).forEach(function (b) {
+        if (b.type === "p") {
+          shell.body.appendChild(el("p", {}, b.text));
+        } else if (b.type === "ul") {
+          var ul = el("ul", { class: "applications" });
+          (b.items || []).forEach(function (raw) {
+            var idx = raw.indexOf("Límite:");
+            var li = el("li", {});
+            if (idx > -1) {
+              li.appendChild(document.createTextNode(raw.slice(0, idx)));
+              li.appendChild(el("span", { class: "app-limit" }, raw.slice(idx)));
+            } else {
+              li.appendChild(document.createTextNode(raw));
+            }
+            ul.appendChild(li);
+          });
+          shell.body.appendChild(ul);
+        }
+      });
+    }
+    return shell.section;
+  }
+
+  // Glosario y Lecturas recomendadas: plegables (mismo patrón que
+  // details.abstract-original), a partir de los accesores estructurados
+  // item.glossary / item.readings.
+  function buildGlosarioSection(sec, item) {
+    var shell = buildSectionShell(sec.heading);
+    var terms = item.glossary;
+    if (sec.pending || !terms || !terms.length) {
+      shell.body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    } else {
+      var det = el("details", { class: "fold" });
+      det.appendChild(el("summary", {}, "Glosario (" + terms.length + " términos)"));
+      var dl = el("dl", {});
+      terms.forEach(function (g) {
+        dl.appendChild(el("dt", {}, g.term));
+        dl.appendChild(el("dd", {}, g.definition));
+      });
+      det.appendChild(dl);
+      shell.body.appendChild(det);
+    }
+    return shell.section;
+  }
+
+  function buildLecturasSection(sec, item) {
+    var shell = buildSectionShell(sec.heading);
+    var readings = item.readings;
+    if (sec.pending || !readings || !readings.length) {
+      shell.body.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    } else {
+      var det = el("details", { class: "fold" });
+      det.appendChild(el("summary", {}, "Lecturas recomendadas (" + readings.length + ")"));
+      var ul = el("ul", { class: "readings" });
+      readings.forEach(function (r) {
+        var li = el("li", { class: "reading-item" });
+        li.appendChild(el("p", {}, r.citation));
+        var label = r.doi ? "DOI" : (r.pmid ? "PMID" : "Enlace");
+        var a = extLinkStrict(label, r.url);
+        if (a) li.appendChild(a);
+        if (r.why) li.appendChild(el("p", { class: "reading-why" }, r.why));
+        ul.appendChild(li);
+      });
+      det.appendChild(ul);
+      shell.body.appendChild(det);
+    }
+    return shell.section;
+  }
+
+  // El principio: no es una <section> genérica sino un <aside> con su
+  // propio h2 (aria-labelledby), a partir de item.principle (el objeto
+  // estructurado de 7 claves).
+  function buildPrincipioAside(sec, item, labelsMap) {
+    var aside = el("aside", { class: "principle", "aria-labelledby": "principle-heading" });
+    aside.appendChild(el("h2", { id: "principle-heading" }, sec.heading || "El principio"));
+    var p = item.principle;
+    if (sec.pending || !p) {
+      aside.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+      return aside;
+    }
+    aside.appendChild(el("p", { class: "principle-statement" }, p.statement));
+    var dl = el("dl", { class: "principle-meta" });
+    function row(term, valueNode) {
+      if (!valueNode) return;
+      dl.appendChild(el("dt", {}, term));
+      dl.appendChild(el("dd", {}, valueNode));
+    }
+    row("Fundamento", p.rationale);
+    row("Evidencia", p.evidence);
+    var strengthColor = STRENGTH_COLOR[p.strength] || "gray";
+    row("Fuerza", el("span", { class: "pill pill-strength pill-c-" + strengthColor }, strengthLabel(p.strength, labelsMap)));
+    if (p.transfer && p.transfer.length) {
+      var transferWrap = el("span", {});
+      p.transfer.forEach(function (t, i) {
+        if (i > 0) transferWrap.appendChild(document.createTextNode(" "));
+        transferWrap.appendChild(el("span", { class: "pill pill-outline" }, t));
+      });
+      row("Transferencia", transferWrap);
+    }
+    row("Límite", p.limit);
+    row("Procedencia", PROVENANCE_LABEL[p.provenance] || p.provenance);
+    aside.appendChild(dl);
+    if (item.ai_draft && item.status === "draft") {
+      aside.appendChild(el("p", { class: "principle-note" }, "Principio extraído con IA · pendiente de revisión"));
+    }
+    return aside;
+  }
+
+  function buildDetailSections(item, labelsMap) {
+    var wrap = el("div", { class: "detail-sections" });
+    (item.sections || []).forEach(function (sec) {
+      if (sec.id === "en_una_frase") return; // ya se muestra como one-liner-display
+      var node;
+      switch (sec.id) {
+        case "ficha_rapida": node = buildFichaRapidaSection(sec, item); break;
+        case "principio": node = buildPrincipioAside(sec, item, labelsMap); break;
+        case "argumento": node = buildArgumentoSection(sec); break;
+        case "limitaciones": node = buildLimitacionesSection(sec); break;
+        case "clinica": node = buildClinicaSection(sec); break;
+        case "glosario": node = buildGlosarioSection(sec, item); break;
+        case "lecturas": node = buildLecturasSection(sec, item); break;
+        default: node = buildGenericSection(sec);
+      }
+      wrap.appendChild(node);
+    });
+    return wrap;
+  }
+
+  // Enlace interno de la nota completa: nunca toca location.hash (el router
+  // por hash mostraría "No encontramos esa ruta" al recargar sobre un
+  // fragmento #nc-…), solo desplaza y mueve el foco al destino.
+  function bindInternalAnchor(a, targetId) {
+    a.addEventListener("click", function (e) {
+      var targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+      e.preventDefault();
+      targetEl.scrollIntoView({ block: "start" });
+      if (targetEl.focus) targetEl.focus({ preventScroll: true });
+    });
+  }
+
+  function buildFullNote(item) {
+    if (!item.full_note) return null;
+    var wrap = el("section", { class: "full-note-wrap" });
+    wrap.appendChild(el("h2", { id: "nota-completa" }, "Nota completa"));
+    var det = el("details", { class: "full-note" });
+    det.appendChild(el("summary", {}, "Abrir la nota completa (17 apartados)"));
+    var fn = item.full_note;
+    if (fn.pending) {
+      det.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+    } else {
+      var nav = el("nav", { class: "full-note-index", "aria-label": "Índice de la nota completa" });
+      var indexList = el("ol", {});
+      (fn.sections || []).forEach(function (sub) {
+        var a = el("a", { href: "#nc-" + sub.id }, sub.heading);
+        bindInternalAnchor(a, "nc-" + sub.id);
+        indexList.appendChild(el("li", {}, a));
+      });
+      nav.appendChild(indexList);
+      det.appendChild(nav);
+
+      (fn.sections || []).forEach(function (sub) {
+        var subSec = el("section", { class: "full-note-section", id: "nc-" + sub.id, tabindex: "-1" });
+        subSec.appendChild(el("h3", {}, sub.heading));
+        if (sub.pending) subSec.appendChild(el("p", { class: "pending-note" }, "Sección pendiente de redacción."));
+        else appendBlocksGeneric(subSec, sub.blocks);
+        var back = el("a", { class: "full-note-back", href: "#nota-completa" }, "Volver al índice");
+        bindInternalAnchor(back, "nota-completa");
+        subSec.appendChild(back);
+        det.appendChild(subSec);
+      });
+    }
+    if (item.ai_draft && item.status === "draft") {
+      det.appendChild(el("p", { class: "full-note-note" }, "Extracción con IA a partir del texto del artículo · pendiente de revisión"));
+    }
+    wrap.appendChild(det);
     return wrap;
   }
 
@@ -718,7 +1118,7 @@
         " y luego ", el("code", {}, "python3 scripts/build_summaries.py"), "."
       ])));
     } else {
-      var grid = el("div", { class: "card-grid cols-3" });
+      var grid = el("div", { class: "card-grid" });
       items.slice(0, 3).forEach(function (item) { grid.appendChild(buildSummaryCard(item, summaries.labels)); });
       sumBody.appendChild(grid);
       sumBody.appendChild(el("p", {}, el("a", { href: "#/resumenes" }, "Ver todos los resúmenes →")));
@@ -996,7 +1396,8 @@
     var state = {
       q: initialQuery.q || "",
       tag: (initialQuery.tag && availableTags.indexOf(initialQuery.tag) !== -1) ? initialQuery.tag : null,
-      design: (initialQuery.design && availableDesigns.indexOf(initialQuery.design) !== -1) ? initialQuery.design : ""
+      design: (initialQuery.design && availableDesigns.indexOf(initialQuery.design) !== -1) ? initialQuery.design : "",
+      type: (initialQuery.type === "empirico" || initialQuery.type === "conceptual") ? initialQuery.type : ""
     };
 
     var filters = el("div", { class: "filters" });
@@ -1036,7 +1437,25 @@
     designField.appendChild(designSelect);
     filters.appendChild(designField);
 
+    var typeField = el("div", { class: "field" });
+    typeField.appendChild(el("label", { for: "type-filter" }, "Tipo de resumen"));
+    var typeSelect = el("select", { id: "type-filter" });
+    typeSelect.appendChild(el("option", { value: "" }, "Todos"));
+    ["empirico", "conceptual"].forEach(function (id) {
+      var opt = el("option", { value: id }, summaryTypeLabel(id, labelsMap));
+      if (state.type === id) opt.setAttribute("selected", "");
+      typeSelect.appendChild(opt);
+    });
+    typeSelect.addEventListener("change", function () { state.type = typeSelect.value; syncAndRender(); });
+    typeField.appendChild(typeSelect);
+    filters.appendChild(typeField);
+
     c.appendChild(filters);
+
+    // h2 visualmente oculto: sin él, la vista saltaba de h1 ("Resúmenes") a
+    // un h3 por cada tarjeta, sin nivel intermedio — mismo patrón que la
+    // vista de papers del día (hallazgo de verificación; WCAG 1.3.1/2.4.6).
+    c.appendChild(el("h2", { class: "visually-hidden" }, "Listado de resúmenes"));
     var countLine = el("p", { class: "result-count", "aria-live": "polite" });
     c.appendChild(countLine);
     var grid = el("div", { class: "card-grid" });
@@ -1050,6 +1469,7 @@
       if (state.q) params.push("q=" + encodeURIComponent(state.q));
       if (state.tag) params.push("tag=" + encodeURIComponent(state.tag));
       if (state.design) params.push("design=" + encodeURIComponent(state.design));
+      if (state.type) params.push("type=" + encodeURIComponent(state.type));
       var newHash = "#/resumenes" + (params.length ? "?" + params.join("&") : "");
       if (location.hash !== newHash) { try { history.replaceState(null, "", newHash); } catch (e) {} }
       renderList();
@@ -1061,12 +1481,16 @@
       var filtered = items.filter(function (item) {
         if (state.tag && (!item.tags || item.tags.indexOf(state.tag) === -1)) return false;
         if (state.design && (!item.study_design || item.study_design.id !== state.design)) return false;
+        if (state.type && item.summary_type !== state.type) return false;
         if (qNorm) {
           var hay = [item.title, item.one_liner,
+            item.principle ? item.principle.statement : null,
             item.paper ? item.paper.title : null,
             item.paper ? item.paper.authors : null,
             item.paper ? item.paper.journal : null]
             .concat((item.tags || []).map(function (t) { return tagLabel(t, labelsMap); }))
+            .concat((item.glossary || []).map(function (g) { return g.term; }))
+            .concat((item.quick_facts || []).map(function (f) { return f.value; }))
             .filter(Boolean).map(normalizeSearch).join(" ");
           if (hay.indexOf(qNorm) === -1) return false;
         }
@@ -1081,10 +1505,11 @@
         empty.appendChild(el("p", {}, emptyMsg));
         var clearBtn = el("button", { type: "button", class: "btn" }, "Quitar filtros");
         clearBtn.addEventListener("click", function () {
-          state.q = ""; state.tag = null; state.design = "";
+          state.q = ""; state.tag = null; state.design = ""; state.type = "";
           input.value = "";
           chipRow.querySelectorAll(".chip").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
           designSelect.value = "";
+          typeSelect.value = "";
           syncAndRender();
         });
         empty.appendChild(clearBtn);
@@ -1121,18 +1546,32 @@
     clearMain();
     var c = mountContainer();
     var header = el("div", { class: "detail-header" });
-    var badges = buildBadges(item);
-    if (badges.length) {
-      var br = el("div", { class: "badges" });
-      badges.forEach(function (b) { br.appendChild(el("span", { class: "badge" }, b)); });
-      header.appendChild(br);
-    }
+
+    // Fila de badges: la pill de tipo siempre está presente (summary_type es
+    // obligatorio en el esquema v2), así que esta fila ya no depende de que
+    // existan otros badges (borrador/ejemplo/IA) para renderizarse.
+    var br = el("div", { class: "badges" });
+    br.appendChild(el("span", { class: "pill pill-type" }, [
+      el("span", { class: "visually-hidden" }, "Tipo de resumen: "),
+      summaryTypeLabel(item.summary_type, labelsMap)
+    ]));
+    buildBadges(item).forEach(function (b) { br.appendChild(el("span", { class: "badge" }, b.full)); });
+    header.appendChild(br);
+
     header.appendChild(el("h1", {}, item.title));
     var meta = el("div", { class: "detail-meta" });
     meta.appendChild(el("span", {}, formatDateLong(item.date)));
     if (item.author) meta.appendChild(el("span", {}, item.author));
     if (item.reading_minutes) meta.appendChild(el("span", {}, item.reading_minutes + " min de lectura"));
     header.appendChild(meta);
+
+    // Procedencia visible cuando el texto es de Javier y la IA solo lo
+    // adaptó al formato del sitio (nunca lo redactó): no afirma que él
+    // revisó esa adaptación.
+    if (item.adapted_with_ai && item.status === "published" && !item.ai_draft) {
+      header.appendChild(el("p", { class: "provenance-line" },
+        "Resumen de " + item.author + " · adaptado al formato del sitio con asistencia de IA"));
+    }
     c.appendChild(header);
 
     var enUnaFrase = (item.sections || []).filter(function (s) { return s.id === "en_una_frase"; })[0];
@@ -1140,14 +1579,21 @@
     if (!oneLinerText && enUnaFrase && enUnaFrase.pending) oneLinerText = null;
     c.appendChild(el("p", { class: "one-liner-display" }, oneLinerText || "Sección pendiente de redacción."));
 
+    // Capa Paper → Nota resumen: aside.ficha va PRIMERO en el DOM (así llega
+    // primero en móvil y a lectores de pantalla); en ≥960px el CSS lo manda
+    // de vuelta a la columna derecha con grid-column.
     var twoCol = el("div", { class: "two-col has-sidebar" });
+    twoCol.appendChild(buildFicha(item, labelsMap));
     var mainCol = el("div", { class: "detail-main" });
-    var restSections = (item.sections || []).filter(function (s) { return s.id !== "en_una_frase"; });
-    mainCol.appendChild(buildDetailSections(restSections));
+    mainCol.appendChild(buildDetailSections(item, labelsMap));
     mainCol.appendChild(el("a", { href: "#/resumenes", class: "back-link" }, "← Todos los resúmenes"));
     twoCol.appendChild(mainCol);
-    twoCol.appendChild(buildFicha(item, labelsMap));
     c.appendChild(twoCol);
+
+    // Capa Nota completa: a ancho completo, debajo del grid, solo si el
+    // resumen es empírico y trae nota completa.
+    var fullNote = buildFullNote(item);
+    if (fullNote) c.appendChild(fullNote);
   }
 
   function viewAcerca(isCurrent) {

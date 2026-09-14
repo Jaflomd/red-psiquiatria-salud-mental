@@ -1,31 +1,141 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-09-14T17:27:15Z",
+  "schema_version": 2,
+  "generated_at": "2026-09-14T22:24:26Z",
   "count": 4,
   "items": [
     {
-      "slug": "2026-09-14-experiencias-psicoticas-riesgo-suicida",
-      "title": "Las experiencias psicóticas se asocian con mayor riesgo de ideación y conducta suicida",
+      "slug": "2026-09-14-hitop-reconstruido-desde-sintomas",
+      "title": "Reconstruyendo HiTOP desde el síntoma: la estructura se sostiene sin el DSM como punto de partida",
       "date": "2026-09-14",
       "updated": null,
-      "status": "draft",
-      "example": true,
-      "ai_draft": true,
-      "author": "Borrador de ejemplo generado con IA",
+      "status": "published",
+      "example": false,
+      "ai_draft": false,
+      "adapted_with_ai": true,
+      "author": "Javier Flores",
+      "summary_type": "empirico",
       "tags": [
+        "symptom_networks",
         "psychosis",
-        "suicide",
-        "epidemiology"
+        "eating"
       ],
       "study_design": {
-        "id": "systematic_review_meta",
-        "confidence": "draft"
+        "id": "cross_sectional",
+        "confidence": "manual"
       },
       "sample_size": {
-        "value": 81861,
-        "confidence": "draft"
+        "value": 14762,
+        "confidence": "manual"
       },
-      "one_liner": "Un metaanálisis de estudios poblacionales de seguimiento encuentra que reportar experiencias psicóticas se asocia con odds entre 1.9 y 3 veces mayores de ideación o intento suicida posterior, y hasta 4.4 veces mayores de muerte por suicidio (este último, con un solo estudio disponible).",
+      "one_liner": "Reconstruir la jerarquía de HiTOP desde 84 variables de síntomas individuales, sin partir de diagnósticos del DSM, recupera 84.5% de la estructura original, con dos novedades: un espectro de Introversión Patológica y la fusión de Desinhibición con Hipomanía.",
+      "principle": {
+        "statement": "La estructura jerárquica de la psicopatología reaparece cuando se construye desde síntomas individuales, sin pasar por los diagnósticos.",
+        "rationale": "La convergencia entre dos muestras independientes y dos métodos estadísticos distintos (hPCA y clustering jerárquico) hace más creíble que la estructura no sea un artefacto de una sola técnica o de una sola muestra; aun así, el análisis es exploratorio, no confirmatorio, y no se estimó el ajuste de ningún modelo.",
+        "evidence": "71 de 84 variables sintomáticas asignadas a la estructura final (84.5%); 69 asignaciones con acuerdo cross-sample y cross-method (89.6%).",
+        "strength": "baja",
+        "transfer": [
+          "investigación"
+        ],
+        "limit": "Muestra en línea no representativa; autoinforme; análisis exploratorio.",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Población",
+          "value": "14 762 adultos de Australia y EE. UU. reclutados en línea"
+        },
+        {
+          "key": "Intervención o exposición",
+          "value": "No aplica"
+        },
+        {
+          "key": "Comparador",
+          "value": "No aplica"
+        },
+        {
+          "key": "Desenlace primario",
+          "value": "estructura jerárquica de 84 variables sintomáticas"
+        },
+        {
+          "key": "Efecto principal",
+          "value": "71 de 84 variables asignadas a la estructura final (84.5%); 69 asignaciones con acuerdo entre muestras y métodos (89.6%)"
+        },
+        {
+          "key": "Certeza",
+          "value": "exploratoria; sin índices de ajuste"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "HiTOP",
+          "definition": "marco dimensional y jerárquico de la psicopatología, alternativo al DSM, que organiza los trastornos en síntomas, síndromes, subfactores, espectros y superespectros; es el modelo que este estudio pone a prueba reconstruyéndolo desde síntomas individuales."
+        },
+        {
+          "term": "p-factor (factor general de psicopatología)",
+          "definition": "dimensión en el tope de la jerarquía que representa la covarianza común a toda la psicopatología; aquí se retuvo solo de forma tentativa, porque se extrae por defecto con los métodos usados y las reglas de parada del clustering no lo apoyaron."
+        },
+        {
+          "term": "hPCA (hierarchical principal components analysis)",
+          "definition": "análisis de componentes principales jerárquico, con el método bass-ackward extendido, que extrae componentes en varios niveles y permite cargas cruzadas (cross-loadings) en los niveles superiores de la estructura."
+        },
+        {
+          "term": "Clustering jerárquico de Ward",
+          "definition": "método de agrupamiento aglomerativo que combina progresivamente variables similares minimizando la varianza interna; se usó junto al hPCA, y solo los constructos que coincidieron en ambos métodos (cross-method) se consideraron robustos."
+        },
+        {
+          "term": "Bass-ackward approach",
+          "definition": "estrategia que extrae uno, dos, hasta n componentes de forma simultánea y mapea sus asociaciones de arriba hacia abajo, revelando cómo los constructos generales se descomponen en específicos."
+        },
+        {
+          "term": "AMPD (Alternative Model for Personality Disorders)",
+          "definition": "modelo alternativo del DSM-5 (Sección III) que define 25 facetas de rasgos patológicos de personalidad; aquí los trastornos de personalidad se midieron a nivel de estas facetas en vez de los criterios categoriales de la Sección II."
+        },
+        {
+          "term": "Introversión Patológica (Pathological Introversion)",
+          "definition": "espectro identificado en este estudio que combina Desapego (Detachment) y baja Desinhibición/Hipomanía; no existe en el HiTOP oficial."
+        },
+        {
+          "term": "Cross-sample / cross-method",
+          "definition": "criterios de robustez de los autores: \"cross-sample\" significa que un hallazgo se repite en la muestra primaria y en la de reserva; \"cross-method\" significa que se repite tanto con hPCA como con clustering de Ward."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Kotov R, et al. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to traditional nosologies. J Abnorm Psychol",
+          "doi": "10.1037/abn0000258",
+          "pmid": null,
+          "url": "https://doi.org/10.1037/abn0000258",
+          "why": "Paper fundacional de HiTOP: define los espectros y superespectros que este estudio pone a prueba."
+        },
+        {
+          "citation": "Forbes MK, et al. (2025). Reconstructing psychopathology: A data-driven reorganization of the symptoms in the DSM. Clin Psychol Sci",
+          "doi": "10.1177/21677026241268345",
+          "pmid": null,
+          "url": "https://doi.org/10.1177/21677026241268345",
+          "why": "Estudio predecesor directo, con cobertura completa del DSM-5 (680 ítems, 14 762 participantes), que aporta los datos y el pipeline analítico que este paper aplica al alcance de HiTOP."
+        },
+        {
+          "citation": "Ringwald WR, Forbes MK, Wright AGC (2023). Meta-analysis of structural evidence for the HiTOP model. Psychol Med",
+          "doi": "10.1017/S0033291721001902",
+          "pmid": null,
+          "url": "https://doi.org/10.1017/S0033291721001902",
+          "why": "Metaanálisis de 35 estudios (N = 120 596) que sintetiza la evidencia estructural acumulada de HiTOP antes de este estudio."
+        },
+        {
+          "citation": "Watts AL, et al. (2024). A critical evaluation of the p-factor literature. Nat Rev Psychol",
+          "doi": "10.1038/s44159-023-00260-2",
+          "pmid": null,
+          "url": "https://doi.org/10.1038/s44159-023-00260-2",
+          "why": "Revisión crítica del p-factor que respalda la cautela de los autores al retenerlo aquí solo de forma tentativa."
+        },
+        {
+          "citation": "Michelini G, et al. (2024). Where do neurodevelopmental conditions fit in transdiagnostic psychiatric frameworks? World Psychiatry",
+          "doi": "10.1002/wps.21225",
+          "pmid": null,
+          "url": "https://doi.org/10.1002/wps.21225",
+          "why": "Propone incorporar un espectro neurodesarrollante en HiTOP, justo el dominio que este estudio no pudo cubrir por limitaciones de medición."
+        }
+      ],
       "sections": [
         {
           "id": "en_una_frase",
@@ -34,7 +144,43 @@
           "blocks": [
             {
               "type": "p",
-              "text": "Un metaanálisis de estudios poblacionales de seguimiento encuentra que reportar experiencias psicóticas se asocia con odds entre 1.9 y 3 veces mayores de ideación o intento suicida posterior, y hasta 4.4 veces mayores de muerte por suicidio (este último, con un solo estudio disponible)."
+              "text": "Reconstruir la jerarquía de HiTOP desde 84 variables de síntomas individuales, sin partir de diagnósticos del DSM, recupera 84.5% de la estructura original, con dos novedades: un espectro de Introversión Patológica y la fusión de Desinhibición con Hipomanía."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Población",
+                  "value": "14 762 adultos de Australia y EE. UU. reclutados en línea"
+                },
+                {
+                  "key": "Intervención o exposición",
+                  "value": "No aplica"
+                },
+                {
+                  "key": "Comparador",
+                  "value": "No aplica"
+                },
+                {
+                  "key": "Desenlace primario",
+                  "value": "estructura jerárquica de 84 variables sintomáticas"
+                },
+                {
+                  "key": "Efecto principal",
+                  "value": "71 de 84 variables asignadas a la estructura final (84.5%); 69 asignaciones con acuerdo entre muestras y métodos (89.6%)"
+                },
+                {
+                  "key": "Certeza",
+                  "value": "exploratoria; sin índices de ajuste"
+                }
+              ]
             }
           ]
         },
@@ -45,7 +191,7 @@
           "blocks": [
             {
               "type": "p",
-              "text": "¿Las experiencias psicóticas —como oír voces que otros no oyen o sostener creencias no compartidas por el entorno— predicen la aparición posterior de pensamientos y conductas suicidas en población general, y ese riesgo se explica solo por la psicopatología que suele acompañarlas?"
+              "text": "¿Sobrevive la estructura jerárquica de HiTOP —construida en gran parte sobre correlaciones entre diagnósticos del DSM— cuando se reconstruye desde cero a partir de síntomas individuales, sin usar esos diagnósticos como unidad de análisis?"
             }
           ]
         },
@@ -56,13 +202,14 @@
           "blocks": [
             {
               "type": "p",
-              "text": "Es una revisión sistemática con metaanálisis de estudios poblacionales de seguimiento en el tiempo. Los autores buscaron en PubMed, Embase, CINAHL y PsycINFO desde el inicio de cada base hasta julio de 2023, evaluaron la calidad de los estudios con la escala Newcastle-Ottawa y combinaron los resultados con modelos de efectos aleatorios para calcular razones de momios (OR) agrupadas."
+              "text": "Análisis psicométrico estructural exploratorio a nivel de síntoma individual, sobre datos de autoinforme en línea. Se partió de 345 síntomas del DSM-5 alineados al alcance de HiTOP, reducidos mediante clustering a 84 variables observadas (síntomas y síndromes), y se aplicaron hPCA (bass-ackward extendido) y clustering jerárquico de Ward en una muestra primaria (n = 11 762) y una de reserva (n = 3 000). La estructura final se retuvo por consenso entre muestras y, en los niveles inferiores de la jerarquía, también entre métodos."
             },
             {
               "type": "ul",
               "items": [
-                "Veinte estudios provenientes de 18 muestras distintas, con un total de 81 861 personas.",
-                "Comparación del riesgo total, por grupo de edad (niñez, adolescencia, adultez) y ajustando por psicopatología concurrente."
+                "Reducción de 345 ítems a 84 variables mediante iclust más clustering de Ward, fusionando los ítems que coincidieron en el mismo clúster en ambos métodos.",
+                "Comparación cruzada de cuatro soluciones (hPCA por clustering, en las dos muestras) para retener solo los constructos robustos.",
+                "Mapeo secundario de los diagnósticos del SCID-5-RV sobre la estructura empírica resultante."
               ]
             }
           ]
@@ -75,10 +222,11 @@
             {
               "type": "ul",
               "items": [
-                "Las personas con experiencias psicóticas tuvieron más ideación suicida posterior (12 estudios, OR = 1.90; IC 95%: 1.65–2.19).",
-                "También más intentos de suicidio (13 estudios, OR = 2.95; IC 95%: 2.21–3.94) y más probabilidad de pasar de la ideación al intento (3 estudios, OR = 2.83; IC 95%: 1.60–4.99).",
-                "El riesgo de muerte por suicidio también fue mayor, aunque basado en un solo estudio (OR = 4.39; IC 95%: 1.63–11.80).",
-                "El riesgo se mantuvo estable en la niñez, la adolescencia y la adultez. Para los intentos de suicidio en particular, la asociación persistió incluso ajustando por psicopatología concurrente (8 estudios, OR = 2.85; IC 95%: 2.06–3.95); los autores no reportan ese ajuste para la ideación suicida en general."
+                "71 de 84 variables sintomáticas (84.5%) quedaron incluidas en la estructura final; el 15.5% restante no tuvo asignación consistente entre muestras y métodos.",
+                "69 de las asignaciones tuvieron acuerdo cross-sample y cross-method (89.6%), el estándar más estricto de robustez que usan los autores; el resto solo replicó en uno de los dos criterios.",
+                "El 84.6% de los diagnósticos DSM mapeados (SCID-5-RV) abarcó múltiples espectros o subfactores distintos; aun así, el 75.0% mantuvo homogeneidad predominante en un solo dominio.",
+                "Un factor general (p-factor) captó cargas mayores a .3 en el 82.1% de las variables del primer componente no rotado, con una saturación Ω = .96; los autores lo retienen solo de forma tentativa.",
+                "Dos constructos nuevos emergieron de forma consistente en ambas muestras y métodos: un espectro de Introversión Patológica (Desapego más baja Desinhibición/Hipomanía) y la fusión de Desinhibición con Hipomanía en un solo subfactor, sin un dominio de Manía separado."
               ]
             }
           ]
@@ -91,9 +239,50 @@
             {
               "type": "ul",
               "items": [
-                "El estimado de riesgo de muerte por suicidio se basa en un solo estudio primario, así que es menos preciso que los demás resultados.",
-                "Los estudios incluidos son observacionales: la asociación no demuestra que las experiencias psicóticas causen por sí solas la conducta suicida.",
-                "La búsqueda no incorpora estudios publicados después de julio de 2023."
+                "Muestra: sobrerrepresentación de minorías sexuales y de género, personas en tratamiento de salud mental (63.7%) y residentes rurales; subrepresentación de hombres (35.8%) y de diversidad racial, cultural y lingüística (68.3% de raza blanca).",
+                "Medición: solo autoinforme con un período de recuerdo de 12 meses, sin anclar los síntomas a malestar, deterioro funcional o contexto; se pierde información sobre episodicidad, relevante sobre todo para manía y pánico.",
+                "Análisis: el estudio es enteramente exploratorio; no se estimó el ajuste de ningún modelo, y los autores señalan que sería técnicamente imposible hacerlo para los cinco niveles de la jerarquía a la vez.",
+                "Alcance: al alinearse al alcance de HiTOP se excluyeron unos 100 diagnósticos DSM adicionales cubiertos en un estudio previo de los mismos autores; los dominios neurodesarrollantes y cognitivos casi no tienen cobertura, por lo que TDAH y Trastorno del Pensamiento pueden no estar ubicados donde realmente pertenecen."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "La estructura jerárquica de la psicopatología reaparece cuando se construye desde síntomas individuales, sin pasar por los diagnósticos."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "La convergencia entre dos muestras independientes y dos métodos estadísticos distintos (hPCA y clustering jerárquico) hace más creíble que la estructura no sea un artefacto de una sola técnica o de una sola muestra; aun así, el análisis es exploratorio, no confirmatorio, y no se estimó el ajuste de ningún modelo."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "71 de 84 variables sintomáticas asignadas a la estructura final (84.5%); 69 asignaciones con acuerdo cross-sample y cross-method (89.6%)."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "baja"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "investigación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "Muestra en línea no representativa; autoinforme; análisis exploratorio."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
               ]
             }
           ]
@@ -105,7 +294,101 @@
           "blocks": [
             {
               "type": "p",
-              "text": "Los autores concluyen que las experiencias psicóticas son un marcador de riesgo suicida que se suma al de la psicopatología habitual, y que son particularmente relevantes para distinguir, entre quienes ya tienen ideación suicida, a los que tienen mayor probabilidad de pasar al intento. El artículo no evalúa dónde ni cómo debería preguntarse por estas experiencias en la práctica clínica; esa aplicación queda pendiente de investigación futura, según señalan los propios autores."
+              "text": "Aunque es un estudio psicométrico y no una prueba de tratamiento, sus resultados importan para quien usa marcos dimensionales o transdiagnósticos en la práctica: refuerzan que HiTOP no es solo un artefacto de las categorías del DSM, y afinan dónde se ubican mejor ciertos síntomas —por ejemplo, los de TEPT o TDAH— cuando se los mira uno por uno en vez de agrupados en un diagnóstico único."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Al interpretar hallazgos transdiagnósticos, considerar que los síntomas de TEPT se dispersan entre malestar (distress), miedo, externalización y somatización, en vez de pertenecer solo a un espectro de distress. Límite: es un hallazgo descriptivo de un estudio exploratorio en autoinforme, no una recomendación de reclasificación diagnóstica.",
+                "Al leer estudios de estructura de psicopatología basados en autoinforme de síntomas de manía, interpretar con cautela su relación con el trastorno bipolar clínico: aquí esos síntomas se fusionaron con rasgos de desinhibición y no formaron un dominio propio. Límite: el estudio no evaluó episodicidad ni usó entrevista clínica, que son las que definen clínicamente la manía.",
+                "Para investigación transdiagnóstica que reutiliza datos de síntomas del DSM, considerar el re-escalamiento hacia los constructos empíricos de este estudio como alternativa a los puntajes totales por diagnóstico. Límite: las asignaciones síntoma-constructo provienen de una muestra en línea no representativa y de un análisis exploratorio sin prueba de ajuste."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "HiTOP",
+                  "value": "marco dimensional y jerárquico de la psicopatología, alternativo al DSM, que organiza los trastornos en síntomas, síndromes, subfactores, espectros y superespectros; es el modelo que este estudio pone a prueba reconstruyéndolo desde síntomas individuales."
+                },
+                {
+                  "key": "p-factor (factor general de psicopatología)",
+                  "value": "dimensión en el tope de la jerarquía que representa la covarianza común a toda la psicopatología; aquí se retuvo solo de forma tentativa, porque se extrae por defecto con los métodos usados y las reglas de parada del clustering no lo apoyaron."
+                },
+                {
+                  "key": "hPCA (hierarchical principal components analysis)",
+                  "value": "análisis de componentes principales jerárquico, con el método bass-ackward extendido, que extrae componentes en varios niveles y permite cargas cruzadas (cross-loadings) en los niveles superiores de la estructura."
+                },
+                {
+                  "key": "Clustering jerárquico de Ward",
+                  "value": "método de agrupamiento aglomerativo que combina progresivamente variables similares minimizando la varianza interna; se usó junto al hPCA, y solo los constructos que coincidieron en ambos métodos (cross-method) se consideraron robustos."
+                },
+                {
+                  "key": "Bass-ackward approach",
+                  "value": "estrategia que extrae uno, dos, hasta n componentes de forma simultánea y mapea sus asociaciones de arriba hacia abajo, revelando cómo los constructos generales se descomponen en específicos."
+                },
+                {
+                  "key": "AMPD (Alternative Model for Personality Disorders)",
+                  "value": "modelo alternativo del DSM-5 (Sección III) que define 25 facetas de rasgos patológicos de personalidad; aquí los trastornos de personalidad se midieron a nivel de estas facetas en vez de los criterios categoriales de la Sección II."
+                },
+                {
+                  "key": "Introversión Patológica (Pathological Introversion)",
+                  "value": "espectro identificado en este estudio que combina Desapego (Detachment) y baja Desinhibición/Hipomanía; no existe en el HiTOP oficial."
+                },
+                {
+                  "key": "Cross-sample / cross-method",
+                  "value": "criterios de robustez de los autores: \"cross-sample\" significa que un hallazgo se repite en la muestra primaria y en la de reserva; \"cross-method\" significa que se repite tanto con hPCA como con clustering de Ward."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Kotov R, et al. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to traditional nosologies. J Abnorm Psychol",
+                  "doi": "10.1037/abn0000258",
+                  "pmid": null,
+                  "why": "Paper fundacional de HiTOP: define los espectros y superespectros que este estudio pone a prueba."
+                },
+                {
+                  "citation": "Forbes MK, et al. (2025). Reconstructing psychopathology: A data-driven reorganization of the symptoms in the DSM. Clin Psychol Sci",
+                  "doi": "10.1177/21677026241268345",
+                  "pmid": null,
+                  "why": "Estudio predecesor directo, con cobertura completa del DSM-5 (680 ítems, 14 762 participantes), que aporta los datos y el pipeline analítico que este paper aplica al alcance de HiTOP."
+                },
+                {
+                  "citation": "Ringwald WR, Forbes MK, Wright AGC (2023). Meta-analysis of structural evidence for the HiTOP model. Psychol Med",
+                  "doi": "10.1017/S0033291721001902",
+                  "pmid": null,
+                  "why": "Metaanálisis de 35 estudios (N = 120 596) que sintetiza la evidencia estructural acumulada de HiTOP antes de este estudio."
+                },
+                {
+                  "citation": "Watts AL, et al. (2024). A critical evaluation of the p-factor literature. Nat Rev Psychol",
+                  "doi": "10.1038/s44159-023-00260-2",
+                  "pmid": null,
+                  "why": "Revisión crítica del p-factor que respalda la cautela de los autores al retenerlo aquí solo de forma tentativa."
+                },
+                {
+                  "citation": "Michelini G, et al. (2024). Where do neurodevelopmental conditions fit in transdiagnostic psychiatric frameworks? World Psychiatry",
+                  "doi": "10.1002/wps.21225",
+                  "pmid": null,
+                  "why": "Propone incorporar un espectro neurodesarrollante en HiTOP, justo el dominio que este estudio no pudo cubrir por limitaciones de medición."
+                }
+              ]
             }
           ]
         },
@@ -116,32 +399,1725 @@
           "blocks": [
             {
               "type": "p",
-              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
+              "text": "Resumen de Javier Flores · adaptado al formato del sitio con asistencia de IA. Las cifras verificadas se contrastaron contra el accepted manuscript (preprint versión 3, alojado en OSF/PsyArXiv bajo licencia CC BY); la versión final publicada en la revista (J Psychopathol Clin Sci, 2026; 135(7):908-921) puede diferir en detalles menores de formato o paginación respecto al preprint consultado."
             }
           ]
         }
       ],
-      "word_count": 470,
-      "reading_minutes": 2,
-      "source_file": "content/summaries/2026-09-14-experiencias-psicoticas-riesgo-suicida.md",
+      "full_note": {
+        "pending": false,
+        "word_count": 1655,
+        "sections": [
+          {
+            "id": "nc_info",
+            "heading": "Información del estudio",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Título",
+                    "value": "Rebuilding HiTOP from the ground up: Symptom-level analyses and a revised mapping to the DSM"
+                  },
+                  {
+                    "key": "Autor principal",
+                    "value": "Miriam K. Forbes"
+                  },
+                  {
+                    "key": "Correo de correspondencia",
+                    "value": "miri.forbes@mq.edu.au"
+                  },
+                  {
+                    "key": "Año",
+                    "value": "2026"
+                  },
+                  {
+                    "key": "Revista",
+                    "value": "Journal of Psychopathology and Clinical Science"
+                  },
+                  {
+                    "key": "Palabras clave",
+                    "value": "No reportado en el artículo"
+                  },
+                  {
+                    "key": "País",
+                    "value": "Australia y Estados Unidos (81.3% de la muestra residía en uno de estos dos países; institución de los autores: Macquarie University, Australia)"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_intro",
+            "heading": "Introducción en tres frases",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Problema",
+                    "value": "HiTOP, el modelo dimensional de psicopatología más citado, se construyó mayoritariamente sobre correlaciones entre diagnósticos del DSM, lo que arrastra hacia HiTOP las limitaciones propias de esos diagnósticos, como la comorbilidad y el solapamiento de síntomas."
+                  },
+                  {
+                    "key": "Literatura previa",
+                    "value": "los estudios que fundaron HiTOP se basaron sobre todo en diagnósticos y no en síntomas; un metaanálisis posterior confirmó casi todos los espectros superiores del modelo, y un estudio previo de los mismos autores reconstruyó el DSM-5 completo desde síntomas individuales, recuperando buena parte de la estructura de HiTOP."
+                  },
+                  {
+                    "key": "Vacío",
+                    "value": "faltaba una prueba estructural que partiera de síntomas individuales alineados específicamente al alcance de HiTOP —no del DSM completo— y que no dependiera de una medida diseñada para replicar la estructura oficial de HiTOP."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_pregunta",
+            "heading": "Pregunta de investigación",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Primaria",
+                    "value": "determinar si la estructura jerárquica de HiTOP emerge de nuevo al reconstruirla desde síntomas individuales, en vez de partir de diagnósticos del DSM."
+                  },
+                  {
+                    "key": "Secundarias",
+                    "value": "mapear los diagnósticos del SCID-5-RV sobre la estructura empírica resultante, para actualizar la correspondencia entre HiTOP y el DSM."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_metodo",
+            "heading": "Método",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Cuantitativo: análisis psicométrico estructural exploratorio (hPCA y clustering jerárquico de Ward) sobre datos de autoinforme recolectados en línea."
+              }
+            ]
+          },
+          {
+            "id": "nc_diseno",
+            "heading": "Diseño",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Diseño",
+                    "value": "análisis estructural transversal y exploratorio de datos de autoinforme en línea; no es un ensayo ni un estudio de exposición-desenlace, sino una prueba de la estructura latente de un conjunto de síntomas."
+                  },
+                  {
+                    "key": "Checklist declarado",
+                    "value": "No reportado en el artículo (los autores declaran seguir prácticas de transparencia y apertura de datos —Transparency and Openness—, pero no nombran una checklist formal tipo STROBE)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_unidad",
+            "heading": "Unidad de análisis",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Personas adultas (16 años o más) de población general que se autoseleccionaron para un estudio en línea sobre salud mental; no son pacientes reclutados en un servicio clínico específico, aunque el 63.7% estaba en tratamiento de salud mental al momento de participar."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestra",
+            "heading": "Muestra",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Muestra analítica final de 14 762 personas (edad media = 38.0 años, DE = 18.01), dividida aleatoriamente en una muestra primaria (n = 11 762) y una muestra de reserva u \"holdout\" (n = 3 000) para las pruebas de replicación cruzada."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestreo",
+            "heading": "Muestreo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Muestreo no probabilístico por conveniencia: reclutamiento mediante campañas extensas en redes sociales (incluida publicidad dirigida a grupos subrepresentados, como hombres y adultos mayores), grupos comunitarios australianos y bolsas de participantes universitarios de Macquarie University."
+              }
+            ]
+          },
+          {
+            "id": "nc_procedimientos",
+            "heading": "Procedimientos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "Se redactaron 345 ítems de autoinforme (en primera persona y tiempo pasado) que cubrían los síntomas del DSM-5 dentro del alcance de HiTOP, más las 25 facetas del AMPD para personalidad; se excluyeron síntomas que requerían evaluación clínica, solo observables por terceros, específicos de una cultura o exclusivos de la niñez.",
+                  "Los participantes respondieron los ítems en orden aleatorizado (versión completa o subconjuntos de la mitad, un cuarto o un doceavo de los ítems, por un diseño de missingness planificado) y quedaron divididos al azar en muestra primaria (n = 11 762) y de reserva (n = 3 000).",
+                  "Se combinaron 22 ítems muy correlacionados o de baja prevalencia en 6 variables compuestas; los 329 ítems restantes se sometieron en paralelo a iclust y a clustering jerárquico de Ward, y los ítems que coincidieron en el mismo clúster en ambos métodos se fusionaron, dando 84 variables observadas (20 ítems solos y 64 clústeres).",
+                  "Sobre esas 84 variables se aplicaron hPCA (bass-ackward extendido) y clustering jerárquico de Ward de forma independiente en cada muestra (primaria y de reserva).",
+                  "Se compararon los cuatro resultados (hPCA y clustering, en las dos muestras) y se retuvieron en la estructura final solo los constructos con acuerdo entre muestras y, en los niveles inferiores de la jerarquía, también entre métodos.",
+                  "Se mapearon los diagnósticos del SCID-5-RV sobre la estructura empírica resultante para producir un mapa revisado entre el DSM y HiTOP."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_dependientes",
+            "heading": "Variables dependientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Estructura jerárquica de síntomas y síndromes",
+                    "value": "asignación de cada una de las 84 variables sintomáticas a subfactores, espectros y superespectros. Se midió mediante los componentes retenidos en hPCA y los clústeres de Ward en cada muestra; no hay un punto de corte, ya que la asignación se define por convergencia cross-sample y, en los niveles inferiores, también cross-method."
+                  },
+                  {
+                    "key": "Homogeneidad diagnóstica del SCID-5-RV",
+                    "value": "grado en que los síntomas de cada diagnóstico DSM caen bajo un mismo dominio de la estructura empírica versus dispersos en varios. Se midió como proporción de diagnósticos que abarcan múltiples espectros o subfactores frente a los que mantienen homogeneidad predominante en uno solo."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_independientes",
+            "heading": "Variables independientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Variables sintomáticas",
+                    "value": "puntajes estandarizados de 345 ítems de autoinforme, reducidos a 84 variables mediante iclust y clustering de Ward. No se reporta validación psicométrica formal del conjunto completo más allá de las pruebas de consistencia cross-sample y cross-method aplicadas al análisis estructural."
+                  },
+                  {
+                    "key": "Covariables o confusores",
+                    "value": "No reportado en el artículo; el diseño es un análisis estructural exploratorio (hPCA y clustering) sin un modelo de regresión que ajuste por covariables."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_analisis",
+            "heading": "Análisis de datos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Univariado",
+                    "value": "estadísticos descriptivos de la muestra (edad, características sociodemográficas); no se reportan estadísticos univariados detallados para cada una de las 84 variables sintomáticas en el cuerpo del artículo."
+                  },
+                  {
+                    "key": "Bivariado",
+                    "value": "matrices de correlación de Spearman entre las 84 variables observadas en cada muestra, base de los análisis multivariados posteriores."
+                  },
+                  {
+                    "key": "Multivariado",
+                    "value": "análisis de componentes principales jerárquico (hPCA, método bass-ackward extendido) y clustering jerárquico aglomerativo de Ward, aplicados en paralelo en la muestra primaria y en la de reserva; el número de componentes se decidió con análisis paralelo (parallel analysis), exigiendo al menos 3 variables con carga primaria mayor a |.4| y sin cargas cruzadas mayores a |.4|; se eliminaron componentes redundantes cuando la correlación entre ellos era mayor a .9 y los coeficientes de congruencia mayores a .95."
+                  },
+                  {
+                    "key": "Supuestos",
+                    "value": "las matrices de correlación debían ser definidas positivas; se cumplió en ambas muestras sin necesidad de suavizado (\"smoothing\"), a diferencia del estudio predecesor de los mismos autores."
+                  },
+                  {
+                    "key": "Software",
+                    "value": "SPSS (preprocesamiento) y R versión 4.1.1, con el paquete psych versión 2.1.6 y funciones estadísticas propias de uno de los autores."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_hallazgos",
+            "heading": "Hallazgos principales",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Aquí se realizó un análisis psicométrico estructural exploratorio (hPCA y clustering jerárquico de Ward, en una muestra primaria y una de reserva) para reconstruir la jerarquía de HiTOP desde síntomas individuales y compararla con el modelo oficial. Los hallazgos principales son: 1) la estructura final resultante fue muy similar al modelo HiTOP oficial, con 71 de 84 variables sintomáticas (84.5%) asignadas a la jerarquía y 69 asignaciones (89.6%) con acuerdo cross-sample y cross-method; 2) surgieron dos diferencias principales frente a HiTOP: un nuevo espectro de Introversión Patológica (Desapego más baja Desinhibición/Hipomanía) y la fusión de Desinhibición con Hipomanía en un solo subfactor, sin un dominio separado de Manía; 3) al mapear los diagnósticos del SCID-5-RV sobre esta estructura, el 84.6% de los diagnósticos abarcó múltiples espectros o subfactores distintos, con TEPT y TDAH como los casos más heterogéneos."
+              }
+            ]
+          },
+          {
+            "id": "nc_datos",
+            "heading": "Datos por hallazgo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "De las 84 variables sintomáticas analizadas, 71 (84.5%) quedaron incluidas en la estructura final; de estas, 65 (91.5%) se asignaron a un solo subfactor y 6 (8.5%) tuvieron carga cruzada en dos subfactores. De las asignaciones, 69 (89.6%) tuvieron acuerdo cross-sample y cross-method —el estándar más estricto—, 3 (3.9%) solo acuerdo en las cargas primarias de hPCA, y 5 (6.5%) solo en las asignaciones de clustering.",
+                  "El espectro de Introversión Patológica (Desapego más baja Desinhibición/Hipomanía) persistió en tres niveles de la jerarquía bass-ackward en ambas muestras. El subfactor Disinhibición/Hipomanía se mantuvo unido en las cuatro soluciones (hPCA y clustering, en las dos muestras); los síntomas de manía nunca se separaron de los de desinhibición en ninguna de ellas.",
+                  "En el mapeo de los diagnósticos del SCID-5-RV, el 84.6% de los diagnósticos abarcó múltiples espectros o subfactores distintos, aunque el 75.0% mantuvo homogeneidad predominante en un solo dominio. Un factor general (p-factor) captó cargas mayores a .3 en el 82.1% de las variables del primer componente no rotado, con una saturación Ω = .96 en ambas muestras."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_discusion",
+            "heading": "Discusión",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Qué significa",
+                    "value": "los autores concluyen que las fundaciones estructurales de HiTOP son, en gran medida, sólidas: la jerarquía reaparece incluso al eliminar la influencia de los diagnósticos del DSM como unidad de análisis."
+                  },
+                  {
+                    "key": "Por qué ocurre",
+                    "value": "No reportado en el artículo como explicación causal; los autores describen convergencia estadística entre métodos y muestras, no un mecanismo que explique por qué la psicopatología adopta esta forma."
+                  },
+                  {
+                    "key": "Contexto amplio",
+                    "value": "los autores sitúan el hallazgo como un paso incremental hacia una versión formalizada y falsable de HiTOP, y señalan que ningún estudio puede aún estimar el ajuste de un modelo que abarque los cinco niveles jerárquicos de forma simultánea; llaman a análisis confirmatorios futuros que descompongan la jerarquía en partes."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_limitaciones",
+            "heading": "Limitaciones según los autores",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Selección: la muestra no es representativa de la población general: sobrerrepresentación de minorías sexuales y de género (24.0% bisexual, gay o lesbiana; 9.4% no binario o de género fluido; 4.9% transgénero), personas en tratamiento (63.7%) y residentes rurales (21.2%); subrepresentación de hombres (35.8%) y de personas de origen racial, cultural o lingüístico diverso (68.3% de raza blanca; 70.1% con inglés como lengua materna).",
+                  "Medición: solo autoinforme, con un período de recuerdo de 12 meses que pierde información sobre episodicidad (relevante para manía y pánico) y cronicidad; los síntomas se evaluaron sin anclarlos a malestar, deterioro funcional o contexto (por ejemplo, duelo); el trastorno obsesivo-compulsivo quedó medido con solo 4 ítems.",
+                  "Otras: el estudio es enteramente exploratorio, sin estimación del ajuste de ningún modelo; los autores señalan que sería técnicamente imposible ajustar un modelo que incluya los cinco niveles jerárquicos de forma simultánea."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_futuro",
+            "heading": "Investigación futura",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Incluir evaluación de episodicidad y medición por entrevistador para los síntomas de manía, para probar si el patrón de fusión con desinhibición se mantiene.",
+                  "Replicar el análisis en muestras con mayor representación de hombres y de grupos racial, cultural y lingüísticamente diversos.",
+                  "Descomponer la jerarquía completa (vertical y/u horizontalmente) en estudios confirmatorios futuros, evaluando el ajuste de partes del modelo en vez de la estructura completa de una sola vez.",
+                  "Ampliar la medición del trastorno obsesivo-compulsivo (solo 4 ítems en este estudio) para caracterizar mejor su ubicación estructural.",
+                  "Usar los datos y el código abiertos publicados por los autores para reescalar datos de síntomas del DSM hacia los constructos empíricos identificados en este estudio."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "word_count": 1284,
+      "reading_minutes": 6,
+      "source_file": "content/summaries/2026-09-14-hitop-reconstruido-desde-sintomas.md",
       "paper": {
-        "key": "MED:39550208",
-        "epmc_id": "39550208",
+        "key": "MED:42080848",
+        "epmc_id": "42080848",
         "source": "MED",
-        "pmid": "39550208",
-        "pmcid": "PMC12809804",
-        "doi": "10.1093/schbul/sbae197",
-        "title": "Psychotic Experiences and Risk of Suicidal Thoughts and Behaviors: A Systematic Review and Meta-Analysis of Longitudinal Population Studies.",
-        "authors": "O'Hare K, Fadiloglu K, Lång U, Healy C, Cannon M, DeVylder J, Kelleher I.",
-        "journal": "Schizophrenia bulletin",
-        "journal_abbrev": "Schizophr Bull",
+        "pmid": "42080848",
+        "pmcid": null,
+        "doi": "10.1037/abn0001125",
+        "title": "Rebuilding HiTOP from the ground up: Symptom-level analyses and a revised mapping to the DSM.",
+        "authors": "Forbes MK, Pham T, Roberts M, Johnco CJ.",
+        "journal": "Journal of psychopathology and clinical science",
+        "journal_abbrev": "J Psychopathol Clin Sci",
         "pub_year": 2026,
-        "first_publication_date": "2026-01-01",
+        "first_publication_date": "2026-05-04",
         "first_index_date": null,
         "pub_types": [
-          "Meta-Analysis",
-          "Research Support, Non-U.S. Gov't",
-          "Systematic Review",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc+openalex",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1037/abn0001125",
+          "europepmc": "https://europepmc.org/article/MED/42080848",
+          "fulltext_html": "https://doi.org/10.1037/abn0001125",
+          "pdf": null
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "cross_sectional",
+          "confidence": "manual"
+        },
+        "sample_size": {
+          "value": 14762,
+          "confidence": "manual"
+        },
+        "tags": [
+          "symptom_networks",
+          "psychosis",
+          "eating"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-rdoc-psicoterapia-mecanismos",
+      "title": "Criterios de Dominio de Investigación para Psicoterapia: mecanismos funcionales de tratamiento y una teoría básica de la mente",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": false,
+      "adapted_with_ai": true,
+      "author": "Javier Flores",
+      "summary_type": "conceptual",
+      "tags": [
+        "psychotherapy",
+        "neuroscience"
+      ],
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "manual"
+      },
+      "sample_size": null,
+      "one_liner": "Una revisión narrativa propone que las cerca de 500 escuelas de psicoterapia convergen en mecanismos biológicos comunes descritos por el marco RDoC: necesidades como eje, evaluación de experiencias como mecanismo, sesgos cognitivos como blanco y reappraisal como intervención.",
+      "principle": {
+        "statement": "Las escuelas terapéuticas pueden compartir mecanismos de cambio aunque utilicen lenguajes teóricos diferentes.",
+        "rationale": "Los principios transteóricos convergen en expectativas, alianza, experiencias correctivas y control cognitivo; RDoC ofrece un lenguaje común para relacionarlos con sistemas biológicos.",
+        "evidence": "La revisión integra cerca de 500 escuelas con mecanismos de control cognitivo, predicción de recompensa y reappraisal.",
+        "strength": "argumental",
+        "transfer": [
+          "clínica",
+          "investigación",
+          "formación"
+        ],
+        "limit": "El artículo no valida empíricamente un modelo unificado ni un protocolo clínico.",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Tipo",
+          "value": "Revisión narrativa teórico-integrativa; no es un estudio empírico"
+        },
+        {
+          "key": "Objeto",
+          "value": "La psicoterapia carece de una teoría básica de la mente que la conecte con mecanismos biológicos"
+        },
+        {
+          "key": "Tesis",
+          "value": "RDoC permite una ecuación común: necesidades, evaluación de experiencias, sesgos cognitivos y reappraisal"
+        },
+        {
+          "key": "Mecanismo central",
+          "value": "Control cognitivo sobre representaciones semánticas sesgadas, corregido por reappraisal y dopamina"
+        },
+        {
+          "key": "Para quién",
+          "value": "Psicoterapeutas, investigadores en neuropsicoterapia y ciencia de la intervención, residentes"
+        },
+        {
+          "key": "Implicación práctica",
+          "value": "Diseñar intervenciones según el mecanismo biológico que modifican, no según la escuela"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "RDoC",
+          "definition": "Marco del NIMH que vincula funcionamiento clínico, conducta y sistemas biológicos en dimensiones continuas; no es un sistema diagnóstico."
+        },
+        {
+          "term": "Principios de cambio",
+          "definition": "Procesos transteóricos como expectativa, alianza, experiencias correctivas y reality testing."
+        },
+        {
+          "term": "Neuropsicoterapia",
+          "definition": "Modelo integrativo que relaciona necesidades psicológicas, esquemas motivacionales y consistencia con mecanismos neurales."
+        },
+        {
+          "term": "Control cognitivo",
+          "definition": "Capacidad de modular cognición y emoción para seleccionar, actualizar y alcanzar metas."
+        },
+        {
+          "term": "Representaciones semánticas",
+          "definition": "Generalizaciones derivadas de experiencias previas que orientan la percepción, la memoria y la conducta actual."
+        },
+        {
+          "term": "Error de predicción de recompensa",
+          "definition": "Diferencia entre la recompensa esperada y la recibida que guía el aprendizaje."
+        },
+        {
+          "term": "Reappraisal",
+          "definition": "Reinterpretación de una experiencia para modificar su significado y la respuesta emocional asociada."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Grawe K (2007). Neuropsychotherapy: How the Neurosciences Inform Effective Psychotherapy. Psychology Press",
+          "doi": "10.4324/9781315090573",
+          "pmid": null,
+          "url": "https://doi.org/10.4324/9781315090573",
+          "why": "El fundamento teórico de la neuropsicoterapia y de las necesidades como centro del tratamiento que este paper retoma."
+        },
+        {
+          "citation": "Hayes SC, Hofmann SG, Ciarrochi J (2020). A process-based approach to psychological diagnosis and treatment. Clin Psychol Rev",
+          "doi": "10.1016/j.cpr.2020.101908",
+          "pmid": null,
+          "url": "https://doi.org/10.1016/j.cpr.2020.101908",
+          "why": "El argumento contra los tratamientos manualizados por diagnóstico que el paper cita como el vacío que RDoC podría llenar."
+        },
+        {
+          "citation": "Papalini S, Beckers T, Vervliet B (2020). Dopamine: from prediction error to psychotherapy. Transl Psychiatry",
+          "doi": "10.1038/s41398-020-0814-x",
+          "pmid": null,
+          "url": "https://doi.org/10.1038/s41398-020-0814-x",
+          "why": "El vínculo dopaminérgico entre errores de predicción y psicoterapia en el que se apoya el mecanismo de cambio propuesto."
+        },
+        {
+          "citation": "Goldfried MR (2019). Obtaining consensus in psychotherapy: what holds us back? Am Psychol",
+          "doi": "10.1037/amp0000365",
+          "pmid": null,
+          "url": "https://doi.org/10.1037/amp0000365",
+          "why": "El análisis de por qué la psicoterapia tiene cerca de 500 escuelas sin consenso, el problema que este paper busca resolver."
+        },
+        {
+          "citation": "Messina I, Sambin M, Beschoner P, Viviani R (2016). Changing views of emotion regulation and neurobiological models of the mechanism of action of psychotherapy. Cogn Affect Behav Neurosci",
+          "doi": "10.3758/s13415-016-0440-5",
+          "pmid": null,
+          "url": "https://doi.org/10.3758/s13415-016-0440-5",
+          "why": "La base neurobiológica de las representaciones semánticas en el mecanismo de acción de la psicoterapia."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Una revisión narrativa propone que las cerca de 500 escuelas de psicoterapia convergen en mecanismos biológicos comunes descritos por el marco RDoC: necesidades como eje, evaluación de experiencias como mecanismo, sesgos cognitivos como blanco y reappraisal como intervención."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Tipo",
+                  "value": "Revisión narrativa teórico-integrativa; no es un estudio empírico"
+                },
+                {
+                  "key": "Objeto",
+                  "value": "La psicoterapia carece de una teoría básica de la mente que la conecte con mecanismos biológicos"
+                },
+                {
+                  "key": "Tesis",
+                  "value": "RDoC permite una ecuación común: necesidades, evaluación de experiencias, sesgos cognitivos y reappraisal"
+                },
+                {
+                  "key": "Mecanismo central",
+                  "value": "Control cognitivo sobre representaciones semánticas sesgadas, corregido por reappraisal y dopamina"
+                },
+                {
+                  "key": "Para quién",
+                  "value": "Psicoterapeutas, investigadores en neuropsicoterapia y ciencia de la intervención, residentes"
+                },
+                {
+                  "key": "Implicación práctica",
+                  "value": "Diseñar intervenciones según el mecanismo biológico que modifican, no según la escuela"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Puede el marco RDoC ofrecer una teoría biológica común que explique qué mecanismos comparten las distintas escuelas de psicoterapia y permita estudiar el cambio terapéutico con mayor precisión?"
+            }
+          ]
+        },
+        {
+          "id": "argumento",
+          "heading": "El argumento",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Es una revisión narrativa que integra tres líneas de trabajo: los límites de la metodología tradicional de investigación en psicoterapia, la convergencia de los principios de cambio transteóricos y el marco RDoC como base biológica unificadora. No es un estudio empírico: es una propuesta teórica integrativa que traduce conceptos de psicoterapia a variables RDoC."
+            },
+            {
+              "type": "ol",
+              "items": [
+                "La proliferación de cerca de 500 escuelas refleja la ausencia de una teoría compartida y limita la comparación de sus mecanismos.",
+                "Los principios de cambio transteóricos, como la alianza, las experiencias correctivas y el reality testing, sugieren que distintas escuelas actúan sobre procesos comunes.",
+                "RDoC permite vincular esos procesos con sistemas biológicos medibles y someter las explicaciones terapéuticas a pruebas más falsables.",
+                "Las necesidades psicológicas básicas se traducen a metas y al control cognitivo, incluidos goal selection y goal updating.",
+                "Las expectativas disfuncionales se interpretan como errores persistentes de predicción de recompensa sostenidos por señalización dopaminérgica.",
+                "El reappraisal busca reabrir el acceso a experiencias alternativas en la memoria y recuperar control sobre representaciones semánticas sesgadas."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ideas",
+          "heading": "Ideas clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "El control cognitivo funciona como puente entre necesidades, metas y mecanismos RDoC; los autores lo sitúan en una red fronto-cíngulo-parieto-insular con alteraciones transdiagnósticas.",
+                "Las expectativas disfuncionales se entienden como errores persistentes de predicción de recompensa, y la dopamina conecta aprendizaje, extinción y consolidación con el cambio terapéutico.",
+                "La psicoterapia alinea procesos automáticos implícitos con regulación explícita al hacer consciente lo automatizado y construir respuestas más funcionales.",
+                "La investigación en adicciones ofrece paradigmas para estudiar cómo las necesidades se transforman en metas y cómo los sesgos de recompensa mantienen conductas disfuncionales."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Diseño: Es una propuesta teórico-integrativa que no prueba empíricamente el modelo unificado que formula.",
+                "Generalización: Los procesos específicos de algunos trastornos pueden no quedar explicados por un enfoque centrado en necesidades y control cognitivo.",
+                "Alcance: El artículo no ofrece un protocolo operacionalizado ni un instrumento validado para aplicar el mapeo RDoC en cada sesión.",
+                "Análisis: Al ser una revisión narrativa, la selección de referencias no sigue una búsqueda sistemática reproducible."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "Las escuelas terapéuticas pueden compartir mecanismos de cambio aunque utilicen lenguajes teóricos diferentes."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "Los principios transteóricos convergen en expectativas, alianza, experiencias correctivas y control cognitivo; RDoC ofrece un lenguaje común para relacionarlos con sistemas biológicos."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "La revisión integra cerca de 500 escuelas con mecanismos de control cognitivo, predicción de recompensa y reappraisal."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "argumental"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "clínica, investigación, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "El artículo no valida empíricamente un modelo unificado ni un protocolo clínico."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El marco invita a preguntar qué proceso pretende modificar una intervención, en vez de definirla solo por su escuela o por el diagnóstico al que se aplica. Su valor actual es heurístico: organiza preguntas clínicas e hipótesis de investigación, pero no sustituye tratamientos validados."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Al formular un caso, identificar la necesidad, la expectativa y el sesgo que podrían mantener la conducta problemática. Límite: El artículo no proporciona una entrevista ni una escala validada para ese mapeo.",
+                "Al elegir una técnica, explicitar si se busca modificar amenaza sostenida, pérdida, aprendizaje de recompensa o control cognitivo. Límite: La correspondencia entre técnica y constructo RDoC sigue siendo una hipótesis de trabajo.",
+                "En formación, comparar escuelas según mecanismos compartidos y no solo según sus etiquetas. Límite: Los mecanismos comunes no eliminan las diferencias clínicas relevantes entre enfoques."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "RDoC",
+                  "value": "Marco del NIMH que vincula funcionamiento clínico, conducta y sistemas biológicos en dimensiones continuas; no es un sistema diagnóstico."
+                },
+                {
+                  "key": "Principios de cambio",
+                  "value": "Procesos transteóricos como expectativa, alianza, experiencias correctivas y reality testing."
+                },
+                {
+                  "key": "Neuropsicoterapia",
+                  "value": "Modelo integrativo que relaciona necesidades psicológicas, esquemas motivacionales y consistencia con mecanismos neurales."
+                },
+                {
+                  "key": "Control cognitivo",
+                  "value": "Capacidad de modular cognición y emoción para seleccionar, actualizar y alcanzar metas."
+                },
+                {
+                  "key": "Representaciones semánticas",
+                  "value": "Generalizaciones derivadas de experiencias previas que orientan la percepción, la memoria y la conducta actual."
+                },
+                {
+                  "key": "Error de predicción de recompensa",
+                  "value": "Diferencia entre la recompensa esperada y la recibida que guía el aprendizaje."
+                },
+                {
+                  "key": "Reappraisal",
+                  "value": "Reinterpretación de una experiencia para modificar su significado y la respuesta emocional asociada."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Grawe K (2007). Neuropsychotherapy: How the Neurosciences Inform Effective Psychotherapy. Psychology Press",
+                  "doi": "10.4324/9781315090573",
+                  "pmid": null,
+                  "why": "El fundamento teórico de la neuropsicoterapia y de las necesidades como centro del tratamiento que este paper retoma."
+                },
+                {
+                  "citation": "Hayes SC, Hofmann SG, Ciarrochi J (2020). A process-based approach to psychological diagnosis and treatment. Clin Psychol Rev",
+                  "doi": "10.1016/j.cpr.2020.101908",
+                  "pmid": null,
+                  "why": "El argumento contra los tratamientos manualizados por diagnóstico que el paper cita como el vacío que RDoC podría llenar."
+                },
+                {
+                  "citation": "Papalini S, Beckers T, Vervliet B (2020). Dopamine: from prediction error to psychotherapy. Transl Psychiatry",
+                  "doi": "10.1038/s41398-020-0814-x",
+                  "pmid": null,
+                  "why": "El vínculo dopaminérgico entre errores de predicción y psicoterapia en el que se apoya el mecanismo de cambio propuesto."
+                },
+                {
+                  "citation": "Goldfried MR (2019). Obtaining consensus in psychotherapy: what holds us back? Am Psychol",
+                  "doi": "10.1037/amp0000365",
+                  "pmid": null,
+                  "why": "El análisis de por qué la psicoterapia tiene cerca de 500 escuelas sin consenso, el problema que este paper busca resolver."
+                },
+                {
+                  "citation": "Messina I, Sambin M, Beschoner P, Viviani R (2016). Changing views of emotion regulation and neurobiological models of the mechanism of action of psychotherapy. Cogn Affect Behav Neurosci",
+                  "doi": "10.3758/s13415-016-0440-5",
+                  "pmid": null,
+                  "why": "La base neurobiológica de las representaciones semánticas en el mecanismo de acción de la psicoterapia."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El artículo formula un marco teórico, no demuestra que los mecanismos propuestos sean comunes a todas las psicoterapias. El resumen conserva la procedencia de Javier y explicita ese límite para evitar presentar la integración RDoC como una validación empírica."
+            }
+          ]
+        }
+      ],
+      "full_note": null,
+      "word_count": 892,
+      "reading_minutes": 4,
+      "source_file": "content/summaries/2026-09-14-rdoc-psicoterapia-mecanismos.md",
+      "paper": {
+        "key": "MED:40612031",
+        "epmc_id": "40612031",
+        "source": "MED",
+        "pmid": "40612031",
+        "pmcid": "PMC12222160",
+        "doi": "10.3389/fpsyt.2025.1549976",
+        "title": "Psychotherapy Research Domain Criteria: functional mechanisms of treatment and a basic theory of the mind.",
+        "authors": "Rohlfing N, Pum M, Bonnet U, Koelkebeck K, Scherbaum N.",
+        "journal": "Frontiers in psychiatry",
+        "journal_abbrev": "Front Psychiatry",
+        "pub_year": 2025,
+        "first_publication_date": "2025-06-19",
+        "first_index_date": null,
+        "pub_types": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.3389/fpsyt.2025.1549976",
+          "europepmc": "https://europepmc.org/article/MED/40612031",
+          "fulltext_html": "https://europepmc.org/articles/PMC12222160",
+          "pdf": "https://europepmc.org/articles/PMC12222160?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "narrative_review",
+          "confidence": "manual"
+        },
+        "sample_size": null,
+        "tags": [
+          "psychotherapy",
+          "neuroscience"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-signos-observables-psicosis",
+      "title": "Anclando la investigación en psicosis: por qué los signos observables deben guiar las investigaciones biológicas",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": false,
+      "adapted_with_ai": true,
+      "author": "Javier Flores",
+      "summary_type": "conceptual",
+      "tags": [
+        "psychosis",
+        "neuroscience",
+        "symptom_networks"
+      ],
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "manual"
+      },
+      "sample_size": null,
+      "one_liner": "Los signos clínicos observables y anclados en la realidad sensoriomotora, no los síntomas autointerpretados, deberían ser el punto de partida para investigar los sustratos biológicos de la psicosis.",
+      "principle": {
+        "statement": "Los signos clínicos observables y anclados en la realidad sensoriomotora ofrecen el punto de partida epistemológicamente más limpio para investigar los sustratos biológicos de la psicosis",
+        "rationale": "El argumento se apoya en el modelo de formación de síntomas de Marková y Berrios (2009), que muestra cómo los síntomas psiquiátricos son productos de una interpretación en capas —paciente, clínico y cultura—, mientras que ciertos signos bypasean ese proceso. Es un argumento conceptual del propio autor, no un hallazgo empírico de este artículo.",
+        "evidence": "Argumento apoyado en la predicción cuantitativa del propio marco: d ≥ 0.8 para asociaciones cerebro-MGS en neuroimagen o genética, frente a d = 0.2–0.5 para síntomas no anclados; sin datos propios que la pongan a prueba en este artículo",
+        "strength": "argumental",
+        "transfer": [
+          "investigación",
+          "clínica",
+          "formación"
+        ],
+        "limit": "No es específico de psicosis; el mismo patrón de signos aparece en depresión melancólica y otros cuadros",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Tipo",
+          "value": "Revisión narrativa (perspective / brief report)"
+        },
+        {
+          "key": "Objeto",
+          "value": "Psicosis y esquizofrenia; criterios diagnósticos del DSM-5"
+        },
+        {
+          "key": "Tesis",
+          "value": "Los signos observables y anclados en la realidad sensoriomotora —no los síntomas autointerpretados— deberían ser el punto de partida privilegiado para investigar los sustratos biológicos de la psicosis"
+        },
+        {
+          "key": "Mecanismo central",
+          "value": "separación epistemológica entre signos anclados (desorganización, empobrecimiento) y síntomas no anclados (delirios, alucinaciones), a partir del modelo de formación de síntomas de Marková y Berrios"
+        },
+        {
+          "key": "Para quién",
+          "value": "investigadores en neurociencia de la psicosis, psicometría clínica, redes de psicopatología y psiquiatría computacional"
+        },
+        {
+          "key": "Implicación práctica",
+          "value": "priorizar medidas del conjunto mínimo de anclaje (MGS) como variables primarias —no secundarias— en estudios biológicos y en la evaluación de estados de alto riesgo"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Problema del anclaje de símbolos (symbol grounding problem)",
+          "definition": "concepto filosófico de Harnad (1990); los símbolos abstractos solo tienen significado si algunos están anclados en la realidad sensoriomotora externa, o quedan definidos circularmente por otros símbolos."
+        },
+        {
+          "term": "Opacidad hermenéutica (hermeneutic opacity)",
+          "definition": "el oscurecimiento de la señal biológica subyacente a través de capas de interpretación subjetiva —del paciente y luego del clínico— entre el evento neurobiológico y el síntoma reportado."
+        },
+        {
+          "term": "Conjunto mínimo de anclaje (Minimal Grounding Set, MGS)",
+          "definition": "el subconjunto de rasgos clínicos detectables por los sentidos del observador sin requerir autointerpretación del paciente y cuya gradación puede especificarse en términos conductuales."
+        },
+        {
+          "term": "Signos anclados (grounded signs)",
+          "definition": "rasgos observables directamente —habla desorganizada, afecto aplanado, alogia— que el paciente frecuentemente no percibe como anómalos."
+        },
+        {
+          "term": "Síntomas no anclados (ungrounded symptoms)",
+          "definition": "rasgos clínicos co-construidos mediante interpretación del paciente y del clínico —delirios, alucinaciones, avolición referida— sin anclaje directo en la realidad sensoriomotora."
+        },
+        {
+          "term": "Envolvente semántica (semantic envelope)",
+          "definition": "la amalgama de idiomas culturales, narrativas personales e interpretaciones clínicas que transforma una señal neurobiológica en el síntoma finalmente reportado."
+        },
+        {
+          "term": "Psiquiatría del signo primero (sign-first psychiatry)",
+          "definition": "el enfoque que prioriza los signos anclados sobre los síntomas autorreportados al investigar mecanismos biológicos, sin negar la relevancia clínica de estos últimos."
+        },
+        {
+          "term": "Red nomológica (nomological network)",
+          "definition": "red de relaciones empíricas entre constructos observables e inobservables que da validez a un concepto; aquí, la red que debería conectar el sustrato del MGS con los síntomas no anclados."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Marková IS, Berrios GE (2009). Epistemology of mental symptoms. Psychopathology, 42:343-349",
+          "doi": "10.1159/000236905",
+          "pmid": null,
+          "url": "https://doi.org/10.1159/000236905",
+          "why": "El modelo de formación de síntomas que sostiene todo el argumento del paper."
+        },
+        {
+          "citation": "Walther S, Mittal VA (2022). Motor behavior is relevant for understanding mechanism, bolstering prediction, and improving treatment. Schizophr Bull, 48:741-748",
+          "doi": "10.1093/schbul/sbac003",
+          "pmid": null,
+          "url": "https://doi.org/10.1093/schbul/sbac003",
+          "why": "La evidencia empírica más directa a favor del argumento: los signos motores predicen y discriminan en psicosis desde una perspectiva transdiagnóstica."
+        },
+        {
+          "citation": "Heckers S, Walther S (2023). Catatonia. N Engl J Med, 389:1797-1802",
+          "doi": "10.1056/NEJMra2116304",
+          "pmid": null,
+          "url": "https://doi.org/10.1056/NEJMra2116304",
+          "why": "El modelo de evaluación de catatonia que el autor propone como estándar para valorar cualquier signo del MGS."
+        },
+        {
+          "citation": "Palaniyappan L (2021). More than a biomarker: could language be a biosocial marker of psychosis? NPJ Schizophr, 7:1-5",
+          "doi": "10.1038/s41537-021-00172-1",
+          "pmid": null,
+          "url": "https://doi.org/10.1038/s41537-021-00172-1",
+          "why": "El propio autor sobre el lenguaje como marcador biosocial, base de la propuesta de cuantificar la desorganización con procesamiento de lenguaje natural."
+        },
+        {
+          "citation": "Borsboom D, Cramer AOJ, Schmittmann VD, Epskamp S, Waldorp LJ (2011). The small world of psychopathology. PLoS One, 6:e27407",
+          "doi": "10.1371/journal.pone.0027407",
+          "pmid": null,
+          "url": "https://doi.org/10.1371/journal.pone.0027407",
+          "why": "El paper fundacional de redes de psicopatología, referido directamente al predecir que el MGS actuará como nodos modulares ancla."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Los signos clínicos observables y anclados en la realidad sensoriomotora, no los síntomas autointerpretados, deberían ser el punto de partida para investigar los sustratos biológicos de la psicosis."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Tipo",
+                  "value": "Revisión narrativa (perspective / brief report)"
+                },
+                {
+                  "key": "Objeto",
+                  "value": "Psicosis y esquizofrenia; criterios diagnósticos del DSM-5"
+                },
+                {
+                  "key": "Tesis",
+                  "value": "Los signos observables y anclados en la realidad sensoriomotora —no los síntomas autointerpretados— deberían ser el punto de partida privilegiado para investigar los sustratos biológicos de la psicosis"
+                },
+                {
+                  "key": "Mecanismo central",
+                  "value": "separación epistemológica entre signos anclados (desorganización, empobrecimiento) y síntomas no anclados (delirios, alucinaciones), a partir del modelo de formación de síntomas de Marková y Berrios"
+                },
+                {
+                  "key": "Para quién",
+                  "value": "investigadores en neurociencia de la psicosis, psicometría clínica, redes de psicopatología y psiquiatría computacional"
+                },
+                {
+                  "key": "Implicación práctica",
+                  "value": "priorizar medidas del conjunto mínimo de anclaje (MGS) como variables primarias —no secundarias— en estudios biológicos y en la evaluación de estados de alto riesgo"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Por qué décadas de investigación biológica en psicosis no han producido biomarcadores replicables? Palaniyappan argumenta que el problema no es solo técnico sino epistemológico: se ha investigado el objeto equivocado. Los síntomas —delirios, alucinaciones— son construcciones semánticas co-producidas por el paciente, el clínico y la cultura, no ventanas directas al sustrato biológico."
+            },
+            {
+              "type": "p",
+              "text": "Existe un subconjunto de rasgos clínicos —los signos observables— que evitan la interpretación hermenéutica y están anclados en la realidad sensoriomotora compartida. Este conjunto mínimo de anclaje (Minimal Grounding Set, MGS), ejemplificado por la desorganización y el empobrecimiento, debería ser el punto de partida privilegiado para investigar los mecanismos biológicos de la psicosis."
+            }
+          ]
+        },
+        {
+          "id": "argumento",
+          "heading": "El argumento",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El paper no reporta datos empíricos: es un análisis filosófico-clínico que aplica el modelo de formación de síntomas de Marková y Berrios (2009) a los criterios diagnósticos de esquizofrenia del DSM-5, para distinguir signos anclados en la realidad sensoriomotora de síntomas construidos por interpretación."
+            },
+            {
+              "type": "ol",
+              "items": [
+                "El diagnóstico y los síntomas psiquiátricos son símbolos abstractos definidos circularmente por otros símbolos, sin anclaje directo en la realidad concreta (problema del anclaje de símbolos).",
+                "En el modelo de Marková y Berrios, una señal neurobiológica penetra la conciencia, crea una experiencia preverbal, y el paciente la configura con narrativas personales y plantillas culturales antes de que el clínico la reinterprete con sus propias categorías diagnósticas.",
+                "Un subconjunto de rasgos clínicos —los signos observables— no pasa por ese filtro de conciencia; el paciente frecuentemente no percibe que los exhibe y están disponibles a los sentidos del observador. Estos son los candidatos al conjunto mínimo de anclaje (MGS).",
+                "En los criterios A del DSM-5 para esquizofrenia, la desorganización del habla o el comportamiento y el empobrecimiento (afecto aplanado, alogia, reducción psicomotora) son el MGS recuperable; delirios y alucinaciones permanecen no anclados.",
+                "La implementación enfrenta tres retos: heterogeneidad de las categorías clínicas amplias, confiabilidad de la medición clínica de signos sutiles, y necesidad de umbrales poblacionales calibrados culturalmente; el autor propone una hoja de ruta de investigación en tres fases.",
+                "El autor responde objeciones —algunos síntomas no anclados sí tendrían sustrato biológico directo; el MGS no cubre toda la psicopatología relevante— y concluye que separar signos anclados de síntomas no anclados es una necesidad epistemológica para una psiquiatría biológica con sentido."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ideas",
+          "heading": "Ideas clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "El MGS de la psicosis: desorganización y empobrecimiento, los dos dominios de signos anclados recuperables de los criterios A del DSM-5 (habla o comportamiento desorganizado; afecto aplanado, alogia, reducción psicomotora).",
+                "Predicción cuantificable del marco: d ≥ 0.8 para asociaciones cerebro-MGS en neuroimagen o genética, frente a d = 0.2–0.5 para síntomas no anclados como delirios o alucinaciones.",
+                "En modelos de red de psicopatología, el MGS operaría como nodos modulares con estabilidad temporal y consistencia entre muestras; los síntomas no anclados serían nodos densamente interconectados y mutuamente reforzantes.",
+                "El MGS conecta la patología con la función observable normal en un continuum (por ejemplo, habla rápida y parpadeo frecuente como versiones de presión del habla y estereotipia motora), mientras delirios y alucinaciones exigen una ruptura cualitativa con la normalidad."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Alcance: las predicciones cuantitativas del marco (por ejemplo, d ≥ 0.8 para el MGS) no fueron puestas a prueba en este artículo; son derivadas del argumento, no evidencia acumulada.",
+                "Generalización: la desorganización y el empobrecimiento no son específicos de psicosis; aparecen también en depresión melancólica, manía y otros cuadros neurológicos.",
+                "Medición: los umbrales de \"habla desorganizada\" o \"expresividad reducida\" varían entre culturas, edades y contextos; la objetividad tecnológica (PLN, actigrafía) no garantiza por sí sola invarianza cultural.",
+                "Otra: el modelo de formación de síntomas de Marková y Berrios es influyente pero no consensuado en filosofía de la psiquiatría; existe debate sobre si los síntomas son tan co-construidos como propone el argumento.",
+                "Conflicto de interés: el autor declara honorarios de Janssen Canada y Otsuka Canada, participación en advisory boards de Bausch Health y Bristol-Myers Squibb Canada, y regalías de Oxford University Press, sin relación directa con el argumento del artículo."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "Los signos clínicos observables y anclados en la realidad sensoriomotora ofrecen el punto de partida epistemológicamente más limpio para investigar los sustratos biológicos de la psicosis"
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "El argumento se apoya en el modelo de formación de síntomas de Marková y Berrios (2009), que muestra cómo los síntomas psiquiátricos son productos de una interpretación en capas —paciente, clínico y cultura—, mientras que ciertos signos bypasean ese proceso. Es un argumento conceptual del propio autor, no un hallazgo empírico de este artículo."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "Argumento apoyado en la predicción cuantitativa del propio marco: d ≥ 0.8 para asociaciones cerebro-MGS en neuroimagen o genética, frente a d = 0.2–0.5 para síntomas no anclados; sin datos propios que la pongan a prueba en este artículo"
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "argumental"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "investigación, clínica, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "No es específico de psicosis; el mismo patrón de signos aparece en depresión melancólica y otros cuadros"
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Aunque el argumento es teórico, tiene implicaciones concretas para cómo se diseñan estudios de neuroimagen, genética y modelos computacionales en psicosis, y para cómo se evalúan los estados de alto riesgo clínico."
+            },
+            {
+              "type": "p",
+              "text": "La propuesta no reemplaza la evaluación clínica de síntomas positivos y de síntomas negativos experienciales; los reposiciona como el destino de la investigación biológica, no como su punto de partida."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Priorizar medidas del MGS (habla desorganizada cuantificada con procesamiento de lenguaje natural, actividad psicomotora con actigrafía, afecto facial con análisis de video) como variables primarias —no secundarias— en estudios de neuroimagen, genómica o neurofisiología de psicosis. Límite: requiere inversión en calibración de herramientas computacionales y normas transculturales antes de usarse como desenlace primario en ensayos clínicos.",
+                "Incorporar evaluación sistemática de signos de desorganización y psicomotores en la valoración de estados de alto riesgo clínico, hoy centrada en síntomas positivos atenuados. Límite: la desorganización del habla y el retardo psicomotor no son específicos de psicosis; su valor es predictivo para desenlaces amplios, no diagnóstico de un trastorno concreto.",
+                "Adoptar herramientas de cuantificación objetiva (procesamiento de lenguaje natural para coherencia del discurso, análisis acústico de prosodia, sensores portátiles para actividad psicomotora) en investigación y, eventualmente, en la práctica clínica. Límite: la objetividad tecnológica no confiere por sí sola invarianza cultural; los umbrales requieren calibración normativa transcultural que aún no existe."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Problema del anclaje de símbolos (symbol grounding problem)",
+                  "value": "concepto filosófico de Harnad (1990); los símbolos abstractos solo tienen significado si algunos están anclados en la realidad sensoriomotora externa, o quedan definidos circularmente por otros símbolos."
+                },
+                {
+                  "key": "Opacidad hermenéutica (hermeneutic opacity)",
+                  "value": "el oscurecimiento de la señal biológica subyacente a través de capas de interpretación subjetiva —del paciente y luego del clínico— entre el evento neurobiológico y el síntoma reportado."
+                },
+                {
+                  "key": "Conjunto mínimo de anclaje (Minimal Grounding Set, MGS)",
+                  "value": "el subconjunto de rasgos clínicos detectables por los sentidos del observador sin requerir autointerpretación del paciente y cuya gradación puede especificarse en términos conductuales."
+                },
+                {
+                  "key": "Signos anclados (grounded signs)",
+                  "value": "rasgos observables directamente —habla desorganizada, afecto aplanado, alogia— que el paciente frecuentemente no percibe como anómalos."
+                },
+                {
+                  "key": "Síntomas no anclados (ungrounded symptoms)",
+                  "value": "rasgos clínicos co-construidos mediante interpretación del paciente y del clínico —delirios, alucinaciones, avolición referida— sin anclaje directo en la realidad sensoriomotora."
+                },
+                {
+                  "key": "Envolvente semántica (semantic envelope)",
+                  "value": "la amalgama de idiomas culturales, narrativas personales e interpretaciones clínicas que transforma una señal neurobiológica en el síntoma finalmente reportado."
+                },
+                {
+                  "key": "Psiquiatría del signo primero (sign-first psychiatry)",
+                  "value": "el enfoque que prioriza los signos anclados sobre los síntomas autorreportados al investigar mecanismos biológicos, sin negar la relevancia clínica de estos últimos."
+                },
+                {
+                  "key": "Red nomológica (nomological network)",
+                  "value": "red de relaciones empíricas entre constructos observables e inobservables que da validez a un concepto; aquí, la red que debería conectar el sustrato del MGS con los síntomas no anclados."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Marková IS, Berrios GE (2009). Epistemology of mental symptoms. Psychopathology, 42:343-349",
+                  "doi": "10.1159/000236905",
+                  "pmid": null,
+                  "why": "El modelo de formación de síntomas que sostiene todo el argumento del paper."
+                },
+                {
+                  "citation": "Walther S, Mittal VA (2022). Motor behavior is relevant for understanding mechanism, bolstering prediction, and improving treatment. Schizophr Bull, 48:741-748",
+                  "doi": "10.1093/schbul/sbac003",
+                  "pmid": null,
+                  "why": "La evidencia empírica más directa a favor del argumento: los signos motores predicen y discriminan en psicosis desde una perspectiva transdiagnóstica."
+                },
+                {
+                  "citation": "Heckers S, Walther S (2023). Catatonia. N Engl J Med, 389:1797-1802",
+                  "doi": "10.1056/NEJMra2116304",
+                  "pmid": null,
+                  "why": "El modelo de evaluación de catatonia que el autor propone como estándar para valorar cualquier signo del MGS."
+                },
+                {
+                  "citation": "Palaniyappan L (2021). More than a biomarker: could language be a biosocial marker of psychosis? NPJ Schizophr, 7:1-5",
+                  "doi": "10.1038/s41537-021-00172-1",
+                  "pmid": null,
+                  "why": "El propio autor sobre el lenguaje como marcador biosocial, base de la propuesta de cuantificar la desorganización con procesamiento de lenguaje natural."
+                },
+                {
+                  "citation": "Borsboom D, Cramer AOJ, Schmittmann VD, Epskamp S, Waldorp LJ (2011). The small world of psychopathology. PLoS One, 6:e27407",
+                  "doi": "10.1371/journal.pone.0027407",
+                  "pmid": null,
+                  "why": "El paper fundacional de redes de psicopatología, referido directamente al predecir que el MGS actuará como nodos modulares ancla."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Artículo tipo perspective (brief report); se clasifica como revisión narrativa en el vocabulario del sitio. Fuente de verificación: texto completo (fullTextXML de Europe PMC, PMC12983040, 3756 palabras según los metadatos del artículo). Las cinco lecturas recomendadas están verificadas contra la bibliografía del propio artículo y contra Crossref; se corrigió el orden de autoría de Marková IS y Berrios GE (invertido en el resumen original de Javier) y se completó la lista de autores de Borsboom et al. Un tercer principio del resumen original —sobre la \"sign-first psychiatry\" como ruta más rápida hacia los síntomas no anclados— se integró en El argumento (paso 6) y no se repite como principio independiente para no duplicar Enunciado y Evidencia."
+            }
+          ]
+        }
+      ],
+      "full_note": null,
+      "word_count": 1536,
+      "reading_minutes": 8,
+      "source_file": "content/summaries/2026-09-14-signos-observables-psicosis.md",
+      "paper": {
+        "key": "MED:41836652",
+        "epmc_id": "41836652",
+        "source": "MED",
+        "pmid": "41836652",
+        "pmcid": "PMC12983040",
+        "doi": "10.3389/fpsyt.2026.1777099",
+        "title": "Grounding psychosis research: why observable signs should anchor biological investigations",
+        "authors": "Palaniyappan L.",
+        "journal": "Frontiers in psychiatry",
+        "journal_abbrev": "Front Psychiatry",
+        "pub_year": 2026,
+        "first_publication_date": "2026-02-27",
+        "first_index_date": null,
+        "pub_types": [
+          "brief-report",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.3389/fpsyt.2026.1777099",
+          "europepmc": "https://europepmc.org/article/MED/41836652",
+          "fulltext_html": "https://europepmc.org/articles/PMC12983040",
+          "pdf": "https://europepmc.org/articles/PMC12983040?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "narrative_review",
+          "confidence": "manual"
+        },
+        "sample_size": null,
+        "tags": [
+          "psychosis",
+          "neuroscience",
+          "symptom_networks"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-tdah-disrupcion-circadiana",
+      "title": "En el TDAH, la disfunción dopaminérgica y la disrupción del ritmo circadiano interactúan y amplifican los síntomas y las comorbilidades",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": false,
+      "adapted_with_ai": true,
+      "author": "Javier Flores",
+      "summary_type": "conceptual",
+      "tags": [
+        "adhd",
+        "neuroscience"
+      ],
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "manual"
+      },
+      "sample_size": null,
+      "one_liner": "Una revisión narrativa integrativa propone que, en el TDAH, la disfunción dopaminérgica y la disrupción del sistema circadiano interactúan bidireccionalmente y juntas explican mejor los síntomas centrales y las comorbilidades frecuentes que cada sistema por separado.",
+      "principle": {
+        "statement": "En el TDAH, estudiar el sistema dopaminérgico sin el circadiano, o al revés, deja fuera la interacción que amplifica síntomas y comorbilidad",
+        "rationale": "Es una revisión integrativa, no sistemática ni cuantitativa, que reúne evidencia mecanística de neurobiología, cronobiología, farmacología y genética; su fuerza está en la coherencia del argumento que construye, no en un estimado propio con incertidumbre",
+        "evidence": "Los autores describen que la disfunción dopaminérgica y la disrupción circadiana afectan dominios distintos (recompensa y motivación frente a sueño, emoción y metabolismo) pero convergen para amplificar la severidad sintomática y la comorbilidad; no se reportan datos cuantitativos propios de la revisión en el texto disponible",
+        "strength": "argumental",
+        "transfer": [
+          "investigación",
+          "clínica",
+          "formación"
+        ],
+        "limit": "No aplica si los síntomas y las comorbilidades del TDAH se explican igual de bien por uno solo de los dos sistemas, sin necesidad de modelar su interacción",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Tipo",
+          "value": "Revisión narrativa integrativa"
+        },
+        {
+          "key": "Objeto",
+          "value": "TDAH y su relación con el sistema circadiano"
+        },
+        {
+          "key": "Tesis",
+          "value": "La disfunción dopaminérgica y la disrupción del ritmo circadiano del TDAH interactúan de forma bidireccional y, juntas, explican mejor los síntomas centrales y las comorbilidades frecuentes (trastornos del ánimo, trastorno por uso de sustancias, obesidad) que cada sistema por separado"
+        },
+        {
+          "key": "Mecanismo central",
+          "value": "Interacción bidireccional entre neurotransmisión dopaminérgica y regulación circadiana, con el gen CRY1 señalado como posible nodo molecular compartido"
+        },
+        {
+          "key": "Para quién",
+          "value": "Psiquiatras que atienden TDAH con comorbilidad del ánimo o metabólica, e investigadores en cronobiología y neurodesarrollo"
+        },
+        {
+          "key": "Implicación práctica",
+          "value": "Incorporar el perfil circadiano (sueño, cronotipo) a la evaluación del TDAH y considerar la cronoterapia como complemento, mientras se espera evidencia controlada de mayor tamaño"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "TTFL (transcriptional-translational feedback loop)",
+          "definition": "circuito molecular que genera los ritmos circadianos internos mediante activación e inhibición recíproca de los genes reloj (CLOCK, BMAL1, PER, CRY)"
+        },
+        {
+          "term": "SCN (núcleo supraquiasmático)",
+          "definition": "marcapasos circadiano central del hipotálamo que sincroniza los relojes periféricos con el ciclo luz-oscuridad"
+        },
+        {
+          "term": "DLMO (dim-light melatonin onset)",
+          "definition": "marcador fisiológico del inicio de la fase circadiana nocturna, medido en condiciones de luz tenue"
+        },
+        {
+          "term": "DSPS (delayed sleep phase syndrome)",
+          "definition": "trastorno del ritmo circadiano caracterizado por un retraso significativo en el inicio y el despertar del sueño respecto al horario deseado"
+        },
+        {
+          "term": "CRY1",
+          "definition": "gen represor del TTFL al que la revisión atribuye funciones adicionales de regulación génica y metabólica, y que señala como posible interfaz entre el reloj circadiano y el riesgo neuroconductual del TDAH"
+        },
+        {
+          "term": "CDS (cognitive disengagement syndrome)",
+          "definition": "antes llamado \"sluggish cognitive tempo\"; conjunto de síntomas de enlentecimiento cognitivo, niebla mental y letargo que la revisión menciona como posible fenotipo asociado al TDAH"
+        },
+        {
+          "term": "Cronofarmacología",
+          "definition": "principio según el cual el momento de administración de un fármaco influye en su eficacia y en su perfil de efectos adversos"
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Bijlenga D, Vollebregt MA, Kooij JJS, Arns M (2019). The role of the circadian system in the etiology and pathophysiology of ADHD: time to redefine ADHD? Atten Defic Hyperact Disord",
+          "doi": "10.1007/s12402-018-0271-z",
+          "pmid": null,
+          "url": "https://doi.org/10.1007/s12402-018-0271-z",
+          "why": "El paper que propone incorporar el sistema circadiano en la etiología del TDAH; marco central de toda la revisión."
+        },
+        {
+          "citation": "Liu D, Xie Z, Gu P, Li X, Zhang Y, Wang X, Chen Z, Deng S, Shu Y, Li JD (2023). Cry1Δ11 mutation induces ADHD-like symptoms through hyperactive dopamine D1 receptor signaling. JCI Insight",
+          "doi": "10.1172/jci.insight.170434",
+          "pmid": null,
+          "url": "https://doi.org/10.1172/jci.insight.170434",
+          "why": "La evidencia animal más directa que vincula un gen circadiano (CRY1) con síntomas TDAH-like vía dopamina D1."
+        },
+        {
+          "citation": "van Andel E, Bijlenga D, Vogel SWN, Beekman ATF, Kooij JJS (2022). Attention-Deficit/Hyperactivity Disorder and Delayed Sleep Phase Syndrome in Adults: A Randomized Clinical Trial on the Effects of Chronotherapy on Sleep. J Biol Rhythms",
+          "doi": "10.1177/07487304221124659",
+          "pmid": null,
+          "url": "https://doi.org/10.1177/07487304221124659",
+          "why": "El ensayo de cronoterapia (melatonina y luminoterapia) en TDAH adulto con DSPS que la revisión cita como evidencia de intervención."
+        },
+        {
+          "citation": "Meyer N, Lok R, Schmidt C, Kyle SD, McClung CA, Cajochen C, Scheer FAJL, Jones MW, Chellappa SL (2024). The sleep-circadian interface: a window into mental disorders. Proc Natl Acad Sci U S A",
+          "doi": "10.1073/pnas.2214756121",
+          "pmid": null,
+          "url": "https://doi.org/10.1073/pnas.2214756121",
+          "why": "Sitúa la interfaz sueño-circadiano dentro del panorama transdiagnóstico de los trastornos mentales."
+        },
+        {
+          "citation": "Grigore M, Gresita A, Hermann DM, Doeppner TR, Gheorman V, Glavan D, Popa-Wagner A (2025). Regulation of circadian gene activity in fibroblasts from ADHD patients through Rosiglitazone: a pilot study. J Neural Transm (Vienna)",
+          "doi": "10.1007/s00702-025-02883-6",
+          "pmid": null,
+          "url": "https://doi.org/10.1007/s00702-025-02883-6",
+          "why": "Hallazgo traslacional reciente, con coautoría compartida con este paper, sobre restauración farmacológica de genes reloj en fibroblastos de pacientes con TDAH."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Una revisión narrativa integrativa propone que, en el TDAH, la disfunción dopaminérgica y la disrupción del sistema circadiano interactúan bidireccionalmente y juntas explican mejor los síntomas centrales y las comorbilidades frecuentes que cada sistema por separado."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Tipo",
+                  "value": "Revisión narrativa integrativa"
+                },
+                {
+                  "key": "Objeto",
+                  "value": "TDAH y su relación con el sistema circadiano"
+                },
+                {
+                  "key": "Tesis",
+                  "value": "La disfunción dopaminérgica y la disrupción del ritmo circadiano del TDAH interactúan de forma bidireccional y, juntas, explican mejor los síntomas centrales y las comorbilidades frecuentes (trastornos del ánimo, trastorno por uso de sustancias, obesidad) que cada sistema por separado"
+                },
+                {
+                  "key": "Mecanismo central",
+                  "value": "Interacción bidireccional entre neurotransmisión dopaminérgica y regulación circadiana, con el gen CRY1 señalado como posible nodo molecular compartido"
+                },
+                {
+                  "key": "Para quién",
+                  "value": "Psiquiatras que atienden TDAH con comorbilidad del ánimo o metabólica, e investigadores en cronobiología y neurodesarrollo"
+                },
+                {
+                  "key": "Implicación práctica",
+                  "value": "Incorporar el perfil circadiano (sueño, cronotipo) a la evaluación del TDAH y considerar la cronoterapia como complemento, mientras se espera evidencia controlada de mayor tamaño"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Cómo interactúan la disfunción dopaminérgica y la disrupción del sistema circadiano en el TDAH, y puede esa interacción explicar mejor los síntomas centrales y las comorbilidades frecuentes del trastorno (ánimo, consumo de sustancias, obesidad) que cada sistema por separado?"
+            },
+            {
+              "type": "p",
+              "text": "Los autores preguntan además qué papel cumplen los genes circadianos —en particular CRY1— en esa interacción, y qué potencial terapéutico tienen las intervenciones cronoterapéuticas alineadas al perfil circadiano individual."
+            }
+          ]
+        },
+        {
+          "id": "argumento",
+          "heading": "El argumento",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El TDAH se ha entendido tradicionalmente como una disfunción dopaminérgica que explica la inatención, la impulsividad y el procesamiento alterado de la recompensa. Los autores sostienen que esa mirada deja fuera una segunda capa biológica poco estudiada en conjunto: la disrupción del sistema circadiano, que regula el sueño, los ritmos hormonales y el metabolismo, y que hasta ahora se ha investigado por separado del sistema dopaminérgico."
+            },
+            {
+              "type": "ol",
+              "items": [
+                "La disfunción dopaminérgica contribuye al procesamiento de recompensa alterado y al déficit motivacional propios del TDAH.",
+                "La disrupción circadiana se asocia, de modo independiente, a trastornos del sueño, desregulación emocional y disfunción metabólica.",
+                "Ambos procesos parecen interactuar de forma bidireccional, amplificando la severidad sintomática y la comorbilidad.",
+                "Genes circadianos —en particular CRY1— emergen como posibles reguladores de vías tanto neurales como metabólicas, y podrían actuar como interfaz molecular entre ambos sistemas.",
+                "Las intervenciones cronoterapéuticas (luminoterapia, melatonina, estrategias conductuales de sueño) muestran resultados prometedores cuando se alinean con el perfil circadiano individual.",
+                "Los autores concluyen que se necesitan estudios clínicos controlados de mayor escala para validar modelos de atención estratificada y guiada por biomarcadores circadianos."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ideas",
+          "heading": "Ideas clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "El sistema dopaminérgico (recompensa, motivación, impulsividad) y el sistema circadiano (sueño, emoción, metabolismo) del TDAH se han estudiado tradicionalmente como si fueran independientes, cuando la evidencia reunida en la revisión sugiere que están acoplados.",
+                "El gen circadiano CRY1 aparece señalado como un posible nodo de regulación compartido entre las vías neurales y metabólicas implicadas en el TDAH, aunque su papel específico en personas con el trastorno no está establecido.",
+                "Las intervenciones cronoterapéuticas (luminoterapia matutina, melatonina, estrategias conductuales de sueño) muestran resultados prometedores en la revisión, sobre todo cuando se ajustan al perfil circadiano de cada persona, pero los propios autores piden ensayos controlados de mayor escala antes de generalizar su uso."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Diseño: es una revisión narrativa integrativa, sin protocolo de inclusión o exclusión, evaluación formal de calidad ni síntesis cuantitativa; la selección de estudios por relevancia temática expone al sesgo de confirmación.",
+                "Otra: la dirección causal entre disrupción circadiana y TDAH no está establecida; los propios autores reconocen que puede ser un factor primario, secundario a la conducta del trastorno, o resultado de vías moleculares compartidas.",
+                "Alcance: la evidencia sobre cronoterapia en TDAH descrita en la revisión proviene de ensayos pequeños y heterogéneos con resultados inconsistentes a largo plazo; faltan ensayos controlados de mayor escala."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "En el TDAH, estudiar el sistema dopaminérgico sin el circadiano, o al revés, deja fuera la interacción que amplifica síntomas y comorbilidad"
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "Es una revisión integrativa, no sistemática ni cuantitativa, que reúne evidencia mecanística de neurobiología, cronobiología, farmacología y genética; su fuerza está en la coherencia del argumento que construye, no en un estimado propio con incertidumbre"
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "Los autores describen que la disfunción dopaminérgica y la disrupción circadiana afectan dominios distintos (recompensa y motivación frente a sueño, emoción y metabolismo) pero convergen para amplificar la severidad sintomática y la comorbilidad; no se reportan datos cuantitativos propios de la revisión en el texto disponible"
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "argumental"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "investigación, clínica, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "No aplica si los síntomas y las comorbilidades del TDAH se explican igual de bien por uno solo de los dos sistemas, sin necesidad de modelar su interacción"
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Aunque se trata de un marco integrador y no de un ensayo clínico, invita a que la evaluación del TDAH —sobre todo en personas adultas con comorbilidad del ánimo o metabólica— incorpore una mirada al sueño y al ritmo circadiano, y no solo a los síntomas atencionales o conductuales clásicos."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Incorporar preguntas sobre calidad de sueño, cronotipo y horario de sueño-vigilia en la evaluación clínica de rutina del TDAH, en especial en personas con comorbilidad del ánimo o metabólica. Límite: la revisión no valida un instrumento de tamizaje específico ni establece puntos de corte.",
+                "Considerar intervenciones cronoterapéuticas (higiene de sueño, luminoterapia, melatonina) como complemento, no reemplazo, del tratamiento estándar del TDAH cuando coexiste un patrón de sueño retrasado. Límite: la evidencia citada proviene de ensayos pequeños y heterogéneos, sin datos consistentes de eficacia y seguridad a largo plazo."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "TTFL (transcriptional-translational feedback loop)",
+                  "value": "circuito molecular que genera los ritmos circadianos internos mediante activación e inhibición recíproca de los genes reloj (CLOCK, BMAL1, PER, CRY)"
+                },
+                {
+                  "key": "SCN (núcleo supraquiasmático)",
+                  "value": "marcapasos circadiano central del hipotálamo que sincroniza los relojes periféricos con el ciclo luz-oscuridad"
+                },
+                {
+                  "key": "DLMO (dim-light melatonin onset)",
+                  "value": "marcador fisiológico del inicio de la fase circadiana nocturna, medido en condiciones de luz tenue"
+                },
+                {
+                  "key": "DSPS (delayed sleep phase syndrome)",
+                  "value": "trastorno del ritmo circadiano caracterizado por un retraso significativo en el inicio y el despertar del sueño respecto al horario deseado"
+                },
+                {
+                  "key": "CRY1",
+                  "value": "gen represor del TTFL al que la revisión atribuye funciones adicionales de regulación génica y metabólica, y que señala como posible interfaz entre el reloj circadiano y el riesgo neuroconductual del TDAH"
+                },
+                {
+                  "key": "CDS (cognitive disengagement syndrome)",
+                  "value": "antes llamado \"sluggish cognitive tempo\"; conjunto de síntomas de enlentecimiento cognitivo, niebla mental y letargo que la revisión menciona como posible fenotipo asociado al TDAH"
+                },
+                {
+                  "key": "Cronofarmacología",
+                  "value": "principio según el cual el momento de administración de un fármaco influye en su eficacia y en su perfil de efectos adversos"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Bijlenga D, Vollebregt MA, Kooij JJS, Arns M (2019). The role of the circadian system in the etiology and pathophysiology of ADHD: time to redefine ADHD? Atten Defic Hyperact Disord",
+                  "doi": "10.1007/s12402-018-0271-z",
+                  "pmid": null,
+                  "why": "El paper que propone incorporar el sistema circadiano en la etiología del TDAH; marco central de toda la revisión."
+                },
+                {
+                  "citation": "Liu D, Xie Z, Gu P, Li X, Zhang Y, Wang X, Chen Z, Deng S, Shu Y, Li JD (2023). Cry1Δ11 mutation induces ADHD-like symptoms through hyperactive dopamine D1 receptor signaling. JCI Insight",
+                  "doi": "10.1172/jci.insight.170434",
+                  "pmid": null,
+                  "why": "La evidencia animal más directa que vincula un gen circadiano (CRY1) con síntomas TDAH-like vía dopamina D1."
+                },
+                {
+                  "citation": "van Andel E, Bijlenga D, Vogel SWN, Beekman ATF, Kooij JJS (2022). Attention-Deficit/Hyperactivity Disorder and Delayed Sleep Phase Syndrome in Adults: A Randomized Clinical Trial on the Effects of Chronotherapy on Sleep. J Biol Rhythms",
+                  "doi": "10.1177/07487304221124659",
+                  "pmid": null,
+                  "why": "El ensayo de cronoterapia (melatonina y luminoterapia) en TDAH adulto con DSPS que la revisión cita como evidencia de intervención."
+                },
+                {
+                  "citation": "Meyer N, Lok R, Schmidt C, Kyle SD, McClung CA, Cajochen C, Scheer FAJL, Jones MW, Chellappa SL (2024). The sleep-circadian interface: a window into mental disorders. Proc Natl Acad Sci U S A",
+                  "doi": "10.1073/pnas.2214756121",
+                  "pmid": null,
+                  "why": "Sitúa la interfaz sueño-circadiano dentro del panorama transdiagnóstico de los trastornos mentales."
+                },
+                {
+                  "citation": "Grigore M, Gresita A, Hermann DM, Doeppner TR, Gheorman V, Glavan D, Popa-Wagner A (2025). Regulation of circadian gene activity in fibroblasts from ADHD patients through Rosiglitazone: a pilot study. J Neural Transm (Vienna)",
+                  "doi": "10.1007/s00702-025-02883-6",
+                  "pmid": null,
+                  "why": "Hallazgo traslacional reciente, con coautoría compartida con este paper, sobre restauración farmacológica de genes reloj en fibroblastos de pacientes con TDAH."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Texto completo no accesible para verificación automática: Europe PMC no indexa este artículo como open access (isOpenAccess: N) y no hay PMCID; ScienceDirect devuelve 403 al intentar acceder al texto de la revista. La verificación de open access se hizo por la ruta B del sitio (Europe PMC declara licencia \"cc by-nc\" + OpenAlex confirma is_oa=true, best_oa_location.version=publishedVersion, licencia cc-by-nc en su ubicación editorial), por lo que el enlace de texto completo lleva al DOI de la revista, no a una copia OA verificada de lectura libre."
+            },
+            {
+              "type": "p",
+              "text": "Todo el contenido de este resumen se verificó únicamente contra el abstract estructurado de Europe PMC (el único texto del artículo al que se pudo acceder). El resumen original de Javier incluía cifras específicas (por ejemplo, la proporción de personas con TDAH con sueño irregular, la prevalencia de DSPS, la prevalencia de obesidad, la heredabilidad del TDAH, el número de loci de GWAS, la correlación genética con depresión mayor, y el efecto de la melatonina sobre el DLMO y los síntomas) que no aparecen en el abstract disponible y no pudieron confirmarse contra el texto del artículo; por integridad se omitieron de este resumen en vez de publicarse sin verificar. El argumento conceptual central —la interacción bidireccional entre disfunción dopaminérgica y disrupción circadiana, con el gen CRY1 señalado como posible nodo molecular— sí está respaldado por el abstract y se mantiene. Las cinco lecturas recomendadas se verificaron contra la bibliografía real del artículo (154 referencias en Crossref) y contra Europe PMC."
+            }
+          ]
+        }
+      ],
+      "full_note": null,
+      "word_count": 1359,
+      "reading_minutes": 7,
+      "source_file": "content/summaries/2026-09-14-tdah-disrupcion-circadiana.md",
+      "paper": {
+        "key": "MED:41990963",
+        "epmc_id": "41990963",
+        "source": "MED",
+        "pmid": "41990963",
+        "pmcid": null,
+        "doi": "10.1016/j.pnpbp.2026.111700",
+        "title": "Chronobiological disruption in ADHD: Developmental mechanisms linking sleep, behavior, and comorbid conditions.",
+        "authors": "Glavan D, Udristoiu I, Hermann DM, Filfan M, Doeppner TR, Gheorman V, Popa-Wagner A.",
+        "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
+        "journal_abbrev": "Prog Neuropsychopharmacol Biol Psychiatry",
+        "pub_year": 2026,
+        "first_publication_date": "2026-04-15",
+        "first_index_date": null,
+        "pub_types": [
+          "Review",
           "Journal Article"
         ],
         "language": null,
@@ -150,557 +2126,25 @@
           "status": "verified",
           "license": "cc by-nc",
           "license_label": "CC BY-NC",
-          "source": "europepmc",
+          "source": "europepmc+openalex",
           "checked_at": "2026-09-14T00:00:00Z"
         },
         "links": {
-          "doi": "https://doi.org/10.1093/schbul/sbae197",
-          "europepmc": "https://europepmc.org/article/MED/39550208",
-          "fulltext_html": "https://europepmc.org/articles/PMC12809804",
-          "pdf": "https://europepmc.org/articles/PMC12809804?pdf=render"
+          "doi": "https://doi.org/10.1016/j.pnpbp.2026.111700",
+          "europepmc": "https://europepmc.org/article/MED/41990963",
+          "fulltext_html": "https://doi.org/10.1016/j.pnpbp.2026.111700",
+          "pdf": null
         },
         "abstract": null,
         "summary": null,
         "ai_summary": null,
         "study_design": {
-          "id": "systematic_review_meta",
-          "confidence": "draft"
+          "id": "narrative_review",
+          "confidence": "manual"
         },
-        "sample_size": {
-          "value": 81861,
-          "confidence": "draft"
-        },
-        "tags": [
-          "psychosis",
-          "suicide",
-          "epidemiology"
-        ],
-        "mesh_major": [],
-        "keywords": [],
-        "relevance": null
-      }
-    },
-    {
-      "slug": "2026-09-14-redes-sintomas-adolescentes-longitudinal",
-      "title": "La preocupación y la insatisfacción corporal conectan distintos síntomas de salud mental en la adolescencia",
-      "date": "2026-09-14",
-      "updated": null,
-      "status": "draft",
-      "example": true,
-      "ai_draft": true,
-      "author": "Borrador de ejemplo generado con IA",
-      "tags": [
-        "symptom_networks",
-        "depression",
-        "anxiety",
-        "child_adolescent"
-      ],
-      "study_design": {
-        "id": "cohort",
-        "confidence": "draft"
-      },
-      "sample_size": {
-        "value": 1186,
-        "confidence": "draft"
-      },
-      "one_liner": "Un estudio con redes de síntomas en 1186 adolescentes suizos halla que la preocupación, la insatisfacción corporal y la baja autoestima son los síntomas más centrales; en el tiempo, la preocupación, la insatisfacción corporal y la preocupación por el peso predicen síntomas de otros dominios.",
-      "sections": [
-        {
-          "id": "en_una_frase",
-          "heading": "En una frase",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Un estudio con redes de síntomas en 1186 adolescentes suizos halla que la preocupación, la insatisfacción corporal y la baja autoestima son los síntomas más centrales; en el tiempo, la preocupación, la insatisfacción corporal y la preocupación por el peso predicen síntomas de otros dominios."
-            }
-          ]
-        },
-        {
-          "id": "pregunta",
-          "heading": "Pregunta",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "¿Cómo se organizan y se conectan entre sí, a lo largo de un año, los síntomas de distintos trastornos mentales en adolescentes de la población general que todavía no tienen un diagnóstico psiquiátrico, y qué síntomas predicen la aparición de otros?"
-            }
-          ]
-        },
-        {
-          "id": "metodos",
-          "heading": "Métodos",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Estudio prospectivo de un año con una muestra poblacional de adolescentes suizos de 11 a 17 años, sin trastorno mental actual ni pasado al inicio, con recolección de datos entre febrero de 2021 y marzo de 2024. Los participantes respondieron cuestionarios en línea sobre 29 síntomas de siete trastornos mentales en cinco momentos distintos. Los autores usaron modelos de vector autorregresivo gráfico en panel (Panel GVAR) para estimar redes de síntomas contemporáneas (dentro del mismo momento) y temporales (de un momento al siguiente), y calcularon medidas de centralidad e influencia puente entre síntomas."
-            },
-            {
-              "type": "ul",
-              "items": [
-                "1186 adolescentes (edad promedio 14.19 años, DE 1.90; 56.5% mujeres)."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "hallazgos",
-          "heading": "Hallazgos clave",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "ul",
-              "items": [
-                "En la red contemporánea, la preocupación excesiva (influencia esperada = 1.08), la insatisfacción corporal (1.03) y la baja autoestima (1.01) fueron los síntomas más centrales.",
-                "La irritabilidad y la baja autoestima actuaron como síntomas puente entre distintos dominios diagnósticos.",
-                "En la red temporal, la preocupación incontrolable predijo la aparición posterior de síntomas de ansiedad y depresión (β = 0.71).",
-                "La insatisfacción corporal (β = 1.09) y la preocupación por el peso (β = 1.04) predijeron síntomas en varios dominios, incluyendo ansiedad, depresión, síntomas psicóticos, bipolares y obsesivo-compulsivos."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "limitaciones",
-          "heading": "Limitaciones",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "ul",
-              "items": [
-                "La muestra proviene de un solo país (Suiza) y de adolescentes sin diagnóstico psiquiátrico al inicio, por lo que los resultados podrían no aplicar igual a poblaciones clínicas o de otros contextos culturales, incluido el peruano.",
-                "El seguimiento se basa en cuestionarios de autorreporte en cinco momentos, sin una entrevista diagnóstica estructurada en cada punto.",
-                "Los modelos de red muestran asociaciones predictivas entre síntomas y no permiten establecer causalidad."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "clinica",
-          "heading": "Por qué importa para la clínica",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Identificar qué síntomas —como la preocupación excesiva o la insatisfacción corporal— actúan como puente entre distintos dominios diagnósticos en la adolescencia podría orientar estrategias de detección temprana y de prevención transdiagnóstica, en lugar de programas dirigidos a un solo trastorno. Esto es relevante para el diseño de intervenciones escolares o comunitarias dirigidas a adolescentes en riesgo, antes de que aparezca un cuadro clínico establecido."
-            }
-          ]
-        },
-        {
-          "id": "nota",
-          "heading": "Nota del curador",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
-            }
-          ]
-        }
-      ],
-      "word_count": 459,
-      "reading_minutes": 2,
-      "source_file": "content/summaries/2026-09-14-redes-sintomas-adolescentes-longitudinal.md",
-      "paper": {
-        "key": "MED:42416623",
-        "epmc_id": "42416623",
-        "source": "MED",
-        "pmid": "42416623",
-        "pmcid": "PMC13339512",
-        "doi": "10.1002/jcv2.70118",
-        "title": "Transdiagnostic symptom networks in adolescent psychopathology: A longitudinal panel network analysis.",
-        "authors": "Häfeli XA, Morosan L, Hirsig A, Schmidt SJ.",
-        "journal": "JCPP advances",
-        "journal_abbrev": "JCPP Adv",
-        "pub_year": 2026,
-        "first_publication_date": "2026-04-06",
-        "first_index_date": null,
-        "pub_types": [
-          "Journal Article"
-        ],
-        "language": null,
-        "is_preprint": false,
-        "open_access": {
-          "status": "verified",
-          "license": "cc by",
-          "license_label": "CC BY",
-          "source": "europepmc",
-          "checked_at": "2026-09-14T00:00:00Z"
-        },
-        "links": {
-          "doi": "https://doi.org/10.1002/jcv2.70118",
-          "europepmc": "https://europepmc.org/article/MED/42416623",
-          "fulltext_html": "https://europepmc.org/articles/PMC13339512",
-          "pdf": "https://europepmc.org/articles/PMC13339512?pdf=render"
-        },
-        "abstract": null,
-        "summary": null,
-        "ai_summary": null,
-        "study_design": {
-          "id": "cohort",
-          "confidence": "draft"
-        },
-        "sample_size": {
-          "value": 1186,
-          "confidence": "draft"
-        },
-        "tags": [
-          "symptom_networks",
-          "depression",
-          "anxiety",
-          "child_adolescent"
-        ],
-        "mesh_major": [],
-        "keywords": [],
-        "relevance": null
-      }
-    },
-    {
-      "slug": "2026-09-14-tdah-adulto-intervencion-digital-tcc",
-      "title": "Un programa digital de terapia cognitivo-conductual reduce los síntomas de TDAH en adultos",
-      "date": "2026-09-14",
-      "updated": null,
-      "status": "draft",
-      "example": true,
-      "ai_draft": true,
-      "author": "Borrador de ejemplo generado con IA",
-      "tags": [
-        "adhd",
-        "digital",
-        "psychotherapy"
-      ],
-      "study_design": {
-        "id": "rct",
-        "confidence": "draft"
-      },
-      "sample_size": {
-        "value": 337,
-        "confidence": "draft"
-      },
-      "one_liner": "Un ensayo clínico aleatorizado pragmático encuentra que un programa digital autoguiado basado en terapia cognitivo-conductual, sumado al tratamiento habitual, reduce más los síntomas de TDAH en adultos que el tratamiento habitual solo.",
-      "sections": [
-        {
-          "id": "en_una_frase",
-          "heading": "En una frase",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Un ensayo clínico aleatorizado pragmático encuentra que un programa digital autoguiado basado en terapia cognitivo-conductual, sumado al tratamiento habitual, reduce más los síntomas de TDAH en adultos que el tratamiento habitual solo."
-            }
-          ]
-        },
-        {
-          "id": "pregunta",
-          "heading": "Pregunta",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "En personas adultas con diagnóstico confirmado de TDAH que ya reciben tratamiento habitual, ¿añadir un programa digital autoguiado basado en terapia cognitivo-conductual y mindfulness reduce más la gravedad de los síntomas que continuar solo con el tratamiento habitual?"
-            }
-          ]
-        },
-        {
-          "id": "metodos",
-          "heading": "Métodos",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Ensayo clínico aleatorizado pragmático. Se asignó al azar a personas adultas con TDAH confirmado a recibir el programa digital attexis más tratamiento habitual, o solo tratamiento habitual. El desenlace principal fue la gravedad de los síntomas de TDAH por autorreporte, medida a los 3 meses; también se evaluaron el funcionamiento, los síntomas depresivos, la autoestima y la calidad de vida relacionada con la salud, con un seguimiento adicional a los 6 meses."
-            },
-            {
-              "type": "ul",
-              "items": [
-                "337 personas adultas con TDAH confirmado fueron aleatorizadas.",
-                "Análisis por intención de tratar."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "hallazgos",
-          "heading": "Hallazgos clave",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "ul",
-              "items": [
-                "A los 3 meses, el grupo con attexis tuvo una gravedad de síntomas de TDAH significativamente menor que el grupo de tratamiento habitual (diferencia de medias ajustada = -5.0 puntos; d = 0.85; p < .001).",
-                "Los desenlaces secundarios —funcionamiento, síntomas depresivos, autoestima y calidad de vida— también mejoraron de forma significativa.",
-                "Las mejoras se mantuvieron estables a los 6 meses de seguimiento.",
-                "El efecto fue consistente entre sexos, uso de medicación, estar o no en psicoterapia y cambios de tratamiento durante el estudio.",
-                "No se reportaron eventos adversos relacionados con el uso de attexis."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "limitaciones",
-          "heading": "Limitaciones",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "ul",
-              "items": [
-                "El estudio fue financiado por GAIA, la empresa que desarrolla, posee y fabrica attexis, y dos de los nueve autores son empleados de GAIA.",
-                "El diseño no tuvo cegamiento: los participantes sabían a qué grupo fueron asignados, no hubo evaluadores externos de los desenlaces (todo se midió por autorreporte) y el grupo control fue solo tratamiento habitual, sin una intervención control que igualara el contacto y la atención recibida.",
-                "La atrición fue mayor en el grupo attexis que en el grupo control (9.1% frente a 3.5% a los 3 meses; 13.4% frente a 8.1% a los 6 meses)."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "clinica",
-          "heading": "Por qué importa para la clínica",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Un ensayo financiado por el fabricante del programa, con participantes y desenlaces no ciegos, sugiere un beneficio a 3 y 6 meses en síntomas de TDAH cuando attexis se suma al tratamiento habitual. Antes de considerarlo una alternativa con evidencia sólida, hace falta una réplica independiente con un grupo control que iguale el contacto y la atención recibida."
-            }
-          ]
-        },
-        {
-          "id": "nota",
-          "heading": "Nota del curador",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
-            }
-          ]
-        }
-      ],
-      "word_count": 456,
-      "reading_minutes": 2,
-      "source_file": "content/summaries/2026-09-14-tdah-adulto-intervencion-digital-tcc.md",
-      "paper": {
-        "key": "MED:41810578",
-        "epmc_id": "41810578",
-        "source": "MED",
-        "pmid": "41810578",
-        "pmcid": "PMC13079232",
-        "doi": "10.1017/s0033291726103390",
-        "title": "Effectiveness of attexis, a digital intervention based on cognitive behavioral therapy for adults with ADHD: a randomized controlled trial.",
-        "authors": "D'Amelio R, Betz LT, Jow SM, Retz W, Philipsen A, Klein JP, Fassbinder E, Jacob GA, Retz-Junginger P.",
-        "journal": "Psychological medicine",
-        "journal_abbrev": "Psychol Med",
-        "pub_year": 2026,
-        "first_publication_date": "2026-03-11",
-        "first_index_date": null,
-        "pub_types": [
-          "Research Support, Non-U.S. Gov't",
-          "Randomized Controlled Trial",
-          "Pragmatic Clinical Trial",
-          "Journal Article"
-        ],
-        "language": null,
-        "is_preprint": false,
-        "open_access": {
-          "status": "verified",
-          "license": "cc by",
-          "license_label": "CC BY",
-          "source": "europepmc",
-          "checked_at": "2026-09-14T00:00:00Z"
-        },
-        "links": {
-          "doi": "https://doi.org/10.1017/s0033291726103390",
-          "europepmc": "https://europepmc.org/article/MED/41810578",
-          "fulltext_html": "https://europepmc.org/articles/PMC13079232",
-          "pdf": "https://europepmc.org/articles/PMC13079232?pdf=render"
-        },
-        "abstract": null,
-        "summary": null,
-        "ai_summary": null,
-        "study_design": {
-          "id": "rct",
-          "confidence": "draft"
-        },
-        "sample_size": {
-          "value": 337,
-          "confidence": "draft"
-        },
+        "sample_size": null,
         "tags": [
           "adhd",
-          "digital",
-          "psychotherapy"
-        ],
-        "mesh_major": [],
-        "keywords": [],
-        "relevance": null
-      }
-    },
-    {
-      "slug": "2026-09-14-tdcs-trastorno-por-consumo-de-alcohol",
-      "title": "La estimulación transcraneal por corriente directa reduce modestamente los días de consumo intenso de alcohol",
-      "date": "2026-09-14",
-      "updated": null,
-      "status": "draft",
-      "example": true,
-      "ai_draft": true,
-      "author": "Borrador de ejemplo generado con IA",
-      "tags": [
-        "alcohol",
-        "neuroscience"
-      ],
-      "study_design": {
-        "id": "rct",
-        "confidence": "draft"
-      },
-      "sample_size": {
-        "value": 337,
-        "confidence": "draft"
-      },
-      "one_liner": "Un ensayo clínico aleatorizado triple ciego con 337 personas con trastorno por consumo de alcohol encuentra que la estimulación transcraneal activa redujo, de forma modesta, los días de consumo intenso frente a la estimulación simulada.",
-      "sections": [
-        {
-          "id": "en_una_frase",
-          "heading": "En una frase",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Un ensayo clínico aleatorizado triple ciego con 337 personas con trastorno por consumo de alcohol encuentra que la estimulación transcraneal activa redujo, de forma modesta, los días de consumo intenso frente a la estimulación simulada."
-            }
-          ]
-        },
-        {
-          "id": "pregunta",
-          "heading": "Pregunta",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "En personas adultas con trastorno por consumo de alcohol, ¿la estimulación transcraneal por corriente directa activa, aplicada sobre la corteza prefrontal, reduce más el consumo de alcohol que una estimulación simulada (placebo)?"
-            }
-          ]
-        },
-        {
-          "id": "metodos",
-          "heading": "Métodos",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "REDSTIM es un ensayo clínico aleatorizado, controlado con estimulación simulada y triple ciego, realizado en catorce centros de Francia y Mónaco entre octubre de 2015 y enero de 2022. Los participantes recibieron dos sesiones diarias de estimulación (ánodo en F4, cátodo en F3, 2 mA) durante cinco días consecutivos, activa o simulada, y fueron seguidos cada 4 semanas durante 24 semanas. Los desenlaces principales fueron el cambio en los días de consumo intenso de alcohol y en el consumo total de alcohol."
-            },
-            {
-              "type": "ul",
-              "items": [
-                "356 personas fueron evaluadas para elegibilidad y 337 fueron aleatorizadas 1:1 a estimulación activa o simulada.",
-                "El grupo aleatorizado fue mayoritariamente masculino (60.5%), con una edad promedio de 51.3 años (DE 11.3)."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "hallazgos",
-          "heading": "Hallazgos clave",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "ul",
-              "items": [
-                "A las 24 semanas, el grupo con estimulación activa tuvo una reducción significativamente mayor de los días de consumo intenso de alcohol frente al grupo simulado (-2.45 días cada 4 semanas; IC 97.5%: -4.86 a -0.05; p = 0.022).",
-                "La reducción del consumo total de alcohol no alcanzó significación estadística (-5.96 g/día; IC 97.5%: -15.18 a 3.26; p = 0.147).",
-                "En desenlaces secundarios exploratorios (definidos así por los propios autores, a diferencia de los dos co-primarios anteriores), el craving de alcohol fue menor en el grupo activo (-0.36; IC 95%: -0.65 a -0.07; p = 0.016), al igual que los niveles de transferrina deficiente en carbohidratos (-0.33; IC 95%: -0.65 a -0.01; p = 0.045), un marcador biológico de consumo.",
-                "Presentaron uno o más eventos adversos 69 personas del grupo activo (41.1%) y 62 del grupo simulado (36.7%), con 6 abandonos del estudio en total."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "limitaciones",
-          "heading": "Limitaciones",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "ul",
-              "items": [
-                "Los propios autores señalan que la interpretación de los resultados debe considerar la proporción de datos faltantes por diarios de consumo incompletos y por pérdidas durante el seguimiento.",
-                "El efecto sobre el consumo total de alcohol no fue estadísticamente significativo, por lo que el beneficio observado se limita a los días de consumo intenso.",
-                "El resumen no detalla si hubo diferencias en el tratamiento farmacológico o psicosocial recibido en paralelo por ambos grupos."
-              ]
-            }
-          ]
-        },
-        {
-          "id": "clinica",
-          "heading": "Por qué importa para la clínica",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Las opciones de tratamiento para el trastorno por consumo de alcohol siguen siendo limitadas, y este ensayo aporta evidencia controlada y con una muestra relativamente grande sobre una técnica de neuroestimulación no invasiva como posible complemento terapéutico. El efecto modesto sobre los días de consumo intenso, junto con la buena tolerancia reportada, sugiere una vía de investigación clínica a seguir explorando, más que un cambio inmediato en la práctica."
-            }
-          ]
-        },
-        {
-          "id": "nota",
-          "heading": "Nota del curador",
-          "pending": false,
-          "blocks": [
-            {
-              "type": "p",
-              "text": "Este resumen es un borrador de ejemplo redactado por un agente de inteligencia artificial para mostrar el formato del sitio; no fue escrito por Javier Flores ni ha sido revisado o aprobado por él todavía. Antes de publicarse como resumen curado, un borrador como este debe pasar por revisión humana."
-            }
-          ]
-        }
-      ],
-      "word_count": 518,
-      "reading_minutes": 3,
-      "source_file": "content/summaries/2026-09-14-tdcs-trastorno-por-consumo-de-alcohol.md",
-      "paper": {
-        "key": "MED:42091052",
-        "epmc_id": "42091052",
-        "source": "MED",
-        "pmid": "42091052",
-        "pmcid": "PMC13357871",
-        "doi": "10.1111/add.70461",
-        "title": "Efficacy and safety of transcranial direct current stimulation in alcohol use disorder: A randomized controlled triple-blind trial.",
-        "authors": "Trojak B, Sauvaget A, El Hage W, Wallenhorst T, Rolland B, Nubukpo P, Harika-Germaneau G, Szekely D, Giustiniani J, Auriacombe M, Brousse G, Guillaume S, Bubrovszky M, Petit B, Cabelguen C, El Ayoubi H, Rankin S, Soudry-Faure A, Goueslard K, Demina A.",
-        "journal": "Addiction (Abingdon, England)",
-        "journal_abbrev": "Addiction",
-        "pub_year": 2026,
-        "first_publication_date": "2026-05-06",
-        "first_index_date": null,
-        "pub_types": [
-          "Research Support, Non-U.S. Gov't",
-          "Multicenter Study",
-          "Randomized Controlled Trial",
-          "Journal Article"
-        ],
-        "language": null,
-        "is_preprint": false,
-        "open_access": {
-          "status": "verified",
-          "license": "cc by",
-          "license_label": "CC BY",
-          "source": "europepmc",
-          "checked_at": "2026-09-14T00:00:00Z"
-        },
-        "links": {
-          "doi": "https://doi.org/10.1111/add.70461",
-          "europepmc": "https://europepmc.org/article/MED/42091052",
-          "fulltext_html": "https://europepmc.org/articles/PMC13357871",
-          "pdf": "https://europepmc.org/articles/PMC13357871?pdf=render"
-        },
-        "abstract": null,
-        "summary": null,
-        "ai_summary": null,
-        "study_design": {
-          "id": "rct",
-          "confidence": "draft"
-        },
-        "sample_size": {
-          "value": 337,
-          "confidence": "draft"
-        },
-        "tags": [
-          "alcohol",
           "neuroscience"
         ],
         "mesh_major": [],
@@ -753,6 +2197,17 @@
       "modelling": "Modelado / economía de la salud",
       "guideline": "Guía / consenso",
       "narrative_review": "Revisión narrativa"
+    },
+    "summary_types": {
+      "empirico": "Empírico",
+      "conceptual": "Conceptual"
+    },
+    "strengths": {
+      "alta": "Alta",
+      "moderada": "Moderada",
+      "baja": "Baja",
+      "muy baja": "Muy baja",
+      "argumental": "Argumental"
     }
   }
 }
