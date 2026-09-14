@@ -1,8 +1,881 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T22:24:26Z",
-  "count": 4,
+  "generated_at": "2026-09-14T22:44:11Z",
+  "count": 7,
   "items": [
+    {
+      "slug": "2026-09-14-exposoma-salud-mental-curso-vida",
+      "title": "El exposoma y la salud mental a lo largo de la vida",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": false,
+      "adapted_with_ai": true,
+      "author": "Javier Flores",
+      "summary_type": "conceptual",
+      "tags": [
+        "child_adolescent",
+        "older_adults",
+        "public_mental_health",
+        "digital",
+        "epidemiology"
+      ],
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "manual"
+      },
+      "sample_size": null,
+      "one_liner": "El exposoma organiza la totalidad de exposiciones no genéticas a lo largo de la vida y conecta el ambiente externo con sus huellas biológicas para estudiar riesgo, resiliencia y desigualdades en salud mental.",
+      "principle": {
+        "statement": "Comprender la salud mental exige modelar exposiciones acumuladas, su momento y su incorporación biológica, no solo factores aislados.",
+        "rationale": "El marco integra niveles individuales, estructurales y moleculares, y la evidencia ExWAS muestra que perfiles agregados pueden asociarse con desenlaces a través de distintas etapas vitales. La revisión no establece que cada componente sea causal ni clínicamente accionable.",
+        "evidence": "siete ejemplos ExWAS abarcan infancia, adolescencia, adultez y vejez, con conjuntos de 36 a 2864 exposiciones.",
+        "strength": "argumental",
+        "transfer": [
+          "clínica",
+          "investigación",
+          "formación"
+        ],
+        "limit": "evidencia heterogénea y principalmente observacional, con medición incompleta del exposoma total.",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Tipo",
+          "value": "perspectiva y revisión narrativa orientada a investigación y clínica"
+        },
+        {
+          "key": "Objeto",
+          "value": "exposiciones ambientales, sociales, conductuales y biológicas acumuladas durante el curso de vida"
+        },
+        {
+          "key": "Tesis",
+          "value": "integrar exposoma externo e interno permite estudiar la carga poliambiental mejor que analizar factores aislados"
+        },
+        {
+          "key": "Mecanismo central",
+          "value": "embedding biológico mediante inflamación, cambios epigenéticos, estrés oxidativo, metabolismo y microbioma"
+        },
+        {
+          "key": "Para quién",
+          "value": "investigadores, clínicos, epidemiólogos y profesionales de salud pública"
+        },
+        {
+          "key": "Implicación práctica",
+          "value": "ampliar la formulación clínica desde la enfermedad individual hacia el contexto ambiental y social modificable"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Exposoma",
+          "definition": "totalidad de exposiciones no genéticas y encuentros ambientales de una persona durante su vida."
+        },
+        {
+          "term": "Exposoma externo",
+          "definition": "condiciones individuales y estructurales, desde dieta y adversidad hasta vecindario, políticas y contaminación."
+        },
+        {
+          "term": "Exposoma interno",
+          "definition": "respuestas endógenas que reflejan la incorporación biológica del ambiente, como inflamación, metabolismo o epigenética."
+        },
+        {
+          "term": "Embedding biológico",
+          "definition": "proceso por el que una exposición externa deja huellas moleculares, celulares o fisiológicas medibles."
+        },
+        {
+          "term": "ExWAS",
+          "definition": "estudio de asociación de todo el exposoma que explora simultáneamente numerosas exposiciones y desenlaces."
+        },
+        {
+          "term": "Carga poliambiental",
+          "definition": "efecto conjunto o perfil acumulado de múltiples exposiciones coexistentes."
+        },
+        {
+          "term": "Susceptibilidad diferencial",
+          "definition": "variación individual en la sensibilidad tanto a ambientes adversos como favorables."
+        },
+        {
+          "term": "Período sensible",
+          "definition": "ventana del desarrollo en la que una exposición puede asociarse con consecuencias particularmente intensas o duraderas."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Choi KW, et al. (2022). Integrative analysis of genomic and exposomic influences on youth mental health. J Child Psychol Psychiatry",
+          "doi": "10.1111/jcpp.13664",
+          "pmid": null,
+          "url": "https://doi.org/10.1111/jcpp.13664",
+          "why": "Integra riesgo genómico y exposómico en jóvenes y muestra el valor de modelarlos conjuntamente."
+        },
+        {
+          "citation": "Moore TM, et al. (2022). Modeling environment through a general exposome factor in two independent adolescent cohorts. Exposome",
+          "doi": "10.1093/exposome/osac010",
+          "pmid": null,
+          "url": "https://doi.org/10.1093/exposome/osac010",
+          "why": "Desarrolla el concepto de un factor exposómico general y prueba su replicación entre cohortes."
+        },
+        {
+          "citation": "Visoki E, et al. (2024). Classification of suicide attempt risk using environmental and lifestyle factors in 3 large youth cohorts. JAMA Psychiatry",
+          "doi": "10.1001/jamapsychiatry.2024.1887",
+          "pmid": null,
+          "url": "https://doi.org/10.1001/jamapsychiatry.2024.1887",
+          "why": "Ejemplo de estratificación de riesgo con perfiles ambientales y de estilo de vida en cohortes juveniles."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El exposoma organiza la totalidad de exposiciones no genéticas a lo largo de la vida y conecta el ambiente externo con sus huellas biológicas para estudiar riesgo, resiliencia y desigualdades en salud mental."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Tipo",
+                  "value": "perspectiva y revisión narrativa orientada a investigación y clínica"
+                },
+                {
+                  "key": "Objeto",
+                  "value": "exposiciones ambientales, sociales, conductuales y biológicas acumuladas durante el curso de vida"
+                },
+                {
+                  "key": "Tesis",
+                  "value": "integrar exposoma externo e interno permite estudiar la carga poliambiental mejor que analizar factores aislados"
+                },
+                {
+                  "key": "Mecanismo central",
+                  "value": "embedding biológico mediante inflamación, cambios epigenéticos, estrés oxidativo, metabolismo y microbioma"
+                },
+                {
+                  "key": "Para quién",
+                  "value": "investigadores, clínicos, epidemiólogos y profesionales de salud pública"
+                },
+                {
+                  "key": "Implicación práctica",
+                  "value": "ampliar la formulación clínica desde la enfermedad individual hacia el contexto ambiental y social modificable"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Cómo puede el marco del exposoma mejorar la comprensión de la salud mental durante todo el curso de vida, y qué oportunidades ofrece para investigación, estratificación de riesgo, prevención y atención clínica?"
+            }
+          ]
+        },
+        {
+          "id": "argumento",
+          "heading": "El argumento",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Los autores sostienen que la salud mental resulta de la interacción continua entre susceptibilidad biológica y exposiciones externas. El exposoma amplía los determinantes sociales de la salud al conectar esas condiciones con procesos internos medibles y al tratar las exposiciones como una carga conjunta, cambiante y dependiente del momento del desarrollo."
+            },
+            {
+              "type": "ol",
+              "items": [
+                "El exposoma externo reúne experiencias individuales y condiciones estructurales, mientras el interno recoge la respuesta molecular, celular y fisiológica del organismo.",
+                "La susceptibilidad diferencial y los períodos sensibles implican que una misma exposición puede asociarse con trayectorias distintas según la persona y el momento de la vida.",
+                "Los estudios ExWAS permiten explorar muchas exposiciones a la vez, construir puntuaciones agregadas y probar su generalización entre cohortes.",
+                "La integración longitudinal, multi-ómica y genéticamente informada puede distinguir mejor correlación, confusión y posibles mecanismos.",
+                "La traducción clínica debe centrarse en estratificación de riesgo, exposiciones modificables y psicoeducación, sin convertir asociaciones en prescripciones causales."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ideas",
+          "heading": "Ideas clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Exposoma y determinantes sociales no son sinónimos: los determinantes sociales aportan especificidad contextual y el exposoma añade profundidad biológica y medición agregada.",
+                "La temporalidad es estructural, no un detalle: exposiciones perinatales, digitales, laborales o sociales adquieren significado diferente en infancia, adolescencia, adultez y vejez.",
+                "La carga poliambiental puede modelarse como un factor general o como perfiles de exposición; la revisión ilustra estudios juveniles que abarcan desde 36 hasta 2864 exposiciones y prueban comparaciones entre cohortes.",
+                "La agenda pendiente incluye datos longitudinales escalables, integración multi-ómica, diseños genéticamente informados, inferencia causal, estandarización y medición del exposoma digital."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Diseño: es una perspectiva narrativa, no una revisión sistemática ni una estimación cuantitativa del efecto del exposoma sobre desenlaces clínicos.",
+                "Alcance: ningún estudio puede capturar la totalidad del exposoma; cada cohorte queda limitada por las exposiciones que decidió medir.",
+                "Medición: las definiciones, escalas y ventanas temporales difieren entre cohortes, lo que dificulta la replicación y la comparabilidad.",
+                "Confusión: muchas asociaciones ambiente-salud mental pueden reflejar selección, causalidad inversa o factores genéticos y sociales no medidos.",
+                "Generalización: gran parte de la evidencia proviene de cohortes grandes de países de altos ingresos y no garantiza transferibilidad a Perú o América Latina."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "Comprender la salud mental exige modelar exposiciones acumuladas, su momento y su incorporación biológica, no solo factores aislados."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "El marco integra niveles individuales, estructurales y moleculares, y la evidencia ExWAS muestra que perfiles agregados pueden asociarse con desenlaces a través de distintas etapas vitales. La revisión no establece que cada componente sea causal ni clínicamente accionable."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "siete ejemplos ExWAS abarcan infancia, adolescencia, adultez y vejez, con conjuntos de 36 a 2864 exposiciones."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "argumental"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "clínica, investigación, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "evidencia heterogénea y principalmente observacional, con medición incompleta del exposoma total."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El exposoma propone una formulación más amplia: además de preguntar por síntomas y antecedentes, pregunta por aquello en lo que la persona está inmersa. Puede ordenar información social, ambiental, digital y conductual, pero todavía no ofrece un instrumento clínico universal ni umbrales validados para decidir tratamientos."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Incorporar exposiciones sociales y ambientales relevantes en la formulación y el plan de cuidado, incluyendo vivienda, seguridad alimentaria, contaminación, aislamiento y entorno digital. Límite: registrar una exposición no demuestra que explique el cuadro individual.",
+                "Priorizar intervenciones sobre factores modificables y derivaciones a recursos comunitarios cuando exista una necesidad concreta. Límite: no desplazar tratamientos eficaces ni responsabilizar al paciente por exposiciones estructurales.",
+                "Usar perfiles exposómicos como complemento futuro de modelos pronósticos y de prevención. Límite: requiere validación local, equidad algorítmica y evaluación de beneficio clínico antes de su uso rutinario."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Exposoma",
+                  "value": "totalidad de exposiciones no genéticas y encuentros ambientales de una persona durante su vida."
+                },
+                {
+                  "key": "Exposoma externo",
+                  "value": "condiciones individuales y estructurales, desde dieta y adversidad hasta vecindario, políticas y contaminación."
+                },
+                {
+                  "key": "Exposoma interno",
+                  "value": "respuestas endógenas que reflejan la incorporación biológica del ambiente, como inflamación, metabolismo o epigenética."
+                },
+                {
+                  "key": "Embedding biológico",
+                  "value": "proceso por el que una exposición externa deja huellas moleculares, celulares o fisiológicas medibles."
+                },
+                {
+                  "key": "ExWAS",
+                  "value": "estudio de asociación de todo el exposoma que explora simultáneamente numerosas exposiciones y desenlaces."
+                },
+                {
+                  "key": "Carga poliambiental",
+                  "value": "efecto conjunto o perfil acumulado de múltiples exposiciones coexistentes."
+                },
+                {
+                  "key": "Susceptibilidad diferencial",
+                  "value": "variación individual en la sensibilidad tanto a ambientes adversos como favorables."
+                },
+                {
+                  "key": "Período sensible",
+                  "value": "ventana del desarrollo en la que una exposición puede asociarse con consecuencias particularmente intensas o duraderas."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Choi KW, et al. (2022). Integrative analysis of genomic and exposomic influences on youth mental health. J Child Psychol Psychiatry",
+                  "doi": "10.1111/jcpp.13664",
+                  "pmid": null,
+                  "why": "Integra riesgo genómico y exposómico en jóvenes y muestra el valor de modelarlos conjuntamente."
+                },
+                {
+                  "citation": "Moore TM, et al. (2022). Modeling environment through a general exposome factor in two independent adolescent cohorts. Exposome",
+                  "doi": "10.1093/exposome/osac010",
+                  "pmid": null,
+                  "why": "Desarrolla el concepto de un factor exposómico general y prueba su replicación entre cohortes."
+                },
+                {
+                  "citation": "Visoki E, et al. (2024). Classification of suicide attempt risk using environmental and lifestyle factors in 3 large youth cohorts. JAMA Psychiatry",
+                  "doi": "10.1001/jamapsychiatry.2024.1887",
+                  "pmid": null,
+                  "why": "Ejemplo de estratificación de riesgo con perfiles ambientales y de estilo de vida en cohortes juveniles."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Resumen de Javier Flores, adaptado al formato del sitio con asistencia de IA. La versión publicada está disponible bajo CC BY 4.0 en el sitio del editor. Europe PMC registra el artículo y su licencia, pero todavía no marca isOpenAccess=Y; por eso la verificación se completó con OpenAlex sobre la versión publicada."
+            }
+          ]
+        }
+      ],
+      "full_note": null,
+      "word_count": 903,
+      "reading_minutes": 5,
+      "source_file": "content/summaries/2026-09-14-exposoma-salud-mental-curso-vida.md",
+      "paper": {
+        "key": "MED:41803416",
+        "epmc_id": "41803416",
+        "source": "MED",
+        "pmid": "41803416",
+        "pmcid": "PMC13248140",
+        "doi": "10.1038/s41386-026-02333-1",
+        "title": "Exposome and mental health across the lifespan: research and clinical perspectives.",
+        "authors": "Barzilay R, Jeste DV.",
+        "journal": "Neuropsychopharmacology",
+        "journal_abbrev": "Neuropsychopharmacology",
+        "pub_year": 2026,
+        "first_publication_date": "2026-03-09",
+        "first_index_date": null,
+        "pub_types": [
+          "research-article",
+          "Review",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc+openalex",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1038/s41386-026-02333-1",
+          "europepmc": "https://europepmc.org/article/MED/41803416",
+          "fulltext_html": "https://europepmc.org/articles/PMC13248140",
+          "pdf": "https://europepmc.org/articles/PMC13248140?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "narrative_review",
+          "confidence": "manual"
+        },
+        "sample_size": null,
+        "tags": [
+          "child_adolescent",
+          "older_adults",
+          "public_mental_health",
+          "digital",
+          "epidemiology"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-frustrative-nonreward-frustracion-recompensa",
+      "title": "Frustrative nonreward: un siglo de progreso sobre frustración y recompensa",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": false,
+      "adapted_with_ai": true,
+      "author": "Javier Flores",
+      "summary_type": "conceptual",
+      "tags": [
+        "depression",
+        "anxiety",
+        "adhd",
+        "bpd",
+        "substances",
+        "neuroscience"
+      ],
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "manual"
+      },
+      "sample_size": null,
+      "one_liner": "La frustración surge cuando una recompensa esperada disminuye o desaparece y funciona como una señal adaptativa que reorganiza motivación, persistencia y búsqueda, pero su desregulación atraviesa varios cuadros clínicos.",
+      "principle": {
+        "statement": "La frustración regula el equilibrio entre persistir en una meta y desacoplarse para buscar alternativas.",
+        "rationale": "La evidencia revisada conecta violación de expectativa con invigoration, supresión, exploración y aprendizaje de persistencia. El mismo mecanismo puede resultar adaptativo o problemático según la magnitud, el contexto y la capacidad de regulación.",
+        "evidence": "un siglo de estudios integra paradigmas de contraste negativo, reforzamiento parcial, neuroimagen, EEG, EMA, farmacología y manipulación de circuitos.",
+        "strength": "argumental",
+        "transfer": [
+          "clínica",
+          "investigación",
+          "formación"
+        ],
+        "limit": "síntesis heterogénea con gran peso de modelos animales y sin estimación cuantitativa conjunta.",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Tipo",
+          "value": "revisión narrativa e integradora de un siglo de investigación animal y humana"
+        },
+        {
+          "key": "Objeto",
+          "value": "frustrative nonreward, la respuesta a la omisión, reducción, demora o inaccesibilidad inesperada de una recompensa"
+        },
+        {
+          "key": "Tesis",
+          "value": "la frustración es una respuesta a la violación de expectativa que coordina emoción, estrés, aprendizaje y selección de acciones"
+        },
+        {
+          "key": "Mecanismo central",
+          "value": "error de predicción negativo y desacoplamiento de incentivos mediante una red cíngulo-insular, estriatal, amigdalina, hipocampal y dopaminérgica"
+        },
+        {
+          "key": "Para quién",
+          "value": "investigadores traslacionales, psiquiatras, psicólogos y clínicos interesados en irritabilidad, motivación y adicciones"
+        },
+        {
+          "key": "Implicación práctica",
+          "value": "evaluar si la respuesta desadaptativa expresa persistencia excesiva, supresión insuficiente o abandono prematuro de metas"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Frustrative nonreward",
+          "definition": "estado emocional negativo producido por una reducción u omisión inesperada de una recompensa apetitiva."
+        },
+        {
+          "term": "Reward downshift",
+          "definition": "procedimiento que reduce la magnitud o calidad de una recompensa previamente esperada."
+        },
+        {
+          "term": "Error de predicción de recompensa",
+          "definition": "diferencia entre la recompensa esperada y la obtenida que actualiza aprendizaje y conducta."
+        },
+        {
+          "term": "Desacoplamiento de incentivos",
+          "definition": "ruptura adaptativa del apego a una fuente que dejó de producir recompensa."
+        },
+        {
+          "term": "cSNC",
+          "definition": "contraste negativo sucesivo consumatorio; supresión del consumo tras cambiar de una recompensa preferida a otra menor."
+        },
+        {
+          "term": "pSNC",
+          "definition": "contraste negativo sucesivo pavloviano; cambio de preferencia anticipatoria después de reducir una recompensa."
+        },
+        {
+          "term": "PREE",
+          "definition": "mayor resistencia a la extinción después de entrenamiento con reforzamiento parcial que después de reforzamiento continuo."
+        },
+        {
+          "term": "Invigoration",
+          "definition": "incremento transitorio de energía, velocidad o intensidad de la respuesta frente a una barrera o pérdida de recompensa."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Papini MR, Guarino S, Hagen C, Torres C (2022). Incentive disengagement and the adaptive significance of frustrative nonreward. Learn Behav",
+          "doi": "10.3758/s13420-022-00519-3",
+          "pmid": null,
+          "url": "https://doi.org/10.3758/s13420-022-00519-3",
+          "why": "Desarrolla la hipótesis de desacoplamiento de incentivos que organiza la función adaptativa propuesta en esta revisión."
+        },
+        {
+          "citation": "Ishino S, et al. (2023). Dopamine error signal to actively cope with lack of expected reward. Sci Adv",
+          "doi": "10.1126/sciadv.ade5420",
+          "pmid": null,
+          "url": "https://doi.org/10.1126/sciadv.ade5420",
+          "why": "Identifica una señal dopaminérgica vinculada a persistencia activa cuando la recompensa esperada falta."
+        },
+        {
+          "citation": "Tseng WL, et al. (2023). Network analysis of ecological momentary assessment identifies frustration as a central node in irritability. J Child Psychol Psychiatry",
+          "doi": "10.1111/jcpp.13794",
+          "pmid": null,
+          "url": "https://doi.org/10.1111/jcpp.13794",
+          "why": "Conecta la frustración cotidiana con la organización dinámica de síntomas de irritabilidad en humanos."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "La frustración surge cuando una recompensa esperada disminuye o desaparece y funciona como una señal adaptativa que reorganiza motivación, persistencia y búsqueda, pero su desregulación atraviesa varios cuadros clínicos."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Tipo",
+                  "value": "revisión narrativa e integradora de un siglo de investigación animal y humana"
+                },
+                {
+                  "key": "Objeto",
+                  "value": "frustrative nonreward, la respuesta a la omisión, reducción, demora o inaccesibilidad inesperada de una recompensa"
+                },
+                {
+                  "key": "Tesis",
+                  "value": "la frustración es una respuesta a la violación de expectativa que coordina emoción, estrés, aprendizaje y selección de acciones"
+                },
+                {
+                  "key": "Mecanismo central",
+                  "value": "error de predicción negativo y desacoplamiento de incentivos mediante una red cíngulo-insular, estriatal, amigdalina, hipocampal y dopaminérgica"
+                },
+                {
+                  "key": "Para quién",
+                  "value": "investigadores traslacionales, psiquiatras, psicólogos y clínicos interesados en irritabilidad, motivación y adicciones"
+                },
+                {
+                  "key": "Implicación práctica",
+                  "value": "evaluar si la respuesta desadaptativa expresa persistencia excesiva, supresión insuficiente o abandono prematuro de metas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Qué es el frustrative nonreward, qué mecanismos psicológicos y neurobiológicos lo sostienen, y cómo ayuda a explicar diferencias en motivación, agresión, persistencia e irritabilidad entre especies y condiciones clínicas?"
+            }
+          ]
+        },
+        {
+          "id": "argumento",
+          "heading": "El argumento",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "La revisión distingue el procedimiento experimental de la respuesta del organismo: no recibir algo nunca esperado es simple no recompensa; frustrarse requiere una expectativa previa violada. Desde allí integra evidencia de aprendizaje, estrés y neurociencia para proponer que la función adaptativa del FNR es romper el apego a una fuente agotada y redistribuir la conducta hacia alternativas."
+            },
+            {
+              "type": "ol",
+              "items": [
+                "La omisión, reducción, demora u obstrucción de una recompensa esperada genera un error de predicción negativo y un estado afectivo aversivo.",
+                "Ese estado recluta una red distribuida que incluye corteza cingulada anterior y frontoinsular, estriado ventral, amígdala, habénula, hipocampo y neuronas dopaminérgicas del área tegmental ventral.",
+                "La respuesta inicial puede intensificar la conducta; si la discrepancia persiste, favorece exploración, cambio de estrategia o abandono de la meta.",
+                "La experiencia con recompensa intermitente puede contracondicionar la frustración y aumentar la persistencia posterior, como muestra el efecto de extinción tras reforzamiento parcial.",
+                "La desregulación puede tomar direcciones opuestas: búsqueda compulsiva y persistencia excesiva, o invigoration insuficiente y desacoplamiento prematuro."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ideas",
+          "heading": "Ideas clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "El FNR no reside en un centro cerebral único: emerge de la coordinación entre sistemas de saliencia afectiva, valoración de recompensa, control cognitivo, memoria y selección de acciones.",
+                "La frustración comparte propiedades con otros estresores, incluida activación autonómica y del eje HPA, y puede sumarse conductualmente a restricción o dolor.",
+                "El desacoplamiento de incentivos ofrece una función adaptativa: abandonar una fuente que dejó de recompensar para explorar alternativas, equilibrando perseverancia y flexibilidad.",
+                "Irritabilidad, adicciones, depresión, ansiedad, TDAH, trastorno límite y juego problemático pueden involucrar componentes diferentes del FNR; la revisión propone un mecanismo transdiagnóstico, no una explicación única."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Diseño: revisión narrativa extensa, sin búsqueda sistemática, evaluación formal de sesgo ni metaanálisis propio.",
+                "Generalización: combina especies, paradigmas y niveles de análisis muy distintos; una convergencia conceptual no garantiza equivalencia de mecanismos.",
+                "Medición: FNR se operacionaliza mediante omisión, pérdida, obstrucción o downshift, procedimientos que pueden generar experiencias parcialmente diferentes.",
+                "Alcance: varias implicaciones terapéuticas derivan de modelos animales o estudios humanos pequeños y todavía no constituyen intervenciones clínicas validadas.",
+                "Confusión: frustración, estrés, ira, conflicto y motivación se solapan; muchos estudios no separan con precisión la emoción subjetiva de la conducta observada."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "La frustración regula el equilibrio entre persistir en una meta y desacoplarse para buscar alternativas."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "La evidencia revisada conecta violación de expectativa con invigoration, supresión, exploración y aprendizaje de persistencia. El mismo mecanismo puede resultar adaptativo o problemático según la magnitud, el contexto y la capacidad de regulación."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "un siglo de estudios integra paradigmas de contraste negativo, reforzamiento parcial, neuroimagen, EEG, EMA, farmacología y manipulación de circuitos."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "argumental"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "clínica, investigación, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "síntesis heterogénea con gran peso de modelos animales y sin estimación cuantitativa conjunta."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "La utilidad del FNR está en descomponer la frustración en operaciones observables: expectativa, discrepancia, intensidad de respuesta, persistencia, cambio de estrategia y recuperación. Esto permite formular hipótesis más precisas que etiquetar a una persona como poco tolerante a la frustración, aunque la revisión no aporta un protocolo diagnóstico ni un tratamiento único."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "En irritabilidad, explorar qué expectativas se violan, cómo aumenta la activación y qué facilita la recuperación antes de centrarse solo en el estallido. Límite: la relación entre frustración e irritabilidad no identifica por sí sola un diagnóstico.",
+                "En depresión o adicciones, diferenciar falta de invigoration, abandono prematuro y persistencia compulsiva frente a una recompensa perdida. Límite: estas rutas son hipótesis mecanísticas y requieren evaluación clínica individual.",
+                "En psicoterapia, usar exposición graduada a demoras, errores y recompensa incierta para entrenar flexibilidad y recuperación cuando sea apropiado. Límite: la traducción desde reforzamiento parcial animal a tratamiento humano todavía necesita ensayos clínicos."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Frustrative nonreward",
+                  "value": "estado emocional negativo producido por una reducción u omisión inesperada de una recompensa apetitiva."
+                },
+                {
+                  "key": "Reward downshift",
+                  "value": "procedimiento que reduce la magnitud o calidad de una recompensa previamente esperada."
+                },
+                {
+                  "key": "Error de predicción de recompensa",
+                  "value": "diferencia entre la recompensa esperada y la obtenida que actualiza aprendizaje y conducta."
+                },
+                {
+                  "key": "Desacoplamiento de incentivos",
+                  "value": "ruptura adaptativa del apego a una fuente que dejó de producir recompensa."
+                },
+                {
+                  "key": "cSNC",
+                  "value": "contraste negativo sucesivo consumatorio; supresión del consumo tras cambiar de una recompensa preferida a otra menor."
+                },
+                {
+                  "key": "pSNC",
+                  "value": "contraste negativo sucesivo pavloviano; cambio de preferencia anticipatoria después de reducir una recompensa."
+                },
+                {
+                  "key": "PREE",
+                  "value": "mayor resistencia a la extinción después de entrenamiento con reforzamiento parcial que después de reforzamiento continuo."
+                },
+                {
+                  "key": "Invigoration",
+                  "value": "incremento transitorio de energía, velocidad o intensidad de la respuesta frente a una barrera o pérdida de recompensa."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Papini MR, Guarino S, Hagen C, Torres C (2022). Incentive disengagement and the adaptive significance of frustrative nonreward. Learn Behav",
+                  "doi": "10.3758/s13420-022-00519-3",
+                  "pmid": null,
+                  "why": "Desarrolla la hipótesis de desacoplamiento de incentivos que organiza la función adaptativa propuesta en esta revisión."
+                },
+                {
+                  "citation": "Ishino S, et al. (2023). Dopamine error signal to actively cope with lack of expected reward. Sci Adv",
+                  "doi": "10.1126/sciadv.ade5420",
+                  "pmid": null,
+                  "why": "Identifica una señal dopaminérgica vinculada a persistencia activa cuando la recompensa esperada falta."
+                },
+                {
+                  "citation": "Tseng WL, et al. (2023). Network analysis of ecological momentary assessment identifies frustration as a central node in irritability. J Child Psychol Psychiatry",
+                  "doi": "10.1111/jcpp.13794",
+                  "pmid": null,
+                  "why": "Conecta la frustración cotidiana con la organización dinámica de síntomas de irritabilidad en humanos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Resumen de Javier Flores, adaptado al formato del sitio con asistencia de IA. Las afirmaciones y metadatos se contrastaron con el PDF de la versión publicada depositado en ORBi UMONS, que declara CC BY 4.0. Europe PMC aún no consigna la licencia; OpenAlex confirma que la versión publicada es open access bajo CC BY."
+            }
+          ]
+        }
+      ],
+      "full_note": null,
+      "word_count": 947,
+      "reading_minutes": 5,
+      "source_file": "content/summaries/2026-09-14-frustrative-nonreward-frustracion-recompensa.md",
+      "paper": {
+        "key": "MED:41864253",
+        "epmc_id": "41864253",
+        "source": "MED",
+        "pmid": "41864253",
+        "pmcid": null,
+        "doi": "10.1016/j.neubiorev.2026.106651",
+        "title": "Frustrative nonreward: A century of progress.",
+        "authors": "Green TA, Leibenluft E, Li Z, Ogawa M, Sabariego M, Mármol Contreras Y, Bellaert N, Papini MR.",
+        "journal": "Neuroscience and Biobehavioral Reviews",
+        "journal_abbrev": "Neurosci Biobehav Rev",
+        "pub_year": 2026,
+        "first_publication_date": "2026-03-19",
+        "first_index_date": null,
+        "pub_types": [
+          "Review",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc+openalex",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1016/j.neubiorev.2026.106651",
+          "europepmc": "https://europepmc.org/article/MED/41864253",
+          "fulltext_html": "https://doi.org/10.1016/j.neubiorev.2026.106651",
+          "pdf": null
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "narrative_review",
+          "confidence": "manual"
+        },
+        "sample_size": null,
+        "tags": [
+          "depression",
+          "anxiety",
+          "adhd",
+          "bpd",
+          "substances",
+          "neuroscience"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
     {
       "slug": "2026-09-14-hitop-reconstruido-desde-sintomas",
       "title": "Reconstruyendo HiTOP desde el síntoma: la estructura se sostiene sin el DSM como punto de partida",
@@ -2145,6 +3018,759 @@
         "sample_size": null,
         "tags": [
           "adhd",
+          "neuroscience"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-14-validando-rdoc-modelo-bifactor",
+      "title": "Validando RDoC con datos: un modelo bifactor guiado por activación cerebral",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": false,
+      "adapted_with_ai": true,
+      "author": "Javier Flores",
+      "summary_type": "empirico",
+      "tags": [
+        "symptom_networks",
+        "neuroscience"
+      ],
+      "study_design": {
+        "id": "modelling",
+        "confidence": "manual"
+      },
+      "sample_size": {
+        "value": 6192,
+        "confidence": "manual"
+      },
+      "one_liner": "Un modelo bifactor construido desde 84 mapas de activación cerebral representa mejor las relaciones circuito-función que la organización RDoC convencional y sugiere añadir un factor general y dividir el dominio cognitivo.",
+      "principle": {
+        "statement": "Una ontología funcional mejora cuando separa la actividad compartida entre tareas de los patrones específicos de cada función.",
+        "rationale": "El bifactor permitió distinguir un componente general de ocho factores específicos y superó el ajuste del RDoC convencional en datos retenidos. La ventaja fue menor al penalizar complejidad y no equivale a validar una nueva nosología clínica.",
+        "evidence": "84 mapas de 19 estudios y 6192 participantes; 47 mapas de validación interna y 36 mapas de validación externa.",
+        "strength": "baja",
+        "transfer": [
+          "investigación",
+          "formación"
+        ],
+        "limit": "corpus de tareas desequilibrado y restringido a activación funcional en participantes sanos.",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Población",
+          "value": "6192 participantes sanos procedentes de 19 estudios de resonancia magnética funcional"
+        },
+        {
+          "key": "Intervención o exposición",
+          "value": "84 mapas whole-brain de activación durante tareas, obtenidos de NeuroVault y UK Biobank"
+        },
+        {
+          "key": "Comparador",
+          "value": "cuatro modelos factoriales, RDoC específico, RDoC bifactor, data-driven específico y data-driven bifactor"
+        },
+        {
+          "key": "Desenlace primario",
+          "value": "ajuste de los modelos medido con RMSEA, CFI, TLI, AIC y BIC"
+        },
+        {
+          "key": "Efecto principal",
+          "value": "el modelo data-driven bifactor mostró mejor ajuste global; Tukey p < .001 para RMSEA, CFI y TLI"
+        },
+        {
+          "key": "Certeza",
+          "value": "baja; análisis exploratorio sobre un corpus limitado, con validación interna y externa"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "RDoC",
+          "definition": "marco del NIMH que organiza funciones relevantes para la psicopatología en dominios y unidades de análisis dimensionales."
+        },
+        {
+          "term": "Modelo bifactor",
+          "definition": "modelo que estima simultáneamente un factor general compartido y factores específicos ortogonales."
+        },
+        {
+          "term": "Factor general",
+          "definition": "patrón de activación común a múltiples tareas; aquí estuvo dominado por regiones visuales y motoras."
+        },
+        {
+          "term": "EFA",
+          "definition": "análisis factorial exploratorio usado para descubrir cuántos factores específicos describen los datos."
+        },
+        {
+          "term": "CFA",
+          "definition": "análisis factorial confirmatorio usado para estimar el ajuste de una estructura factorial definida."
+        },
+        {
+          "term": "Validación interna",
+          "definition": "prueba del modelo en mapas whole-brain retenidos del corpus original."
+        },
+        {
+          "term": "Validación externa",
+          "definition": "prueba con mapas de coordenadas obtenidos de Neurosynth, una modalidad distinta a la usada para entrenar."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Beam E, Potts C, Poldrack RA, Etkin A (2021). A data-driven framework for mapping domains of human neurobiology. Nat Neurosci",
+          "doi": "10.1038/s41593-021-00948-9",
+          "pmid": null,
+          "url": "https://doi.org/10.1038/s41593-021-00948-9",
+          "why": "Antecedente directo que mostró límites en la correspondencia circuito-función de RDoC y DSM."
+        },
+        {
+          "citation": "Bolt T, et al. (2020). Ontological dimensions of cognitive-neural mappings. Neuroinformatics",
+          "doi": "10.1007/s12021-020-09454-y",
+          "pmid": null,
+          "url": "https://doi.org/10.1007/s12021-020-09454-y",
+          "why": "Presenta el corpus de mapas y el enfoque ontológico sobre el que se apoya este análisis."
+        },
+        {
+          "citation": "Insel T, et al. (2010). Research Domain Criteria: Toward a New Classification Framework for Research on Mental Disorders. Am J Psychiatry",
+          "doi": "10.1176/appi.ajp.2010.09091379",
+          "pmid": null,
+          "url": "https://doi.org/10.1176/appi.ajp.2010.09091379",
+          "why": "Texto fundacional para entender el propósito original de RDoC y qué intenta refinar el estudio."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Un modelo bifactor construido desde 84 mapas de activación cerebral representa mejor las relaciones circuito-función que la organización RDoC convencional y sugiere añadir un factor general y dividir el dominio cognitivo."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Población",
+                  "value": "6192 participantes sanos procedentes de 19 estudios de resonancia magnética funcional"
+                },
+                {
+                  "key": "Intervención o exposición",
+                  "value": "84 mapas whole-brain de activación durante tareas, obtenidos de NeuroVault y UK Biobank"
+                },
+                {
+                  "key": "Comparador",
+                  "value": "cuatro modelos factoriales, RDoC específico, RDoC bifactor, data-driven específico y data-driven bifactor"
+                },
+                {
+                  "key": "Desenlace primario",
+                  "value": "ajuste de los modelos medido con RMSEA, CFI, TLI, AIC y BIC"
+                },
+                {
+                  "key": "Efecto principal",
+                  "value": "el modelo data-driven bifactor mostró mejor ajuste global; Tukey p < .001 para RMSEA, CFI y TLI"
+                },
+                {
+                  "key": "Certeza",
+                  "value": "baja; análisis exploratorio sobre un corpus limitado, con validación interna y externa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿La estructura de dominios definida a priori por RDoC representa adecuadamente las relaciones entre circuitos cerebrales y funciones psicológicas, o una estructura latente derivada de los propios mapas de activación ofrece un ajuste y una generalización mejores?"
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Estudio de modelado con análisis de variables latentes. Los autores reunieron 84 mapas whole-brain de activación por tareas de 19 estudios con 6192 participantes, reservaron 37 mapas equilibrados por dominio RDoC para entrenar los modelos y conservaron 47 para validación interna. Compararon cuatro soluciones factoriales y realizaron una validación externa con 36 mapas de coordenadas reconstruidos desde Neurosynth."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Los mapas se parcelaron en 333 regiones corticales y 14 subcorticales y sus valores se escalaron antes del análisis.",
+                "Los modelos data-driven combinaron análisis factorial exploratorio y confirmatorio; los modelos RDoC usaron factores predefinidos y análisis confirmatorio.",
+                "El ajuste se evaluó con RMSEA, CFI, TLI, AIC y BIC robustos, con 5000 remuestreos de Yuan y comparaciones ANOVA, Tukey o Mann-Whitney según la distribución."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Añadir un factor general al modelo RDoC específico mejoró todos los índices de ajuste, incluido el balance entre ajuste y complejidad, con Tukey p < .001.",
+                "El modelo data-driven bifactor tuvo el mejor ajuste global en los mapas whole-brain, aunque el modelo data-driven específico fue competitivo al penalizar la complejidad con AIC y BIC.",
+                "La solución data-driven separó ocho factores específicos: percepción social, respuesta motora, respuesta de valencia negativa, memoria de trabajo y lenguaje, atención espacial, teoría de la mente y valoración de recompensa, además del factor general.",
+                "El dominio cognitivo de RDoC distribuyó sus cargas entre varios factores, mientras que el dominio sensorimotor mostró una correspondencia más compacta; valencia negativa no cargó significativamente en un factor data-driven único.",
+                "La validación externa con 36 mapas de Neurosynth favoreció al modelo data-driven específico en todos los índices; el factor general no pudo probarse allí por la dispersión de los mapas de coordenadas."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Muestra: los 84 mapas proceden de un conjunto limitado de estudios y tareas, con representación desigual de los dominios RDoC.",
+                "Medición: la mayoría de tareas usa estímulos visuales, por lo que el factor general puede mezclar funcionamiento task-general con activación visual compartida.",
+                "Análisis: incluso el mejor modelo tuvo un ajuste global subóptimo y la ganancia del bifactor implicó mayor complejidad.",
+                "Generalización: solo se evaluó la unidad de análisis de circuitos por resonancia funcional; faltan datos genéticos, moleculares, fisiológicos y conductuales."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "Una ontología funcional mejora cuando separa la actividad compartida entre tareas de los patrones específicos de cada función."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "El bifactor permitió distinguir un componente general de ocho factores específicos y superó el ajuste del RDoC convencional en datos retenidos. La ventaja fue menor al penalizar complejidad y no equivale a validar una nueva nosología clínica."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "84 mapas de 19 estudios y 6192 participantes; 47 mapas de validación interna y 36 mapas de validación externa."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "baja"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "investigación, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "corpus de tareas desequilibrado y restringido a activación funcional en participantes sanos."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El artículo no valida un instrumento diagnóstico ni propone cambiar la atención de un paciente. Su valor clínico es indirecto: muestra que los dominios transdiagnósticos usados para formular hipótesis neurobiológicas pueden ser demasiado amplios y que parte de la señal atribuida a un dominio puede corresponder a demandas generales de la tarea."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Al interpretar biomarcadores basados en RDoC, separar la activación general de la tarea de la señal específica del constructo. Límite: el estudio no demuestra utilidad diagnóstica ni pronóstica individual.",
+                "En investigación de procesos cognitivos, evitar tratar atención, memoria de trabajo, lenguaje y teoría de la mente como una sola unidad neurofuncional. Límite: la partición propuesta depende del conjunto de tareas disponible.",
+                "Al diseñar protocolos transdiagnósticos, ampliar las tareas dirigidas a arousal y regulación, ausentes en este corpus. Límite: la ausencia de mapas no demuestra que el dominio carezca de coherencia biológica."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "RDoC",
+                  "value": "marco del NIMH que organiza funciones relevantes para la psicopatología en dominios y unidades de análisis dimensionales."
+                },
+                {
+                  "key": "Modelo bifactor",
+                  "value": "modelo que estima simultáneamente un factor general compartido y factores específicos ortogonales."
+                },
+                {
+                  "key": "Factor general",
+                  "value": "patrón de activación común a múltiples tareas; aquí estuvo dominado por regiones visuales y motoras."
+                },
+                {
+                  "key": "EFA",
+                  "value": "análisis factorial exploratorio usado para descubrir cuántos factores específicos describen los datos."
+                },
+                {
+                  "key": "CFA",
+                  "value": "análisis factorial confirmatorio usado para estimar el ajuste de una estructura factorial definida."
+                },
+                {
+                  "key": "Validación interna",
+                  "value": "prueba del modelo en mapas whole-brain retenidos del corpus original."
+                },
+                {
+                  "key": "Validación externa",
+                  "value": "prueba con mapas de coordenadas obtenidos de Neurosynth, una modalidad distinta a la usada para entrenar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Beam E, Potts C, Poldrack RA, Etkin A (2021). A data-driven framework for mapping domains of human neurobiology. Nat Neurosci",
+                  "doi": "10.1038/s41593-021-00948-9",
+                  "pmid": null,
+                  "why": "Antecedente directo que mostró límites en la correspondencia circuito-función de RDoC y DSM."
+                },
+                {
+                  "citation": "Bolt T, et al. (2020). Ontological dimensions of cognitive-neural mappings. Neuroinformatics",
+                  "doi": "10.1007/s12021-020-09454-y",
+                  "pmid": null,
+                  "why": "Presenta el corpus de mapas y el enfoque ontológico sobre el que se apoya este análisis."
+                },
+                {
+                  "citation": "Insel T, et al. (2010). Research Domain Criteria: Toward a New Classification Framework for Research on Mental Disorders. Am J Psychiatry",
+                  "doi": "10.1176/appi.ajp.2010.09091379",
+                  "pmid": null,
+                  "why": "Texto fundacional para entender el propósito original de RDoC y qué intenta refinar el estudio."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Resumen de Javier Flores, adaptado al formato del sitio con asistencia de IA. El contenido y las cifras se contrastaron con el texto completo de PubMed Central. La licencia CC BY-NC-ND permite compartir el artículo con atribución, pero no reutilizar material adaptado del original; esta nota es una síntesis independiente y no reproduce tablas ni figuras."
+            }
+          ]
+        }
+      ],
+      "full_note": {
+        "pending": false,
+        "word_count": 904,
+        "sections": [
+          {
+            "id": "nc_info",
+            "heading": "Información del estudio",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Título",
+                    "value": "A data-driven latent variable approach to validating the research domain criteria framework"
+                  },
+                  {
+                    "key": "Autor principal",
+                    "value": "Suan Kit Lionel Quah"
+                  },
+                  {
+                    "key": "Correo de correspondencia",
+                    "value": "No reportado en el artículo"
+                  },
+                  {
+                    "key": "Año",
+                    "value": "2025"
+                  },
+                  {
+                    "key": "Revista",
+                    "value": "Nature Communications"
+                  },
+                  {
+                    "key": "Palabras clave",
+                    "value": "Human behaviour; Cognitive neuroscience"
+                  },
+                  {
+                    "key": "País",
+                    "value": "Estados Unidos"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_intro",
+            "heading": "Introducción en tres frases",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Problema",
+                    "value": "RDoC se definió conceptualmente y puede ser demasiado amplio o poco específico respecto de los circuitos cerebrales que pretende organizar."
+                  },
+                  {
+                    "key": "Literatura previa",
+                    "value": "estudios data-driven habían encontrado vínculos circuito-función más reproducibles y solapamiento neural entre varios dominios RDoC."
+                  },
+                  {
+                    "key": "Vacío",
+                    "value": "faltaba comparar directamente modelos RDoC y modelos derivados de mapas whole-brain, separando varianza general y específica y probando su generalización."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_pregunta",
+            "heading": "Pregunta de investigación",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Primaria",
+                    "value": "comparar si una estructura factorial data-driven representa mejor que RDoC las relaciones entre funciones de tarea y patrones de activación cerebral."
+                  },
+                  {
+                    "key": "Secundarias",
+                    "value": "evaluar el aporte de un factor general, describir la correspondencia entre dominios RDoC y factores empíricos y validar la solución en datos no usados para entrenarla."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_metodo",
+            "heading": "Método",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Cuantitativo: modelado de variables latentes mediante análisis factorial exploratorio y confirmatorio de mapas de activación cerebral agregados."
+              }
+            ]
+          },
+          {
+            "id": "nc_diseno",
+            "heading": "Diseño",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Diseño",
+                    "value": "estudio de modelado secundario con validación interna y externa de estructuras factoriales."
+                  },
+                  {
+                    "key": "Checklist declarado",
+                    "value": "Nature Portfolio Reporting Summary."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_unidad",
+            "heading": "Unidad de análisis",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Mapas grupales no umbralizados de contraste BOLD tarea frente a línea basal, no participantes individuales. Cada mapa resumió la activación de un estudio o contraste funcional en participantes sanos."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestra",
+            "heading": "Muestra",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Corpus inicial de 84 mapas whole-brain procedentes de 19 estudios con 6192 participantes. El entrenamiento utilizó 37 mapas derivados de 6119 participantes; la validación interna usó 47 mapas retenidos y la externa 36 mapas de coordenadas de Neurosynth."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestreo",
+            "heading": "Muestreo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Muestreo intencional de mapas públicos en NeuroVault y UK Biobank. Los autores excluyeron mapas del Human Connectome Project para reducir dependencia entre mapas del mismo grupo y equilibraron el conjunto de entrenamiento por dominio RDoC."
+              }
+            ]
+          },
+          {
+            "id": "nc_procedimientos",
+            "heading": "Procedimientos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "Se reunieron 84 mapas whole-brain y se seleccionaron 37 para un conjunto de entrenamiento más equilibrado, reservando 47 para validación interna.",
+                  "Los mapas se transformaron a espacio MNI-152 de 2 mm, se parcelaron en 333 regiones corticales y 14 subcorticales y se escalaron.",
+                  "Se estimaron cuatro modelos: RDoC específico, RDoC bifactor, data-driven específico y data-driven bifactor.",
+                  "Se comparó el ajuste de los modelos y la correspondencia entre sus factores, controlando la autocorrelación espacial.",
+                  "La solución se probó en los mapas whole-brain retenidos y en 36 mapas de coordenadas de Neurosynth."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_dependientes",
+            "heading": "Variables dependientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Ajuste del modelo",
+                    "value": "RMSEA, CFI y TLI robustos, junto con AIC y BIC para balancear ajuste y complejidad."
+                  },
+                  {
+                    "key": "Correspondencia circuito-función",
+                    "value": "cargas y puntuaciones factoriales de cada mapa en los factores generales y específicos."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_independientes",
+            "heading": "Variables independientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Arquitectura del modelo",
+                    "value": "organización RDoC o data-driven, cada una con estructura específica o bifactor."
+                  },
+                  {
+                    "key": "Conjunto de validación",
+                    "value": "mapas whole-brain retenidos o mapas de coordenadas de Neurosynth."
+                  },
+                  {
+                    "key": "Covariables evaluadas",
+                    "value": "balance por sexo, tamaño de muestra e identificador del estudio; no se incluyeron en el modelo final por su bajo aporte y problemas de convergencia."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_analisis",
+            "heading": "Análisis de datos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Univariado",
+                    "value": "descripción del número de mapas, estudios, participantes y representación de dominios."
+                  },
+                  {
+                    "key": "Bivariado",
+                    "value": "correlaciones de Pearson entre puntuaciones factoriales de RDoC y del modelo data-driven."
+                  },
+                  {
+                    "key": "Multivariado",
+                    "value": "EFA con principal axis factoring y rotación oblimin, CFA con máxima verosimilitud robusta y modelos bifactor ortogonales; 5000 remuestreos de Yuan para los índices de ajuste."
+                  },
+                  {
+                    "key": "Supuestos",
+                    "value": "manejo robusto de no normalidad y ajuste de p por autocorrelación espacial mediante BrainSMASH."
+                  },
+                  {
+                    "key": "Software",
+                    "value": "R y paquetes de modelado estructural; el artículo remite al código abierto para los detalles reproducibles."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_hallazgos",
+            "heading": "Hallazgos principales",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Aquí se realizó un estudio de modelado factorial de mapas de resonancia funcional para comparar la ontología RDoC con estructuras data-driven y evaluar su generalización. Los hallazgos principales son: 1) añadir un factor general mejoró el ajuste de RDoC; 2) el modelo data-driven bifactor mostró el mejor ajuste global en whole-brain, aunque la penalización por complejidad favoreció parcialmente al modelo específico; 3) los factores empíricos dividieron el dominio cognitivo y mostraron límites difusos para valencia negativa; 4) la solución data-driven generalizó a mapas retenidos y a mapas de coordenadas externos."
+              }
+            ]
+          },
+          {
+            "id": "nc_datos",
+            "heading": "Datos por hallazgo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "El RDoC bifactor superó al RDoC específico en todos los índices de ajuste, con Tukey p < .001, incluidos AIC y BIC.",
+                  "El data-driven bifactor superó a los otros modelos en RMSEA, CFI y TLI con Tukey p < .001; se estimaron ocho factores específicos más un factor general.",
+                  "Atención, memoria de trabajo y lenguaje, teoría de la mente y otras demandas cognitivas se distribuyeron en factores separados; valencia negativa no mostró cargas significativas en un único factor data-driven.",
+                  "La validación interna empleó 47 mapas whole-brain y la externa 36 mapas de Neurosynth; en esta última, el modelo data-driven específico superó al RDoC específico en todos los índices comparados."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_discusion",
+            "heading": "Discusión",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Qué significa",
+                    "value": "una estructura derivada de datos puede representar mejor las relaciones circuito-función que los dominios RDoC actuales, sobre todo al separar actividad general y específica."
+                  },
+                  {
+                    "key": "Por qué ocurre",
+                    "value": "los dominios predefinidos agrupan tareas con demandas neurales heterogéneas, mientras el bifactor absorbe activación compartida y deja patrones residuales más específicos."
+                  },
+                  {
+                    "key": "Contexto amplio",
+                    "value": "los autores proponen refinar RDoC de forma iterativa, no reemplazarlo mecánicamente por una sola solución data-driven."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_limitaciones",
+            "heading": "Limitaciones según los autores",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Selección: conjunto limitado y desequilibrado de mapas, reflejo de las tareas disponibles en la literatura de neuroimagen.",
+                  "Medición: las tareas suelen implicar varios dominios a la vez y predominan los estímulos visuales, lo que puede inflar el factor general.",
+                  "Confusión: variaron el balance por sexo, el tamaño de muestra y los parámetros de adquisición entre estudios; excluir sus efectos produjo problemas de estimación.",
+                  "Otras: el ajuste global siguió siendo subóptimo y el estudio solo evaluó la unidad de análisis de circuitos funcionales."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_futuro",
+            "heading": "Investigación futura",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Incorporar tareas más amplias y equilibradas, en especial para arousal y sistemas regulatorios.",
+                  "Evaluar otras unidades de análisis RDoC, incluidas genética, fisiología y conducta.",
+                  "Probar contrastes por sustracción y estructuras alternativas que separen mejor las demandas múltiples de una tarea.",
+                  "Replicar los factores en corpus independientes con mayor diversidad de paradigmas y participantes."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "word_count": 925,
+      "reading_minutes": 5,
+      "source_file": "content/summaries/2026-09-14-validando-rdoc-modelo-bifactor.md",
+      "paper": {
+        "key": "MED:39827137",
+        "epmc_id": "39827137",
+        "source": "MED",
+        "pmid": "39827137",
+        "pmcid": "PMC11743195",
+        "doi": "10.1038/s41467-025-55831-z",
+        "title": "A data-driven latent variable approach to validating the research domain criteria framework.",
+        "authors": "Quah SKL, Jo B, Geniesse C, Uddin LQ, Mumford JA, Barch DM, Fair DA, Gotlib IH, Poldrack RA, Saggar M.",
+        "journal": "Nature Communications",
+        "journal_abbrev": "Nat Commun",
+        "pub_year": 2025,
+        "first_publication_date": "2025-01-18",
+        "first_index_date": null,
+        "pub_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "license": "cc by-nc-nd",
+          "license_label": "CC BY-NC-ND",
+          "source": "europepmc",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1038/s41467-025-55831-z",
+          "europepmc": "https://europepmc.org/article/MED/39827137",
+          "fulltext_html": "https://europepmc.org/articles/PMC11743195",
+          "pdf": "https://europepmc.org/articles/PMC11743195?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "modelling",
+          "confidence": "manual"
+        },
+        "sample_size": {
+          "value": 6192,
+          "confidence": "manual"
+        },
+        "tags": [
+          "symptom_networks",
           "neuroscience"
         ],
         "mesh_major": [],

@@ -1,4 +1,7 @@
-"""Descarga el feed diario de Europe PMC y lo normaliza a data/daily/.
+"""Descarga el feed diario desde Europe PMC + PubMed y lo normaliza.
+
+PubMed amplía el descubrimiento. Europe PMC conserva la autoridad para el
+gate de publicación: isOpenAccess=Y y una licencia Creative Commons válida.
 
 Ver 3.A A4 del plan de implementación y las enmiendas 5, 6, 7, 9, 12, 27.
 """
@@ -18,6 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import common
 import epmc_client
+import pubmed_client
 
 
 def _log(msg, quiet=False):
@@ -116,10 +120,61 @@ def _is_cross_day_duplicate(paper, idx, date):
     return False
 
 
-def _process_day(date, config, daily_dir, existing_idx, *, fetch_fn, sleep_fn, now_fn, quiet):
+def _record_identity(rec):
+    pmid = str(rec.get("pmid") or "").strip()
+    if pmid:
+        return "pmid:" + pmid
+    pmcid = str(rec.get("pmcid") or "").strip().lower()
+    if pmcid:
+        return "pmcid:" + pmcid
+    doi = str(rec.get("doi") or "").strip().lower()
+    if doi:
+        return "doi:" + doi
+    return f"{rec.get('source') or ''}:{rec.get('id') or ''}"
+
+
+def _merge_discovery_records(epmc_records, pubmed_records, pubmed_pmids):
+    """Deduplica registros y conserva por qué API fueron descubiertos."""
+    merged = {}
+    order = []
+
+    def add(rec, source):
+        key = _record_identity(rec)
+        if key not in merged:
+            merged[key] = {"record": rec, "sources": []}
+            order.append(key)
+        if source not in merged[key]["sources"]:
+            merged[key]["sources"].append(source)
+
+    for rec in epmc_records:
+        add(rec, "europepmc")
+    for rec in pubmed_records:
+        add(rec, "pubmed")
+
+    pubmed_set = {str(x) for x in pubmed_pmids}
+    for entry in merged.values():
+        pmid = str(entry["record"].get("pmid") or "")
+        if pmid in pubmed_set and "pubmed" not in entry["sources"]:
+            entry["sources"].append("pubmed")
+
+    return [merged[key] for key in order]
+
+
+def _process_day(
+    date,
+    config,
+    daily_dir,
+    existing_idx,
+    *,
+    fetch_fn,
+    pubmed_fetch_fn,
+    sleep_fn,
+    now_fn,
+    quiet,
+):
     query = epmc_client.build_daily_query(config, date)
     try:
-        records, hit_count, truncated = epmc_client.search_all(
+        epmc_records, epmc_hit_count, truncated = epmc_client.search_all(
             query,
             page_size=config.get("page_size", 100),
             max_pages=config.get("max_pages", 10),
@@ -138,18 +193,66 @@ def _process_day(date, config, daily_dir, existing_idx, *, fetch_fn, sleep_fn, n
         # un subconjunto parcial y los "retiraría" por error. Se deja el
         # D.json existente intacto y el día cuenta como fallo (exit 1).
         _log(
-            f"{date}: TRUNCADO (hitCount={hit_count} > page_size*max_pages); "
+            f"{date}: Europe PMC TRUNCADO (hitCount={epmc_hit_count} > page_size*max_pages); "
             "no se escribe (sube --max-pages o reduce la ventana)",
             quiet,
         )
         return None, "failure"
 
+    pubmed_pmids = []
+    pubmed_hit_count = 0
+    pubmed_query = None
+    pubmed_records = []
+    pubmed_unresolved = 0
+    if config.get("pubmed_enabled", True):
+        try:
+            pubmed_pmids, pubmed_hit_count, pubmed_truncated, pubmed_query = pubmed_client.search_daily(
+                config,
+                date,
+                fetch_fn=pubmed_fetch_fn,
+                sleep_fn=sleep_fn,
+            )
+        except pubmed_client.PubmedError as e:
+            _log(f"{date}: fallo de PubMed ({e.kind}): {e.msg}", quiet)
+            return None, "failure"
+        if pubmed_truncated:
+            _log(
+                f"{date}: PubMed TRUNCADO (hitCount={pubmed_hit_count} > "
+                f"pubmed_retmax={config.get('pubmed_retmax', 5000)}); no se escribe",
+                quiet,
+            )
+            return None, "failure"
+
+        epmc_pmids = {
+            str(rec.get("pmid") or rec.get("id") or "")
+            for rec in epmc_records
+            if (rec.get("source") == "MED" or rec.get("pmid"))
+        }
+        missing_pmids = [pmid for pmid in pubmed_pmids if pmid not in epmc_pmids]
+        try:
+            pubmed_records = epmc_client.lookup_pmids(
+                missing_pmids,
+                fetch_fn=fetch_fn,
+                sleep_fn=sleep_fn,
+            )
+        except epmc_client.EpmcError as e:
+            _log(f"{date}: fallo al verificar PMIDs de PubMed en Europe PMC ({e.kind}): {e.msg}", quiet)
+            return None, "failure"
+        resolved = {str(rec.get("pmid") or rec.get("id") or "") for rec in pubmed_records}
+        pubmed_unresolved = len(set(missing_pmids) - resolved)
+
+    merged_records = _merge_discovery_records(epmc_records, pubmed_records, pubmed_pmids)
+
     checked_at = _iso_now(now_fn)
     discard_counts = {}
+    if pubmed_unresolved:
+        discard_counts["pubmed_not_in_europepmc"] = pubmed_unresolved
     candidates = []
     seen_keys = set()
-    for rec in records:
+    for entry in merged_records:
+        rec = entry["record"]
         paper = common.normalize_record(rec, config, checked_at)
+        paper["discovered_via"] = entry["sources"]
         reason = _local_filter_reason(rec, paper, config)
         if reason:
             discard_counts[reason] = discard_counts.get(reason, 0) + 1
@@ -193,13 +296,26 @@ def _process_day(date, config, daily_dir, existing_idx, *, fetch_fn, sleep_fn, n
         "timezone": config.get("timezone", "America/Lima"),
         "fetched_at": _iso_now(now_fn),
         "source": {
-            "name": "Europe PMC",
+            "name": "Europe PMC + PubMed",
             "endpoint": epmc_client.BASE_URL,
             "date_field": config.get("date_field", "FIRST_IDATE"),
             "query": query,
-            "hit_count": hit_count,
+            "hit_count": epmc_hit_count,
             "accepted": len(final_items),
             "query_version": config.get("query_version"),
+            "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+            "europepmc": {
+                "endpoint": epmc_client.BASE_URL,
+                "query": query,
+                "hit_count": epmc_hit_count,
+            },
+            "pubmed": {
+                "endpoint": pubmed_client.BASE_URL,
+                "date_field": config.get("pubmed_date_type", "edat"),
+                "query": pubmed_query,
+                "hit_count": pubmed_hit_count,
+                "unresolved_in_europepmc": pubmed_unresolved,
+            },
         },
         "items": final_items,
     }
@@ -208,7 +324,8 @@ def _process_day(date, config, daily_dir, existing_idx, *, fetch_fn, sleep_fn, n
     if not quiet:
         parts = ", ".join(f"{v} {k}" for k, v in sorted(discard_counts.items()))
         print(
-            f"{date}: {hit_count} hits · {len(final_items)} aceptados · {new_count} nuevos · "
+            f"{date}: Europe PMC {epmc_hit_count} hits · PubMed {pubmed_hit_count} hits · "
+            f"{len(final_items)} aceptados OA · {new_count} nuevos · "
             f"{existing_count} existentes · {total_discarded} descartados"
             + (f" ({parts})" if parts else "")
             + (f" · {omitted_cross_day} omitidos por duplicado de otro día" if omitted_cross_day else "")
@@ -315,13 +432,24 @@ def build_arg_parser():
     return p
 
 
-def run(args, *, fetch_fn=None, post_fn=None, now_fn=None, today_fn=None, sleep_fn=None):
+def run(
+    args,
+    *,
+    fetch_fn=None,
+    pubmed_fetch_fn=None,
+    post_fn=None,
+    now_fn=None,
+    today_fn=None,
+    sleep_fn=None,
+):
     now_fn = now_fn or (lambda: datetime.datetime.now(datetime.timezone.utc))
     today_fn = today_fn or common.lima_today
     # Antes: `sleep_fn or (lambda s: None)` apagaba TODO backoff (2s/5s entre
     # reintentos y 0.3s entre páginas) también en producción, porque el
     # default siempre era una lambda "truthy" que nunca cedía a time.sleep.
     sleep_fn = sleep_fn or time.sleep
+    if pubmed_fetch_fn is None:
+        pubmed_fetch_fn = fetch_fn
 
     if args.summarize and not os.environ.get("ANTHROPIC_API_KEY"):
         _log("--summarize requiere ANTHROPIC_API_KEY")
@@ -354,6 +482,7 @@ def run(args, *, fetch_fn=None, post_fn=None, now_fn=None, today_fn=None, sleep_
             daily_dir,
             existing_idx,
             fetch_fn=fetch_fn,
+            pubmed_fetch_fn=pubmed_fetch_fn,
             sleep_fn=sleep_fn,
             now_fn=now_fn,
             quiet=args.quiet,

@@ -93,6 +93,43 @@ class TestNotOaRejected(AddPaperTestCase):
         self.assertFalse(os.path.exists(self.out_dir))
 
 
+class TestOpenAlexOaRoute(AddPaperTestCase):
+    def test_missing_epmc_license_is_completed_by_openalex_published_cc(self):
+        rec = load_fixture_rec("epmc_lookup_not_oa.json")
+        rec["doi"] = "10.1234/open"
+        rec["license"] = None
+
+        def fetch_fn(url):
+            if "api.openalex.org" in url:
+                return {
+                    "open_access": {"is_oa": True},
+                    "best_oa_location": {"version": "publishedVersion", "license": "cc-by"},
+                }
+            return {"version": "6.9", "hitCount": 1, "resultList": {"result": [rec]}}
+
+        rc = ap.run(self._args("10.1234/open"), fetch_fn=fetch_fn, today_fn=_today_fn)
+        self.assertEqual(rc, 0)
+        filename = os.listdir(self.out_dir)[0]
+        with open(os.path.join(self.out_dir, filename), encoding="utf-8") as f:
+            content = f.read()
+        self.assertIn('paper_license: "cc by"', content)
+        self.assertIn('paper_oa_source: "europepmc+openalex"', content)
+
+    def test_explicit_closed_epmc_license_still_blocks_route_b(self):
+        rec = load_fixture_rec("epmc_lookup_not_oa.json")
+        rec["license"] = "all rights reserved"
+        called_openalex = {"n": 0}
+
+        def fetch_fn(url):
+            if "api.openalex.org" in url:
+                called_openalex["n"] += 1
+            return {"version": "6.9", "hitCount": 1, "resultList": {"result": [rec]}}
+
+        rc = ap.run(self._args(rec["doi"]), fetch_fn=fetch_fn, today_fn=_today_fn)
+        self.assertEqual(rc, 2)
+        self.assertEqual(called_openalex["n"], 0)
+
+
 class TestPreprintNotOaRejected(AddPaperTestCase):
     def test_preprint_without_oa_license_rejected(self):
         rec = load_fixture_rec("epmc_lookup_preprint.json")

@@ -185,6 +185,46 @@ class TestLookup(unittest.TestCase):
         self.assertEqual(called["n"], 0)
 
 
+class TestLookupPmids(unittest.TestCase):
+    def test_deduplicates_sanitizes_and_batches_pmids(self):
+        queries = []
+
+        def fetch_fn(url):
+            import urllib.parse
+
+            params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
+            query = params["query"][0]
+            queries.append(query)
+            ids = __import__("re").findall(r"EXT_ID:(\d+)", query)
+            return {
+                "version": "6.9",
+                "hitCount": len(ids),
+                "nextCursorMark": (params.get("cursorMark") or ["*"])[0],
+                "resultList": {"result": [{"id": value, "source": "MED", "pmid": value} for value in ids]},
+            }
+
+        records = ec.lookup_pmids(
+            ["123", " 123 ", "bad", "456", "789"],
+            chunk_size=2,
+            fetch_fn=fetch_fn,
+            sleep_fn=lambda s: None,
+        )
+        self.assertEqual([record["pmid"] for record in records], ["123", "456", "789"])
+        self.assertEqual(len(queries), 2)
+        self.assertEqual(queries[0], "SRC:MED AND (EXT_ID:123 OR EXT_ID:456)")
+        self.assertEqual(queries[1], "SRC:MED AND (EXT_ID:789)")
+
+    def test_empty_input_does_not_call_network(self):
+        called = {"n": 0}
+
+        def fetch_fn(url):
+            called["n"] += 1
+            return {}
+
+        self.assertEqual(ec.lookup_pmids([], fetch_fn=fetch_fn), [])
+        self.assertEqual(called["n"], 0)
+
+
 class TestNetworkFailureAndSslFallback(unittest.TestCase):
     def test_network_failure_raises_after_retries(self):
         calls = {"n": 0}

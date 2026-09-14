@@ -3,7 +3,7 @@
 Prototipo de sitio estático (sin build, sin frameworks) para Javier Flores, psiquiatra e investigador peruano. El sitio combina:
 
 1. **Resúmenes curados** en español de papers que Javier considera relevantes.
-2. Un **feed diario automático** de papers nuevos de psiquiatría y salud mental que sean **open access** en Europe PMC.
+2. Un **feed diario automático** de papers nuevos de psiquiatría y salud mental, descubiertos con Europe PMC y PubMed, que tengan **acceso abierto y licencia verificables** en Europe PMC.
 
 Ver `POLITICA-EDITORIAL.md` para el criterio exacto de acceso abierto y de inclusión, y la spec del proyecto para el detalle técnico completo.
 
@@ -47,7 +47,7 @@ dist/snapshot.html                      → instantánea autocontenida (gitignor
 
 Todos se corren desde la raíz del proyecto con `python3 scripts/<nombre>.py`. Códigos de salida en todos los scripts: `0` correcto · `1` fallo de red/API (no toca datos previos) · `2` rechazo o error de validación · `3` falta configuración (por ejemplo, `--summarize` sin `ANTHROPIC_API_KEY`) · `4` el archivo de destino ya existe · `5` error inesperado.
 
-### 4.1 `fetch_daily.py` — trae los papers del día desde Europe PMC
+### 4.1 `fetch_daily.py` — trae los papers del día desde Europe PMC + PubMed
 
 ```bash
 python3 scripts/fetch_daily.py [--days N] [--date YYYY-MM-DD] [--summarize] [--max-ai N] [--model M] [--dry-run] [--config scripts/feed_config.json] [--data-dir data] [--quiet]
@@ -56,6 +56,7 @@ python3 scripts/fetch_daily.py [--days N] [--date YYYY-MM-DD] [--summarize] [--m
 - Sin argumentos, trae los últimos 2 días (ayer y hoy, hora de Lima).
 - `--days 7` trae una semana hacia atrás (útil para backfill la primera vez).
 - `--date 2026-09-10` trae solo ese día.
+- Europe PMC y PubMed se usan para descubrir candidatos. Cada PMID encontrado solo por PubMed se resuelve después en Europe PMC y **no se publica** salvo que Europe PMC confirme `isOpenAccess=Y` y una licencia Creative Commons declarada.
 - `--summarize` genera además resúmenes en español con IA (ver sección 7); requiere `ANTHROPIC_API_KEY`.
 - `--dry-run` muestra los conteos sin escribir nada en `data/`.
 - Correrlo dos veces seguidas dejando los mismos archivos (salvo las marcas de tiempo) es intencional: el script es idempotente.
@@ -66,7 +67,7 @@ python3 scripts/fetch_daily.py [--days N] [--date YYYY-MM-DD] [--summarize] [--m
 python3 scripts/add_paper.py <DOI|PMID|PMCID|PPRID> [--slug S] [--title T] [--tags a,b] [--design ID] [--sample-size N] [--date YYYY-MM-DD] [--out-dir content/summaries] [--force] [--dry-run] [--summarize] [--model M]
 ```
 
-- Verifica el artículo en Europe PMC. Si no es acceso abierto con licencia declarada (ver `POLITICA-EDITORIAL.md`), **rechaza con código 2** y explica el motivo; no crea el archivo.
+- Verifica el artículo en Europe PMC y, cuando sus metadatos OA están incompletos, contrasta la versión publicada con OpenAlex. Si no puede confirmar acceso abierto y licencia CC (ver `POLITICA-EDITORIAL.md`), **rechaza con código 2** y no crea el archivo.
 - `--slug` recibe solo la parte descriptiva del nombre (sin la fecha): el archivo final es `content/summaries/YYYY-MM-DD-<slug>.md`.
 - Sin `--tags`/`--design`, los detecta automáticamente a partir del título y el resumen (heurística; conviene revisarlos).
 - `--summarize` (opcional, requiere `ANTHROPIC_API_KEY`) rellena las 6 secciones con un borrador de IA en vez de dejarlas en `[[PENDIENTE]]`, y marca `ai_draft: true`.
@@ -122,7 +123,7 @@ Empaqueta el HTML, el CSS, el JS y los datos más recientes (resúmenes + los ú
 
 ## 6. Feed diario y backfill
 
-El feed se genera automáticamente todos los días por GitHub Actions (`.github/workflows/daily-feed.yml`, cron `0 11 * * *` = 06:00 hora de Lima), una vez que el repositorio esté en GitHub con Actions activado. En local:
+El feed se genera automáticamente todos los días por GitHub Actions (`.github/workflows/daily-feed.yml`, cron `0 11 * * *` = 06:00 hora de Lima). PubMed amplía el descubrimiento; Europe PMC aplica el gate final de acceso abierto y licencia. En local:
 
 ```bash
 python3 scripts/fetch_daily.py --days 2      # uso diario normal
@@ -161,24 +162,21 @@ No requieren red ni `ANTHROPIC_API_KEY`: usan datos de prueba (`tests/fixtures/`
 | `ANTHROPIC_API_KEY` | habilita `--summarize` (resumen con IA) | no; sin ella, `--summarize` falla con código 3 |
 | `ANTHROPIC_MODEL` | cambia el modelo de IA por defecto | no |
 | `EPMC_CA_FILE` | ruta a un archivo de certificados CA alternativo, si el de macOS no sirve | no |
+| `NCBI_EMAIL` | identifica opcionalmente al responsable de las consultas a PubMed ante NCBI | no |
+| `NCBI_API_KEY` | aumenta el límite de solicitudes de NCBI; el uso diario normal no la necesita | no |
 
 ## 10. Nota sobre certificados SSL en macOS
 
 En algunas instalaciones de macOS, el contexto SSL por defecto de Python no encuentra la cadena de certificados y las llamadas a Europe PMC fallan con `CERTIFICATE_VERIFY_FAILED`. El cliente del pipeline (`scripts/epmc_client.py`) reintenta automáticamente con `/etc/ssl/cert.pem` (o con la ruta de `EPMC_CA_FILE` si la defines) y, como último recurso, con `curl` si está instalado. Si ves un error de red mencionando certificados, no hace falta ninguna acción manual salvo, en casos raros, instalar los certificados de Python (`Install Certificates.command`, incluido con el instalador oficial de python.org) o definir `EPMC_CA_FILE` a mano.
 
-## 11. Despliegue futuro: GitHub Pages + Actions
+## 11. Despliegue: GitHub Pages + Actions
 
-El repositorio incluye dos workflows ya escritos pero **inactivos** hasta que decidas publicarlo:
+El repositorio público está en [GitHub](https://github.com/Jaflomd/red-psiquiatria-salud-mental) y el sitio se publica con dos workflows:
 
 - `.github/workflows/daily-feed.yml`: corre los tests, trae el feed del día, reconstruye `data/summaries.json` y, si hay cambios, los commitea.
 - `.github/workflows/pages.yml`: publica el sitio en GitHub Pages cuando cambia algo en `index.html`, `assets/`, `data/` o `content/` (o manualmente).
 
-Para activarlos:
-
-1. Sube este proyecto a un repositorio de GitHub (no lo es todavía; hoy es solo una carpeta local en iCloud).
-2. En **Settings → Pages → Source**, elige **GitHub Actions**.
-3. Si quieres que el feed genere resúmenes con IA automáticamente, crea el secret `ANTHROPIC_API_KEY` en **Settings → Secrets and variables → Actions**. Es opcional: el feed diario funciona igual sin él, solo que sin `ai_summary`.
-4. El cron `0 11 * * *` (06:00 hora de Lima) empezará a correr solo. También puedes lanzarlo a mano desde la pestaña **Actions → Feed diario Europe PMC → Run workflow**.
+El cron `0 11 * * *` corre a las 06:00 hora de Lima. También puede lanzarse a mano desde **Actions → Feed diario Europe PMC + PubMed → Run workflow**. `ANTHROPIC_API_KEY` es opcional: sin ese secret, el feed funciona normalmente pero no genera `ai_summary`.
 
 ## 12. Limitaciones conocidas
 

@@ -108,11 +108,10 @@ def _verify_oa_live(fm, path, fetch_fn=None, sleep_fn=None):
             )
         return
 
-    # Ruta A falló: o ya no es OA en Europe PMC, o la licencia declarada ahí
-    # ya no es CC abierta. Solo se intenta la ruta B (OpenAlex) si la
-    # licencia de Europe PMC sigue siendo CC (el gate de licencia no se
-    # salta nunca) y el .md ya declara la ruta B.
-    if not common.license_allowed(license_raw):
+    # Ruta A falló. Una licencia cerrada explícita en Europe PMC bloquea;
+    # cuando la licencia está ausente, OpenAlex puede completar el gate solo
+    # para la versión publicada y con una CC declarada.
+    if license_raw and not common.license_allowed(license_raw):
         raise ValueError(
             f"{path}: la licencia vigente de {identifier} en Europe PMC no es una CC abierta (--verify-oa)"
         )
@@ -132,10 +131,16 @@ def _verify_oa_live(fm, path, fetch_fn=None, sleep_fn=None):
     ok, license_norm, reason = common.openalex_oa_verdict(work)
     if not ok:
         raise ValueError(f"{path}: OpenAlex no confirma acceso abierto con licencia CC para {doi} ({reason})")
-    if license_norm != license_raw:
+    declared_license = (fm.get("paper_license") or "").strip().lower()
+    if license_raw and license_norm != license_raw:
+        raise ValueError(
+            f"{path}: la licencia de OpenAlex ({license_norm!r}) no coincide con Europe PMC "
+            f"({license_raw!r})"
+        )
+    if license_norm != declared_license:
         raise ValueError(
             f"{path}: la licencia de OpenAlex ({license_norm!r}) no coincide con paper_license "
-            f"declarado ({license_raw!r})"
+            f"del resumen ({declared_license!r})"
         )
 
 

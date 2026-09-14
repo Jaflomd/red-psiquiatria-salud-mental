@@ -233,6 +233,39 @@ def search_all(query, page_size=100, max_pages=10, sort=None, fetch_fn=None, sle
     return results, hit_count, truncated
 
 
+def lookup_pmids(pmids, chunk_size=50, fetch_fn=None, sleep_fn=None):
+    """Resuelve PMIDs de PubMed a registros core de Europe PMC en lotes.
+
+    PubMed aporta descubrimiento, pero estos registros todavía deben pasar el
+    filtro local de isOpenAccess=Y + licencia CC antes de entrar al feed.
+    """
+    clean = []
+    seen = set()
+    for pmid in pmids or []:
+        value = str(pmid).strip()
+        if value.isdigit() and value not in seen:
+            clean.append(value)
+            seen.add(value)
+
+    records = []
+    for start in range(0, len(clean), chunk_size):
+        chunk = clean[start : start + chunk_size]
+        clauses = " OR ".join(f"EXT_ID:{pmid}" for pmid in chunk)
+        query = f"SRC:MED AND ({clauses})"
+        page_size = max(1, min(1000, len(chunk)))
+        batch, _hit_count, truncated = search_all(
+            query,
+            page_size=page_size,
+            max_pages=2,
+            fetch_fn=fetch_fn,
+            sleep_fn=sleep_fn,
+        )
+        if truncated:
+            raise EpmcError("invalid_response", "lote de PMIDs truncado en Europe PMC")
+        records.extend(batch)
+    return records
+
+
 def _identifier_query(identifier):
     ident = identifier.strip()
     if ident.lower().startswith("https://doi.org/"):

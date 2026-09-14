@@ -78,20 +78,56 @@ def _rec(
 _DATE_IN_URL_RE = re.compile(r"FIRST_IDATE%3A%5B(\d{4}-\d{2}-\d{2})")
 
 
-def make_fetch_fn(day_records, day_errors=None):
+def make_fetch_fn(day_records, day_errors=None, pubmed_day_records=None, pubmed_errors=None):
     day_errors = day_errors or set()
+    pubmed_day_records = pubmed_day_records if pubmed_day_records is not None else day_records
+    pubmed_errors = pubmed_errors or set()
 
     def fetch_fn(url):
+        parsed = urllib.parse.urlparse(url)
+        qs = urllib.parse.parse_qs(parsed.query)
+
+        if parsed.netloc == "eutils.ncbi.nlm.nih.gov":
+            day = (qs.get("mindate") or [""])[0].replace("/", "-")
+            if day in pubmed_errors:
+                raise urllib.error.URLError("simulated PubMed failure")
+            records = pubmed_day_records.get(day, [])
+            pmids = []
+            for rec in records:
+                pmid = str(rec.get("pmid") or (rec.get("id") if rec.get("source") == "MED" else ""))
+                if pmid.isdigit() and pmid not in pmids:
+                    pmids.append(pmid)
+            retmax = int((qs.get("retmax") or ["20"])[0])
+            return {
+                "header": {},
+                "esearchresult": {
+                    "count": str(len(pmids)),
+                    "retmax": str(retmax),
+                    "retstart": "0",
+                    "idlist": pmids[:retmax],
+                },
+            }
+
         m = _DATE_IN_URL_RE.search(url)
         date = m.group(1) if m else None
         if date in day_errors:
             raise urllib.error.URLError("simulated failure")
-        records = day_records.get(date, [])
+        if date:
+            records = day_records.get(date, [])
+        else:
+            query = (qs.get("query") or [""])[0]
+            wanted_pmids = set(re.findall(r"EXT_ID:(\d+)", query))
+            records = []
+            for source in (day_records, pubmed_day_records):
+                for source_records in source.values():
+                    for rec in source_records:
+                        pmid = str(rec.get("pmid") or (rec.get("id") if rec.get("source") == "MED" else ""))
+                        if pmid in wanted_pmids and all(existing.get("id") != rec.get("id") for existing in records):
+                            records.append(rec)
         # Eco del cursorMark recibido cuando no hay más páginas (como la API
         # real): antes devolvía siempre "END" (!= cursor inicial "*"), lo que
         # hacía a search_all pedir SIEMPRE una página de más y disparar la
         # pausa real de 0.3s entre páginas en cada test.
-        qs = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
         cursor = (qs.get("cursorMark") or ["*"])[0]
         return {
             "version": "6.9",
@@ -435,6 +471,78 @@ class TestLocalFilters(FetchDailyTestCase):
             day = json.load(f)
         self.assertEqual(len(day["items"]), 1)
         self.assertEqual(day["items"][0]["key"], "MED:4")
+
+
+class TestPubMedDiscovery(FetchDailyTestCase):
+    def test_pubmed_only_record_is_resolved_in_epmc_and_accepted_if_oa(self):
+        epmc_records = {"2026-09-14": [_rec("1")]}
+        pubmed_records = {"2026-09-14": [_rec("1"), _rec("2", license_="cc by-nc")]}
+        fetch_fn = make_fetch_fn(epmc_records, pubmed_day_records=pubmed_records)
+
+        rc = fd.run(
+            self._args(date="2026-09-14"),
+            fetch_fn=fetch_fn,
+            now_fn=_now_fn,
+            today_fn=_today_fn,
+        )
+        self.assertEqual(rc, 0)
+        with open(self._day_path("2026-09-14"), encoding="utf-8") as f:
+            day = json.load(f)
+
+        by_key = {item["key"]: item for item in day["items"]}
+        self.assertEqual(set(by_key), {"MED:1", "MED:2"})
+        self.assertEqual(by_key["MED:1"]["discovered_via"], ["europepmc", "pubmed"])
+        self.assertEqual(by_key["MED:2"]["discovered_via"], ["pubmed"])
+        self.assertEqual(day["source"]["name"], "Europe PMC + PubMed")
+        self.assertEqual(day["source"]["oa_gate"], "Europe PMC isOpenAccess=Y + licencia CC declarada")
+        self.assertEqual(day["source"]["pubmed"]["hit_count"], 2)
+
+    def test_pubmed_only_record_without_oa_or_cc_license_is_rejected(self):
+        epmc_records = {"2026-09-14": []}
+        pubmed_records = {
+            "2026-09-14": [
+                _rec("2", is_oa="N"),
+                _rec("3", license_=None),
+                _rec("4", license_="cc by"),
+            ]
+        }
+        fetch_fn = make_fetch_fn(epmc_records, pubmed_day_records=pubmed_records)
+
+        rc = fd.run(
+            self._args(date="2026-09-14"),
+            fetch_fn=fetch_fn,
+            now_fn=_now_fn,
+            today_fn=_today_fn,
+        )
+        self.assertEqual(rc, 0)
+        with open(self._day_path("2026-09-14"), encoding="utf-8") as f:
+            day = json.load(f)
+        self.assertEqual([item["key"] for item in day["items"]], ["MED:4"])
+
+    def test_pubmed_failure_keeps_previous_day_untouched(self):
+        records = {"2026-09-14": [_rec("1")]}
+        fetch_fn_ok = make_fetch_fn(records)
+        fd.run(
+            self._args(date="2026-09-14"),
+            fetch_fn=fetch_fn_ok,
+            now_fn=_now_fn,
+            today_fn=_today_fn,
+        )
+        with open(self._day_path("2026-09-14"), encoding="utf-8") as f:
+            before = f.read()
+
+        fetch_fn_fail = make_fetch_fn(records, pubmed_errors={"2026-09-14"})
+        rc = fd.run(
+            self._args(date="2026-09-14"),
+            fetch_fn=fetch_fn_fail,
+            now_fn=_now_fn,
+            today_fn=_today_fn,
+            sleep_fn=lambda s: None,
+        )
+        self.assertEqual(rc, 1)
+        with open(self._day_path("2026-09-14"), encoding="utf-8") as f:
+            after = f.read()
+        self.assertEqual(before, after)
 
 
 if __name__ == "__main__":

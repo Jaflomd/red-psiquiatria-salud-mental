@@ -7,21 +7,27 @@ Este documento explica qué publica este sitio, con qué criterios y qué límit
 El sitio combina dos tipos de contenido:
 
 - **Resúmenes curados** (`content/summaries/`): artículos que Javier Flores elige y resume en español, con sus propias palabras, pensando en su utilidad clínica o de investigación.
-- **Feed diario** (`data/daily/`): un listado generado automáticamente todos los días a partir de Europe PMC, sin curaduría manual, con los artículos nuevos de psiquiatría y salud mental que cumplen el criterio de acceso abierto de este documento.
+- **Feed diario** (`data/daily/`): un listado generado automáticamente todos los días a partir de Europe PMC y PubMed, sin curaduría manual, con los artículos nuevos de psiquiatría y salud mental que cumplen el criterio de acceso abierto de este documento.
 
 Ninguno de los dos sustituye la lectura del artículo original. Ambos enlazan siempre a la fuente en Europe PMC.
 
 ## 2. Criterio de acceso abierto (regla dura)
 
-Un artículo entra al feed diario, o puede convertirse en resumen curado, **solo si cumple los dos puntos siguientes a la vez**:
+Un artículo entra al feed diario, o puede convertirse en resumen curado, **solo si tiene acceso abierto y licencia Creative Commons verificables**.
+
+Para el feed diario, la regla dura exige los dos puntos siguientes a la vez:
 
 1. Europe PMC lo marca como acceso abierto: `isOpenAccess = Y`.
 2. El registro declara una licencia Creative Commons reconocible (`license` empieza por `cc by` o es `cc0`: por ejemplo CC BY, CC BY-NC, CC BY-NC-ND, CC BY-SA o CC0).
 
+PubMed se usa únicamente como una segunda vía de descubrimiento. Un resultado de PubMed —incluso si aparece como texto completo gratuito— nunca basta para entrar al feed: su PMID debe resolverse en Europe PMC y superar allí los dos controles anteriores.
+
+Para los resúmenes curados existe una segunda ruta cuando los metadatos de Europe PMC están incompletos: OpenAlex debe confirmar `open_access.is_oa=true`, una licencia CC y `best_oa_location.version=publishedVersion`. Si Europe PMC declara explícitamente una licencia cerrada, esa contradicción bloquea la ruta alternativa. La ficha conserva `paper_oa_source: europepmc+openalex` para hacer visible esta procedencia.
+
 Si falta cualquiera de los dos, el artículo **se rechaza**, sin excepción:
 
 - `add_paper.py` termina con código de salida 2 y explica el motivo (marca de acceso abierto ausente, o licencia no declarada).
-- El feed diario descarta el registro en el paso de filtrado local y lo cuenta como descarte, aunque haya aparecido en los resultados de búsqueda de Europe PMC.
+- El feed diario descarta el registro en el paso de filtrado local y lo cuenta como descarte, aunque haya aparecido en los resultados de búsqueda de Europe PMC o PubMed.
 
 **"Gratis para leer" no es lo mismo que acceso abierto.** Muchas revistas marcan artículos como de lectura gratuita ("Free") sin que Europe PMC los reconozca como acceso abierto ni declaren una licencia. Ese caso se rechaza igual: sin una licencia declarada, no hay base legal clara para resumir el contenido en este sitio.
 
@@ -96,6 +102,6 @@ El feed diario asigna diseño de estudio, tamaño de muestra y etiquetas temáti
 
 ## 9. Privacidad
 
-- Este sitio no envía datos personales de sus lectores a ninguna API externa. Las únicas llamadas salientes son a la API pública de Europe PMC (para buscar y verificar artículos) y, de forma opcional y solo cuando Javier lo activa con su propia clave, a la API de Anthropic para generar borradores de resumen.
+- Este sitio no envía datos personales de sus lectores a ninguna API externa. Las llamadas salientes del pipeline son a las API públicas de Europe PMC y PubMed/NCBI (para buscar y verificar artículos) y, de forma opcional y solo cuando Javier lo activa con su propia clave, a la API de Anthropic para generar borradores de resumen.
 - No se guarda ni se registra ninguna clave de API en el código ni en los datos publicados del sitio.
 - El feed y los resúmenes solo contienen información pública de artículos científicos (título, autores, revista, resumen, identificadores); no se procesan datos de pacientes ni información clínica identificable.

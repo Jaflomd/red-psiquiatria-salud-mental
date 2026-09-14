@@ -98,6 +98,32 @@ class TestValidExampleIncluded(BuildSummariesTestCase):
         self.assertEqual(rc, 1)
         self.assertFalse(os.path.exists(self.out))
 
+    def test_verify_oa_route_b_accepts_missing_epmc_license_with_openalex_cc(self):
+        fm = {
+            "paper_doi": "10.1234/open",
+            "paper_pmcid": None,
+            "paper_license": "cc by",
+            "paper_oa_source": "europepmc+openalex",
+        }
+        epmc_record = {
+            "id": "123",
+            "source": "MED",
+            "doi": "10.1234/open",
+            "title": "An open article",
+            "isOpenAccess": "N",
+            "license": None,
+        }
+
+        def fetch_fn(url):
+            if "api.openalex.org" in url:
+                return {
+                    "open_access": {"is_oa": True},
+                    "best_oa_location": {"version": "publishedVersion", "license": "cc-by"},
+                }
+            return {"version": "6.9", "hitCount": 1, "resultList": {"result": [epmc_record]}}
+
+        bs._verify_oa_live(fm, "summary.md", fetch_fn=fetch_fn, sleep_fn=lambda s: None)
+
 
 class TestPendingRules(BuildSummariesTestCase):
     def test_pending_in_draft_is_accepted(self):

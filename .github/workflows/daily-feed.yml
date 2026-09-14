@@ -1,4 +1,4 @@
-name: Feed diario Europe PMC
+name: Feed diario Europe PMC + PubMed
 
 on:
   schedule:

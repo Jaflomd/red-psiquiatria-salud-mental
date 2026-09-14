@@ -363,11 +363,12 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
     paper_oa_source = "europepmc"
     route_a_ok = rec.get("isOpenAccess") == "Y" and common.license_allowed(license_raw)
     if not route_a_ok:
-        if not common.license_allowed(license_raw):
-            # Sin licencia CC en Europe PMC: rechazo directo, sin consultar
-            # OpenAlex (la licencia es el gate que nunca se salta).
+        if license_raw and not common.license_allowed(license_raw):
+            # Una licencia cerrada explícita en Europe PMC no se sobreescribe
+            # con otra fuente. La ruta B solo completa metadatos ausentes o
+            # confirma el OA cuando isOpenAccess todavía no está actualizado.
             _log(
-                f"Rechazado: Europe PMC no declara licencia abierta para {args.identifier} "
+                f"Rechazado: Europe PMC declara una licencia no abierta para {args.identifier} "
                 f"(license={rec.get('license')!r})."
             )
             return 2
@@ -384,16 +385,18 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
             _reject_not_oa(rec, args.identifier)
             return 2
         ok, license_norm, reason = common.openalex_oa_verdict(work)
-        if not ok or license_norm != license_raw:
+        if not ok or (license_raw and license_norm != license_raw):
             _log(
                 f"Rechazado: Europe PMC no marca isOpenAccess=Y para {args.identifier} y OpenAlex no "
-                f"confirma acceso abierto con licencia CC coincidente ({reason or 'licencia distinta a la declarada'})."
+                f"confirma acceso abierto con licencia CC de la versión publicada "
+                f"({reason or 'licencia distinta a la declarada por Europe PMC'})."
             )
             return 2
+        license_raw = license_norm
         paper_oa_source = "europepmc+openalex"
         _log(
-            "Europe PMC no marca isOpenAccess=Y, pero declara una licencia CC y OpenAlex confirma open "
-            "access con la licencia de la versión publicada; se acepta con "
+            "Europe PMC no completa el gate OA, pero OpenAlex confirma acceso abierto y licencia CC "
+            "de la versión publicada; se acepta con "
             "paper_oa_source: europepmc+openalex"
         )
 
