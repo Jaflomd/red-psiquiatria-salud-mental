@@ -965,6 +965,7 @@ FRONTMATTER_SCHEMA = {
     "study_design": ("str", True),
     "summary_type": ("str", True),
     "adapted_with_ai": ("bool", False),
+    "paper_access_type": ("str", False),
     "paper_oa_source": ("str", False),
     "paper_title": ("str", True),
     "paper_authors": ("str", True),
@@ -998,6 +999,7 @@ FRONTMATTER_DEFAULTS = {
     "example": False,
     "ai_draft": False,
     "adapted_with_ai": False,
+    "paper_access_type": "open_access",
     "paper_oa_source": "europepmc",
     "author": "Red de Investigación",
     "sample_size": None,
@@ -1174,7 +1176,11 @@ def parse_frontmatter(text, path):
             path, end_idx + 1, "un resumen empírico exige un diseño con datos (study_design no puede ser "
             "narrative_review ni guideline)"
         )
-    if data.get("paper_oa_source") not in ("europepmc", "europepmc+openalex"):
+    if data.get("paper_access_type") not in ("open_access", "free_to_read"):
+        raise SummaryFormatError(
+            path, end_idx + 1, f"paper_access_type inválido: {data.get('paper_access_type')!r}"
+        )
+    if data.get("paper_oa_source") not in ("europepmc", "europepmc+openalex", "publisher"):
         raise SummaryFormatError(
             path, end_idx + 1, f"paper_oa_source inválido: {data.get('paper_oa_source')!r}"
         )
@@ -1191,22 +1197,51 @@ def parse_frontmatter(text, path):
     py = data.get("paper_year")
     if py is None or not (1900 <= py <= 2100):
         raise SummaryFormatError(path, end_idx + 1, "paper_year debe estar entre 1900 y 2100")
-    if data.get("paper_oa_verified") is not True:
-        raise SummaryFormatError(
-            path,
-            end_idx + 1,
-            "Rechazado: paper_oa_verified debe ser true. Este sitio solo publica resúmenes de "
-            "artículos open access verificados.",
-        )
+    access_type = data.get("paper_access_type")
+    if access_type == "open_access":
+        if data.get("paper_oa_verified") is not True:
+            raise SummaryFormatError(
+                path,
+                end_idx + 1,
+                "Rechazado: paper_oa_verified debe ser true para paper_access_type: open_access.",
+            )
+        if data.get("paper_oa_source") == "publisher":
+            raise SummaryFormatError(
+                path, end_idx + 1, "paper_oa_source: publisher solo es válido para free_to_read"
+            )
+        if not license_allowed(data.get("paper_license")):
+            raise SummaryFormatError(
+                path,
+                end_idx + 1,
+                f"Rechazado: paper_license '{data.get('paper_license')}' no es una licencia CC abierta "
+                "reconocida (se requiere cc0 o cc by*).",
+            )
+    else:
+        if data.get("paper_oa_verified") is not False:
+            raise SummaryFormatError(
+                path, end_idx + 1,
+                "paper_access_type: free_to_read requiere paper_oa_verified: false para no presentarlo como OA",
+            )
+        if data.get("paper_oa_source") != "publisher":
+            raise SummaryFormatError(
+                path, end_idx + 1,
+                "paper_access_type: free_to_read requiere paper_oa_source: publisher",
+            )
+        if (data.get("paper_license") or "").strip().lower() != "not verified":
+            raise SummaryFormatError(
+                path, end_idx + 1,
+                'paper_access_type: free_to_read requiere paper_license: "not verified"',
+            )
+        if not data.get("paper_doi"):
+            raise SummaryFormatError(
+                path, end_idx + 1, "paper_access_type: free_to_read requiere paper_doi"
+            )
+        if data.get("paper_preprint"):
+            raise SummaryFormatError(
+                path, end_idx + 1, "paper_access_type: free_to_read no admite preprints sin licencia abierta"
+            )
     if not validate_date(data.get("paper_oa_checked")):
         raise SummaryFormatError(path, end_idx + 1, "paper_oa_checked inválida: se esperaba YYYY-MM-DD")
-    if not license_allowed(data.get("paper_license")):
-        raise SummaryFormatError(
-            path,
-            end_idx + 1,
-            f"Rechazado: paper_license '{data.get('paper_license')}' no es una licencia CC abierta "
-            "reconocida (se requiere cc0 o cc by*).",
-        )
     if data.get("paper_pub_date") is not None and not validate_date(data["paper_pub_date"]):
         raise SummaryFormatError(path, end_idx + 1, "paper_pub_date inválida: se esperaba YYYY-MM-DD")
     if data.get("updated") is not None and not validate_date(data["updated"]):

@@ -56,6 +56,7 @@ class AddPaperTestCase(unittest.TestCase):
             force=False,
             dry_run=False,
             summarize=False,
+            free_to_read=False,
             model=None,
             config=CONFIG_PATH,
         )
@@ -89,6 +90,35 @@ class TestNotOaRejected(AddPaperTestCase):
     def test_not_oa_fixture_rejected(self):
         rec = load_fixture_rec("epmc_lookup_not_oa.json")
         rc = ap.run(self._args("10.1001/jamapsychiatry.2026.2410"), fetch_fn=make_fetch_fn(rec), today_fn=_today_fn)
+        self.assertEqual(rc, 2)
+        self.assertFalse(os.path.exists(self.out_dir))
+
+
+class TestFreeToReadRoute(AddPaperTestCase):
+    def test_free_fulltext_without_oa_license_is_accepted_when_explicit(self):
+        rec = load_fixture_rec("epmc_lookup_not_oa.json")
+        rc = ap.run(
+            self._args(rec["doi"], free_to_read=True),
+            fetch_fn=make_fetch_fn(rec),
+            today_fn=_today_fn,
+        )
+        self.assertEqual(rc, 0)
+        filename = os.listdir(self.out_dir)[0]
+        with open(os.path.join(self.out_dir, filename), encoding="utf-8") as f:
+            content = f.read()
+        self.assertIn('paper_access_type: "free_to_read"', content)
+        self.assertIn('paper_license: "not verified"', content)
+        self.assertIn('paper_oa_verified: false', content)
+        self.assertIn('paper_oa_source: "publisher"', content)
+
+    def test_free_to_read_flag_requires_a_verified_free_link(self):
+        rec = load_fixture_rec("epmc_lookup_not_oa.json")
+        rec["fullTextUrlList"] = {"fullTextUrl": []}
+        rc = ap.run(
+            self._args(rec["doi"], free_to_read=True),
+            fetch_fn=make_fetch_fn(rec),
+            today_fn=_today_fn,
+        )
         self.assertEqual(rc, 2)
         self.assertFalse(os.path.exists(self.out_dir))
 

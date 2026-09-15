@@ -64,10 +64,11 @@ python3 scripts/fetch_daily.py [--days N] [--date YYYY-MM-DD] [--summarize] [--m
 ### 4.2 `add_paper.py` — crea la plantilla de un resumen curado a partir de un DOI/PMID/PMCID
 
 ```bash
-python3 scripts/add_paper.py <DOI|PMID|PMCID|PPRID> [--slug S] [--title T] [--tags a,b] [--design ID] [--sample-size N] [--date YYYY-MM-DD] [--out-dir content/summaries] [--force] [--dry-run] [--summarize] [--model M]
+python3 scripts/add_paper.py <DOI|PMID|PMCID|PPRID> [--free-to-read] [--slug S] [--title T] [--tags a,b] [--design ID] [--sample-size N] [--date YYYY-MM-DD] [--out-dir content/summaries] [--force] [--dry-run] [--summarize] [--model M]
 ```
 
 - Verifica el artículo en Europe PMC y, cuando sus metadatos OA están incompletos, contrasta la versión publicada con OpenAlex. Si no puede confirmar acceso abierto y licencia CC (ver `POLITICA-EDITORIAL.md`), **rechaza con código 2** y no crea el archivo.
+- `--free-to-read` activa explícitamente la ruta para una reseña curada cuando Europe PMC ofrece texto completo gratuito pero no hay licencia abierta verificable. El archivo queda marcado como `free_to_read`, nunca como open access; esta opción no cambia el filtro estricto del feed.
 - `--slug` recibe solo la parte descriptiva del nombre (sin la fecha): el archivo final es `content/summaries/YYYY-MM-DD-<slug>.md`.
 - Sin `--tags`/`--design`, los detecta automáticamente a partir del título y el resumen (heurística; conviene revisarlos).
 - `--summarize` (opcional, requiere `ANTHROPIC_API_KEY`) rellena las 6 secciones con un borrador de IA en vez de dejarlas en `[[PENDIENTE]]`, y marca `ai_draft: true`.
@@ -80,7 +81,7 @@ python3 scripts/build_summaries.py [--src content/summaries] [--out data/summari
 ```
 
 - `--check` solo valida el formato, no escribe nada.
-- `--verify-oa` además revalida en vivo contra Europe PMC que cada artículo sigue siendo acceso abierto con licencia y que no fue retractado; es la variante que se usa antes de publicar.
+- `--verify-oa` revalida en vivo cada artículo y su estado editorial: OA + licencia CC en `open_access`, o continuidad del texto completo gratuito en `free_to_read`; también bloquea retractaciones. Es la variante usada antes de publicar.
 - Con errores de formato, no escribe `data/summaries.json` y sale con código 2 (salvo `--skip-invalid`, que escribe los válidos y avisa de los que dejó fuera).
 - Por defecto, un borrador (`status: draft`) que no sea `example: true` no se incluye en `data/summaries.json` (para que un borrador real a medio escribir de Javier no se publique por accidente). Los 4 resúmenes de ejemplo de este prototipo llevan `example: true`, así que sí se incluyen aunque sigan en `draft`. `--include-drafts` fuerza incluir también los borradores no marcados como ejemplo (uso local, para previsualizar).
 
@@ -102,12 +103,12 @@ Empaqueta el HTML, el CSS, el JS y los datos más recientes (resúmenes + los ú
 
 ## 5. Cómo agregar un resumen curado, paso a paso
 
-1. Busca el artículo y confirma que es acceso abierto con licencia (ver criterio en `POLITICA-EDITORIAL.md`). Necesitas su DOI, PMID o PMCID.
+1. Busca el artículo y confirma su ruta de acceso (open access con licencia o acceso gratuito sin licencia verificada; ver `POLITICA-EDITORIAL.md`). Necesitas su DOI, PMID o PMCID.
 2. Genera la plantilla:
    ```bash
    python3 scripts/add_paper.py 10.1234/ejemplo.2026 --tags adhd,digital --design rct
    ```
-   Si el artículo no es acceso abierto o no declara licencia, el comando termina con código 2 y no crea nada.
+   Para un artículo gratuito sin licencia abierta verificable, añade `--free-to-read`; si no se puede verificar el texto completo gratuito, el comando termina con código 2 y no crea nada.
 3. Abre el archivo creado en `content/summaries/` y reemplaza cada `[[PENDIENTE]]`:
    - `En una frase` (una sola oración, máximo 300 caracteres).
    - `Pregunta`, `Métodos`, `Hallazgos clave`, `Limitaciones`, `Por qué importa para la clínica` (obligatorias).

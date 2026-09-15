@@ -1,8 +1,739 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T22:44:11Z",
-  "count": 7,
+  "generated_at": "2026-09-15T02:14:27Z",
+  "count": 8,
   "items": [
+    {
+      "slug": "2026-09-14-experiencia-vivida-intento-suicidio",
+      "title": "La experiencia vivida del intento de suicidio: escuchar antes de explicar",
+      "date": "2026-09-14",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": true,
+      "adapted_with_ai": false,
+      "author": "Red PSM",
+      "summary_type": "empirico",
+      "tags": [
+        "suicide",
+        "public_mental_health",
+        "medical_education",
+        "psychotherapy"
+      ],
+      "study_design": {
+        "id": "qualitative",
+        "confidence": "draft"
+      },
+      "sample_size": null,
+      "one_liner": "Las narrativas de quienes intentaron suicidarse describen una transformación del mundo vivido que atraviesa la agencia, el tiempo, el cuerpo, los vínculos, la cultura, la recuperación y los encuentros con los servicios.",
+      "principle": {
+        "statement": "Comprender una crisis suicida exige reconstruir cómo cambian el mundo vivido, la agencia y los vínculos de la persona, no reducirla a una puntuación de riesgo.",
+        "rationale": "Los relatos vinculan la conducta con alteraciones encarnadas, temporales, relacionales y culturales que una evaluación centrada solo en predicción puede dejar fuera.",
+        "evidence": "La síntesis organizó los relatos en 4 dominios y los contrastó con expertos por experiencia de una red presente en más de 40 países.",
+        "strength": "baja",
+        "transfer": [
+          "clínica",
+          "investigación",
+          "formación"
+        ],
+        "limit": "Es un marco interpretativo no exhaustivo y no permite estimar frecuencia, causalidad ni efecto terapéutico.",
+        "provenance": "curador"
+      },
+      "quick_facts": [
+        {
+          "key": "Población",
+          "value": "Relatos en primera persona de personas que intentaron suicidarse y aportes de expertos por experiencia de distintos países."
+        },
+        {
+          "key": "Intervención o exposición",
+          "value": "Experiencia vivida antes, durante y después del intento de suicidio, incluido el acceso a la atención."
+        },
+        {
+          "key": "Comparador",
+          "value": "No aplica."
+        },
+        {
+          "key": "Desenlace primario",
+          "value": "Temas descriptivos que organizan la experiencia vivida del intento de suicidio."
+        },
+        {
+          "key": "Efecto principal",
+          "value": "Cuatro dominios integran el mundo del intento, el contexto social y cultural, la vida posterior y el acceso a los servicios."
+        },
+        {
+          "key": "Certeza",
+          "value": "Baja; síntesis cualitativa interpretativa, no exhaustiva y sin tamaño del corpus reportado."
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Mundo vivido",
+          "definition": "Forma en que una persona experimenta de manera inmediata su cuerpo, su tiempo, sus posibilidades y sus relaciones."
+        },
+        {
+          "term": "Enfoque bottom-up",
+          "definition": "Construcción de categorías desde los relatos y experiencias, en lugar de imponer primero un modelo teórico cerrado."
+        },
+        {
+          "term": "Experto por experiencia",
+          "definition": "Persona cuyo conocimiento procede de haber vivido directamente el fenómeno estudiado."
+        },
+        {
+          "term": "Agencia",
+          "definition": "Experiencia de poder iniciar acciones, elegir y sentir que se influye en el propio curso vital."
+        },
+        {
+          "term": "Sentimiento existencial",
+          "definition": "Orientación corporal y afectiva de fondo que configura qué parece real, posible o cercano."
+        },
+        {
+          "term": "Humildad cultural",
+          "definition": "Disposición a reconocer los límites del propio marco y a explorar el significado situado de la experiencia de otra persona."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Shamsaei F, Yaghmaei S, Haghighi M. Exploring the lived experiences of the suicide attempt survivors: a phenomenological approach. Int J Qual Stud Health Well-being. 2020.",
+          "doi": "10.1080/17482631.2020.1745478",
+          "pmid": null,
+          "url": "https://doi.org/10.1080/17482631.2020.1745478",
+          "why": "Profundiza mediante entrevistas fenomenológicas en la experiencia posterior al intento y permite contrastar los dominios de recuperación y relación."
+        },
+        {
+          "citation": "Lakeman R, FitzGerald M. How people live with or get over being suicidal: a review of qualitative studies. J Adv Nurs. 2008.",
+          "doi": "10.1111/j.1365-2648.2008.04773.x",
+          "pmid": null,
+          "url": "https://doi.org/10.1111/j.1365-2648.2008.04773.x",
+          "why": "Ofrece un antecedente de síntesis cualitativa sobre cómo las personas viven con la suicidalidad o se distancian de ella."
+        },
+        {
+          "citation": "Hawton K, Lascelles K, Pitman A, et al. Assessment of suicide risk in mental health practice: shifting from prediction to therapeutic assessment, formulation, and risk management. Lancet Psychiatry. 2022.",
+          "doi": "10.1016/S2215-0366(22)00232-2",
+          "pmid": null,
+          "url": "https://doi.org/10.1016/S2215-0366(22)00232-2",
+          "why": "Conecta la escucha de la experiencia con una evaluación terapéutica y una formulación que no dependen solo de predecir el suicidio."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Las narrativas de quienes intentaron suicidarse describen una transformación del mundo vivido que atraviesa la agencia, el tiempo, el cuerpo, los vínculos, la cultura, la recuperación y los encuentros con los servicios."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Población",
+                  "value": "Relatos en primera persona de personas que intentaron suicidarse y aportes de expertos por experiencia de distintos países."
+                },
+                {
+                  "key": "Intervención o exposición",
+                  "value": "Experiencia vivida antes, durante y después del intento de suicidio, incluido el acceso a la atención."
+                },
+                {
+                  "key": "Comparador",
+                  "value": "No aplica."
+                },
+                {
+                  "key": "Desenlace primario",
+                  "value": "Temas descriptivos que organizan la experiencia vivida del intento de suicidio."
+                },
+                {
+                  "key": "Efecto principal",
+                  "value": "Cuatro dominios integran el mundo del intento, el contexto social y cultural, la vida posterior y el acceso a los servicios."
+                },
+                {
+                  "key": "Certeza",
+                  "value": "Baja; síntesis cualitativa interpretativa, no exhaustiva y sin tamaño del corpus reportado."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Cómo describen las personas que han intentado suicidarse su experiencia antes, durante y después del intento, y qué dimensiones deberían reconocer la clínica, la investigación y la formación?"
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El equipo combinó experiencia vivida, experiencia profesional y trabajo académico. Buscó en Web of Science, PubMed y SciELO desde el inicio de cada base hasta el 15 de marzo de 2024 estudios cualitativos en inglés, español o italiano con relatos en primera persona, además de libros autobiográficos. Excluyó autolesión no suicida, autopsias psicológicas, decisiones al final de la vida y población juvenil."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Tres investigadores codificaron de forma independiente los relatos línea por línea y desarrollaron una síntesis temática inicial.",
+                "La primera síntesis produjo 4 temas generales y se discutió en un taller con expertos por experiencia de una red presente en más de 40 países y con participantes de un Recovery College londinense.",
+                "Perspectivas informadas por la fenomenología ayudaron a refinar los temas; quienes participaron activamente fueron invitados como coautores y recibieron compensación."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "El mundo vivido del intento incluyó cambios en la relación con uno mismo, la agencia, el tiempo, las emociones y el cuerpo; la conducta no apareció como un evento aislado de esa experiencia.",
+                "El contexto interpersonal y cultural moduló el sufrimiento mediante vínculos, género, edad, normas sociales y estigma, con experiencias tanto de desconexión como de reconocimiento.",
+                "Después del intento coexistieron pensamientos suicidas persistentes, dificultades de recuperación, perspectivas nuevas sobre la vida y esfuerzos por reconstruir relaciones.",
+                "El acceso a la atención estuvo marcado por ambivalencia: buscar ayuda podía implicar vergüenza, temor al etiquetado, barreras económicas o vivencias de abandono, pero también alivio cuando la persona se sintió escuchada y aceptada."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Diseño: La revisión fue deliberadamente bottom-up y no una revisión sistemática exhaustiva de todas las experiencias posibles.",
+                "Muestra: No se reportó el número total de estudios, libros, relatos ni participantes integrados en la síntesis.",
+                "Análisis: La metasíntesis cualitativa depende de la cointerpretación del equipo y de decisiones analíticas que no producen una estimación única reproducible.",
+                "Generalización: Los relatos dependen del contexto, la cultura y la práctica narrativa; además, se excluyeron jóvenes y situaciones de final de vida."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "Comprender una crisis suicida exige reconstruir cómo cambian el mundo vivido, la agencia y los vínculos de la persona, no reducirla a una puntuación de riesgo."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "Los relatos vinculan la conducta con alteraciones encarnadas, temporales, relacionales y culturales que una evaluación centrada solo en predicción puede dejar fuera."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "La síntesis organizó los relatos en 4 dominios y los contrastó con expertos por experiencia de una red presente en más de 40 países."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "baja"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "clínica, investigación, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "Es un marco interpretativo no exhaustivo y no permite estimar frecuencia, causalidad ni efecto terapéutico."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "curador"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El trabajo invita a complementar la evaluación inmediata de seguridad con una reconstrucción compartida del significado de la crisis. Su valor no está en ofrecer un nuevo predictor, sino en ampliar lo que el clínico escucha y formula junto con la persona."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Explorar cómo cambiaron el tiempo, el cuerpo, la capacidad de actuar y el sentido de futuro alrededor del intento. Límite: no sustituye la evaluación urgente de seguridad ni el manejo del riesgo inmediato.",
+                "Cuidar la continuidad relacional después del intento y preguntar qué encuentros con los servicios se vivieron como abandono, juicio o aceptación. Límite: cada trayectoria es singular y no todas las personas reconocen los mismos temas.",
+                "Incorporar cultura, género, edad, recursos económicos y estigma en la formulación clínica. Límite: estas dimensiones necesitan interpretación local y no deben convertirse en estereotipos."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Mundo vivido",
+                  "value": "Forma en que una persona experimenta de manera inmediata su cuerpo, su tiempo, sus posibilidades y sus relaciones."
+                },
+                {
+                  "key": "Enfoque bottom-up",
+                  "value": "Construcción de categorías desde los relatos y experiencias, en lugar de imponer primero un modelo teórico cerrado."
+                },
+                {
+                  "key": "Experto por experiencia",
+                  "value": "Persona cuyo conocimiento procede de haber vivido directamente el fenómeno estudiado."
+                },
+                {
+                  "key": "Agencia",
+                  "value": "Experiencia de poder iniciar acciones, elegir y sentir que se influye en el propio curso vital."
+                },
+                {
+                  "key": "Sentimiento existencial",
+                  "value": "Orientación corporal y afectiva de fondo que configura qué parece real, posible o cercano."
+                },
+                {
+                  "key": "Humildad cultural",
+                  "value": "Disposición a reconocer los límites del propio marco y a explorar el significado situado de la experiencia de otra persona."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Shamsaei F, Yaghmaei S, Haghighi M. Exploring the lived experiences of the suicide attempt survivors: a phenomenological approach. Int J Qual Stud Health Well-being. 2020.",
+                  "doi": "10.1080/17482631.2020.1745478",
+                  "pmid": null,
+                  "why": "Profundiza mediante entrevistas fenomenológicas en la experiencia posterior al intento y permite contrastar los dominios de recuperación y relación."
+                },
+                {
+                  "citation": "Lakeman R, FitzGerald M. How people live with or get over being suicidal: a review of qualitative studies. J Adv Nurs. 2008.",
+                  "doi": "10.1111/j.1365-2648.2008.04773.x",
+                  "pmid": null,
+                  "why": "Ofrece un antecedente de síntesis cualitativa sobre cómo las personas viven con la suicidalidad o se distancian de ella."
+                },
+                {
+                  "citation": "Hawton K, Lascelles K, Pitman A, et al. Assessment of suicide risk in mental health practice: shifting from prediction to therapeutic assessment, formulation, and risk management. Lancet Psychiatry. 2022.",
+                  "doi": "10.1016/S2215-0366(22)00232-2",
+                  "pmid": null,
+                  "why": "Conecta la escucha de la experiencia con una evaluación terapéutica y una formulación que no dependen solo de predecir el suicidio."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Reseña original generada con asistencia de IA a partir del texto completo oficial. La versión de registro puede leerse gratuitamente, pero Europe PMC y OpenAlex no confirman una licencia Creative Commons; por eso se identifica como acceso gratuito y no como open access. No se reprodujeron tablas, figuras ni pasajes largos. El texto no ha sido revisado por un humano."
+            }
+          ]
+        }
+      ],
+      "full_note": {
+        "pending": false,
+        "word_count": 827,
+        "sections": [
+          {
+            "id": "nc_info",
+            "heading": "Información del estudio",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Título",
+                    "value": "The lived experience of persons who attempt suicide: a bottom-up review co-designed, co-produced and co-written by experts by experience and academics."
+                  },
+                  {
+                    "key": "Autor principal",
+                    "value": "Paolo Fusar-Poli"
+                  },
+                  {
+                    "key": "Correo de correspondencia",
+                    "value": "No reportado."
+                  },
+                  {
+                    "key": "Año",
+                    "value": "2026"
+                  },
+                  {
+                    "key": "Revista",
+                    "value": "World Psychiatry"
+                  },
+                  {
+                    "key": "Palabras clave",
+                    "value": "intento de suicidio, experiencia vivida, fenomenología, recuperación, acceso a la atención"
+                  },
+                  {
+                    "key": "País",
+                    "value": "Multinacional; participaron expertos de una red con presencia en más de 40 países."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_intro",
+            "heading": "Introducción en tres frases",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Problema",
+                    "value": "La investigación y la práctica sobre suicidio pueden privilegiar factores de riesgo y predicción por encima de la experiencia en primera persona."
+                  },
+                  {
+                    "key": "Literatura previa",
+                    "value": "Estudios cualitativos y autobiográficos han descrito desesperanza, desconexión, cambios corporales y temporales, relaciones y experiencias con los servicios."
+                  },
+                  {
+                    "key": "Vacío",
+                    "value": "Faltaba una integración amplia co-diseñada y co-escrita con expertos por experiencia que organizara estos relatos sin partir de una taxonomía clínica cerrada."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_pregunta",
+            "heading": "Pregunta de investigación",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Primaria",
+                    "value": "¿Cuáles son las dimensiones centrales de la experiencia vivida de las personas que intentan suicidarse?"
+                  },
+                  {
+                    "key": "Secundarias",
+                    "value": "¿Cómo se expresan esas dimensiones antes, durante y después del intento, en el contexto social y cultural y en el acceso a la atención?"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_metodo",
+            "heading": "Método",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Revisión cualitativa bottom-up y metasíntesis temática co-diseñada, co-producida y co-escrita por académicos y expertos por experiencia, seguida de deliberación internacional y refinamiento fenomenológicamente informado."
+              }
+            ]
+          },
+          {
+            "id": "nc_diseno",
+            "heading": "Diseño",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Diseño",
+                    "value": "Síntesis cualitativa temática de relatos en primera persona y literatura autobiográfica."
+                  },
+                  {
+                    "key": "Checklist declarado",
+                    "value": "No reportado."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_unidad",
+            "heading": "Unidad de análisis",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Fragmentos narrativos sobre la experiencia vivida de personas que intentaron suicidarse, extraídos de estudios cualitativos y libros autobiográficos elegibles."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestra",
+            "heading": "Muestra",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "No se reportó un conteo total de estudios, libros, relatos ni participantes; por ello no se consigna un tamaño de muestra numérico."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestreo",
+            "heading": "Muestreo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Búsqueda intencional en Web of Science, PubMed y SciELO desde el inicio de cada base hasta el 15 de marzo de 2024, limitada a relatos en inglés, español o italiano y complementada con libros autobiográficos."
+              }
+            ]
+          },
+          {
+            "id": "nc_procedimientos",
+            "heading": "Procedimientos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "Se identificaron estudios cualitativos y libros autobiográficos con relatos en primera persona, aplicando los criterios de inclusión y exclusión definidos por el equipo.",
+                  "Tres investigadores extrajeron y codificaron independientemente los textos línea por línea y construyeron una síntesis temática preliminar.",
+                  "Los 4 temas iniciales se presentaron en un taller con expertos por experiencia de una red internacional y de un Recovery College de Londres.",
+                  "El equipo integró la deliberación y perspectivas fenomenológicas, finalizó los dominios e invitó a los participantes activos a coescribir el artículo."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_dependientes",
+            "heading": "Variables dependientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "No aplica",
+                    "value": "El estudio no estimó desenlaces cuantitativos; describió temas de experiencia vivida."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_independientes",
+            "heading": "Variables independientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "No aplica",
+                    "value": "No se evaluaron exposiciones como predictores ni relaciones estadísticas entre variables."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_analisis",
+            "heading": "Análisis de datos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Univariado",
+                    "value": "No aplica; no hubo análisis estadístico descriptivo."
+                  },
+                  {
+                    "key": "Bivariado",
+                    "value": "No aplica; no se compararon variables por pares."
+                  },
+                  {
+                    "key": "Multivariado",
+                    "value": "No aplica; no se estimaron modelos ajustados."
+                  },
+                  {
+                    "key": "Supuestos",
+                    "value": "La síntesis asumió que los relatos son situados y que su interpretación requiere reflexividad y deliberación entre perspectivas."
+                  },
+                  {
+                    "key": "Software",
+                    "value": "No reportado."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_hallazgos",
+            "heading": "Hallazgos principales",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Aquí se realizó una síntesis temática cualitativa de relatos en primera persona, refinada con expertos por experiencia y perspectivas fenomenológicas. Los hallazgos principales son: 1) el intento se inscribe en cambios del yo, la agencia, el tiempo, las emociones y el cuerpo; 2) las relaciones, la cultura, el género, la edad y el estigma configuran la experiencia; 3) la vida posterior combina persistencia de pensamientos, retos de recuperación, perspectivas nuevas y reconstrucción relacional; 4) buscar atención puede exponer a abandono, vergüenza, etiquetas y barreras económicas, o facilitar alivio cuando existe escucha y aceptación."
+              }
+            ]
+          },
+          {
+            "id": "nc_datos",
+            "heading": "Datos por hallazgo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "Mundo vivido: los relatos reunieron experiencia del intento, relación con uno mismo, agencia, temporalidad, emociones y corporalidad; el artículo no informó frecuencias ni tamaños de efecto.",
+                  "Contexto social y cultural: aparecieron relaciones con otras personas, cultura, género, edad y estigma como dimensiones situadas, sin comparaciones cuantitativas entre grupos.",
+                  "Después del intento: se describieron convivencia con pensamientos suicidas, obstáculos para recuperarse, nuevas perspectivas y reparación de relaciones, sin una trayectoria universal.",
+                  "Acceso a la atención: buscar ayuda estuvo atravesado por abandono, vergüenza, miedo al etiquetado, costos, hospitalización y experiencias de escucha o aceptación."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_discusion",
+            "heading": "Discusión",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Qué significa",
+                    "value": "Una formulación clínica útil necesita comprender el mundo vivido y no reducir el intento a un marcador aislado o a una puntuación de riesgo."
+                  },
+                  {
+                    "key": "Por qué ocurre",
+                    "value": "La crisis se experimenta de forma corporal, temporal, relacional y cultural, de modo que el significado emerge de la interacción entre la persona y su contexto."
+                  },
+                  {
+                    "key": "Contexto amplio",
+                    "value": "El artículo se alinea con enfoques de evaluación terapéutica, atención centrada en la persona, educación antiestigma y humildad cultural."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_limitaciones",
+            "heading": "Limitaciones según los autores",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Selección: El trabajo no revisó sistemáticamente todas las experiencias posibles y excluyó autolesión no suicida, población juvenil y situaciones de final de vida.",
+                  "Medición: Los relatos en primera persona dependen del contexto, la práctica narrativa y el momento desde el cual se reconstruye la experiencia.",
+                  "Confusión: No aplica como confusión estadística; distintas condiciones sociales, culturales y clínicas pueden influir en los relatos sin poder separarse analíticamente.",
+                  "Otras: La metasíntesis exige cointerpretación y el artículo no abordó sistemáticamente causas, modelos de riesgo, historia, filosofía ni ética del suicidio."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_futuro",
+            "heading": "Investigación futura",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Evaluar cómo estos dominios pueden incorporarse a entrevistas y formulaciones clínicas sin convertirlos en una nueva lista rígida.",
+                  "Investigar variaciones culturales, de género, edad y posición socioeconómica con participación local de expertos por experiencia.",
+                  "Estudiar si prácticas de escucha, continuidad relacional y reducción del estigma mejoran desenlaces valorados por las personas después de un intento.",
+                  "Describir con mayor transparencia el corpus y las decisiones de síntesis en futuras revisiones cualitativas participativas."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "word_count": 902,
+      "reading_minutes": 5,
+      "source_file": "content/summaries/2026-09-14-experiencia-vivida-intento-suicidio.md",
+      "paper": {
+        "key": "MED:41536099",
+        "epmc_id": "41536099",
+        "source": "MED",
+        "pmid": "41536099",
+        "pmcid": "PMC12805064",
+        "doi": "10.1002/wps.70003",
+        "title": "The lived experience of persons who attempt suicide: a bottom-up review co-designed, co-produced and co-written by experts by experience and academics.",
+        "authors": "Fusar-Poli P, Esposito CM, Estradé A, Rosfort R, Mancini M, Jackman M, Sugianto A, Berk E, Prawira B, Wangui LN, Agaba A, Cullen J, O'Connor RR, Marsh I, Shamsaei F, Bonoldi I, Stefana A, Damiani S, Basadonne I, Singh A, Fontana S, Curti I, Massari L, Legittimo A, Cortese S, Yon DK, Shin JI, Madeira L, Stanghellini G, Rossi Monti M, Ratcliffe M, Pompili M, Maj M.",
+        "journal": "World Psychiatry",
+        "journal_abbrev": "World Psychiatry",
+        "pub_year": 2026,
+        "first_publication_date": "2026-02-01",
+        "first_index_date": null,
+        "pub_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "free_to_read",
+          "access_type": "free_to_read",
+          "license": null,
+          "license_label": "Licencia no verificada",
+          "source": "publisher",
+          "checked_at": "2026-09-14T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1002/wps.70003",
+          "europepmc": "https://europepmc.org/article/MED/41536099",
+          "fulltext_html": "https://europepmc.org/articles/PMC12805064",
+          "pdf": "https://europepmc.org/articles/PMC12805064?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "qualitative",
+          "confidence": "draft"
+        },
+        "sample_size": null,
+        "tags": [
+          "suicide",
+          "public_mental_health",
+          "medical_education",
+          "psychotherapy"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
     {
       "slug": "2026-09-14-exposoma-salud-mental-curso-vida",
       "title": "El exposoma y la salud mental a lo largo de la vida",
@@ -408,6 +1139,7 @@
         "is_preprint": false,
         "open_access": {
           "status": "verified",
+          "access_type": "open_access",
           "license": "cc by",
           "license_label": "CC BY",
           "source": "europepmc+openalex",
@@ -844,6 +1576,7 @@
         "is_preprint": false,
         "open_access": {
           "status": "verified",
+          "access_type": "open_access",
           "license": "cc by",
           "license_label": "CC BY",
           "source": "europepmc+openalex",
@@ -1627,6 +2360,7 @@
         "is_preprint": false,
         "open_access": {
           "status": "verified",
+          "access_type": "open_access",
           "license": "cc by",
           "license_label": "CC BY",
           "source": "europepmc+openalex",
@@ -2079,6 +2813,7 @@
         "is_preprint": false,
         "open_access": {
           "status": "verified",
+          "access_type": "open_access",
           "license": "cc by",
           "license_label": "CC BY",
           "source": "europepmc",
@@ -2544,6 +3279,7 @@
         "is_preprint": false,
         "open_access": {
           "status": "verified",
+          "access_type": "open_access",
           "license": "cc by",
           "license_label": "CC BY",
           "source": "europepmc",
@@ -2997,6 +3733,7 @@
         "is_preprint": false,
         "open_access": {
           "status": "verified",
+          "access_type": "open_access",
           "license": "cc by-nc",
           "license_label": "CC BY-NC",
           "source": "europepmc+openalex",
@@ -3747,6 +4484,7 @@
         "is_preprint": false,
         "open_access": {
           "status": "verified",
+          "access_type": "open_access",
           "license": "cc by-nc-nd",
           "license_label": "CC BY-NC-ND",
           "source": "europepmc",

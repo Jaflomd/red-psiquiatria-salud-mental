@@ -80,6 +80,30 @@ class TestValidExampleIncluded(BuildSummariesTestCase):
         item = data["items"][0]
         self.assertEqual(item["study_design"]["confidence"], "manual")
 
+    def test_free_to_read_summary_is_not_serialized_as_open_access(self):
+        path = os.path.join(FIXTURES, "summary_valid.md")
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+        text = text.replace(
+            'summary_type: "empirico"',
+            'summary_type: "empirico"\npaper_access_type: "free_to_read"',
+        )
+        text = text.replace('paper_license: "cc by"', 'paper_license: "not verified"')
+        text = text.replace("paper_oa_verified: true", "paper_oa_verified: false")
+        text = text.replace(
+            'paper_oa_checked: "2026-09-14"',
+            'paper_oa_source: "publisher"\npaper_oa_checked: "2026-09-14"',
+        )
+        dest = os.path.join(self.src, "2026-09-14-free-to-read.md")
+        with open(dest, "w", encoding="utf-8") as f:
+            f.write(text)
+        self.assertEqual(bs.run(self._args(), now_fn=_now_fn), 0)
+        with open(self.out, encoding="utf-8") as f:
+            item = json.load(f)["items"][0]
+        self.assertEqual(item["paper"]["open_access"]["status"], "free_to_read")
+        self.assertIsNone(item["paper"]["open_access"]["license"])
+        self.assertEqual(item["paper"]["open_access"]["license_label"], "Licencia no verificada")
+
     def test_verify_oa_network_failure_returns_1_not_uncaught(self):
         # hallazgo de verificación: un EpmcError durante --verify-oa (red
         # caída, timeout, SSL) escapaba de run() como traceback sin capturar
@@ -123,6 +147,47 @@ class TestValidExampleIncluded(BuildSummariesTestCase):
             return {"version": "6.9", "hitCount": 1, "resultList": {"result": [epmc_record]}}
 
         bs._verify_oa_live(fm, "summary.md", fetch_fn=fetch_fn, sleep_fn=lambda s: None)
+
+    def test_verify_free_to_read_accepts_a_free_fulltext_link(self):
+        fm = {
+            "paper_doi": "10.1234/free",
+            "paper_pmcid": None,
+            "paper_access_type": "free_to_read",
+            "paper_license": "not verified",
+            "paper_oa_source": "publisher",
+        }
+        rec = {
+            "id": "123",
+            "source": "MED",
+            "title": "A free-to-read article",
+            "isOpenAccess": "N",
+            "license": None,
+            "fullTextUrlList": {"fullTextUrl": [{"availability": "Free", "url": "https://doi.org/10.1234/free"}]},
+        }
+        bs._verify_oa_live(fm, "summary.md", fetch_fn=lambda url: {
+            "version": "6.9", "hitCount": 1, "resultList": {"result": [rec]}
+        }, sleep_fn=lambda s: None)
+
+    def test_verify_free_to_read_rejects_when_free_link_disappears(self):
+        fm = {
+            "paper_doi": "10.1234/free",
+            "paper_pmcid": None,
+            "paper_access_type": "free_to_read",
+            "paper_license": "not verified",
+            "paper_oa_source": "publisher",
+        }
+        rec = {
+            "id": "123",
+            "source": "MED",
+            "title": "A no-longer-free article",
+            "isOpenAccess": "N",
+            "license": None,
+            "fullTextUrlList": {"fullTextUrl": []},
+        }
+        with self.assertRaises(ValueError):
+            bs._verify_oa_live(fm, "summary.md", fetch_fn=lambda url: {
+                "version": "6.9", "hitCount": 1, "resultList": {"result": [rec]}
+            }, sleep_fn=lambda s: None)
 
 
 class TestPendingRules(BuildSummariesTestCase):

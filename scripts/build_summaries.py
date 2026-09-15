@@ -75,14 +75,16 @@ _RETRACTION_TITLE_RE = re.compile(
 
 
 def _verify_oa_live(fm, path, fetch_fn=None, sleep_fn=None):
-    """Ejecuta lookup en vivo y valida OA v2 + no-retracción. Lanza
+    """Ejecuta lookup en vivo y valida acceso + no-retracción. Lanza
     ValueError si falla la validación; deja pasar epmc_client.EpmcError (red
     caída, 5xx agotados, 429...) para que el llamador la trate como fallo de
     red (exit 1), no como rechazo de contenido.
 
-    OA v2 (solo resúmenes curados, contrato §11): ruta A si Europe PMC sigue
-    marcando isOpenAccess=Y con licencia CC; si no, ruta B (OpenAlex) cuando
-    el .md declara paper_oa_source: europepmc+openalex.
+    OA v2 (solo resúmenes curados): ruta A si Europe PMC sigue marcando
+    isOpenAccess=Y con licencia CC; si no, ruta B (OpenAlex) cuando el .md
+    declara paper_oa_source: europepmc+openalex. Para reseñas free_to_read,
+    comprueba que Europe PMC mantenga al menos un enlace gratuito legítimo,
+    sin convertirlo en una afirmación de open access.
     """
     identifier = fm.get("paper_pmcid") or fm.get("paper_doi")
     rec = epmc_client.lookup(identifier, fetch_fn=fetch_fn, sleep_fn=sleep_fn)
@@ -97,7 +99,23 @@ def _verify_oa_live(fm, path, fetch_fn=None, sleep_fn=None):
         raise ValueError(f"{path}: {identifier} tiene una retractación o expresión de preocupación asociada")
 
     license_raw = (rec.get("license") or "").strip().lower()
+    access_type = fm.get("paper_access_type", "open_access")
     oa_source = fm.get("paper_oa_source", "europepmc")
+
+    if access_type == "free_to_read":
+        urls = (rec.get("fullTextUrlList") or {}).get("fullTextUrl") or []
+        has_free_link = any(
+            (u.get("availability") or "").strip().lower() in ("free", "open access")
+            and bool(u.get("url"))
+            for u in urls
+        )
+        if not has_free_link:
+            raise ValueError(
+                f"{path}: {identifier} ya no ofrece un enlace de texto completo gratuito "
+                "en Europe PMC (--verify-oa)"
+            )
+        return
+
     route_a_ok = rec.get("isOpenAccess") == "Y" and common.license_allowed(license_raw)
 
     if route_a_ok:
@@ -169,6 +187,8 @@ def _build_paper(fm):
     source = fm["paper_source"]
     epmc_id = fm["paper_epmc_id"]
     license_raw = fm["paper_license"]
+    access_type = fm.get("paper_access_type", "open_access")
+    is_free_to_read = access_type == "free_to_read"
     # "manual" implica que Javier confirmó el dato; un borrador con
     # ai_draft:true no lo ha hecho todavía (hallazgo de verificación) — se
     # etiqueta "draft" y el frontend lo muestra como "(indicado en el
@@ -193,9 +213,10 @@ def _build_paper(fm):
         "language": None,
         "is_preprint": fm.get("paper_preprint", False),
         "open_access": {
-            "status": "verified",
-            "license": license_raw,
-            "license_label": common.license_label(license_raw),
+            "status": "free_to_read" if is_free_to_read else "verified",
+            "access_type": access_type,
+            "license": None if is_free_to_read else license_raw,
+            "license_label": "Licencia no verificada" if is_free_to_read else common.license_label(license_raw),
             "source": fm.get("paper_oa_source", "europepmc"),
             "checked_at": fm["paper_oa_checked"] + "T00:00:00Z",
         },

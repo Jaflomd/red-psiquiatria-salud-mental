@@ -199,6 +199,7 @@ _FRONTMATTER_KEY_ORDER = [
     "study_design",
     "summary_type",
     "sample_size",
+    "paper_access_type",
     "paper_title",
     "paper_authors",
     "paper_journal",
@@ -244,6 +245,15 @@ def _reject_not_oa(rec, identifier):
         f"source: {rec.get('source')}\n"
         f"license: {rec.get('license')}\n"
         f"fullTextUrlList:\n{url_lines}"
+    )
+
+
+def _has_free_fulltext(rec):
+    urls = (rec.get("fullTextUrlList") or {}).get("fullTextUrl") or []
+    return any(
+        (u.get("availability") or "").strip().lower() in ("free", "open access")
+        and bool(u.get("url"))
+        for u in urls
     )
 
 
@@ -329,6 +339,14 @@ def build_arg_parser():
         help="summary_type; por defecto se sugiere a partir de --design/study_design detectado",
     )
     p.add_argument("--sample-size", type=int, default=None)
+    p.add_argument(
+        "--free-to-read",
+        action="store_true",
+        help=(
+            "permite crear una reseña curada de una versión publicada accesible gratis pero sin "
+            "licencia CC verificada; nunca se usa para el feed diario"
+        ),
+    )
     p.add_argument("--date", default=None)
     p.add_argument("--out-dir", default="content/summaries")
     p.add_argument("--force", action="store_true")
@@ -360,45 +378,67 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
         return 2
 
     license_raw = (rec.get("license") or "").strip().lower() or None
+    paper_access_type = "open_access"
     paper_oa_source = "europepmc"
     route_a_ok = rec.get("isOpenAccess") == "Y" and common.license_allowed(license_raw)
     if not route_a_ok:
-        if license_raw and not common.license_allowed(license_raw):
-            # Una licencia cerrada explícita en Europe PMC no se sobreescribe
-            # con otra fuente. La ruta B solo completa metadatos ausentes o
-            # confirma el OA cuando isOpenAccess todavía no está actualizado.
+        if args.free_to_read:
+            if license_raw and not common.license_allowed(license_raw):
+                _log(
+                    f"Rechazado: Europe PMC declara una licencia cerrada explícita para "
+                    f"{args.identifier} (license={rec.get('license')!r})."
+                )
+                return 2
+            if not _has_free_fulltext(rec):
+                _log(
+                    f"Rechazado: {args.identifier} no tiene un enlace de texto completo gratuito "
+                    "verificable en Europe PMC."
+                )
+                return 2
+            paper_access_type = "free_to_read"
+            paper_oa_source = "publisher"
+            license_raw = "not verified"
             _log(
-                f"Rechazado: Europe PMC declara una licencia no abierta para {args.identifier} "
-                f"(license={rec.get('license')!r})."
+                "Aceptado como reseña free_to_read: el texto completo es accesible gratuitamente, "
+                "pero no se afirmará que es open access ni que tiene licencia de reutilización."
             )
-            return 2
-        doi_for_oa = rec.get("doi")
-        if not doi_for_oa:
-            _reject_not_oa(rec, args.identifier)
-            return 2
-        try:
-            work = epmc_client.openalex_lookup(doi_for_oa, fetch_fn=fetch_fn, sleep_fn=sleep_fn)
-        except epmc_client.EpmcError as e:
-            _log(f"fallo de red/API consultando OpenAlex (ruta B de OA v2): {e.msg}")
-            return 1
-        if work is None:
-            _reject_not_oa(rec, args.identifier)
-            return 2
-        ok, license_norm, reason = common.openalex_oa_verdict(work)
-        if not ok or (license_raw and license_norm != license_raw):
+        else:
+            if license_raw and not common.license_allowed(license_raw):
+                # Una licencia cerrada explícita en Europe PMC no se sobreescribe
+                # con otra fuente. La ruta B solo completa metadatos ausentes o
+                # confirma el OA cuando isOpenAccess todavía no está actualizado.
+                _log(
+                    f"Rechazado: Europe PMC declara una licencia no abierta para {args.identifier} "
+                    f"(license={rec.get('license')!r})."
+                )
+                return 2
+            doi_for_oa = rec.get("doi")
+            if not doi_for_oa:
+                _reject_not_oa(rec, args.identifier)
+                return 2
+            try:
+                work = epmc_client.openalex_lookup(doi_for_oa, fetch_fn=fetch_fn, sleep_fn=sleep_fn)
+            except epmc_client.EpmcError as e:
+                _log(f"fallo de red/API consultando OpenAlex (ruta B de OA v2): {e.msg}")
+                return 1
+            if work is None:
+                _reject_not_oa(rec, args.identifier)
+                return 2
+            ok, license_norm, reason = common.openalex_oa_verdict(work)
+            if not ok or (license_raw and license_norm != license_raw):
+                _log(
+                    f"Rechazado: Europe PMC no marca isOpenAccess=Y para {args.identifier} y OpenAlex no "
+                    f"confirma acceso abierto con licencia CC de la versión publicada "
+                    f"({reason or 'licencia distinta a la declarada por Europe PMC'})."
+                )
+                return 2
+            license_raw = license_norm
+            paper_oa_source = "europepmc+openalex"
             _log(
-                f"Rechazado: Europe PMC no marca isOpenAccess=Y para {args.identifier} y OpenAlex no "
-                f"confirma acceso abierto con licencia CC de la versión publicada "
-                f"({reason or 'licencia distinta a la declarada por Europe PMC'})."
+                "Europe PMC no completa el gate OA, pero OpenAlex confirma acceso abierto y licencia CC "
+                "de la versión publicada; se acepta con "
+                "paper_oa_source: europepmc+openalex"
             )
-            return 2
-        license_raw = license_norm
-        paper_oa_source = "europepmc+openalex"
-        _log(
-            "Europe PMC no completa el gate OA, pero OpenAlex confirma acceso abierto y licencia CC "
-            "de la versión publicada; se acepta con "
-            "paper_oa_source: europepmc+openalex"
-        )
 
     import json
 
@@ -514,6 +554,7 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
         "study_design": design_id,
         "summary_type": summary_type,
         "sample_size": args.sample_size,
+        "paper_access_type": paper_access_type,
         "paper_title": paper_title,
         "paper_authors": rec.get("authorString"),
         "paper_journal": journal,
@@ -528,7 +569,7 @@ def run(args, *, fetch_fn=None, post_fn=None, today_fn=None, sleep_fn=None):
         "paper_license": license_raw,
         "paper_pub_types": pub_types,
         "paper_preprint": is_preprint,
-        "paper_oa_verified": True,
+        "paper_oa_verified": paper_access_type == "open_access",
         "paper_oa_source": paper_oa_source,
         "paper_oa_checked": str(today_fn()),
         "updated": None,

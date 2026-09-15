@@ -247,6 +247,35 @@ class TestFrontmatter(unittest.TestCase):
         with self.assertRaises(c.SummaryFormatError):
             c.parse_frontmatter(text, "summary_invalid_not_oa.md")
 
+    def test_free_to_read_route_is_accepted_with_explicit_provenance(self):
+        text = self._valid_text()
+        text = text.replace(
+            'summary_type: "empirico"',
+            'summary_type: "empirico"\npaper_access_type: "free_to_read"',
+        )
+        text = text.replace('paper_license: "cc by"', 'paper_license: "not verified"')
+        text = text.replace("paper_oa_verified: true", "paper_oa_verified: false")
+        text = text.replace(
+            'paper_oa_checked: "2026-09-14"',
+            'paper_oa_source: "publisher"\npaper_oa_checked: "2026-09-14"',
+        )
+        fm, _ = c.parse_frontmatter(text, "free.md")
+        self.assertEqual(fm["paper_access_type"], "free_to_read")
+        self.assertFalse(fm["paper_oa_verified"])
+
+    def test_free_to_read_route_cannot_claim_cc_license(self):
+        text = self._valid_text().replace(
+            'summary_type: "empirico"',
+            'summary_type: "empirico"\npaper_access_type: "free_to_read"',
+        )
+        text = text.replace("paper_oa_verified: true", "paper_oa_verified: false")
+        text = text.replace(
+            'paper_oa_checked: "2026-09-14"',
+            'paper_oa_source: "publisher"\npaper_oa_checked: "2026-09-14"',
+        )
+        with self.assertRaises(c.SummaryFormatError):
+            c.parse_frontmatter(text, "free-invalid.md")
+
     def test_license_not_cc_rejected(self):
         text = self._valid_text().replace('paper_license: "cc by"', 'paper_license: "all rights reserved"')
         with self.assertRaises(c.SummaryFormatError):

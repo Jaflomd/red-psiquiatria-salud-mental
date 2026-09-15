@@ -98,7 +98,7 @@
     site: {
       name: "Red de Investigación de Psiquiatría y Salud Mental",
       short_name: "Red PSM",
-      tagline: "Lecturas curadas y un feed diario de investigación open access en psiquiatría, desde el Perú."
+      tagline: "Lecturas curadas con acceso verificable y un feed diario open access en psiquiatría, desde el Perú."
     },
     author: { name: "Javier Flores", role: "Psiquiatra e investigador", lines: [] },
     about: { paragraphs: [] },
@@ -442,13 +442,16 @@
     if (paper.pmcid) parts.push(paper.pmcid);
     if (paper.doi) parts.push("doi " + paper.doi);
     var oa = paper.open_access || {};
+    var isFreeToRead = oa.status === "free_to_read" || oa.access_type === "free_to_read";
+    if (isFreeToRead) parts.push("acceso gratuito");
     var licLabel = oa.license_label || licenseLabel(oa.license);
     if (licLabel) parts.push(licLabel);
     if (paper.first_index_date) parts.push("indexado " + paper.first_index_date);
-    else if (oa.checked_at) parts.push("OA verificado " + String(oa.checked_at).slice(0, 10));
+    else if (oa.checked_at) parts.push((isFreeToRead ? "acceso comprobado " : "OA verificado ") + String(oa.checked_at).slice(0, 10));
     if (!parts.length) return null;
     var line = el("p", { class: "reg-line" });
-    line.appendChild(el("span", { class: "oa-mark" }, el("span", { class: "visually-hidden" }, "Open access verificado")));
+    line.appendChild(el("span", { class: isFreeToRead ? "access-mark" : "oa-mark" },
+      el("span", { class: "visually-hidden" }, isFreeToRead ? "Acceso gratuito; licencia no verificada" : "Open access verificado")));
     line.appendChild(document.createTextNode(parts.join(" · ")));
     return line;
   }
@@ -589,7 +592,7 @@
         if (item.ai_draft) add("Borrador IA", "Borrador IA · pendiente de revisión");
         else add("Borrador", "Borrador");
       } else if (item.status === "published" && item.ai_draft) {
-        add("Asistido por IA", "Redactado con asistencia de IA y revisado por " + (item.author || ""));
+        add("Generado con IA", "Resumen generado con IA · no revisado por un humano");
       } else if (item.status === "published" && item.adapted_with_ai) {
         // Distinto de "Asistido por IA": aquí el texto es del autor humano y
         // la IA solo lo adaptó al formato del sitio (nunca lo redactó), y son
@@ -675,6 +678,8 @@
       metaRow.appendChild(nSpan);
     }
     var oa = (item.paper && item.paper.open_access) || {};
+    var isFreeToRead = oa.status === "free_to_read" || oa.access_type === "free_to_read";
+    if (isFreeToRead) metaRow.appendChild(el("span", { class: "pill pill-access" }, "Acceso gratuito"));
     var lic = oa.license_label || (oa.license ? licenseLabel(oa.license) : null);
     if (lic) metaRow.appendChild(el("span", { class: "pill pill-outline" }, [el("span", { class: "visually-hidden" }, "Licencia: "), lic]));
     if (metaRow.childNodes.length) body.appendChild(metaRow);
@@ -730,6 +735,8 @@
       row("N", "N = " + Number(item.sample_size.value).toLocaleString("es-PE") + nSuffix);
     }
     var oa = paper.open_access || {};
+    var isFreeToRead = oa.status === "free_to_read" || oa.access_type === "free_to_read";
+    row("Acceso", isFreeToRead ? "Acceso gratuito · no es open access" : "Open access verificado");
     row("Licencia", oa.license_label || (oa.license ? licenseLabel(oa.license) : null));
     aside.appendChild(dl);
     var reg = buildRegLine(paper);
@@ -748,8 +755,7 @@
     } else if (item.ai_draft && item.status === "draft") {
       provenanceNote = "Borrador redactado con IA a partir del resumen del artículo; pendiente de revisión humana. No reemplaza la lectura del original.";
     } else if (item.ai_draft) {
-      provenanceNote = "Redactado con asistencia de IA y revisado por " + (item.author || "el curador") +
-        "; no reemplaza la lectura del original.";
+      provenanceNote = "Resumen generado con asistencia de IA a partir del artículo; no ha sido revisado por un humano. No reemplaza la lectura del original.";
     } else {
       provenanceNote = "Resumen escrito con palabras propias a partir del artículo; no reemplaza la lectura del original.";
     }
@@ -1381,7 +1387,7 @@
     // pantalla (hallazgo de verificación).
     c.appendChild(el("h1", {}, "Resúmenes"));
     c.appendChild(el("p", { class: "view-intro" },
-      "Lecturas en español de artículos open access; los marcados como borrador aún no tienen revisión humana."));
+      "Lecturas en español de artículos open access y reseñas de acceso gratuito claramente identificadas; el origen y la revisión humana se declaran en cada ficha."));
     if (items.length === 0) {
       c.appendChild(el("div", { class: "state" }, el("p", {}, [
         "Todavía no hay resúmenes. Crea uno con ", el("code", {}, "python3 scripts/add_paper.py <DOI>"),
@@ -1571,6 +1577,9 @@
     if (item.adapted_with_ai && item.status === "published" && !item.ai_draft) {
       header.appendChild(el("p", { class: "provenance-line" },
         "Resumen de " + item.author + " · adaptado al formato del sitio con asistencia de IA"));
+    } else if (item.ai_draft && item.status === "published") {
+      header.appendChild(el("p", { class: "provenance-line" },
+        "Resumen generado con IA · no revisado por un humano"));
     }
     c.appendChild(header);
 
@@ -1641,7 +1650,7 @@
 
     if (site.oa_policy) {
       var oa = el("section", { class: "section-block oa-policy measure" });
-      oa.appendChild(el("h2", {}, "Criterios open access"));
+      oa.appendChild(el("h2", {}, "Acceso y licencias"));
       var body = el("div", { class: "section-body" });
       if (site.oa_policy.intro) body.appendChild(el("p", {}, site.oa_policy.intro));
       if (site.oa_policy.criteria && site.oa_policy.criteria.length) {

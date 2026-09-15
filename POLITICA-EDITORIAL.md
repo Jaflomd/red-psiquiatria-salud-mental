@@ -6,14 +6,14 @@ Este documento explica qué publica este sitio, con qué criterios y qué límit
 
 El sitio combina dos tipos de contenido:
 
-- **Resúmenes curados** (`content/summaries/`): artículos que Javier Flores elige y resume en español, con sus propias palabras, pensando en su utilidad clínica o de investigación.
+- **Resúmenes curados** (`content/summaries/`): reseñas originales en español de artículos con acceso verificable, escritas pensando en su utilidad clínica o de investigación. Cada una declara su autoría, el uso de IA y si tuvo revisión humana.
 - **Feed diario** (`data/daily/`): un listado generado automáticamente todos los días a partir de Europe PMC y PubMed, sin curaduría manual, con los artículos nuevos de psiquiatría y salud mental que cumplen el criterio de acceso abierto de este documento.
 
-Ninguno de los dos sustituye la lectura del artículo original. Ambos enlazan siempre a la fuente en Europe PMC.
+Ninguno de los dos sustituye la lectura del artículo original. Ambos enlazan siempre al DOI y, cuando corresponde, a Europe PMC.
 
-## 2. Criterio de acceso abierto (regla dura)
+## 2. Acceso y licencia
 
-Un artículo entra al feed diario, o puede convertirse en resumen curado, **solo si tiene acceso abierto y licencia Creative Commons verificables**.
+El feed diario y los resúmenes curados tienen rutas distintas. El feed conserva una regla dura de acceso abierto; los resúmenes curados pueden usar una segunda ruta, claramente rotulada, para textos completos gratuitos sin licencia abierta verificada.
 
 Para el feed diario, la regla dura exige los dos puntos siguientes a la vez:
 
@@ -22,14 +22,17 @@ Para el feed diario, la regla dura exige los dos puntos siguientes a la vez:
 
 PubMed se usa únicamente como una segunda vía de descubrimiento. Un resultado de PubMed —incluso si aparece como texto completo gratuito— nunca basta para entrar al feed: su PMID debe resolverse en Europe PMC y superar allí los dos controles anteriores.
 
-Para los resúmenes curados existe una segunda ruta cuando los metadatos de Europe PMC están incompletos: OpenAlex debe confirmar `open_access.is_oa=true`, una licencia CC y `best_oa_location.version=publishedVersion`. Si Europe PMC declara explícitamente una licencia cerrada, esa contradicción bloquea la ruta alternativa. La ficha conserva `paper_oa_source: europepmc+openalex` para hacer visible esta procedencia.
+Para los resúmenes curados existen dos rutas:
 
-Si falta cualquiera de los dos, el artículo **se rechaza**, sin excepción:
+1. **Open access verificado** (`paper_access_type: open_access`): cumple la regla del feed. Cuando los metadatos de Europe PMC están incompletos, OpenAlex puede confirmar `open_access.is_oa=true`, una licencia CC y `best_oa_location.version=publishedVersion`. Una licencia cerrada explícita en Europe PMC bloquea esta alternativa.
+2. **Acceso gratuito; licencia no verificada** (`paper_access_type: free_to_read`): el texto completo puede verificarse gratuitamente y existe DOI, pero Europe PMC/OpenAlex no permiten afirmar una licencia CC. La ficha muestra `paper_oa_verified: false`, `paper_license: "not verified"` y `paper_oa_source: publisher`. Esta ruta nunca alimenta el feed ni se presenta como open access.
+
+Si falta cualquiera de los controles de la ruta seleccionada, el artículo se rechaza:
 
 - `add_paper.py` termina con código de salida 2 y explica el motivo (marca de acceso abierto ausente, o licencia no declarada).
 - El feed diario descarta el registro en el paso de filtrado local y lo cuenta como descarte, aunque haya aparecido en los resultados de búsqueda de Europe PMC o PubMed.
 
-**"Gratis para leer" no es lo mismo que acceso abierto.** Muchas revistas marcan artículos como de lectura gratuita ("Free") sin que Europe PMC los reconozca como acceso abierto ni declaren una licencia. Ese caso se rechaza igual: sin una licencia declarada, no hay base legal clara para resumir el contenido en este sitio.
+**"Gratis para leer" no es lo mismo que acceso abierto.** La segunda ruta no concede derechos de reutilización: solo permite publicar una reseña original, con atribución y enlace, sin reproducir tablas, figuras, pasajes largos ni material gráfico. Si desaparece el acceso gratuito, la verificación previa a publicación falla.
 
 ### Preprints
 
@@ -52,7 +55,7 @@ Si un artículo ya incluido en el feed es retractado o recibe una expresión de 
 
 Un resumen curado:
 
-- Resume un artículo real, verificado en Europe PMC (DOI, PMID o PMCID, licencia y marca de acceso abierto comprobados el día en que se escribe).
+- Resume un artículo real con identificadores y acceso comprobados el día en que se escribe; la ficha diferencia open access de acceso gratuito sin licencia verificada.
 - Está redactado con palabras propias, en español claro, pensando en un lector clínico.
 - Incluye una sección fija con la pregunta de investigación, el método, los hallazgos principales, las limitaciones y la relevancia clínica.
 - Enlaza siempre al artículo original en Europe PMC (y al DOI y al PDF cuando existen).
@@ -63,10 +66,6 @@ Un resumen curado **no es**:
 - Una opinión clínica de Javier sobre el tema, salvo en la sección "Por qué importa para la clínica", que sí es una lectura interpretativa y se presenta como tal.
 - Un resumen generado por inteligencia artificial sin decirlo. Ver sección 6.
 
-### Los cuatro resúmenes de ejemplo de este prototipo
-
-Los cuatro resúmenes que acompañan este prototipo (`content/summaries/2026-09-14-*.md`) fueron redactados por un agente de inteligencia artificial para mostrar el formato del sitio con artículos reales y verificados, **no por Javier Flores**. Por eso llevan `author: "Borrador de ejemplo generado con IA"`, `status: draft`, `example: true` y `ai_draft: true`, y el frontend los muestra con las etiquetas "BORRADOR DE EJEMPLO" y "BORRADOR IA". No deben tratarse como resúmenes curados publicados hasta que Javier los revise, corrija lo que haga falta y cambie su estado a `published` con su propia autoría.
-
 ## 5. Regla de citas y derechos de autor
 
 Los resúmenes se escriben con palabras propias. Si es imprescindible citar una frase del artículo original, la cita:
@@ -75,20 +74,20 @@ Los resúmenes se escriben con palabras propias. Si es imprescindible citar una 
 - tiene menos de 15 palabras,
 - y nunca sustituye la explicación en palabras propias del hallazgo.
 
-No se reproducen tablas, figuras ni fragmentos largos del artículo. El resumen siempre enlaza al artículo completo en Europe PMC (y al DOI cuando existe) para quien quiera leer el texto original.
+No se reproducen tablas, figuras ni fragmentos largos del artículo. Esta restricción es especialmente importante en la ruta `free_to_read`, donde no se ha verificado una licencia abierta. El resumen siempre enlaza al DOI y a la fuente de texto completo disponible.
 
 ## 6. Etiquetado obligatorio de contenido generado con inteligencia artificial
 
 Ningún texto generado o redactado con ayuda de inteligencia artificial se presenta como si lo hubiera escrito Javier Flores sin decirlo:
 
 - En el **feed diario**, un resumen generado con IA (`ai_summary`) muestra siempre el modelo usado y la fecha de generación, y se etiqueta "Resumen generado con IA · no revisado por un humano". Las etiquetas temáticas detectadas automáticamente se marcan como "Etiquetas automáticas".
-- En los **resúmenes curados**, un borrador con `ai_draft: true` se etiqueta "BORRADOR IA · pendiente de revisión" mientras está en estado `draft`, y como redactado con asistencia de IA y revisado por su autor una vez que pasa a `published` (la marca de origen por IA no desaparece al publicarse: solo cambia el texto que la describe).
+- En los **resúmenes curados**, `ai_draft: true` significa que el texto fue generado con IA. Mientras no haya revisión humana confirmada, se etiqueta “Generado con IA · no revisado por un humano”, incluso si su estado editorial es `published`. Publicar no equivale a revisar. `adapted_with_ai: true` se reserva para un texto de autoría humana que la IA solo adaptó al formato.
 - El diseño de estudio y el tamaño de muestra detectados automáticamente en el feed se marcan siempre como "estimado", porque el método automático (reglas y expresiones regulares sobre el título y el resumen) puede equivocarse. Solo se presentan sin esa marca cuando Javier los indica manualmente en un resumen curado.
 
 ## 7. Corrección y retractación
 
 - Si Europe PMC marca un artículo del feed como retractado o con expresión de preocupación **mientras su día sigue dentro de la ventana de consulta**, el artículo se retira automáticamente del feed en la siguiente corrida (ver la limitación de plazo en la sección 3: fuera de esa ventana, la retirada automática no ocurre sin un backfill manual).
-- Los **resúmenes curados** sí se revalidan cada vez que se corre `python3 scripts/build_summaries.py --verify-oa` (paso obligatorio antes de publicar cambios, ver README): esa bandera vuelve a consultar Europe PMC en vivo por cada artículo curado y rechaza la compilación si alguno perdió el acceso abierto, la licencia abierta, o aparece como retractado o con expresión de preocupación asociada.
+- Los **resúmenes curados** se revalidan cada vez que se corre `python3 scripts/build_summaries.py --verify-oa`: para `open_access`, se comprueban OA y licencia; para `free_to_read`, se comprueba que siga existiendo un enlace gratuito. Ambas rutas bloquean artículos retractados o con expresión de preocupación asociada.
 - Si un resumen curado ya publicado resulta estar basado en un artículo posteriormente retractado, corregido de forma sustancial o con expresión de preocupación, Javier lo marca de forma visible en el propio resumen y añade una nota explicando el cambio; el resumen no se elimina en silencio.
 - Cualquier error de hecho detectado en un resumen curado ya publicado (una cifra, un dato de autoría, una conclusión mal transcrita) se corrige en el archivo Markdown y el resumen actualiza su campo `updated` con la fecha de la corrección.
 

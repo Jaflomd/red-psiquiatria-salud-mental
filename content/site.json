@@ -3,7 +3,7 @@
   "site": {
     "name": "Red de Investigación de Psiquiatría y Salud Mental",
     "short_name": "Red PSM",
-    "tagline": "Lecturas curadas y un feed diario de investigación open access en psiquiatría, desde el Perú."
+    "tagline": "Lecturas curadas con acceso verificable y un feed diario open access en psiquiatría, desde el Perú."
   },
   "author": {
     "name": "Javier Flores",
@@ -22,9 +22,9 @@
   },
   "about": {
     "paragraphs": [
-      "Este sitio reúne dos maneras de acercarse a la investigación en psiquiatría y salud mental: resúmenes curados, escritos en español a partir de artículos que Javier Flores considera relevantes para la práctica clínica y la investigación en la región, y un feed diario que reúne automáticamente los papers nuevos de acceso abierto indexados en Europe PMC sobre psiquiatría y salud mental.",
+      "Este sitio reúne dos maneras de acercarse a la investigación en psiquiatría y salud mental: resúmenes curados en español de artículos con acceso verificable, y un feed diario que reúne automáticamente papers nuevos open access indexados en Europe PMC.",
       "Javier Flores es psiquiatra e investigador peruano. Sus líneas de trabajo incluyen psicosis, redes de síntomas de depresión y ansiedad, prevención del suicidio, TDAH en adultos, trastorno bipolar, trastorno límite de la personalidad, consumo de alcohol, salud mental pública en el Perú y educación médica.",
-      "El sitio está en una etapa de prototipo. Los primeros resúmenes que vas a encontrar son borradores de ejemplo, generados para mostrar el formato del sitio, y están marcados así de forma explícita en cada tarjeta y en cada ficha. Todavía no reemplazan un resumen curado y revisado por Javier."
+      "Cada resumen declara de forma visible si fue escrito por su autor, adaptado con IA o generado con IA, y si tuvo revisión humana. Esa procedencia no cambia ni desaparece al publicarse."
     ]
   },
   "feed": {
@@ -35,20 +35,21 @@
     ]
   },
   "oa_policy": {
-    "intro": "Este sitio solo incluye artículos que Europe PMC marca como acceso abierto (isOpenAccess = Y) y que además declaran una licencia Creative Commons. Que un artículo se pueda leer sin pagar en la página de la revista no basta: sin una licencia declarada, no se considera acceso abierto para efectos de este sitio.",
+    "intro": "El feed diario es estrictamente open access: exige una marca de acceso abierto y una licencia Creative Commons verificables. Los resúmenes curados admiten además una ruta separada para artículos que pueden leerse completos gratis, pero cuya licencia abierta no está verificada; esos casos nunca se presentan como open access.",
     "criteria": [
-      "Europe PMC marca el registro con isOpenAccess = Y.",
-      "El registro declara una licencia (por ejemplo CC BY, CC BY-NC, CC BY-NC-ND, CC BY-SA o CC0). Un artículo sin licencia declarada no entra al feed ni puede convertirse en resumen curado, aunque Europe PMC lo marque como de acceso abierto.",
-      "Los preprints entran al feed solo si cumplen los dos puntos anteriores, y siempre se etiquetan como preprint, sin revisión por pares."
+      "Feed diario: Europe PMC debe marcar isOpenAccess = Y y el registro debe declarar una licencia Creative Commons reconocible.",
+      "Resumen curado open access: se aplica la misma regla; OpenAlex puede completar metadatos ausentes únicamente si confirma una licencia CC de la versión publicada.",
+      "Resumen curado de acceso gratuito: se admite cuando el texto completo puede verificarse gratuitamente, existe DOI y la reseña original evita tablas, figuras, pasajes largos o cualquier afirmación de licencia abierta.",
+      "Los preprints entran al feed solo si cumplen la regla estricta de open access y siempre se etiquetan como preprint, sin revisión por pares."
     ],
     "rejections": [
-      "Artículos marcados como \"gratis para leer\" en la página de la revista pero sin isOpenAccess = Y en Europe PMC.",
-      "Artículos de acceso abierto sin licencia declarada.",
+      "En el feed: artículos solo gratuitos o de acceso abierto sin licencia declarada.",
+      "En los resúmenes curados: artículos sin texto completo gratuito verificable, o cuya licencia cerrada prohíba expresamente el uso previsto.",
       "Resúmenes de congreso, editoriales, cartas, comentarios, erratas, correcciones, noticias y otros tipos de publicación que no son artículos de investigación.",
       "Artículos retractados o con expresión de preocupación publicada: si Europe PMC marca la retractación mientras ese día sigue dentro de la ventana de consulta del feed, se retira; fuera de esa ventana, la retirada automática no ocurre y hace falta un backfill manual (ver la política editorial)."
     ],
-    "ai_note": "Cuando un resumen o una etiqueta temática se genera o se redacta con ayuda de inteligencia artificial, el sitio lo indica de forma visible junto al contenido. Ningún texto generado con IA se presenta como escrito por Javier Flores sin decirlo; los diseños de estudio y los tamaños de muestra detectados de forma automática en el feed se marcan como \"estimado\", porque el método automático puede equivocarse.",
-    "copyright_note": "Los resúmenes curados se escriben con palabras propias, sin copiar el resumen original del artículo. Cuando hace falta citar una frase, la cita es breve (menos de 15 palabras) y nunca reemplaza al resumen o al artículo completo, que siempre queda enlazado en Europe PMC."
+    "ai_note": "Cuando un resumen o una etiqueta temática se genera o se redacta con ayuda de inteligencia artificial, el sitio lo indica de forma visible junto al contenido. Un resumen generado con IA se marca como no revisado por un humano hasta que exista esa revisión; publicarlo no cambia automáticamente su procedencia. Los diseños y tamaños de muestra detectados automáticamente en el feed se marcan como estimados.",
+    "copyright_note": "Los resúmenes curados son reseñas originales escritas con palabras propias. No reproducen tablas, figuras ni pasajes largos; una cita excepcional debe ser breve y nunca sustituye la explicación. Cada ficha enlaza el artículo original mediante DOI y, cuando corresponde, Europe PMC."
   },
   "links": [
     {"label": "Europe PMC", "url": "https://europepmc.org/"}
