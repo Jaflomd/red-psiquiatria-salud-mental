@@ -2,15 +2,28 @@
   "schema_version": 1,
   "date": "2026-09-13",
   "timezone": "America/Lima",
-  "fetched_at": "2026-09-14T19:22:08Z",
+  "fetched_at": "2026-09-15T02:47:20Z",
   "source": {
-    "name": "Europe PMC",
+    "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
     "date_field": "FIRST_IDATE",
     "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-13 TO 2026-09-13] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
     "hit_count": 123,
-    "accepted": 121,
-    "query_version": "2026-09-14.1"
+    "accepted": 129,
+    "query_version": "2026-09-14.2",
+    "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+    "europepmc": {
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-13 TO 2026-09-13] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+      "hit_count": 123
+    },
+    "pubmed": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "date_field": "edat",
+      "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
+      "hit_count": 183,
+      "unresolved_in_europepmc": 0
+    }
   },
   "items": [
     {
@@ -38,7 +51,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1155/da/6640438",
@@ -119,7 +132,11 @@
           "mesh_major",
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729560",
@@ -147,7 +164,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fcimb.2026.1719357",
@@ -206,7 +223,11 @@
           "mesh_major",
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729609",
@@ -233,7 +254,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1177/09727531261477576",
@@ -304,7 +325,11 @@
           "tags:3",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730132",
@@ -332,7 +357,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.apjon.2026.101017",
@@ -402,7 +427,11 @@
           "tags:3",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13565723",
@@ -430,7 +459,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -466,7 +495,10 @@
           "tags:3",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42732177",
@@ -494,7 +526,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1177/18911803261473521",
@@ -569,7 +601,94 @@
           "tags:3",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "MED:42731100",
+      "epmc_id": "42731100",
+      "source": "MED",
+      "pmid": "42731100",
+      "pmcid": "PMC13570949",
+      "doi": "10.1177/07067437261479071",
+      "title": "Pharmacological Management of Opioid Use Disorder: A Systematic Review and Network Meta-Analysis: Prise en charge pharmacologique du trouble de l'usage des opiacés: revue systématique et méta-analyse en réseau.",
+      "authors": "Rodrigues M, Dennis BB, Sadeghirad B, Oprea A, Malik M, Naji LN, McEvoy A, Malhotra D, Parpia S, Thabane L, Samaan Z.",
+      "journal": "Canadian journal of psychiatry. Revue canadienne de psychiatrie",
+      "journal_abbrev": "Can J Psychiatry",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-12",
+      "first_index_date": "2026-09-13",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1177/07067437261479071",
+        "europepmc": "https://europepmc.org/article/MED/42731100",
+        "fulltext_html": "https://europepmc.org/articles/PMC13570949",
+        "pdf": "https://europepmc.org/articles/PMC13570949?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "ObjectiveTo assess the comparative benefits and harms of opioid substitution and antagonist therapies (OSATs) for opioid use disorder (OUD) using a network meta-analysis (NMA) of randomized controlled trials (RCTs).Data SourcesMedline, EMBASE, PubMed, PsycINFO, Web of Science, Cochrane Library, Cochrane Clinical Trials Registry, and the National Institutes of Health Clinical Trials Registry were searched through 10 August 2025, for trials assessing the effectiveness or safety of any OSAT for people with OUD.Data Extraction and SynthesisPairs of reviewers independently screened studies, extracted data, and assessed risk of bias. Frequentist random-effects NMAs were conducted, and certainty of evidence for treatment effects was assessed using the Grading of Recommendations Assessment, Development, and Evaluation approach.Main Outcomes and MeasuresTreatment retention (people remaining in follow-up at study end), opioid abstinence (during follow-up), criminal activity, all-cause mortality, and overdose-related death.ResultsWe included 103 RCTs assessing 13 interventions across 26,624 people with OUD. Compared with placebo, moderate-certainty evidence demonstrated that heroin was most effective for treatment retention (Odds Ratio [OR] = 31.47; 95% confidence interval [CI] = 12.29,80.58). Heroin + methadone (OR = 8.00; 95% CI = 3.21,19.93) and high-dose methadone (HMET) (OR = 6.94; 95% CI = 3.76, 12.82) also ranked highly (moderate certainty). High- and low-dose buprenorphine (moderate certainty) and HMET (low certainty), improved abstinence as measured by urine drug screens. No intervention reduced criminal activity (moderate certainty), all-cause mortality (low certainty), or overdose-related death.Conclusions and RelevanceHeroin-assisted therapy, alone or with methadone, and HMET were most effective for treatment retention. Buprenorphine and HMET improved abstinence, although certainty was lower. Evidence for mortality, overdose, and other patient-important outcomes remains limited. Heroin-assisted therapy exclusively enrolled people with heroin dependence and should not be initiated in those without prior use. Larger trials directly comparing methadone, buprenorphine, and heroin-assisted therapy, and enrolling patients with fentanyl use, are needed in the evolving toxic drug supply.PROSPERO RegistrationCRD42013006507."
+          }
+        ],
+        "text": "ObjectiveTo assess the comparative benefits and harms of opioid substitution and antagonist therapies (OSATs) for opioid use disorder (OUD) using a network meta-analysis (NMA) of randomized controlled trials (RCTs).Data SourcesMedline, EMBASE, PubMed, PsycINFO, Web of Science, Cochrane Library, Cochrane Clinical Trials Registry, and the National Institutes of Health Clinical Trials Registry were searched through 10 August 2025, for trials assessing the effectiveness or safety of any OSAT for people with OUD.Data Extraction and SynthesisPairs of reviewers independently screened studies, extracted data, and assessed risk of bias. Frequentist random-effects NMAs were conducted, and certainty of evidence for treatment effects was assessed using the Grading of Recommendations Assessment, Development, and Evaluation approach.Main Outcomes and MeasuresTreatment retention (people remaining in follow-up at study end), opioid abstinence (during follow-up), criminal activity, all-cause mortality, and overdose-related death.ResultsWe included 103 RCTs assessing 13 interventions across 26,624 people with OUD. Compared with placebo, moderate-certainty evidence demonstrated that heroin was most effective for treatment retention (Odds Ratio [OR] = 31.47; 95% confidence interval [CI] = 12.29,80.58). Heroin + methadone (OR = 8.00; 95% CI = 3.21,19.93) and high-dose methadone (HMET) (OR = 6.94; 95% CI = 3.76, 12.82) also ranked highly (moderate certainty). High- and low-dose buprenorphine (moderate certainty) and HMET (low certainty), improved abstinence as measured by urine drug screens. No intervention reduced criminal activity (moderate certainty), all-cause mortality (low certainty), or overdose-related death.Conclusions and RelevanceHeroin-assisted therapy, alone or with methadone, and HMET were most effective for treatment retention. Buprenorphine and HMET improved abstinence, although certainty was lower. Evidence for mortality, overdose, and other patient-important outcomes remains limited. Heroin-assisted therapy exclusively enrolled people with heroin dependence and should not be initiated in those without prior use. Larger trials directly comparing methadone, buprenorphine, and heroin-assisted therapy, and enrolling patients with fentanyl use, are needed in the evolving toxic drug supply.PROSPERO RegistrationCRD42013006507."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Evidence for mortality, overdose, and other patient-important outcomes remains limited. Heroin-assisted therapy exclusively enrolled people with heroin dependence and should not be initiated in those without prior use.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review_meta",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "substances",
+        "psychopharmacology",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Clinical Trial",
+        "Substance Use Disorder",
+        "Opioid Use Disorder",
+        "Medication-assisted Therapy",
+        "Opioid Substitution And Antagonist Therapies"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42728876",
@@ -597,7 +716,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1111/cts.70725",
@@ -646,9 +765,9 @@
         "Schizophrenia",
         "Antipsychotic",
         "Karxt",
-        "Non‐dopaminergic",
         "Emergent Trials",
-        "M1/m4 Muscarinic Receptors"
+        "M1/m4 Muscarinic Receptors",
+        "Non‐dopaminergic"
       ],
       "relevance": {
         "score": 4,
@@ -656,7 +775,11 @@
           "mesh_major",
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729393",
@@ -684,7 +807,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1881200",
@@ -749,7 +872,11 @@
           "tags:3",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13555182",
@@ -776,7 +903,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -816,7 +943,10 @@
           "tags:3",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729447",
@@ -843,7 +973,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.apjon.2026.100995",
@@ -906,7 +1036,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13563744",
@@ -933,7 +1067,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -964,7 +1098,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13563716",
@@ -991,7 +1128,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -1025,7 +1162,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42730026",
@@ -1052,7 +1192,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1155/crps/2386844",
@@ -1103,7 +1243,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730388",
@@ -1130,7 +1274,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114386",
@@ -1201,7 +1345,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42732358",
@@ -1228,7 +1376,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114486",
@@ -1284,7 +1432,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729034",
@@ -1311,7 +1463,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114374",
@@ -1367,7 +1519,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729604",
@@ -1395,7 +1551,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114401",
@@ -1447,7 +1603,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13564694",
@@ -1474,7 +1634,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -1509,7 +1669,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42728455",
@@ -1536,7 +1699,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s41824-026-00322-7",
@@ -1606,7 +1769,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729280",
@@ -1634,7 +1801,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fcvm.2026.1888860",
@@ -1697,7 +1864,11 @@
           "tags:2",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729250",
@@ -1724,7 +1895,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/frcha.2026.1909726",
@@ -1792,7 +1963,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730305",
@@ -1819,7 +1994,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fgene.2026.1801152",
@@ -1873,7 +2048,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729184",
@@ -1900,7 +2079,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fphar.2026.1897531",
@@ -1962,7 +2141,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729519",
@@ -1989,7 +2172,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1927040",
@@ -2061,7 +2244,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729497",
@@ -2089,7 +2276,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1915974",
@@ -2150,7 +2337,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729365",
@@ -2178,7 +2369,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1886320",
@@ -2238,7 +2429,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729407",
@@ -2266,7 +2461,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1863575",
@@ -2334,7 +2529,11 @@
           "tags:2",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729350",
@@ -2361,7 +2560,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1773189",
@@ -2412,7 +2611,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729246",
@@ -2440,7 +2643,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1890098",
@@ -2495,7 +2698,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729003",
@@ -2522,7 +2729,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.12688/hrbopenres.14320.1",
@@ -2586,7 +2793,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13564741",
@@ -2613,7 +2824,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -2648,7 +2859,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13551983",
@@ -2675,7 +2889,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -2708,7 +2922,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13566424",
@@ -2736,7 +2953,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -2771,7 +2988,10 @@
           "tags:2",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42728622",
@@ -2798,7 +3018,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s40337-026-01765-w",
@@ -2864,7 +3084,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729005",
@@ -2891,7 +3115,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.12688/mep.21343.1",
@@ -2948,7 +3172,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13567430",
@@ -2976,7 +3204,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -3021,7 +3249,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13567302",
@@ -3048,7 +3279,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -3079,7 +3310,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42728979",
@@ -3106,7 +3340,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.12688/openreseurope.23623.1",
@@ -3174,7 +3408,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730323",
@@ -3201,7 +3439,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.2147/ppa.s628920",
@@ -3268,7 +3506,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42732427",
@@ -3295,7 +3537,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1093/schizbullopen/sgag034",
@@ -3359,7 +3601,11 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13568374",
@@ -3386,7 +3632,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -3416,7 +3662,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13568199",
@@ -3443,7 +3692,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -3479,7 +3728,10 @@
         "signals": [
           "tags:3"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729831",
@@ -3506,7 +3758,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1021/acsomega.6c06753",
@@ -3550,7 +3802,97 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "MED:42732882",
+      "epmc_id": "42732882",
+      "source": "MED",
+      "pmid": "42732882",
+      "pmcid": "PMC13571901",
+      "doi": "10.1111/adb.70191",
+      "title": "Acquisition-Recruited and MOR-Expressing Striatal dMSNs Differentially Regulate Extinction and Cue-Induced Relapse of Alcohol Seeking.",
+      "authors": "Xie X, Wang X, Wang J.",
+      "journal": "Addiction biology",
+      "journal_abbrev": "Addict Biol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-14",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1111/adb.70191",
+        "europepmc": "https://europepmc.org/article/MED/42732882",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571901",
+        "pdf": "https://europepmc.org/articles/PMC13571901?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Relapse to alcohol use is frequently triggered by re-exposure to alcohol-associated cues, and extinction-based interventions can reduce this vulnerability. However, the striatal cellular mechanisms through which extinction alters later alcohol seeking remain unclear. Using a mouse model of operant alcohol self-administration, we examined two distinct direct-pathway medium spiny neuron (dMSN) populations in the dorsomedial striatum. Extinction reduced cue-induced alcohol seeking and decreased the probability that acquisition-recruited dMSNs were reactivated during relapse testing. Chemogenetically maintaining activity in acquisition-recruited dMSNs during extinction slowed the reduction in alcohol-seeking and enhanced subsequent relapse. In contrast, increasing activity in μ-opioid receptor (MOR)-expressing dMSNs, a striosome-enriched population, accelerated the reduction in responding and decreased later relapse without altering inactive-lever responding or locomotor activity. These findings indicate that extinction is associated with reduced re-engagement of acquisition-related dMSN ensembles, whereas enhancing activity in a MOR-defined, striosome-enriched output population can facilitate extinction-related behavioural change. Together, the results identify two complementary striatal processes that regulate alcohol extinction and relapse."
+          }
+        ],
+        "text": "Relapse to alcohol use is frequently triggered by re-exposure to alcohol-associated cues, and extinction-based interventions can reduce this vulnerability. However, the striatal cellular mechanisms through which extinction alters later alcohol seeking remain unclear. Using a mouse model of operant alcohol self-administration, we examined two distinct direct-pathway medium spiny neuron (dMSN) populations in the dorsomedial striatum. Extinction reduced cue-induced alcohol seeking and decreased the probability that acquisition-recruited dMSNs were reactivated during relapse testing. Chemogenetically maintaining activity in acquisition-recruited dMSNs during extinction slowed the reduction in alcohol-seeking and enhanced subsequent relapse. In contrast, increasing activity in μ-opioid receptor (MOR)-expressing dMSNs, a striosome-enriched population, accelerated the reduction in responding and decreased later relapse without altering inactive-lever responding or locomotor activity. These findings indicate that extinction is associated with reduced re-engagement of acquisition-related dMSN ensembles, whereas enhancing activity in a MOR-defined, striosome-enriched output population can facilitate extinction-related behavioural change. Together, the results identify two complementary striatal processes that regulate alcohol extinction and relapse."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "These findings indicate that extinction is associated with reduced re-engagement of acquisition-related dMSN ensembles, whereas enhancing activity in a MOR-defined, striosome-enriched output population can facilitate extinction-related behavioural change. Together, the results identify two complementary striatal processes that regulate alcohol extinction and relapse.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "alcohol",
+        "substances"
+      ],
+      "mesh_major": [
+        "Corpus Striatum",
+        "Receptors, Opioid, mu",
+        "Extinction, Psychological",
+        "Drug-Seeking Behavior"
+      ],
+      "keywords": [
+        "Extinction",
+        "Relapse",
+        "Striosome",
+        "Alcohol Use Disorder",
+        "Dorsomedial Striatum",
+        "Engram Ensemble",
+        "Operant Self‐Administration",
+        "Arctrap/fostrap",
+        "Direct‐pathway Medium Spiny Neurons"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42728740",
@@ -3577,7 +3919,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/alz.71823",
@@ -3646,7 +3988,11 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13570528",
@@ -3673,7 +4019,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -3708,7 +4054,10 @@
           "tags:1",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42728634",
@@ -3735,7 +4084,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s40479-026-00352-4",
@@ -3792,15 +4141,19 @@
       "keywords": [
         "Recovery",
         "Borderline Personality Disorder (Bpd)",
-        "A Life Worth Living",
-        "Dialectical Behavior Therapy (Dbt)"
+        "Dialectical Behavior Therapy (Dbt)",
+        "A Life Worth Living"
       ],
       "relevance": {
         "score": 2,
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13551702",
@@ -3827,7 +4180,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -3857,7 +4210,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729706",
@@ -3885,7 +4241,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.prdoa.2026.100497",
@@ -3934,7 +4290,11 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730233",
@@ -3961,7 +4321,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.fsisyn.2026.100729",
@@ -4012,17 +4372,21 @@
         "Cyberbullying",
         "Digital Forensics",
         "Digital Evidence",
-        "Abetment To Suicide",
-        "Social Media Harassment",
         "Comparative Law",
-        "Chain Of Custody"
+        "Chain Of Custody",
+        "Abetment To Suicide",
+        "Social Media Harassment"
       ],
       "relevance": {
         "score": 2,
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729848",
@@ -4050,7 +4414,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fgene.2026.1792849",
@@ -4100,7 +4464,11 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729563",
@@ -4127,7 +4495,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1865249",
@@ -4187,7 +4555,11 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13564688",
@@ -4214,7 +4586,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4249,7 +4621,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13565456",
@@ -4276,7 +4651,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4310,7 +4685,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13566609",
@@ -4337,7 +4715,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4370,7 +4748,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729930",
@@ -4397,7 +4778,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.ibneur.2026.08.009",
@@ -4466,7 +4847,11 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13565813",
@@ -4494,7 +4879,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4532,7 +4917,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13565513",
@@ -4559,7 +4947,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4589,7 +4977,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13557101",
@@ -4616,7 +5007,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4657,7 +5048,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13566321",
@@ -4684,7 +5078,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4714,7 +5108,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13566821",
@@ -4741,7 +5138,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4772,7 +5169,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13567540",
@@ -4799,7 +5199,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4834,7 +5234,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13567683",
@@ -4862,7 +5265,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -4897,7 +5300,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42728961",
@@ -4924,7 +5330,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.12688/wellcomeopenres.24189.2",
@@ -4985,7 +5391,68 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "MED:42730283",
+      "epmc_id": "42730283",
+      "source": "MED",
+      "pmid": "42730283",
+      "pmcid": "PMC13564140",
+      "doi": "10.52787/agl.v56i2.653",
+      "title": "[Dietary Restrictions in Celiac Disease: Differential Diagnosis Between Eating Disorders and Disordered Eating].",
+      "authors": "Noejovich CV, Bhola N, Blom JJ, Temprano MP, Armstrong D, Pinto-Sanchez MI.",
+      "journal": "Acta gastroenterologica Latinoamericana",
+      "journal_abbrev": "Acta Gastroenterol Latinoam",
+      "pub_year": 2026,
+      "first_publication_date": "2026-04-01",
+      "first_index_date": "2026-09-13",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "spa",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-sa",
+        "license_label": "CC BY-NC-SA",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.52787/agl.v56i2.653",
+        "europepmc": "https://europepmc.org/article/MED/42730283",
+        "fulltext_html": "https://europepmc.org/articles/PMC13564140",
+        "pdf": "https://europepmc.org/articles/PMC13564140?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "eating"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13563709",
@@ -5012,7 +5479,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5043,7 +5510,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13551708",
@@ -5070,7 +5540,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5106,7 +5576,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13556074",
@@ -5133,7 +5606,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5164,7 +5637,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42732215",
@@ -5192,7 +5668,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1007/s40429-026-00790-8",
@@ -5250,7 +5726,11 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729771",
@@ -5278,7 +5758,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fendo.2026.1922174",
@@ -5338,7 +5818,11 @@
           "tags:3",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729906",
@@ -5366,7 +5850,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fnmol.2026.1922816",
@@ -5417,7 +5901,11 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729272",
@@ -5444,7 +5932,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1906142",
@@ -5505,7 +5993,11 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13565760",
@@ -5533,7 +6025,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5569,7 +6061,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13565994",
@@ -5596,7 +6091,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5626,7 +6121,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13570700",
@@ -5653,7 +6151,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5687,7 +6185,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13566458",
@@ -5715,7 +6216,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5747,7 +6248,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42730063",
@@ -5774,7 +6278,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.2147/nss.s615753",
@@ -5836,7 +6340,11 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13567152",
@@ -5863,7 +6371,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -5890,7 +6398,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42732430",
@@ -5917,7 +6428,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1093/geroni/igag076",
@@ -5983,7 +6494,108 @@
           "tags:3",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "MED:42732202",
+      "epmc_id": "42732202",
+      "source": "MED",
+      "pmid": "42732202",
+      "pmcid": "PMC13570296",
+      "doi": "10.1016/j.bpsgos.2026.100789",
+      "title": "Associations Between Teenage Motherhood, Perinatal Cortical Maturation, and Risk of Psychopathology in Children: The Mediating Role of Pregnancy Complications.",
+      "authors": "Paysserand A, Belzeaux R, Auzias G, Lefrere A, Cachia A, Deruelle P, Pizzagalli F, Deruelle C.",
+      "journal": "Biological psychiatry global open science",
+      "journal_abbrev": "Biol Psychiatry Glob Open Sci",
+      "pub_year": 2026,
+      "first_publication_date": "2026-07-10",
+      "first_index_date": "2026-09-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1016/j.bpsgos.2026.100789",
+        "europepmc": "https://europepmc.org/article/MED/42732202",
+        "fulltext_html": "https://europepmc.org/articles/PMC13570296",
+        "pdf": "https://europepmc.org/articles/PMC13570296?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Children born to teenage mothers (<20 years) are at increased risk for psychopathology, partially due to atypical brain development. We explored whether this risk is mediated by perinatal complications more frequent in teenage pregnancies and by their impact on perinatal brain maturation as indexed by sulcal morphometry."
+          },
+          {
+            "heading": "Methods",
+            "text": "Using data from the Adolescent Brain Cognitive Development (ABCD) Study ( N = 5291 singletons, ages 9-11 years), we investigated the associations between maternal age, child psychopathology risks (Child Behavior Checklist [CBCL]), sulcal morphometry (sulcal surface, width, length, and mean depth), and perinatal complications through mixed modeling, mediation analysis, and structural equation modeling (SEM)."
+          },
+          {
+            "heading": "Results",
+            "text": "Maternal age was negatively associated with CBCL scores, indicating higher risks of psychopathology in children born to teenage mothers. Severe anemia, nausea, unplanned pregnancy, tobacco/marijuana use, and urinary tract infection partially mediated this association. Consistently, SEM showed that the association between maternal age and offspring psychopathology risk was mediated by perinatal adversities that were more prevalent in teenage pregnancies. Maternal age was associated with sulcal morphometry, consistent with variations in perinatal brain maturation. In boys, perinatal adversity linked to teenage pregnancies was associated with wider frontal and subparietal sulci, which mediated higher CBCL scores in boys born to a teenage mother. In girls, maternal age was positively associated with occipitotemporal sulcus length; however, sulcal morphometry was not associated with perinatal adversity in teenage pregnancies and did not mediate psychopathology risks."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Overall, this study suggests that teenage motherhood is linked to early brain development and psychopathology risks in offspring partially through the perinatal adversities that are more commonly associated with it."
+          }
+        ],
+        "text": "Children born to teenage mothers (<20 years) are at increased risk for psychopathology, partially due to atypical brain development. We explored whether this risk is mediated by perinatal complications more frequent in teenage pregnancies and by their impact on perinatal brain maturation as indexed by sulcal morphometry.\n\nUsing data from the Adolescent Brain Cognitive Development (ABCD) Study ( N = 5291 singletons, ages 9-11 years), we investigated the associations between maternal age, child psychopathology risks (Child Behavior Checklist [CBCL]), sulcal morphometry (sulcal surface, width, length, and mean depth), and perinatal complications through mixed modeling, mediation analysis, and structural equation modeling (SEM).\n\nMaternal age was negatively associated with CBCL scores, indicating higher risks of psychopathology in children born to teenage mothers. Severe anemia, nausea, unplanned pregnancy, tobacco/marijuana use, and urinary tract infection partially mediated this association. Consistently, SEM showed that the association between maternal age and offspring psychopathology risk was mediated by perinatal adversities that were more prevalent in teenage pregnancies. Maternal age was associated with sulcal morphometry, consistent with variations in perinatal brain maturation. In boys, perinatal adversity linked to teenage pregnancies was associated with wider frontal and subparietal sulci, which mediated higher CBCL scores in boys born to a teenage mother. In girls, maternal age was positively associated with occipitotemporal sulcus length; however, sulcal morphometry was not associated with perinatal adversity in teenage pregnancies and did not mediate psychopathology risks.\n\nOverall, this study suggests that teenage motherhood is linked to early brain development and psychopathology risks in offspring partially through the perinatal adversities that are more commonly associated with it."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Overall, this study suggests that teenage motherhood is linked to early brain development and psychopathology risks in offspring partially through the perinatal adversities that are more commonly associated with it.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "modelling",
+        "confidence": "heuristic"
+      },
+      "sample_size": {
+        "value": 5291,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "substances",
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Pregnancy",
+        "Maternal age",
+        "Brain Development",
+        "Risk factor",
+        "Sulci",
+        "Perinatal Adversity"
+      ],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:2",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42732390",
@@ -6011,7 +6623,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114477",
@@ -6063,7 +6675,11 @@
           "tags:2",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729501",
@@ -6090,7 +6706,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fnhum.2026.1923498",
@@ -6162,7 +6778,11 @@
           "strong_design",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729124",
@@ -6189,7 +6809,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpubh.2026.1893495",
@@ -6270,7 +6890,11 @@
           "tags:2",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42732143",
@@ -6297,7 +6921,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1177/24731242261484372",
@@ -6352,8 +6976,8 @@
         "Postpartum Care",
         "Health Equity",
         "Racially Concordant Care",
-        "Guaranteed Basic Income",
-        "Birth Equity"
+        "Birth Equity",
+        "Guaranteed Basic Income"
       ],
       "relevance": {
         "score": -2,
@@ -6361,7 +6985,11 @@
           "tags:2",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13567332",
@@ -6388,7 +7016,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -6421,7 +7049,10 @@
           "tags:2",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729450",
@@ -6449,7 +7080,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1007/s40614-026-00506-3",
@@ -6503,7 +7134,11 @@
           "strong_design",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730175",
@@ -6531,7 +7166,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114435",
@@ -6583,7 +7218,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729471",
@@ -6610,7 +7249,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/frhs.2026.1920816",
@@ -6679,7 +7318,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729378",
@@ -6706,7 +7349,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1870948",
@@ -6770,7 +7413,11 @@
           "strong_design",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729372",
@@ -6797,7 +7444,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1900651",
@@ -6850,8 +7497,8 @@
         "Preclinical Stage",
         "Anti-amyloid Therapy",
         "Real-world Evidence",
-        "Lecanemab",
-        "Donanemab"
+        "Donanemab",
+        "Lecanemab"
       ],
       "relevance": {
         "score": -3,
@@ -6859,7 +7506,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729210",
@@ -6886,7 +7537,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1935428",
@@ -6954,7 +7605,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729160",
@@ -6982,7 +7637,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1919146",
@@ -7048,7 +7703,11 @@
           "strong_design",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729102",
@@ -7075,7 +7734,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1907289",
@@ -7124,8 +7783,8 @@
         "Perceived Restorativeness",
         "Urban Green Infrastructure",
         "Multi-group Structural Equation Modelling",
-        "Perceived Biodiversity",
-        "Biophilic Design"
+        "Biophilic Design",
+        "Perceived Biodiversity"
       ],
       "relevance": {
         "score": -3,
@@ -7133,7 +7792,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42732162",
@@ -7160,7 +7823,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1177/24731242261461010",
@@ -7235,7 +7898,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13565381",
@@ -7263,7 +7930,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -7302,7 +7969,10 @@
           "strong_design",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13564686",
@@ -7329,7 +7999,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -7360,7 +8030,10 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13566155",
@@ -7387,7 +8060,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -7417,7 +8090,103 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42730258",
+      "epmc_id": "42730258",
+      "source": "MED",
+      "pmid": "42730258",
+      "pmcid": "PMC13564129",
+      "doi": "10.1016/j.acepjo.2026.100490",
+      "title": "Association Between Triage Score and Resource Use for Children Presenting to the Emergency Department with Behavioral Health Conditions.",
+      "authors": "Foster AA, Ormseth CH, Grupp-Phelan J, Lowry SJ, Alpern ER, Hoffmann JA.",
+      "journal": "Journal of the American College of Emergency Physicians open",
+      "journal_abbrev": "J Am Coll Emerg Physicians Open",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1016/j.acepjo.2026.100490",
+        "europepmc": "https://europepmc.org/article/MED/42730258",
+        "fulltext_html": "https://europepmc.org/articles/PMC13564129",
+        "pdf": "https://europepmc.org/articles/PMC13564129?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Objective",
+            "text": "Among pediatric emergency department (ED) visits for behavioral health (BH), we examined the association between Emergency Severity Index (ESI) level and (1) the time to first provider evaluation and (2) ED resource use."
+          },
+          {
+            "heading": "Methods",
+            "text": "This retrospective cross-sectional study, using the National Hospital Ambulatory Medical Care Survey, assessed ED visits of children aged 5 to 17 years. For each ESI level, we compared resource use among BH versus non-BH visits. Among BH visits, regression models examined the association of ESI level and (1) the time to first provider evaluation and (2) ED resource use, adjusted for visit characteristics."
+          },
+          {
+            "heading": "Results",
+            "text": "There were an estimated 3,646,060 pediatric BH ED visits and 52,499,554 non-BH ED visits. Across all visits with ESI 4 to 5 (least acute), BH visits were more likely to use >1 resource (32.1%) compared with non-BH visits (15.6%; difference 16.5%, 95% confidence interval [CI] 2.0 to 30.9). Among BH visits, the most frequent ESI level was 1 to 2 (most acute; 48.5%); of these, 57.8% resulted in discharge/other disposition. Among BH visits, ESI was not associated with time to first provider evaluation; the estimated incidence rate ratio for number of different resources used was 1.59 (95% CI 1.18 to 2.14) for ESI 1 to 2 and 1.37 (95% CI 1.02 to 1.85) for ESI 3 compared with ESI 4 to 5."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Among pediatric BH ED visits, ESI level was associated with ED resource use, but not time to first provider evaluation. Many high acuity BH visits resulted in discharge, whereas one third of low acuity BH visits required >1 resource, suggesting misalignment of assigned ESI levels with resource use."
+          }
+        ],
+        "text": "Among pediatric emergency department (ED) visits for behavioral health (BH), we examined the association between Emergency Severity Index (ESI) level and (1) the time to first provider evaluation and (2) ED resource use.\n\nThis retrospective cross-sectional study, using the National Hospital Ambulatory Medical Care Survey, assessed ED visits of children aged 5 to 17 years. For each ESI level, we compared resource use among BH versus non-BH visits. Among BH visits, regression models examined the association of ESI level and (1) the time to first provider evaluation and (2) ED resource use, adjusted for visit characteristics.\n\nThere were an estimated 3,646,060 pediatric BH ED visits and 52,499,554 non-BH ED visits. Across all visits with ESI 4 to 5 (least acute), BH visits were more likely to use >1 resource (32.1%) compared with non-BH visits (15.6%; difference 16.5%, 95% confidence interval [CI] 2.0 to 30.9). Among BH visits, the most frequent ESI level was 1 to 2 (most acute; 48.5%); of these, 57.8% resulted in discharge/other disposition. Among BH visits, ESI was not associated with time to first provider evaluation; the estimated incidence rate ratio for number of different resources used was 1.59 (95% CI 1.18 to 2.14) for ESI 1 to 2 and 1.37 (95% CI 1.02 to 1.85) for ESI 3 compared with ESI 4 to 5.\n\nAmong pediatric BH ED visits, ESI level was associated with ED resource use, but not time to first provider evaluation. Many high acuity BH visits resulted in discharge, whereas one third of low acuity BH visits required >1 resource, suggesting misalignment of assigned ESI levels with resource use."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Among pediatric BH ED visits, ESI level was associated with ED resource use, but not time to first provider evaluation. Many high acuity BH visits resulted in discharge, whereas one third of low acuity BH visits required >1 resource, suggesting misalignment of assigned ESI levels with resource use.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Pediatrics",
+        "Triage",
+        "Behavioral Symptoms",
+        "Pediatric Emergency Medicine"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730241",
@@ -7445,7 +8214,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.lana.2026.101617",
@@ -7495,7 +8264,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730199",
@@ -7522,7 +8295,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1162/netn.a.575",
@@ -7564,8 +8337,8 @@
         "Multimodal Fusion",
         "Intrinsic Connectivity Network",
         "Joint Ica",
-        "Pmg-jica",
-        "Joint Spatial Maps And Subject Loadings"
+        "Joint Spatial Maps And Subject Loadings",
+        "Pmg-jica"
       ],
       "relevance": {
         "score": -3,
@@ -7573,7 +8346,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13566919",
@@ -7600,7 +8377,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -7634,7 +8411,10 @@
           "strong_design",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729919",
@@ -7662,7 +8442,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.obpill.2026.100283",
@@ -7718,7 +8498,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42728959",
@@ -7745,7 +8529,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.12688/openreseurope.23442.2",
@@ -7805,7 +8589,11 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730182",
@@ -7832,7 +8620,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114405",
@@ -7897,7 +8685,11 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729343",
@@ -7924,7 +8716,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fdgth.2026.1891178",
@@ -7967,16 +8759,20 @@
         "Patient-centered Design",
         "Young Adult Patients",
         "Design Justice",
+        "Ai Ethics And Governance",
         "Health And Digital Literacy",
-        "Responsible Technology Development",
-        "Ai Ethics And Governance"
+        "Responsible Technology Development"
       ],
       "relevance": {
         "score": -4,
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729889",
@@ -8003,7 +8799,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fdgth.2026.1863876",
@@ -8073,7 +8869,91 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "MED:42729136",
+      "epmc_id": "42729136",
+      "source": "MED",
+      "pmid": "42729136",
+      "pmcid": "PMC13561885",
+      "doi": "10.3389/fnut.2026.1920952",
+      "title": "Serum 25-hydroxyvitamin D concentrations, well being, and presenteeism among hospital porters: a single-center cross-sectional study in Greece.",
+      "authors": "Vasileiou E, Nena E, Ntolios P, Zissimopoulos A, Constantinides T.",
+      "journal": "Frontiers in nutrition",
+      "journal_abbrev": "Front Nutr",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-28",
+      "first_index_date": "2026-09-13",
+      "pub_types": [
+        "brief-report",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fnut.2026.1920952",
+        "europepmc": "https://europepmc.org/article/MED/42729136",
+        "fulltext_html": "https://europepmc.org/articles/PMC13561885",
+        "pdf": "https://europepmc.org/articles/PMC13561885?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Vitamin D deficiency is common among healthcare workers owing to indoor work, shift patterns, and limited sunlight, even in Mediterranean countries, yet evidence for hospital porters is scarce. This single-center, cross-sectional study assessed serum 25-hydroxyvitamin D [25(OH)D] concentrations and their unadjusted associations with psychological well being and presenteeism among hospital porters in a Greek tertiary university hospital in Alexandroupolis, Northern Greece, between March and June 2026. Of 46 eligible porters, 42 participated (91.3%). Serum 25(OH)D was measured by electrochemiluminescence immunoassay (ECLIA). Participants completed validated Greek versions of the WHO-5 Well Being Index and the Stanford Presenteeism Scale (SPS-6). Demographic, occupational, lifestyle, and clinical data, including BMI, were obtained from occupational-health records. The median 25(OH)D was 18.7 ng/mL (IQR 14.3-26.0), with 59.5% classified as deficient; mean BMI was 26.7 ± 3.7 kg/m^2. In unadjusted analyses, 25(OH)D correlated positively with WHO-5 (rho = 0.371, p  = 0.015) but not SPS-6, and inversely with BMI (rho = -0.465, p  = 0.002). Surgical porters had lower 25(OH)D ( p  = 0.025) but higher BMI ( p  = 0.029) than general ward porters. Because no multivariable adjustment was possible and residual confounding cannot be excluded, these associations are exploratory and hypothesis-generating. These findings highlight the need for longitudinal research in this understudied workforce."
+          }
+        ],
+        "text": "Vitamin D deficiency is common among healthcare workers owing to indoor work, shift patterns, and limited sunlight, even in Mediterranean countries, yet evidence for hospital porters is scarce. This single-center, cross-sectional study assessed serum 25-hydroxyvitamin D [25(OH)D] concentrations and their unadjusted associations with psychological well being and presenteeism among hospital porters in a Greek tertiary university hospital in Alexandroupolis, Northern Greece, between March and June 2026. Of 46 eligible porters, 42 participated (91.3%). Serum 25(OH)D was measured by electrochemiluminescence immunoassay (ECLIA). Participants completed validated Greek versions of the WHO-5 Well Being Index and the Stanford Presenteeism Scale (SPS-6). Demographic, occupational, lifestyle, and clinical data, including BMI, were obtained from occupational-health records. The median 25(OH)D was 18.7 ng/mL (IQR 14.3-26.0), with 59.5% classified as deficient; mean BMI was 26.7 ± 3.7 kg/m^2. In unadjusted analyses, 25(OH)D correlated positively with WHO-5 (rho = 0.371, p  = 0.015) but not SPS-6, and inversely with BMI (rho = -0.465, p  = 0.002). Surgical porters had lower 25(OH)D ( p  = 0.025) but higher BMI ( p  = 0.029) than general ward porters. Because no multivariable adjustment was possible and residual confounding cannot be excluded, these associations are exploratory and hypothesis-generating. These findings highlight the need for longitudinal research in this understudied workforce."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Because no multivariable adjustment was possible and residual confounding cannot be excluded, these associations are exploratory and hypothesis-generating. These findings highlight the need for longitudinal research in this understudied workforce.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Vitamin D deficiency",
+        "body mass index",
+        "Health Personnel",
+        "Shift Work",
+        "Presenteeism",
+        "Hospital Workers",
+        "Psychological Well Being"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729443",
@@ -8100,7 +8980,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1806942",
@@ -8139,18 +9019,22 @@
         "Theory Of Planned Behavior",
         "Crisis Management",
         "Covid-19 Pandemic",
-        "Evaluation Of Anti-corona Measures",
-        "Longitudinal Study And Qualitative Analysis Of Perception Of Anti-corona Measures",
         "Covid-19 Vaccination",
         "Means-End Theory Of Complex Cognitive Structures",
-        "Covid-19 Mitigation Measures"
+        "Covid-19 Mitigation Measures",
+        "Evaluation Of Anti-corona Measures",
+        "Longitudinal Study And Qualitative Analysis Of Perception Of Anti-corona Measures"
       ],
       "relevance": {
         "score": -4,
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729415",
@@ -8177,7 +9061,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpubh.2026.1918732",
@@ -8237,15 +9121,19 @@
         "Community Health Workers",
         "Mixed-methods Study",
         "Deliberate Rumination",
-        "Covid-19",
-        "Positive Psychological Changes"
+        "Positive Psychological Changes",
+        "Covid-19"
       ],
       "relevance": {
         "score": -4,
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730124",
@@ -8272,7 +9160,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fsoc.2026.1878074",
@@ -8333,7 +9221,11 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729928",
@@ -8361,7 +9253,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.5334/ijic.9794",
@@ -8428,7 +9320,11 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13554821",
@@ -8455,7 +9351,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -8476,7 +9372,10 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13570513",
@@ -8503,7 +9402,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -8529,7 +9428,99 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42732432",
+      "epmc_id": "42732432",
+      "source": "MED",
+      "pmid": "42732432",
+      "pmcid": "PMC13570659",
+      "doi": "10.2147/ijwh.s632351",
+      "title": "\"I Wondered if I Would Live or Not\": A Qualitative Study of Women's Experiences of Traumatic Childbirth.",
+      "authors": "Alotaibi SM, Almutairi AS, Almutairi RR, AlKhunaizi AN, Al-Otaibi AG, Bulut H, Alqurashi TS.",
+      "journal": "International journal of women's health",
+      "journal_abbrev": "Int J Womens Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-08",
+      "first_index_date": "2026-09-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.2147/ijwh.s632351",
+        "europepmc": "https://europepmc.org/article/MED/42732432",
+        "fulltext_html": "https://europepmc.org/articles/PMC13570659",
+        "pdf": "https://europepmc.org/articles/PMC13570659?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Purpose",
+            "text": "To gain an in-depth understanding of Saudi women's experiences of traumatic childbirth that occurred at any point within the previous five years."
+          },
+          {
+            "heading": "Methods",
+            "text": "A qualitative study using Interpretative Phenomenological Analysis, an idiographic approach supporting in-depth exploration of lived experience. Fifteen women who had experienced traumatic childbirth occurring at any point within the previous five years were recruited through social media and publicly accessible locations frequented by women. Semi-structured interviews were conducted between January and March 2026. The data were analysed following the steps of Interpretative Phenomenological Analysis to explore women's lived experiences in depth."
+          },
+          {
+            "heading": "Results",
+            "text": "Three experiential themes were identified: Experiencing distressing childbirth; living with the emotional aftermath; and the lasting impact of birth trauma on motherhood. These findings highlight the substantial impact of traumatic birth on women's lives and suggest enduring psychological and relational consequences, particularly when care is perceived as dismissive."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "There is a need for maternity care to be delivered in a respectful, woman-centred, and supportive manner to reduce the occurrence and impact of traumatic birth experiences. Insight into women's birth experiences can inform the development of interventions to prevent birth trauma and reduce its consequences within the Saudi healthcare system."
+          }
+        ],
+        "text": "To gain an in-depth understanding of Saudi women's experiences of traumatic childbirth that occurred at any point within the previous five years.\n\nA qualitative study using Interpretative Phenomenological Analysis, an idiographic approach supporting in-depth exploration of lived experience. Fifteen women who had experienced traumatic childbirth occurring at any point within the previous five years were recruited through social media and publicly accessible locations frequented by women. Semi-structured interviews were conducted between January and March 2026. The data were analysed following the steps of Interpretative Phenomenological Analysis to explore women's lived experiences in depth.\n\nThree experiential themes were identified: Experiencing distressing childbirth; living with the emotional aftermath; and the lasting impact of birth trauma on motherhood. These findings highlight the substantial impact of traumatic birth on women's lives and suggest enduring psychological and relational consequences, particularly when care is perceived as dismissive.\n\nThere is a need for maternity care to be delivered in a respectful, woman-centred, and supportive manner to reduce the occurrence and impact of traumatic birth experiences. Insight into women's birth experiences can inform the development of interventions to prevent birth trauma and reduce its consequences within the Saudi healthcare system."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "There is a need for maternity care to be delivered in a respectful, woman-centred, and supportive manner to reduce the occurrence and impact of traumatic birth experiences. Insight into women's birth experiences can inform the development of interventions to prevent birth trauma and reduce its consequences within the Saudi healthcare system.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "qualitative",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Maternal Health",
+        "Qualitative Study",
+        "Traumatic Childbirth",
+        "Birth Trauma",
+        "Postpartum Mental Health"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42732323",
@@ -8556,7 +9547,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.invent.2026.100994",
@@ -8618,7 +9609,100 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "MED:42730422",
+      "epmc_id": "42730422",
+      "source": "MED",
+      "pmid": "42730422",
+      "pmcid": "PMC13568711",
+      "doi": "10.4103/jispcd.jispcd_8_26",
+      "title": "Emotional Intelligence and Stress Coping Strategies among Dental Professionals in Chennai, India: A Cross-Sectional Study.",
+      "authors": "Kirubagaran H, Balasubramaniam A.",
+      "journal": "Journal of International Society of Preventive & Community Dentistry",
+      "journal_abbrev": "J Int Soc Prev Community Dent",
+      "pub_year": 2024,
+      "first_publication_date": "2024-07-01",
+      "first_index_date": "2026-09-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-sa",
+        "license_label": "CC BY-NC-SA",
+        "source": "europepmc",
+        "checked_at": "2026-09-15T02:47:19Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.4103/jispcd.jispcd_8_26",
+        "europepmc": "https://europepmc.org/article/MED/42730422",
+        "fulltext_html": "https://europepmc.org/articles/PMC13568711",
+        "pdf": "https://europepmc.org/articles/PMC13568711?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Objective",
+            "text": "This study aimed to assess the association between EI and stress coping strategies among dental professionals."
+          },
+          {
+            "heading": "Methods",
+            "text": "This cross-sectional study was conducted among 588 dental professionals, including undergraduate and postgraduate students and qualified dentists, in Chennai, Tamil Nadu, from May to July 2024. Coping Inventory for Stressful Situations-21 and Schutte Self-Report EI Test questionnaires were administered to dental professionals using a convenience sampling method. Pearson's correlation test and multivariable linear regression were carried out to evaluate the relationship between EI and stress coping strategies."
+          },
+          {
+            "heading": "Results",
+            "text": "The overall mean EI score for undergraduate students (141.6 ± 38.49) was higher compared with that of qualified dentists (137.6 ± 40.96; P = 0.033). The mean task-oriented coping was found to be higher among qualified dental professionals (4.358 ± 1.963) compared with undergraduate students. EI showed a moderate positive correlation with task-oriented coping ( r = 0.319; P = 0.000) and a weak positive correlation with avoidance coping ( r = 0.198; P = 0.020), whereas a moderate negative correlation was observed with emotion-oriented coping ( r = -0.600; P = 0.000)."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "EI demonstrated significant associations with specific coping domains among dental professionals. Higher EI was associated with greater task-oriented coping and lower emotion-oriented and avoidant coping after adjusting for gender and professional category."
+          }
+        ],
+        "text": "This study aimed to assess the association between EI and stress coping strategies among dental professionals.\n\nThis cross-sectional study was conducted among 588 dental professionals, including undergraduate and postgraduate students and qualified dentists, in Chennai, Tamil Nadu, from May to July 2024. Coping Inventory for Stressful Situations-21 and Schutte Self-Report EI Test questionnaires were administered to dental professionals using a convenience sampling method. Pearson's correlation test and multivariable linear regression were carried out to evaluate the relationship between EI and stress coping strategies.\n\nThe overall mean EI score for undergraduate students (141.6 ± 38.49) was higher compared with that of qualified dentists (137.6 ± 40.96; P = 0.033). The mean task-oriented coping was found to be higher among qualified dental professionals (4.358 ± 1.963) compared with undergraduate students. EI showed a moderate positive correlation with task-oriented coping ( r = 0.319; P = 0.000) and a weak positive correlation with avoidance coping ( r = 0.198; P = 0.020), whereas a moderate negative correlation was observed with emotion-oriented coping ( r = -0.600; P = 0.000).\n\nEI demonstrated significant associations with specific coping domains among dental professionals. Higher EI was associated with greater task-oriented coping and lower emotion-oriented and avoidant coping after adjusting for gender and professional category."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "EI demonstrated significant associations with specific coping domains among dental professionals. Higher EI was associated with greater task-oriented coping and lower emotion-oriented and avoidant coping after adjusting for gender and professional category.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Stress Coping",
+        "Emotional Intelligence",
+        "Dental Education",
+        "Dental Professionals"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729055",
@@ -8645,7 +9729,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.12688/openreseurope.19394.1",
@@ -8707,7 +9791,10 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729498",
@@ -8735,7 +9822,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1007/s40614-026-00502-7",
@@ -8786,7 +9873,11 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730013",
@@ -8813,7 +9904,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.2147/prbm.s626455",
@@ -8875,7 +9966,11 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42730765",
@@ -8902,7 +9997,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.1007/s00520-026-11204-w",
@@ -8977,7 +10072,11 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729753",
@@ -9004,7 +10103,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1900932",
@@ -9071,7 +10170,11 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729951",
@@ -9099,7 +10202,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1833853",
@@ -9167,7 +10270,11 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13565555",
@@ -9194,7 +10301,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -9232,7 +10339,10 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "MED:42729632",
@@ -9259,7 +10369,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1886039",
@@ -9309,9 +10419,9 @@
         "EEG",
         "Mental Health Assessment",
         "Cross-modal Fusion",
-        "Spatiotemporal Graph Attention Network",
         "Explainability",
-        "Risk Representation"
+        "Risk Representation",
+        "Spatiotemporal Graph Attention Network"
       ],
       "relevance": {
         "score": -6,
@@ -9319,7 +10429,11 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729517",
@@ -9347,7 +10461,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1893934",
@@ -9397,7 +10511,11 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "MED:42729978",
@@ -9424,7 +10542,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1907283",
@@ -9470,7 +10588,11 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
     },
     {
       "key": "PMC:PMC13565071",
@@ -9497,7 +10619,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -9525,7 +10647,10 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13564705",
@@ -9552,7 +10677,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:07Z"
+        "checked_at": "2026-09-15T02:47:19Z"
       },
       "links": {
         "doi": null,
@@ -9586,7 +10711,10 @@
           "weak_topic",
           "journal_overflow"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     }
   ]
 }

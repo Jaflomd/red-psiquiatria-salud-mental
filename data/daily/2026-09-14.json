@@ -2,15 +2,28 @@
   "schema_version": 1,
   "date": "2026-09-14",
   "timezone": "America/Lima",
-  "fetched_at": "2026-09-14T19:22:08Z",
+  "fetched_at": "2026-09-15T02:47:24Z",
   "source": {
-    "name": "Europe PMC",
+    "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
     "date_field": "FIRST_IDATE",
     "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-14 TO 2026-09-14] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
     "hit_count": 9,
     "accepted": 9,
-    "query_version": "2026-09-14.1"
+    "query_version": "2026-09-14.2",
+    "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+    "europepmc": {
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-14 TO 2026-09-14] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+      "hit_count": 9
+    },
+    "pubmed": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "date_field": "edat",
+      "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
+      "hit_count": 104,
+      "unresolved_in_europepmc": 52
+    }
   },
   "items": [
     {
@@ -38,7 +51,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -73,7 +86,10 @@
           "tags:3",
           "strong_design"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13571128",
@@ -100,7 +116,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -124,7 +140,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13570906",
@@ -151,7 +170,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -175,7 +194,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13571855",
@@ -202,7 +224,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -232,7 +254,10 @@
         "signals": [
           "tags:2"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13571240",
@@ -259,7 +284,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -289,7 +314,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13571419",
@@ -316,7 +344,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -346,7 +374,10 @@
         "signals": [
           "tags:1"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13571105",
@@ -373,7 +404,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -403,7 +434,10 @@
           "tags:1",
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13571009",
@@ -431,7 +465,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -460,7 +494,10 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     },
     {
       "key": "PMC:PMC13571571",
@@ -487,7 +524,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-14T19:22:08Z"
+        "checked_at": "2026-09-15T02:47:24Z"
       },
       "links": {
         "doi": null,
@@ -510,7 +547,10 @@
         "signals": [
           "weak_topic"
         ]
-      }
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
     }
   ]
 }
