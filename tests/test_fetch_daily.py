@@ -418,7 +418,8 @@ class TestIndexRebuild(FetchDailyTestCase):
         # sin éxito un día después (09-15), el índice se reconstruye igual
         # (para reflejar 'failures') pero el 09-14 NO debe volverse "completo"
         # solo porque el reloj de la reconstrucción ya es 09-15: sigue siendo
-        # el mismo fetched_at parcial de las 11:00 UTC del 09-14.
+        # el mismo fetched_at parcial de las 11:00 UTC del 09-14 (antes del
+        # cierre en UTC de ese día en 2026-09-15T00:00:00Z).
         records = {"2026-09-14": [_rec("1")]}
         fetch_fn_ok = make_fetch_fn(records)
         fd.run(self._args(date="2026-09-14"), fetch_fn=fetch_fn_ok, now_fn=_now_fn, today_fn=_today_fn)
@@ -438,6 +439,46 @@ class TestIndexRebuild(FetchDailyTestCase):
         with open(os.path.join(self.data_dir, "daily", "index.json"), encoding="utf-8") as f:
             index_after = json.load(f)
         self.assertFalse({d["date"]: d for d in index_after["days"]}["2026-09-14"]["complete"])
+
+
+class TestCompleteAsOfFetch(unittest.TestCase):
+    """Tests unitarios para la función _complete_as_of_fetch."""
+
+    def test_complete_when_fetch_after_day_ended_utc(self):
+        # Un día está completo si el fetch ocurrió después de que terminó
+        # ese día en UTC (00:00 UTC del día siguiente).
+        result = fd._complete_as_of_fetch("2026-09-14", "2026-09-15T01:07:00Z")
+        self.assertTrue(result)
+
+    def test_incomplete_when_fetch_same_day_utc(self):
+        # Un día está incompleto si el fetch fue el mismo día en UTC.
+        result = fd._complete_as_of_fetch("2026-09-14", "2026-09-14T23:59:00Z")
+        self.assertFalse(result)
+
+    def test_incomplete_when_fetch_next_day_same_time(self):
+        # El día siguiente no está completo porque ese día aún no ha terminado.
+        result = fd._complete_as_of_fetch("2026-09-15", "2026-09-15T01:07:00Z")
+        self.assertFalse(result)
+
+    def test_complete_previous_day(self):
+        # Un día anterior está completo si el fetch fue después de su cierre.
+        result = fd._complete_as_of_fetch("2026-09-13", "2026-09-14T11:00:00Z")
+        self.assertTrue(result)
+
+    def test_invalid_date(self):
+        # Una fecha inválida devuelve False.
+        result = fd._complete_as_of_fetch("2026-13-01", "2026-09-15T01:07:00Z")
+        self.assertFalse(result)
+
+    def test_none_fetched_at(self):
+        # fetched_at None devuelve False.
+        result = fd._complete_as_of_fetch("2026-09-14", None)
+        self.assertFalse(result)
+
+    def test_malformed_fetched_at(self):
+        # fetched_at malformado devuelve False.
+        result = fd._complete_as_of_fetch("2026-09-14", "2026-09-15 01:07:00")
+        self.assertFalse(result)
 
 
 class TestDryRun(FetchDailyTestCase):

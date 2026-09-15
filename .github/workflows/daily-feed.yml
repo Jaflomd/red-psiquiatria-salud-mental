@@ -2,7 +2,7 @@ name: Feed diario Europe PMC + PubMed
 
 on:
   schedule:
-    - cron: "0 11 * * *"     # 11:00 UTC = 06:00 America/Lima
+    - cron: "7 1 * * *"      # 01:07 UTC = 20:07 America/Lima
   workflow_dispatch:
     inputs:
       days:
@@ -71,7 +71,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "feed: $(date -u +%F)"
+          git commit -m "feed: $(date +%F)"
           git pull --rebase origin main
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"

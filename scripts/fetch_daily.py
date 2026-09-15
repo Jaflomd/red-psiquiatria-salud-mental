@@ -335,11 +335,16 @@ def _process_day(
 
 
 def _complete_as_of_fetch(date, fetched_at_iso):
-    """True si `date` ya había terminado (hora de Lima) en el momento en que
+    """True si `date` ya había terminado en UTC en el momento en que
     ESE día se consultó (`fetched_at`), no en el momento de reconstruir el
     índice (hallazgo de verificación: usar `today` de la reconstrucción hace
     que un día parcial se declare "completo" tras una re-consulta fallida
-    posterior, sin que Europe PMC haya terminado de indexarlo)."""
+    posterior, sin que Europe PMC haya terminado de indexarlo).
+
+    Europe PMC fecha FIRST_IDATE en UTC. Un día está completo si el fetch
+    ocurrió después de que ese día terminó en UTC. PubMed (hora del este de
+    EE. UU.) puede sumar papers de ese día en la corrida de la noche siguiente,
+    que re-consulta el día."""
     if not common.validate_date(date) or not fetched_at_iso:
         return False
     try:
@@ -348,13 +353,7 @@ def _complete_as_of_fetch(date, fetched_at_iso):
         )
     except ValueError:
         return False
-    try:
-        from zoneinfo import ZoneInfo
-
-        lima_dt = fetched_dt.astimezone(ZoneInfo("America/Lima"))
-    except Exception:
-        lima_dt = fetched_dt.astimezone(datetime.timezone(datetime.timedelta(hours=-5)))
-    return date < str(lima_dt.date())
+    return date < str(fetched_dt.date())
 
 
 def _rebuild_index(daily_dir, index_path, config, today, now_fn):

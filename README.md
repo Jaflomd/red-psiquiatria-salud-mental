@@ -124,7 +124,7 @@ Empaqueta el HTML, el CSS, el JS y los datos más recientes (resúmenes + los ú
 
 ## 6. Feed diario y backfill
 
-El feed se genera automáticamente todos los días por GitHub Actions (`.github/workflows/daily-feed.yml`, cron `0 11 * * *` = 06:00 hora de Lima). PubMed amplía el descubrimiento; Europe PMC aplica el gate final de acceso abierto y licencia. En local:
+El feed se genera automáticamente todos los días por GitHub Actions (`.github/workflows/daily-feed.yml`, cron `7 1 * * *` = 20:07 hora de Lima). Cada noche se consultan ayer y hoy; hoy queda casi completo esa misma noche y se cierra en la corrida siguiente. PubMed amplía el descubrimiento; Europe PMC aplica el gate final de acceso abierto y licencia. En local:
 
 ```bash
 python3 scripts/fetch_daily.py --days 2      # uso diario normal
@@ -177,7 +177,7 @@ El repositorio público está en [GitHub](https://github.com/Jaflomd/red-psiquia
 - `.github/workflows/daily-feed.yml`: corre los tests, trae el feed del día, reconstruye `data/summaries.json` y, si hay cambios, los commitea.
 - `.github/workflows/pages.yml`: publica el sitio en GitHub Pages cuando cambia algo en `index.html`, `assets/`, `data/` o `content/` (o manualmente).
 
-El cron `0 11 * * *` corre a las 06:00 hora de Lima. También puede lanzarse a mano desde **Actions → Feed diario Europe PMC + PubMed → Run workflow**. `ANTHROPIC_API_KEY` es opcional: sin ese secret, el feed funciona normalmente pero no genera `ai_summary`.
+El cron `7 1 * * *` corre a las 20:07 hora de Lima. También puede lanzarse a mano desde **Actions → Feed diario Europe PMC + PubMed → Run workflow**. `ANTHROPIC_API_KEY` es opcional: sin ese secret, el feed funciona normalmente pero no genera `ai_summary`.
 
 ## 12. Limitaciones conocidas
 
