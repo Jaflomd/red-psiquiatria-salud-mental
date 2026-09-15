@@ -1,8 +1,1592 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-15T02:14:27Z",
-  "count": 8,
+  "generated_at": "2026-09-15T14:02:21Z",
+  "count": 10,
   "items": [
+    {
+      "slug": "2026-09-15-lenguaje-pragmatico-trayectorias-psicopatologicas",
+      "title": "Lenguaje pragmático: una señal temprana de trayectorias psicopatológicas",
+      "date": "2026-09-15",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": true,
+      "adapted_with_ai": false,
+      "author": "Javier Flores",
+      "summary_type": "empirico",
+      "tags": [
+        "child_adolescent",
+        "public_mental_health"
+      ],
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "draft"
+      },
+      "sample_size": {
+        "value": 16,
+        "confidence": "draft"
+      },
+      "one_liner": "Esta revisión sistemática sugiere que las dificultades tempranas de lenguaje pragmático anticipan trayectorias internalizantes, externalizantes y de pares en infancia y adolescencia, con evidencia menos consistente para psicosis.",
+      "principle": {
+        "statement": "La pragmática del lenguaje funciona como marcador dimensional de vulnerabilidad, no como frontera diagnóstica autosuficiente.",
+        "rationale": "La revisión encuentra asociaciones convergentes entre dificultades pragmáticas y desenlaces internalizantes, externalizantes y sociales, pero la evidencia es heterogénea y no demuestra validez categorial de SPCD.",
+        "evidence": "16 estudios incluidos; 13 longitudinales y 3 transversales o de seguimiento corto; 8 de alta calidad, 7 moderados y 1 de baja calidad.",
+        "strength": "moderada",
+        "transfer": [
+          "clínica",
+          "investigación",
+          "formación"
+        ],
+        "limit": "evidencia principalmente occidental, sin metaanálisis y sin estudios que diagnostiquen SPCD con criterios DSM-5.",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Población",
+          "value": "niños y adolescentes de 4 a 14 años al inicio, en estudios comunitarios y clínicos"
+        },
+        {
+          "key": "Intervención o exposición",
+          "value": "dificultades o variación dimensional en lenguaje pragmático, medidas con instrumentos como CCC, CCC-2, SCDC, CASL, TLC-E y tareas de escritura"
+        },
+        {
+          "key": "Comparador",
+          "value": "niños sin dificultades pragmáticas o diferencias dentro de la misma muestra en habilidad pragmática"
+        },
+        {
+          "key": "Desenlace primario",
+          "value": "síntomas psicopatológicos, problemas conductuales o dificultades socioemocionales después de al menos 6 meses"
+        },
+        {
+          "key": "Efecto principal",
+          "value": "16 estudios incluidos; 8 de alta calidad, 7 de calidad moderada y 1 de baja calidad"
+        },
+        {
+          "key": "Certeza",
+          "value": "baja a moderada; síntesis narrativa sin metaanálisis, heterogeneidad de medidas y sesgo por informantes en varios estudios"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Lenguaje pragmático",
+          "definition": "uso del lenguaje ajustado al contexto social, incluyendo turnos, inferencias, reparación conversacional, coherencia, prosodia, gestos y pertinencia."
+        },
+        {
+          "term": "SPCD",
+          "definition": "diagnóstico DSM-5 de trastorno de comunicación social pragmática; aquí no fue diagnosticado formalmente en los estudios incluidos."
+        },
+        {
+          "term": "Lenguaje estructural",
+          "definition": "componentes formales como vocabulario, gramática, sintaxis y comprensión lingüística básica."
+        },
+        {
+          "term": "Cascadas del desarrollo",
+          "definition": "modelo donde dificultades en un dominio alteran trayectorias posteriores en otros dominios, como pares, emoción y conducta."
+        },
+        {
+          "term": "HiTOP",
+          "definition": "taxonomía dimensional que organiza psicopatología en espectros jerárquicos en vez de categorías rígidas."
+        },
+        {
+          "term": "RDoC",
+          "definition": "marco de investigación que estudia procesos bioconductuales dimensionales relevantes para psicopatología."
+        },
+        {
+          "term": "Varianza de método compartida",
+          "definition": "sesgo que aparece cuando la misma fuente informa predictor y desenlace, elevando artificialmente la asociación."
+        },
+        {
+          "term": "Predictive validity",
+          "definition": "capacidad de un rasgo o constructo para anticipar desenlaces posteriores, usada como criterio de validez diagnóstica o dimensional."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Norbury CF (2014). Practitioner review: Social (pragmatic) communication disorder conceptualization, evidence and clinical implications. J Child Psychol Psychiatry",
+          "doi": "10.1111/jcpp.12154",
+          "pmid": null,
+          "url": "https://doi.org/10.1111/jcpp.12154",
+          "why": "Aclara por qué SPCD sigue siendo una categoría difícil de separar de otros perfiles neurodesarrollativos."
+        },
+        {
+          "citation": "Swineford LB, Thurm A, Baird G, Wetherby AM, Swedo S (2014). Social (pragmatic) communication disorder: a research review of this new DSM-5 diagnostic category. J Neurodev Disord",
+          "doi": "10.1186/1866-1955-6-41",
+          "pmid": null,
+          "url": "https://doi.org/10.1186/1866-1955-6-41",
+          "why": "Revisión de base para entender el nacimiento DSM-5 del constructo y sus límites."
+        },
+        {
+          "citation": "Masten AS, Cicchetti D (2010). Developmental cascades. Dev Psychopathol",
+          "doi": "10.1017/S0954579410000222",
+          "pmid": null,
+          "url": "https://doi.org/10.1017/S0954579410000222",
+          "why": "Marco conceptual para leer cómo una dificultad comunicativa puede reorganizar trayectorias emocionales y sociales."
+        },
+        {
+          "citation": "Culpin I, Mars B, Pearson RM, Golding J, Heron J, et al. (2018). Autistic Traits and Suicidal Thoughts, Plans, and Self-Harm in Late Adolescence. J Am Acad Child Adolesc Psychiatry",
+          "doi": "10.1016/j.jaac.2018.01.023",
+          "pmid": null,
+          "url": "https://doi.org/10.1016/j.jaac.2018.01.023",
+          "why": "Ejemplo de cohorte donde comunicación social se vincula con autolesión y suicidabilidad."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Esta revisión sistemática sugiere que las dificultades tempranas de lenguaje pragmático anticipan trayectorias internalizantes, externalizantes y de pares en infancia y adolescencia, con evidencia menos consistente para psicosis."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Población",
+                  "value": "niños y adolescentes de 4 a 14 años al inicio, en estudios comunitarios y clínicos"
+                },
+                {
+                  "key": "Intervención o exposición",
+                  "value": "dificultades o variación dimensional en lenguaje pragmático, medidas con instrumentos como CCC, CCC-2, SCDC, CASL, TLC-E y tareas de escritura"
+                },
+                {
+                  "key": "Comparador",
+                  "value": "niños sin dificultades pragmáticas o diferencias dentro de la misma muestra en habilidad pragmática"
+                },
+                {
+                  "key": "Desenlace primario",
+                  "value": "síntomas psicopatológicos, problemas conductuales o dificultades socioemocionales después de al menos 6 meses"
+                },
+                {
+                  "key": "Efecto principal",
+                  "value": "16 estudios incluidos; 8 de alta calidad, 7 de calidad moderada y 1 de baja calidad"
+                },
+                {
+                  "key": "Certeza",
+                  "value": "baja a moderada; síntesis narrativa sin metaanálisis, heterogeneidad de medidas y sesgo por informantes en varios estudios"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Las dificultades tempranas de lenguaje pragmático predicen desenlaces psicopatológicos posteriores en niños y adolescentes, más allá de lenguaje estructural, inteligencia general u otros rasgos neurodesarrollativos?"
+            },
+            {
+              "type": "p",
+              "text": "La pregunta también toca una discusión nosológica: si el trastorno de comunicación social pragmática debe entenderse como una categoría discreta o como un perfil dimensional y transdiagnóstico que atraviesa autismo, trastornos del lenguaje, TDAH, problemas de conducta y vulnerabilidad emocional."
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Revisión sistemática reportada según PRISMA 2020. Los autores buscaron estudios publicados entre 1980 y 2025 en Google Scholar, PubMed, ScienceDirect y PsycINFO. Incluyeron estudios longitudinales, prospectivos o de seguimiento con niños de 4 a 14 años al inicio, medición específica de lenguaje pragmático, desenlaces psicopatológicos cuantitativos y seguimiento mínimo de 6 meses. Tres estudios transversales o de seguimiento corto se retuvieron de manera excepcional porque usaban modelos predictivos con control de confusores."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "La búsqueda inicial identificó 3,112 registros; tras retirar 263 duplicados y 257 registros manifiestamente fuera de alcance, quedaron 2,592 para cribado manual.",
+                "La síntesis final incluyó 16 estudios: 12 procedentes de la búsqueda en bases y 4 por encadenamiento de citas; 13 fueron longitudinales y 3 transversales o de seguimiento corto con análisis predictivo.",
+                "La calidad se evaluó con Newcastle-Ottawa Scale adaptada: 8 estudios fueron de alta calidad, 7 moderados y 1 de baja calidad.",
+                "La extracción se organizó por dominios: problemas externalizantes, dificultades internalizantes, adaptación social y pares, psicopatología amplia y psicopatología severa.",
+                "No se realizó metaanálisis; la síntesis fue narrativa por heterogeneidad de instrumentos, muestras, desenlaces y diseños."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "La evidencia más consistente aparece en problemas externalizantes e internalizantes: algunos estudios reportaron asociaciones independientes de lenguaje estructural e inteligencia, con ejemplos como RR hasta 12.3 para dificultades totales y beta de -0.601 para ansiedad.",
+                "Las dificultades pragmáticas también se asociaron con trayectorias persistentes de problemas con pares; un estudio reportó OR = 2.53 para problemas persistentes en niños con deterioro pragmático.",
+                "La señal para suicidabilidad provino de una cohorte poblacional: la alteración de comunicación social se asoció con autolesión con intención suicida, RR = 2.14, y parte de esa asociación fue mediada por síntomas depresivos a los 12 años.",
+                "El vínculo con psicosis fue menos estable: un estudio ALSPAC encontró OR hasta 1.25 para experiencias psicóticas a los 12 y 18 años, mientras otro estudio premórbido no halló un trastorno pragmático específico antes de esquizofrenia.",
+                "Las asociaciones parecieron más informativas cuando se interpretaron como rasgos dimensionales transdiagnósticos, no como validación directa de una categoría DSM-5 de trastorno de comunicación social pragmática.",
+                "Diez principios de lectura salen de la síntesis: mirar lo pragmático como desarrollo social; separar pragmática de gramática; exigir temporalidad; vigilar sesgo por informante; no sobrediagnosticar SPCD; pensar en cascadas; mapear dominios HiTOP/RDoC; distinguir riesgo de predicción clínica; buscar diversidad cultural; y probar intervenciones antes de convertir el marcador en recomendación."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Diseño: tres estudios no tenían longitudinalidad fuerte y fueron retenidos por análisis predictivo, lo que reduce la inferencia temporal.",
+                "Medición: los instrumentos variaron entre reportes parentales, reportes docentes, pruebas directas y tareas diseñadas por investigadores, impidiendo metaanálisis.",
+                "Análisis: varios estudios no controlaron de forma completa lenguaje estructural, nivel socioeconómico u otros confusores.",
+                "Muestra: predominan estudios occidentales y angloparlantes; 11 de 16 estudios proceden del Reino Unido.",
+                "Confusión: el uso del mismo informante para predictor pragmático y desenlace conductual puede inflar asociaciones por varianza de método compartida.",
+                "Generalización: ningún estudio incluido diagnosticó SPCD según criterios DSM-5, por lo que la revisión informa el constructo dimensional, no valida una categoría clínica discreta."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "La pragmática del lenguaje funciona como marcador dimensional de vulnerabilidad, no como frontera diagnóstica autosuficiente."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "La revisión encuentra asociaciones convergentes entre dificultades pragmáticas y desenlaces internalizantes, externalizantes y sociales, pero la evidencia es heterogénea y no demuestra validez categorial de SPCD."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "16 estudios incluidos; 13 longitudinales y 3 transversales o de seguimiento corto; 8 de alta calidad, 7 moderados y 1 de baja calidad."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "moderada"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "clínica, investigación, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "evidencia principalmente occidental, sin metaanálisis y sin estudios que diagnostiquen SPCD con criterios DSM-5."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "El valor clínico del paper no es convertir una dificultad pragmática en diagnóstico ni usarla como tamizaje aislado. Su aporte es recordar que la forma en que un niño usa el lenguaje en interacción social puede anticipar fricción acumulativa: malentendidos, rechazo de pares, retraimiento, ansiedad, conducta disruptiva o dificultades adaptativas."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "En evaluación infantil, preguntar por uso social del lenguaje además de vocabulario, sintaxis e inteligencia. Límite: el paper no valida un instrumento de tamizaje clínico ni puntos de corte.",
+                "En formulación longitudinal, tratar las dificultades pragmáticas como posible nodo de cascada entre comunicación, pares y síntomas emocionales. Límite: las asociaciones observacionales no prueban causalidad.",
+                "En intervención, considerar que trabajar pragmática podría tener beneficios socioemocionales indirectos. Límite: la revisión no incluyó ensayos de intervención.",
+                "En investigación local, priorizar medidas culturalmente sensibles en español y contextos latinoamericanos. Límite: la base revisada proviene sobre todo de países angloparlantes."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Lenguaje pragmático",
+                  "value": "uso del lenguaje ajustado al contexto social, incluyendo turnos, inferencias, reparación conversacional, coherencia, prosodia, gestos y pertinencia."
+                },
+                {
+                  "key": "SPCD",
+                  "value": "diagnóstico DSM-5 de trastorno de comunicación social pragmática; aquí no fue diagnosticado formalmente en los estudios incluidos."
+                },
+                {
+                  "key": "Lenguaje estructural",
+                  "value": "componentes formales como vocabulario, gramática, sintaxis y comprensión lingüística básica."
+                },
+                {
+                  "key": "Cascadas del desarrollo",
+                  "value": "modelo donde dificultades en un dominio alteran trayectorias posteriores en otros dominios, como pares, emoción y conducta."
+                },
+                {
+                  "key": "HiTOP",
+                  "value": "taxonomía dimensional que organiza psicopatología en espectros jerárquicos en vez de categorías rígidas."
+                },
+                {
+                  "key": "RDoC",
+                  "value": "marco de investigación que estudia procesos bioconductuales dimensionales relevantes para psicopatología."
+                },
+                {
+                  "key": "Varianza de método compartida",
+                  "value": "sesgo que aparece cuando la misma fuente informa predictor y desenlace, elevando artificialmente la asociación."
+                },
+                {
+                  "key": "Predictive validity",
+                  "value": "capacidad de un rasgo o constructo para anticipar desenlaces posteriores, usada como criterio de validez diagnóstica o dimensional."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Norbury CF (2014). Practitioner review: Social (pragmatic) communication disorder conceptualization, evidence and clinical implications. J Child Psychol Psychiatry",
+                  "doi": "10.1111/jcpp.12154",
+                  "pmid": null,
+                  "why": "Aclara por qué SPCD sigue siendo una categoría difícil de separar de otros perfiles neurodesarrollativos."
+                },
+                {
+                  "citation": "Swineford LB, Thurm A, Baird G, Wetherby AM, Swedo S (2014). Social (pragmatic) communication disorder: a research review of this new DSM-5 diagnostic category. J Neurodev Disord",
+                  "doi": "10.1186/1866-1955-6-41",
+                  "pmid": null,
+                  "why": "Revisión de base para entender el nacimiento DSM-5 del constructo y sus límites."
+                },
+                {
+                  "citation": "Masten AS, Cicchetti D (2010). Developmental cascades. Dev Psychopathol",
+                  "doi": "10.1017/S0954579410000222",
+                  "pmid": null,
+                  "why": "Marco conceptual para leer cómo una dificultad comunicativa puede reorganizar trayectorias emocionales y sociales."
+                },
+                {
+                  "citation": "Culpin I, Mars B, Pearson RM, Golding J, Heron J, et al. (2018). Autistic Traits and Suicidal Thoughts, Plans, and Self-Harm in Late Adolescence. J Am Acad Child Adolesc Psychiatry",
+                  "doi": "10.1016/j.jaac.2018.01.023",
+                  "pmid": null,
+                  "why": "Ejemplo de cohorte donde comunicación social se vincula con autolesión y suicidabilidad."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Borrador extenso generado con IA para revisión de Javier. Verificado contra el texto completo de PubMed Central, PMID 42558799, PMCID PMC13438378, DOI 10.3389/frcha.2026.1860959. El artículo es open access con licencia CC BY en Europe PMC. Los autores declaran que usaron Gemini Pro y Claude Sonnet para mejorar gramática, legibilidad, formato y organización; también declaran revisión humana y responsabilidad por el contenido. La petición de diez principios se resolvió dentro de Hallazgos clave como diez principios de lectura, porque el sitio actual valida un único bloque estructurado de El principio."
+            }
+          ]
+        }
+      ],
+      "full_note": {
+        "pending": false,
+        "word_count": 957,
+        "sections": [
+          {
+            "id": "nc_info",
+            "heading": "Información del estudio",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Título",
+                    "value": "Pragmatic language disorders as predictors of psychopathological trajectories in childhood and adolescence: a systematic review"
+                  },
+                  {
+                    "key": "Autor principal",
+                    "value": "Sergio Melogno"
+                  },
+                  {
+                    "key": "Correo de correspondencia",
+                    "value": "sergio.melogno@unicusano.it"
+                  },
+                  {
+                    "key": "Año",
+                    "value": "2026"
+                  },
+                  {
+                    "key": "Revista",
+                    "value": "Frontiers in Child and Adolescent Psychiatry"
+                  },
+                  {
+                    "key": "Palabras clave",
+                    "value": "child and adolescent psychiatry; developmental cascades; longitudinal studies; pragmatic language; predictive validity; psychopathology; social (pragmatic) communication disorder; transdiagnostic"
+                  },
+                  {
+                    "key": "País",
+                    "value": "Italia"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_intro",
+            "heading": "Introducción en tres frases",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Problema",
+                    "value": "Las dificultades pragmáticas del lenguaje se reconocen en múltiples condiciones neurodesarrollativas, pero su valor para anticipar psicopatología posterior seguía poco integrado."
+                  },
+                  {
+                    "key": "Literatura previa",
+                    "value": "SPCD, HiTOP, RDoC y el enfoque de cascadas del desarrollo ofrecen marcos para pensar la pragmática como rasgo dimensional y transdiagnóstico."
+                  },
+                  {
+                    "key": "Vacío",
+                    "value": "faltaba sintetizar evidencia longitudinal sobre si la pragmática temprana predice síntomas internalizantes, externalizantes, sociales o severos en niños y adolescentes."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_pregunta",
+            "heading": "Pregunta de investigación",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Primaria",
+                    "value": "determinar si los trastornos o dificultades de lenguaje pragmático predicen desenlaces psicopatológicos posteriores en infancia y adolescencia."
+                  },
+                  {
+                    "key": "Secundarias",
+                    "value": "evaluar especificidad frente a lenguaje estructural e inteligencia, valorar la fuerza por dominios psicopatológicos y discutir implicancias para SPCD, HiTOP, RDoC y prevención."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_metodo",
+            "heading": "Método",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Síntesis sistemática narrativa de estudios longitudinales, prospectivos, de seguimiento y tres estudios transversales o de seguimiento corto retenidos por análisis predictivo con control de confusores."
+              }
+            ]
+          },
+          {
+            "id": "nc_diseno",
+            "heading": "Diseño",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Diseño",
+                    "value": "revisión sistemática de estudios pronósticos y predictivos con síntesis narrativa."
+                  },
+                  {
+                    "key": "Checklist declarado",
+                    "value": "PRISMA 2020."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_unidad",
+            "heading": "Unidad de análisis",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Estudios primarios que midieron lenguaje pragmático en niños de 4 a 14 años y evaluaron posteriormente síntomas psicopatológicos, problemas conductuales, dificultades socioemocionales o adaptación social."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestra",
+            "heading": "Muestra",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "La síntesis incluyó 16 estudios publicados entre 2005 y 2023. Once fueron del Reino Unido y cinco de Canadá, Países Bajos, España, Australia y Estados Unidos. Los tamaños muestrales variaron de 23 a 15,145 participantes y los seguimientos de aproximadamente 6 meses a más de 27 años."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestreo",
+            "heading": "Muestreo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Búsqueda sistemática en Google Scholar, PubMed, ScienceDirect y PsycINFO para literatura publicada entre enero de 1980 y diciembre de 2025, complementada con encadenamiento backward y forward de citas. Solo se incluyeron artículos revisados por pares en inglés."
+              }
+            ]
+          },
+          {
+            "id": "nc_procedimientos",
+            "heading": "Procedimientos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "Se definió la pregunta con PICOS, incluyendo niños de 4 a 14 años, lenguaje pragmático como exposición y desenlaces psicopatológicos cuantitativos.",
+                  "Se ejecutaron búsquedas amplias en cuatro bases, adaptadas a la variabilidad terminológica entre pragmatic language impairment, semantic-pragmatic disorder, pragmatic deficits y SPCD.",
+                  "Se retiraron duplicados y registros claramente fuera de alcance, seguidos de cribado manual de títulos, resúmenes y textos completos por dos autores.",
+                  "Se extrajeron características del estudio, instrumentos pragmáticos, desenlaces psicopatológicos, controles, mediadores, moderadores, calidad metodológica y modelos estadísticos.",
+                  "Se sintetizaron los resultados por dominios psicopatológicos y se evaluó riesgo de sesgo con Newcastle-Ottawa Scale y dominios adicionales inspirados en QUIPS."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_dependientes",
+            "heading": "Variables dependientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Psicopatología internalizante",
+                    "value": "ansiedad, depresión, síntomas emocionales, soledad, ideación suicida, planes suicidas y autolesión."
+                  },
+                  {
+                    "key": "Psicopatología externalizante",
+                    "value": "hiperactividad, problemas de conducta, agresión, rule-breaking y dificultades conductuales generales."
+                  },
+                  {
+                    "key": "Adaptación social y pares",
+                    "value": "problemas persistentes con pares, habilidades sociales, adaptación funcional, empleo y relaciones en adultez."
+                  },
+                  {
+                    "key": "Psicopatología severa",
+                    "value": "experiencias psicóticas, síntomas psicóticos no clínicos y esquizofrenia posterior."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_independientes",
+            "heading": "Variables independientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Lenguaje pragmático",
+                    "value": "desempeño o dificultades medidas con CCC, CCC-2, SCDC, CASL, TLC-E, Strange Stories, esquemas de Bishop y Adams, y tareas de escritura."
+                  },
+                  {
+                    "key": "Lenguaje estructural y cognición",
+                    "value": "vocabulario, sintaxis, gramática, recepción lingüística, CI verbal, CI no verbal o CI total según cada estudio."
+                  },
+                  {
+                    "key": "Confusores y moderadores",
+                    "value": "sexo, nivel socioeconómico, salud mental materna, edad al daño cerebral, localización de lesión, conducta prosocial, depresión a los 12 años e interacción sexo por CI verbal."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_analisis",
+            "heading": "Análisis de datos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Univariado",
+                    "value": "descripción de estudios incluidos, países, tamaños muestrales, instrumentos, fuentes informantes y calidad NOS."
+                  },
+                  {
+                    "key": "Bivariado",
+                    "value": "síntesis de asociaciones entre pragmática y dominios psicopatológicos, incluyendo RR, OR, beta, correlaciones y diferencias medias reportadas por estudios primarios."
+                  },
+                  {
+                    "key": "Multivariado",
+                    "value": "revisión de modelos ajustados por lenguaje estructural, CI, variables sociodemográficas y otros confusores cuando estaban disponibles."
+                  },
+                  {
+                    "key": "Supuestos",
+                    "value": "la síntesis distingue predicción longitudinal de asociación transversal predictiva y degrada la fuerza cuando falta temporalidad clara."
+                  },
+                  {
+                    "key": "Software",
+                    "value": "No reportado en el artículo."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_hallazgos",
+            "heading": "Hallazgos principales",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Aquí se realizó una revisión sistemática narrativa de estudios sobre lenguaje pragmático temprano y desenlaces psicopatológicos posteriores. Los hallazgos principales son: 1) las dificultades pragmáticas se asociaron de forma más consistente con problemas internalizantes y externalizantes; 2) las asociaciones con pares y adaptación social fueron relevantes pero dependieron en parte de cohortes específicas; 3) la evidencia para psicosis fue inconsistente; 4) el patrón apoya una lectura transdiagnóstica dimensional y no una validación directa de SPCD como categoría discreta."
+              }
+            ]
+          },
+          {
+            "id": "nc_datos",
+            "heading": "Datos por hallazgo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "La revisión incluyó 16 estudios; 8 fueron de alta calidad, 7 moderados y 1 de baja calidad; ejemplos de asociación incluyeron RR hasta 12.3 para dificultades totales, beta de -0.601 para ansiedad y beta de -0.067 para externalización.",
+                  "En pares y adaptación social se reportaron OR = 2.53 para problemas persistentes de pares, diferencia media de -8.60 con p = .004 en trayectorias conjuntas severas y correlaciones de .52 a .60 con adaptación adulta.",
+                  "Para psicosis, un estudio reportó OR hasta 1.25 para experiencias psicóticas a los 12 y 18 años, mientras otro no encontró evidencia de trastorno pragmático premórbido específico en quienes desarrollaron esquizofrenia.",
+                  "Ningún estudio incluido diagnosticó SPCD con criterios DSM-5; los autores interpretan la evidencia como convergente y sugerente, no definitiva."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_discusion",
+            "heading": "Discusión",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Qué significa",
+                    "value": "las dificultades pragmáticas tempranas parecen marcar vulnerabilidad transdiagnóstica para varios desenlaces, especialmente internalizantes, externalizantes y sociales."
+                  },
+                  {
+                    "key": "Por qué ocurre",
+                    "value": "la pragmática puede afectar reciprocidad social, reparación de malentendidos, integración con pares y exposición a rechazo o aislamiento, generando cascadas de riesgo."
+                  },
+                  {
+                    "key": "Contexto amplio",
+                    "value": "los autores proponen desplazar el foco desde una categoría SPCD rígida hacia rasgos dimensionales compatibles con HiTOP, RDoC y modelos de desarrollo."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_limitaciones",
+            "heading": "Limitaciones según los autores",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Selección: la revisión excluyó literatura gris y artículos no publicados, lo que puede sobrestimar asociaciones positivas.",
+                  "Medición: hubo heterogeneidad importante en instrumentos pragmáticos, fuentes informantes y amplitud del constructo medido.",
+                  "Confusión: algunos estudios no controlaron adecuadamente lenguaje estructural, variables socioeconómicas u otros confusores relevantes.",
+                  "Otras: no se registró prospectivamente en PROSPERO, no hubo metaanálisis, los rater-level records no permitieron concordancia por criterio y predominan muestras occidentales angloparlantes."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_futuro",
+            "heading": "Investigación futura",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Replicar los hallazgos en muestras diversas, multilingües y no occidentales.",
+                  "Usar baterías multimodales que combinen cuestionarios, tareas objetivas, análisis de discurso y medidas neurocognitivas.",
+                  "Aplicar modelos cross-lagged y random intercept cross-lagged para probar bidireccionalidad entre pragmática y salud mental.",
+                  "Desarrollar medidas culturalmente válidas y estudiar si intervenir habilidades pragmáticas modifica trayectorias emocionales, conductuales o sociales."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "word_count": 1182,
+      "reading_minutes": 6,
+      "source_file": "content/summaries/2026-09-15-lenguaje-pragmatico-trayectorias-psicopatologicas.md",
+      "paper": {
+        "key": "MED:42558799",
+        "epmc_id": "42558799",
+        "source": "MED",
+        "pmid": "42558799",
+        "pmcid": "PMC13438378",
+        "doi": "10.3389/frcha.2026.1860959",
+        "title": "Pragmatic language disorders as predictors of psychopathological trajectories in childhood and adolescence: a systematic review.",
+        "authors": "Melogno S, Stievano P, Paglialunga A.",
+        "journal": "Frontiers in child and adolescent psychiatry",
+        "journal_abbrev": "Front Child Adolesc Psychiatry",
+        "pub_year": 2026,
+        "first_publication_date": "2026-07-22",
+        "first_index_date": null,
+        "pub_types": [
+          "Systematic Review",
+          "systematic-review",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "verified",
+          "access_type": "open_access",
+          "license": "cc by",
+          "license_label": "CC BY",
+          "source": "europepmc",
+          "checked_at": "2026-09-15T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.3389/frcha.2026.1860959",
+          "europepmc": "https://europepmc.org/article/MED/42558799",
+          "fulltext_html": "https://europepmc.org/articles/PMC13438378",
+          "pdf": "https://europepmc.org/articles/PMC13438378?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "systematic_review",
+          "confidence": "draft"
+        },
+        "sample_size": {
+          "value": 16,
+          "confidence": "draft"
+        },
+        "tags": [
+          "child_adolescent",
+          "public_mental_health"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
+    {
+      "slug": "2026-09-15-lesiones-redes-identificacion-delirante",
+      "title": "Delirios de identificación: cuando una lesión altera dos redes",
+      "date": "2026-09-15",
+      "updated": null,
+      "status": "published",
+      "example": false,
+      "ai_draft": true,
+      "adapted_with_ai": false,
+      "author": "Javier Flores",
+      "summary_type": "empirico",
+      "tags": [
+        "psychosis",
+        "neuroscience"
+      ],
+      "study_design": {
+        "id": "modelling",
+        "confidence": "draft"
+      },
+      "sample_size": {
+        "value": 17,
+        "confidence": "draft"
+      },
+      "one_liner": "Las lesiones que producen delirios de identificación no comparten ubicación anatómica, pero sí conectividad con redes de familiaridad y evaluación de creencias.",
+      "principle": {
+        "statement": "Un síntoma neuropsiquiátrico puede localizarse mejor por redes conectadas que por el punto visible de la lesión.",
+        "rationale": "Las lesiones de misidentificación fueron anatómicamente heterogéneas, pero compartieron conectividad con nodos de familiaridad y evaluación de creencias. El patrón explicó mejor el contenido del delirio que la ubicación local aislada.",
+        "evidence": "17 lesiones de misidentificación, 77 lesiones control, 15 lesiones con otros delirios y conectoma normativo de 98 sujetos.",
+        "strength": "baja",
+        "transfer": [
+          "clínica",
+          "investigación",
+          "formación"
+        ],
+        "limit": "método indirecto sin conectividad funcional medida durante el episodio delirante.",
+        "provenance": "autores"
+      },
+      "quick_facts": [
+        {
+          "key": "Población",
+          "value": "17 casos de misidentificación delirante inducida por lesión cerebral focal"
+        },
+        {
+          "key": "Intervención o exposición",
+          "value": "localización de lesiones y su conectividad funcional estimada con un conectoma normativo"
+        },
+        {
+          "key": "Comparador",
+          "value": "77 lesiones de otros síndromes neurológicos y 15 lesiones asociadas a otros delirios"
+        },
+        {
+          "key": "Desenlace primario",
+          "value": "conectividad con regiones de familiaridad y violación de expectativa identificadas por metaanálisis funcional"
+        },
+        {
+          "key": "Efecto principal",
+          "value": "las 17 lesiones se conectaron con corteza retrosplenial izquierda y 16 de 17 con corteza frontal derecha"
+        },
+        {
+          "key": "Certeza",
+          "value": "baja; serie rara, mapeo indirecto con conectoma de sujetos sanos y sin neuroimagen funcional durante el síntoma"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Síndrome de Capgras",
+          "definition": "delirio en el que una persona familiar es vivida como reemplazada por un impostor idéntico."
+        },
+        {
+          "term": "Misidentificación delirante",
+          "definition": "familia de delirios donde personas, lugares u objetos son reconocidos de forma perceptiva pero atribuidos a una identidad falsa."
+        },
+        {
+          "term": "Lesion network mapping",
+          "definition": "método que estima qué regiones están conectadas funcionalmente con una lesión usando un conectoma normativo."
+        },
+        {
+          "term": "Conectoma normativo",
+          "definition": "base de datos de conectividad cerebral obtenida en sujetos sanos, usada aquí para inferir redes conectadas a lesiones."
+        },
+        {
+          "term": "Corteza retrosplenial",
+          "definition": "región medial posterior relacionada con familiaridad, memoria autobiográfica, navegación e integración contextual."
+        },
+        {
+          "term": "Violación de expectativa",
+          "definition": "señal cognitiva que aparece cuando algo no coincide con la predicción o creencia previa."
+        },
+        {
+          "term": "ALE",
+          "definition": "activation likelihood estimation, técnica de metaanálisis que estima convergencia espacial entre focos de neuroimagen."
+        },
+        {
+          "term": "Modelo de dos factores",
+          "definition": "teoría según la cual un delirio requiere una experiencia anómala y una falla de evaluación de la creencia."
+        }
+      ],
+      "readings": [
+        {
+          "citation": "Boes AD, Prasad S, Liu H, Liu Q, Pascual-Leone A, et al. (2015). Network localization of neurological symptoms from focal brain lesions. Brain",
+          "doi": "10.1093/brain/awv228",
+          "pmid": null,
+          "url": "https://doi.org/10.1093/brain/awv228",
+          "why": "Paper metodológico clave para entender el mapeo de redes de lesión usado aquí."
+        },
+        {
+          "citation": "Darby R, Prasad S (2016). Lesion-Related Delusional Misidentification Syndromes: A Comprehensive Review of Reported Cases. J Neuropsychiatry Clin Neurosci",
+          "doi": "10.1176/appi.neuropsych.15100376",
+          "pmid": null,
+          "url": "https://doi.org/10.1176/appi.neuropsych.15100376",
+          "why": "Revisión clínica que organiza los casos de misidentificación delirante por lesión."
+        },
+        {
+          "citation": "Corlett PR, Taylor JR, Wang XJ, Fletcher PC, Krystal JH (2010). Toward a neurobiology of delusions. Prog Neurobiol",
+          "doi": "10.1016/j.pneurobio.2010.06.007",
+          "pmid": null,
+          "url": "https://doi.org/10.1016/j.pneurobio.2010.06.007",
+          "why": "Marco de predicción y error que ayuda a interpretar la red frontal de evaluación de creencias."
+        },
+        {
+          "citation": "Vann SD, Aggleton JP, Maguire EA (2009). What does the retrosplenial cortex do? Nat Rev Neurosci",
+          "doi": "10.1038/nrn2733",
+          "pmid": null,
+          "url": "https://doi.org/10.1038/nrn2733",
+          "why": "Revisión útil para entender por qué la retrosplenial encaja con familiaridad, memoria y contexto."
+        }
+      ],
+      "sections": [
+        {
+          "id": "en_una_frase",
+          "heading": "En una frase",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Las lesiones que producen delirios de identificación no comparten ubicación anatómica, pero sí conectividad con redes de familiaridad y evaluación de creencias."
+            }
+          ]
+        },
+        {
+          "id": "ficha_rapida",
+          "heading": "Ficha rápida",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Población",
+                  "value": "17 casos de misidentificación delirante inducida por lesión cerebral focal"
+                },
+                {
+                  "key": "Intervención o exposición",
+                  "value": "localización de lesiones y su conectividad funcional estimada con un conectoma normativo"
+                },
+                {
+                  "key": "Comparador",
+                  "value": "77 lesiones de otros síndromes neurológicos y 15 lesiones asociadas a otros delirios"
+                },
+                {
+                  "key": "Desenlace primario",
+                  "value": "conectividad con regiones de familiaridad y violación de expectativa identificadas por metaanálisis funcional"
+                },
+                {
+                  "key": "Efecto principal",
+                  "value": "las 17 lesiones se conectaron con corteza retrosplenial izquierda y 16 de 17 con corteza frontal derecha"
+                },
+                {
+                  "key": "Certeza",
+                  "value": "baja; serie rara, mapeo indirecto con conectoma de sujetos sanos y sin neuroimagen funcional durante el síntoma"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregunta",
+          "heading": "Pregunta",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "¿Puede un único daño cerebral focal producir un síndrome neuropsiquiátrico complejo, como Capgras u otras misidentificaciones delirantes, no por la ubicación local de la lesión sino por su patrón de conectividad funcional?"
+            },
+            {
+              "type": "p",
+              "text": "La apuesta del paper es elegante: si el contenido del delirio requiere falla de familiaridad y falla de evaluación de creencias, entonces las lesiones deberían conectarse con regiones que sostienen esos dos procesos, aunque las lesiones estén en lugares anatómicos distintos."
+            }
+          ]
+        },
+        {
+          "id": "metodos",
+          "heading": "Métodos",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Estudio de mapeo de redes de lesión. Los autores reunieron 17 casos de misidentificación delirante inducida por lesión, incluyendo dos casos propios no publicados, trazaron las lesiones en un atlas MNI común y usaron datos de conectividad en reposo de 98 sujetos sanos para estimar qué regiones estaban funcionalmente conectadas con cada lesión."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "Cada lesión se usó como semilla en un análisis de conectividad funcional sobre el conectoma normativo; se incluyeron correlaciones positivas y negativas.",
+                "Las regiones de familiaridad se identificaron mediante un metaanálisis ALE de 15 estudios de neuroimagen que comparaban estímulos personalmente familiares contra no familiares.",
+                "Las regiones de violación de expectativa se identificaron mediante un metaanálisis ALE de 11 estudios con variantes del paradigma de Posner, además de análisis con tareas oddball y tareas de creencias.",
+                "La especificidad se probó contra 77 lesiones de cuatro síndromes neurológicos no delirantes: alucinaciones auditivas, alucinaciones visuales, dolor post-ictus y afasia subcortical.",
+                "Para separar contenido delirante de formación general de delirios, se analizó además un grupo de 15 lesiones que producían delirios no relacionados con misidentificación."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hallazgos",
+          "heading": "Hallazgos clave",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Las 17 lesiones asociadas a misidentificación delirante estaban funcionalmente conectadas con la corteza retrosplenial izquierda, región más activada por estímulos personalmente familiares en el metaanálisis de familiaridad.",
+                "Dieciséis de 17 lesiones compartían conectividad con una región frontal derecha, y 14 de 17 se conectaban significativamente con la región frontal más activada por violación de expectativa.",
+                "En análisis por regiones de interés, las lesiones de misidentificación se correlacionaron con regiones de familiaridad con media de -0.23, p < 0.0001, y con regiones de violación de expectativa con media de 0.24, p < 0.0005.",
+                "La conectividad con estas regiones fue más fuerte que en las 77 lesiones control de otros síndromes neurológicos, con p < 0.0001 en las comparaciones reportadas.",
+                "Las 15 lesiones con otros delirios se conectaron con regiones de violación de expectativa, media 0.13, p < 0.01, pero no con regiones de familiaridad, media -0.007, p = 0.89.",
+                "La comparación directa sugirió que la conexión con familiaridad distingue el contenido de misidentificación, p = 0.001, mientras la conexión frontal de expectativa parece más general para delirios."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limitaciones",
+          "heading": "Limitaciones",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Diseño: serie de casos y mapeo secundario; no prueba que las regiones conectadas estén disfuncionales en cada paciente.",
+                "Muestra: el síndrome es raro y solo se incluyeron 17 lesiones principales y 15 lesiones con otros delirios.",
+                "Medición: muchas lesiones provinieron de imágenes publicadas; las reconstrucciones bidimensionales aproximan, pero no reemplazan, volúmenes tridimensionales completos.",
+                "Análisis: el conectoma normativo usa sujetos sanos, no conectividad medida directamente en pacientes con síntomas activos.",
+                "Alcance: las tareas de violación de expectativa simplifican el proceso clínico de evaluación de creencias.",
+                "Generalización: el estudio localiza redes plausibles para delirios por lesión, no para todos los delirios psicóticos primarios."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "principio",
+          "heading": "El principio",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Enunciado",
+                  "value": "Un síntoma neuropsiquiátrico puede localizarse mejor por redes conectadas que por el punto visible de la lesión."
+                },
+                {
+                  "key": "Fundamento",
+                  "value": "Las lesiones de misidentificación fueron anatómicamente heterogéneas, pero compartieron conectividad con nodos de familiaridad y evaluación de creencias. El patrón explicó mejor el contenido del delirio que la ubicación local aislada."
+                },
+                {
+                  "key": "Evidencia",
+                  "value": "17 lesiones de misidentificación, 77 lesiones control, 15 lesiones con otros delirios y conectoma normativo de 98 sujetos."
+                },
+                {
+                  "key": "Fuerza",
+                  "value": "baja"
+                },
+                {
+                  "key": "Transferencia",
+                  "value": "clínica, investigación, formación"
+                },
+                {
+                  "key": "Límite",
+                  "value": "método indirecto sin conectividad funcional medida durante el episodio delirante."
+                },
+                {
+                  "key": "Procedencia",
+                  "value": "autores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clinica",
+          "heading": "Por qué importa para la clínica",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Este paper no permite diagnosticar Capgras con una imagen ni reduce el delirio a una coordenada cerebral. Su utilidad clínica es conceptual: ayuda a pensar los delirios de identificación como una combinación entre una señal de familiaridad alterada y una falla para rechazar una explicación implausible."
+            },
+            {
+              "type": "ul",
+              "items": [
+                "En neuropsiquiatría de lesiones, formular el síntoma como efecto de red, no solo como lesión frontal, temporal o parietal. Límite: la hipótesis no sustituye evaluación clínica, curso temporal ni etiología.",
+                "En enseñanza de psicosis orgánica, usar Capgras como ejemplo de doble proceso: contenido perceptivo-afectivo y evaluación de creencia. Límite: el modelo no cubre todos los delirios ni todos los pacientes con psicosis.",
+                "En investigación de biomarcadores, separar redes vinculadas al contenido del delirio de redes vinculadas a la formación general de creencias delirantes. Límite: falta replicación con neuroimagen funcional en pacientes sintomáticos."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glosario",
+          "heading": "Glosario",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "kv",
+              "items": [
+                {
+                  "key": "Síndrome de Capgras",
+                  "value": "delirio en el que una persona familiar es vivida como reemplazada por un impostor idéntico."
+                },
+                {
+                  "key": "Misidentificación delirante",
+                  "value": "familia de delirios donde personas, lugares u objetos son reconocidos de forma perceptiva pero atribuidos a una identidad falsa."
+                },
+                {
+                  "key": "Lesion network mapping",
+                  "value": "método que estima qué regiones están conectadas funcionalmente con una lesión usando un conectoma normativo."
+                },
+                {
+                  "key": "Conectoma normativo",
+                  "value": "base de datos de conectividad cerebral obtenida en sujetos sanos, usada aquí para inferir redes conectadas a lesiones."
+                },
+                {
+                  "key": "Corteza retrosplenial",
+                  "value": "región medial posterior relacionada con familiaridad, memoria autobiográfica, navegación e integración contextual."
+                },
+                {
+                  "key": "Violación de expectativa",
+                  "value": "señal cognitiva que aparece cuando algo no coincide con la predicción o creencia previa."
+                },
+                {
+                  "key": "ALE",
+                  "value": "activation likelihood estimation, técnica de metaanálisis que estima convergencia espacial entre focos de neuroimagen."
+                },
+                {
+                  "key": "Modelo de dos factores",
+                  "value": "teoría según la cual un delirio requiere una experiencia anómala y una falla de evaluación de la creencia."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lecturas",
+          "heading": "Lecturas recomendadas",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "readings",
+              "items": [
+                {
+                  "citation": "Boes AD, Prasad S, Liu H, Liu Q, Pascual-Leone A, et al. (2015). Network localization of neurological symptoms from focal brain lesions. Brain",
+                  "doi": "10.1093/brain/awv228",
+                  "pmid": null,
+                  "why": "Paper metodológico clave para entender el mapeo de redes de lesión usado aquí."
+                },
+                {
+                  "citation": "Darby R, Prasad S (2016). Lesion-Related Delusional Misidentification Syndromes: A Comprehensive Review of Reported Cases. J Neuropsychiatry Clin Neurosci",
+                  "doi": "10.1176/appi.neuropsych.15100376",
+                  "pmid": null,
+                  "why": "Revisión clínica que organiza los casos de misidentificación delirante por lesión."
+                },
+                {
+                  "citation": "Corlett PR, Taylor JR, Wang XJ, Fletcher PC, Krystal JH (2010). Toward a neurobiology of delusions. Prog Neurobiol",
+                  "doi": "10.1016/j.pneurobio.2010.06.007",
+                  "pmid": null,
+                  "why": "Marco de predicción y error que ayuda a interpretar la red frontal de evaluación de creencias."
+                },
+                {
+                  "citation": "Vann SD, Aggleton JP, Maguire EA (2009). What does the retrosplenial cortex do? Nat Rev Neurosci",
+                  "doi": "10.1038/nrn2733",
+                  "pmid": null,
+                  "why": "Revisión útil para entender por qué la retrosplenial encaja con familiaridad, memoria y contexto."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nota",
+          "heading": "Nota del curador",
+          "pending": false,
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Borrador generado con IA para revisión de Javier. El texto completo se verificó contra PubMed Central, PMCID PMC5278302. Este paper está disponible gratuitamente, pero Europe PMC lo marca como isOpenAccess=N y OpenAlex no declara licencia para la versión publicada; por eso se etiqueta como acceso gratuito con licencia no verificada. Esta reseña es una síntesis original y no reproduce tablas ni figuras."
+            }
+          ]
+        }
+      ],
+      "full_note": {
+        "pending": false,
+        "word_count": 859,
+        "sections": [
+          {
+            "id": "nc_info",
+            "heading": "Información del estudio",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Título",
+                    "value": "Finding the imposter: brain connectivity of lesions causing delusional misidentifications"
+                  },
+                  {
+                    "key": "Autor principal",
+                    "value": "R Ryan Darby"
+                  },
+                  {
+                    "key": "Correo de correspondencia",
+                    "value": "rdarby@bidmc.harvard.edu"
+                  },
+                  {
+                    "key": "Año",
+                    "value": "2017"
+                  },
+                  {
+                    "key": "Revista",
+                    "value": "Brain"
+                  },
+                  {
+                    "key": "Palabras clave",
+                    "value": "Capgras; connectivity; delusional misidentifications; delusions; Fregoli"
+                  },
+                  {
+                    "key": "País",
+                    "value": "Estados Unidos"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_intro",
+            "heading": "Introducción en tres frases",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Problema",
+                    "value": "Las misidentificaciones delirantes parecen requerir alteraciones de familiaridad y evaluación de creencias, pero las lesiones reportadas aparecen en localizaciones anatómicas diversas."
+                  },
+                  {
+                    "key": "Literatura previa",
+                    "value": "los modelos de dos factores y de error de predicción proponen que una experiencia anómala no basta; también debe fallar la evaluación de la creencia."
+                  },
+                  {
+                    "key": "Vacío",
+                    "value": "faltaba probar si lesiones anatómicamente distintas comparten conectividad con redes funcionales que correspondan a esos procesos."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_pregunta",
+            "heading": "Pregunta de investigación",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Primaria",
+                    "value": "determinar si las lesiones que causan misidentificación delirante comparten conectividad funcional con regiones de familiaridad y evaluación de creencias."
+                  },
+                  {
+                    "key": "Secundarias",
+                    "value": "probar especificidad frente a otros síndromes neurológicos y diferenciar redes relacionadas con contenido de misidentificación frente a formación general de delirios."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_metodo",
+            "heading": "Método",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Cuantitativo: mapeo de redes de lesión con conectoma normativo y metaanálisis ALE de tareas funcionales."
+              }
+            ]
+          },
+          {
+            "id": "nc_diseno",
+            "heading": "Diseño",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Diseño",
+                    "value": "estudio de modelado neuroanatómico con serie de lesiones, conectoma normativo, controles por síndrome y metaanálisis funcional."
+                  },
+                  {
+                    "key": "Checklist declarado",
+                    "value": "No reportado en el artículo."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_unidad",
+            "heading": "Unidad de análisis",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Lesiones cerebrales focales asociadas a síntomas neuropsiquiátricos, no pacientes individuales evaluados con neuroimagen funcional durante el síntoma."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestra",
+            "heading": "Muestra",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Grupo principal de 17 lesiones asociadas a misidentificación delirante. Comparadores: 77 lesiones de otros cuatro síndromes neurológicos y 15 lesiones asociadas a delirios de otro contenido. La conectividad se estimó usando datos de 98 sujetos sanos."
+              }
+            ]
+          },
+          {
+            "id": "nc_muestreo",
+            "heading": "Muestreo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Casos identificados en la literatura y dos casos propios no publicados de los autores. Las regiones funcionales de familiaridad y violación de expectativa se derivaron de búsquedas PubMed y metaanálisis ALE de estudios previos."
+              }
+            ]
+          },
+          {
+            "id": "nc_procedimientos",
+            "heading": "Procedimientos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "Los autores identificaron casos de misidentificación delirante inducida por lesión y trazaron cada lesión en espacio MNI común.",
+                  "Cada lesión se usó como semilla para estimar conectividad funcional con el resto del cerebro usando datos en reposo de 98 controles sanos.",
+                  "Se superpusieron los mapas de conectividad para detectar regiones conectadas con la mayor cantidad de lesiones.",
+                  "Se hicieron metaanálisis ALE para localizar regiones activadas por familiaridad y por violación de expectativa.",
+                  "Se comparó la conectividad del grupo principal con 77 lesiones de otros síndromes y con 15 lesiones que producían delirios no relacionados con misidentificación."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_dependientes",
+            "heading": "Variables dependientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Conectividad con familiaridad",
+                    "value": "correlación funcional entre lesiones y regiones derivadas del metaanálisis de estímulos personalmente familiares."
+                  },
+                  {
+                    "key": "Conectividad con violación de expectativa",
+                    "value": "correlación funcional entre lesiones y regiones derivadas de tareas de expectativa, oddball y creencias."
+                  },
+                  {
+                    "key": "Especificidad de contenido",
+                    "value": "diferencia entre lesiones de misidentificación y lesiones con otros delirios."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_independientes",
+            "heading": "Variables independientes",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Tipo de lesión",
+                    "value": "misidentificación delirante, otros delirios u otros síndromes neurológicos."
+                  },
+                  {
+                    "key": "Región funcional objetivo",
+                    "value": "corteza retrosplenial izquierda, corteza frontal derecha y otros focos derivados de ALE."
+                  },
+                  {
+                    "key": "Tipo de proceso cognitivo",
+                    "value": "familiaridad, expectativa, oddball o evaluación de creencias."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_analisis",
+            "heading": "Análisis de datos",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Univariado",
+                    "value": "conteo de lesiones conectadas con cada región y descripción de grupos de comparación."
+                  },
+                  {
+                    "key": "Bivariado",
+                    "value": "comparación de conectividad entre lesiones de misidentificación y lesiones control mediante pruebas t de dos colas."
+                  },
+                  {
+                    "key": "Multivariado",
+                    "value": "No reportado en el artículo."
+                  },
+                  {
+                    "key": "Supuestos",
+                    "value": "la conectividad normal de sujetos sanos aproxima redes conectadas a sitios lesionados y permite inferir regiones vulnerables al efecto remoto de la lesión."
+                  },
+                  {
+                    "key": "Software",
+                    "value": "FSL, GingerALE v2.3.3 y STATA 14.0."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_hallazgos",
+            "heading": "Hallazgos principales",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Aquí se realizó un estudio de mapeo de redes de lesión para explicar delirios de identificación a partir de conectividad funcional. Los hallazgos principales son: 1) todas las lesiones de misidentificación se conectaron con corteza retrosplenial izquierda; 2) casi todas se conectaron con corteza frontal derecha; 3) la conectividad con familiaridad distinguió misidentificación de otros delirios; 4) la conectividad con violación de expectativa apareció también en otros delirios."
+              }
+            ]
+          },
+          {
+            "id": "nc_datos",
+            "heading": "Datos por hallazgo",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ol",
+                "items": [
+                  "Las 17 lesiones de misidentificación se conectaron con la corteza retrosplenial izquierda; esta fue la región más activada por estímulos familiares en 15 estudios de familiaridad.",
+                  "Dieciséis de 17 lesiones compartieron conectividad con corteza frontal derecha; 14 de 17 se conectaron con la región frontal del metaanálisis de violación de expectativa.",
+                  "Las lesiones de misidentificación mostraron conectividad con familiaridad de media -0.23, p < 0.0001, y fueron más conectadas con familiaridad que lesiones de otros delirios, p = 0.001.",
+                  "Las 15 lesiones con otros delirios se conectaron con violación de expectativa, media 0.13, p < 0.01, pero no con familiaridad, media -0.007, p = 0.89."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_discusion",
+            "heading": "Discusión",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "kv",
+                "items": [
+                  {
+                    "key": "Qué significa",
+                    "value": "el contenido de misidentificación parece relacionarse con redes de familiaridad, mientras la formación delirante general se relaciona con redes frontales de evaluación o violación de expectativa."
+                  },
+                  {
+                    "key": "Por qué ocurre",
+                    "value": "una lesión focal puede desorganizar regiones conectadas a distancia, de modo que el síntoma surge del patrón de red y no solo del tejido lesionado."
+                  },
+                  {
+                    "key": "Contexto amplio",
+                    "value": "los resultados apoyan modelos de dos factores y modelos de error de predicción, pero también muestran que el contenido específico del delirio requiere considerar redes de familiaridad."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_limitaciones",
+            "heading": "Limitaciones según los autores",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Selección: las misidentificaciones delirantes son raras y el tamaño de muestra fue pequeño.",
+                  "Medición: no se obtuvo neuroimagen funcional directa en pacientes durante síntomas activos.",
+                  "Confusión: el conectoma normativo aproxima conectividad, pero no determina si cada región conectada aumenta, disminuye o cambia de forma más compleja su actividad tras la lesión.",
+                  "Otras: las tareas de violación de expectativa simplifican el proceso clínico de evaluación de creencias; la predicción de disfunción frontal derecha queda como hipótesis no probada."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nc_futuro",
+            "heading": "Investigación futura",
+            "pending": false,
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Obtener neuroimagen funcional en pacientes con síntomas activos cuando sea posible.",
+                  "Replicar el patrón en cohortes mayores y con subtipos no solapados de misidentificación delirante.",
+                  "Probar si las diferencias de conectividad separan Capgras, Fregoli, reduplicación de lugares y otros contenidos específicos.",
+                  "Evaluar si las redes identificadas pueden orientar hipótesis de neuromodulación o biomarcadores, sin asumir todavía utilidad clínica directa."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "word_count": 1089,
+      "reading_minutes": 5,
+      "source_file": "content/summaries/2026-09-15-lesiones-redes-identificacion-delirante.md",
+      "paper": {
+        "key": "MED:28082298",
+        "epmc_id": "28082298",
+        "source": "MED",
+        "pmid": "28082298",
+        "pmcid": "PMC5278302",
+        "doi": "10.1093/brain/aww288",
+        "title": "Finding the imposter: brain connectivity of lesions causing delusional misidentifications.",
+        "authors": "Darby RR, Laganiere S, Pascual-Leone A, Prasad S, Fox MD.",
+        "journal": "Brain : a journal of neurology",
+        "journal_abbrev": "Brain",
+        "pub_year": 2017,
+        "first_publication_date": "2017-01-12",
+        "first_index_date": null,
+        "pub_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "language": null,
+        "is_preprint": false,
+        "open_access": {
+          "status": "free_to_read",
+          "access_type": "free_to_read",
+          "license": null,
+          "license_label": "Licencia no verificada",
+          "source": "publisher",
+          "checked_at": "2026-09-15T00:00:00Z"
+        },
+        "links": {
+          "doi": "https://doi.org/10.1093/brain/aww288",
+          "europepmc": "https://europepmc.org/article/MED/28082298",
+          "fulltext_html": "https://europepmc.org/articles/PMC5278302",
+          "pdf": "https://europepmc.org/articles/PMC5278302?pdf=render"
+        },
+        "abstract": null,
+        "summary": null,
+        "ai_summary": null,
+        "study_design": {
+          "id": "modelling",
+          "confidence": "draft"
+        },
+        "sample_size": {
+          "value": 17,
+          "confidence": "draft"
+        },
+        "tags": [
+          "psychosis",
+          "neuroscience"
+        ],
+        "mesh_major": [],
+        "keywords": [],
+        "relevance": null
+      }
+    },
     {
       "slug": "2026-09-14-experiencia-vivida-intento-suicidio",
       "title": "La experiencia vivida del intento de suicidio: escuchar antes de explicar",
