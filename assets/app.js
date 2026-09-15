@@ -447,6 +447,9 @@
     var licLabel = oa.license_label || licenseLabel(oa.license);
     if (licLabel) parts.push(licLabel);
     if (paper.first_index_date) parts.push("indexado " + paper.first_index_date);
+    var via = Array.isArray(paper.discovered_via) ? paper.discovered_via : [];
+    var viaNames = via.map(function (v) { return v === "pubmed" ? "PubMed" : v === "europepmc" ? "Europe PMC" : null; }).filter(Boolean);
+    if (viaNames.length) parts.push("vía " + viaNames.join(" + "));
     else if (oa.checked_at) parts.push((isFreeToRead ? "acceso comprobado " : "OA verificado ") + String(oa.checked_at).slice(0, 10));
     if (!parts.length) return null;
     var line = el("p", { class: "reg-line" });
@@ -1133,7 +1136,7 @@
     c.appendChild(sumSection);
 
     var paperSection = el("section", { class: "section-block" });
-    paperSection.appendChild(el("h2", {}, index.latest ? "Papers indexados el " + formatDateLong(index.latest) : "Papers del día"));
+    paperSection.appendChild(el("h2", {}, index.latest ? "Papers nuevos del " + formatDateLong(index.latest) : "Papers del día"));
     var paperBody = el("div", { class: "section-body" });
     if (!index.latest) {
       paperBody.appendChild(el("div", { class: "state" }, el("p", {}, [
@@ -1232,13 +1235,20 @@
     var embeddedCount = (typeof day.embedded_count === "number") ? day.embedded_count : ((day.items || []).length);
 
     var header = el("div", { class: "day-header" });
-    header.appendChild(el("h1", {}, "Indexados en Europe PMC el " + formatDateLong(entry.date)));
+    header.appendChild(el("h1", {}, "Papers nuevos del " + formatDateLong(entry.date)));
     var monoParts = [];
     if (typeof totalCount === "number") monoParts.push(totalCount + (totalCount === 1 ? " paper open access" : " papers open access"));
+    // El feed combina dos fuentes: Europe PMC (fecha de indexación) y PubMed
+    // (fecha de ingreso); Europe PMC decide el acceso abierto de ambas.
+    var src = day.source || {};
+    var epmcHits = src.europepmc && typeof src.europepmc.hit_count === "number" ? src.europepmc.hit_count : src.hit_count;
+    var pubmedHits = src.pubmed && typeof src.pubmed.hit_count === "number" ? src.pubmed.hit_count : null;
+    if (typeof epmcHits === "number") monoParts.push("Europe PMC " + epmcHits + " encontrados");
+    if (pubmedHits !== null) monoParts.push("PubMed " + pubmedHits + " encontrados");
     if (day.fetched_at) monoParts.push("consulta ejecutada " + formatLimaDateTime(day.fetched_at));
     header.appendChild(el("p", { class: "day-mono" }, monoParts.join(" · ")));
     if (entry.complete === false) {
-      header.appendChild(el("p", { class: "day-notice" }, "Día en curso: Europe PMC sigue indexando; vuelve mañana para el conteo completo."));
+      header.appendChild(el("p", { class: "day-notice" }, "Día en curso: Europe PMC y PubMed siguen incorporando papers; vuelve mañana para el conteo completo."));
     }
 
     var nav = el("div", { class: "day-nav" });

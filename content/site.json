@@ -22,15 +22,15 @@
   },
   "about": {
     "paragraphs": [
-      "Este sitio reúne dos maneras de acercarse a la investigación en psiquiatría y salud mental: resúmenes curados en español de artículos con acceso verificable, y un feed diario que reúne automáticamente papers nuevos open access indexados en Europe PMC.",
+      "Este sitio reúne dos maneras de acercarse a la investigación en psiquiatría y salud mental: resúmenes curados en español de artículos con acceso verificable, y un feed diario que reúne automáticamente papers nuevos open access que entran a Europe PMC y PubMed.",
       "Javier Flores es psiquiatra e investigador peruano. Sus líneas de trabajo incluyen psicosis, redes de síntomas de depresión y ansiedad, prevención del suicidio, TDAH en adultos, trastorno bipolar, trastorno límite de la personalidad, consumo de alcohol, salud mental pública en el Perú y educación médica.",
       "Cada resumen declara de forma visible si fue escrito por su autor, adaptado con IA o generado con IA, y si tuvo revisión humana. Esa procedencia no cambia ni desaparece al publicarse."
     ]
   },
   "feed": {
     "paragraphs": [
-      "El feed diario se genera con un script que consulta la API de Europe PMC y guarda los artículos nuevos de psiquiatría y salud mental que cumplen el criterio de acceso abierto descrito en la política editorial. No hay selección manual: es un listado automático, ordenado por relevancia estimada, que Javier revisa para elegir cuáles convertir en resúmenes curados.",
-      "\"Papers del día\" son los artículos cuya fecha de indexación en Europe PMC (no necesariamente su fecha de publicación) cae en ese día. Un día recién indexado puede seguir creciendo durante las horas siguientes, así que el conteo de un día en curso no es definitivo todavía.",
+      "El feed diario se genera cada noche a las 20:07 (hora de Lima) con un script que consulta Europe PMC y PubMed. PubMed amplía el descubrimiento; cada paper que encuentra se verifica en Europe PMC, que decide si cumple el criterio de acceso abierto descrito en la política editorial. No hay selección manual: es un listado automático, ordenado por relevancia estimada, que Javier revisa para elegir cuáles convertir en resúmenes curados.",
+      "\"Papers del día\" son los artículos que ese día entraron a Europe PMC (fecha de indexación) o a PubMed (fecha de ingreso), no necesariamente su fecha de publicación. Cada noche se consultan ayer y hoy: el día queda casi completo esa misma noche y se cierra en la corrida siguiente. Cada paper indica por qué fuente se encontró.",
       "Los preprints (artículos sin revisión por pares) solo entran al feed cuando Europe PMC los marca como acceso abierto con licencia declarada, y siempre aparecen etiquetados como preprint, sin revisión por pares, para que se distingan de los artículos publicados en una revista."
     ]
   },
@@ -52,6 +52,13 @@
     "copyright_note": "Los resúmenes curados son reseñas originales escritas con palabras propias. No reproducen tablas, figuras ni pasajes largos; una cita excepcional debe ser breve y nunca sustituye la explicación. Cada ficha enlaza el artículo original mediante DOI y, cuando corresponde, Europe PMC."
   },
   "links": [
-    {"label": "Europe PMC", "url": "https://europepmc.org/"}
+    {
+      "label": "Europe PMC",
+      "url": "https://europepmc.org/"
+    },
+    {
+      "label": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/"
+    }
   ]
 }
