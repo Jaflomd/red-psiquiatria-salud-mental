@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-09-16",
   "timezone": "America/Lima",
-  "fetched_at": "2026-09-16T19:15:13Z",
+  "fetched_at": "2026-09-16T19:18:15Z",
   "source": {
     "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
