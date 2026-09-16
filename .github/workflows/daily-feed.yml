@@ -2,7 +2,12 @@ name: Feed diario Europe PMC + PubMed
 
 on:
   schedule:
-    - cron: "7 1 * * *"      # 01:07 UTC = 20:07 America/Lima
+    # Franja de baja carga en GitHub Actions (madrugada en Europa) y fuera de
+    # la hora en punto. La principal publica el día la misma noche de Lima;
+    # la de respaldo lo vuelve a intentar por si GitHub retrasa o salta la
+    # primera (la tarea es idempotente: solo commitea si hay cambios).
+    - cron: "41 3 * * *"     # 03:41 UTC = 22:41 America/Lima (principal)
+    - cron: "23 6 * * *"     # 06:23 UTC = 01:23 America/Lima (respaldo)
   workflow_dispatch:
     inputs:
       days:
