@@ -1,0 +1,1547 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "timezone": "America/Lima",
+  "fetched_at": "2026-09-16T05:50:44Z",
+  "source": {
+    "name": "Europe PMC + PubMed",
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "date_field": "FIRST_IDATE",
+    "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-15 TO 2026-09-15] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "hit_count": 23,
+    "accepted": 23,
+    "query_version": "2026-09-14.2",
+    "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+    "europepmc": {
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-15 TO 2026-09-15] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+      "hit_count": 23
+    },
+    "pubmed": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "date_field": "edat",
+      "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
+      "hit_count": 312,
+      "unresolved_in_europepmc": 77
+    }
+  },
+  "items": [
+    {
+      "key": "PMC:PMC13574110",
+      "epmc_id": "PMC13574110",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13574110",
+      "doi": null,
+      "title": "Nicotine Dependence and Risk of Postpartum Psychosis: A Large Real-World Cohort Study",
+      "authors": "Kuo J, Le K, Gomez K, Jiang X.",
+      "journal": "Cureus",
+      "journal_abbrev": "Cureus",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13574110",
+        "fulltext_html": "https://europepmc.org/articles/PMC13574110",
+        "pdf": "https://europepmc.org/articles/PMC13574110?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cohort",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "depression",
+        "substances",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Post-partum Depression",
+        "Nicotine Dependence",
+        "Smoking Tobacco",
+        "Post-partum Psychosis",
+        "Trinetx"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42734572",
+      "epmc_id": "42734572",
+      "source": "MED",
+      "pmid": "42734572",
+      "pmcid": "PMC13574344",
+      "doi": "10.1097/jan.0000000000000662",
+      "title": "Focus Groups With American Indian/Alaska Native Adults to Discuss Substance Misuse and Access to Services.",
+      "authors": "Woods C, Bingham-Hendricks C, Peters-Mosquera A, Miller J, Aronowitz T.",
+      "journal": "International journal of addiction nursing",
+      "journal_abbrev": "Int J Addctn Nurs",
+      "pub_year": 2026,
+      "first_publication_date": "2026-04-22",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1097/jan.0000000000000662",
+        "europepmc": "https://europepmc.org/article/MED/42734572",
+        "fulltext_html": "https://europepmc.org/articles/PMC13574344",
+        "pdf": "https://europepmc.org/articles/PMC13574344?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "After the beginning of the COVID-19 pandemic, there was a 53% increase in overdose deaths in the U.S., with the highest rates among American Indian/Alaska Natives (AI/AN) individuals compared with all racial/ethnic groups in the U.S. Historical trauma has been linked to substance use among AI/AN individuals. First cited in the 1990s, historical trauma is an intergenerational response to the loss of AI/AN communities' land, peoples, and culture secondary to colonization in North America. Two-Eyed Seeing is the gift of multiple perspectives treasured by many Indigenous peoples, which includes storytelling. The purpose of this study was to hear from the tribal members their concerns related to substance use among youth and their ideas related to prevention and treatment."
+          },
+          {
+            "heading": "Method",
+            "text": "The study design was a focus group methodology. Five focus groups were completed with 20 AI/AN self-identified adults over 18 years of age."
+          },
+          {
+            "heading": "Results",
+            "text": "Several themes emerged that focused on both prevention and treatment of substance use disorder. Participants expressed concern about their invisibility in state and federal datasets, lack of access to health care, and a lack of prosocial opportunities for youth to inspire their future aspirations. They expressed concern about stigma and the potential negative influences of peers and social media. Two approaches many participants felt could help were to start prevention projects early with elementary-aged youth and to take an intergenerational approach."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "To more broadly understand the needs of the AI/AN medication for opioid use disorder clients, future investigations should include interviews with substance use disorder clients and their families. Further understanding of the experiences of individuals with substance use disorder and their treatment could advance creative treatment plans that are trauma-informed and culturally sensitive. Implementing community participatory action increases the assurance that the needs of AI/AN families are addressed."
+          }
+        ],
+        "text": "After the beginning of the COVID-19 pandemic, there was a 53% increase in overdose deaths in the U.S., with the highest rates among American Indian/Alaska Natives (AI/AN) individuals compared with all racial/ethnic groups in the U.S. Historical trauma has been linked to substance use among AI/AN individuals. First cited in the 1990s, historical trauma is an intergenerational response to the loss of AI/AN communities' land, peoples, and culture secondary to colonization in North America. Two-Eyed Seeing is the gift of multiple perspectives treasured by many Indigenous peoples, which includes storytelling. The purpose of this study was to hear from the tribal members their concerns related to substance use among youth and their ideas related to prevention and treatment.\n\nThe study design was a focus group methodology. Five focus groups were completed with 20 AI/AN self-identified adults over 18 years of age.\n\nSeveral themes emerged that focused on both prevention and treatment of substance use disorder. Participants expressed concern about their invisibility in state and federal datasets, lack of access to health care, and a lack of prosocial opportunities for youth to inspire their future aspirations. They expressed concern about stigma and the potential negative influences of peers and social media. Two approaches many participants felt could help were to start prevention projects early with elementary-aged youth and to take an intergenerational approach.\n\nTo more broadly understand the needs of the AI/AN medication for opioid use disorder clients, future investigations should include interviews with substance use disorder clients and their families. Further understanding of the experiences of individuals with substance use disorder and their treatment could advance creative treatment plans that are trauma-informed and culturally sensitive. Implementing community participatory action increases the assurance that the needs of AI/AN families are addressed."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "To more broadly understand the needs of the AI/AN medication for opioid use disorder clients, future investigations should include interviews with substance use disorder clients and their families. Further understanding of the experiences of individuals with substance use disorder and their treatment could advance creative treatment plans that are trauma-informed and culturally sensitive. Implementing community participatory action increases the assurance that the needs of AI/AN families are addressed.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "qualitative",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "substances",
+        "child_adolescent"
+      ],
+      "mesh_major": [
+        "Substance-Related Disorders",
+        "Health Services Accessibility",
+        "American Indian or Alaska Native"
+      ],
+      "keywords": [
+        "Substance Use Disorder Treatment",
+        "Focus Group Methodology",
+        "American Indian/alaska Natives",
+        "Access To Substance Use Disorder Treatment"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "mesh_major",
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42734573",
+      "epmc_id": "42734573",
+      "source": "MED",
+      "pmid": "42734573",
+      "pmcid": "PMC13574360",
+      "doi": "10.1097/jan.0000000000000672",
+      "title": "Functional Analysis and Quality Assessment of Mobile Applications for Managing Alcohol Use Disorder.",
+      "authors": "Lee Y, Seo JM.",
+      "journal": "International journal of addiction nursing",
+      "journal_abbrev": "Int J Addctn Nurs",
+      "pub_year": 2026,
+      "first_publication_date": "2026-05-19",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1097/jan.0000000000000672",
+        "europepmc": "https://europepmc.org/article/MED/42734573",
+        "fulltext_html": "https://europepmc.org/articles/PMC13574360",
+        "pdf": "https://europepmc.org/articles/PMC13574360?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Aims",
+            "text": "This study investigated the current mobile applications (apps) for the management of alcohol use disorder (AUD) and analyzed their functionality and quality."
+          },
+          {
+            "heading": "Design/methods",
+            "text": "A comprehensive search of the Apple App Store and Google Play Store was conducted between August 1 and October 31, 2023, based on predefined inclusion and exclusion criteria, to identify apps specifically designed for patients with AUD. Two independent raters evaluated the apps using the Mobile App Rating Scale and the Institute for Healthcare Informatics functionality score."
+          },
+          {
+            "heading": "Results",
+            "text": "This search resulted in the selection of 33 apps for assessment. The Mobile App Rating Scale quality assessment indicated that more than half of the selected apps were suitable for use, and the Institute for Healthcare Informatics functionality assessment determined that the apps had a 4.5 average for 11 possible functions. Additionally, a detailed analysis of the top three apps with the highest scores for both quality and functionality was conducted. This study highlighted the key features that apps for AUD management should incorporate and identified possible areas for improvement."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Based on these results, we recommend that apps record and store data on the number of days to abstinence and the amount of alcohol consumed and display this information using graphs. In addition, we recommend that apps allow users to customize the timing and number of reminders and alarms and connect to a support system or professional immediately in high-risk situations."
+          }
+        ],
+        "text": "This study investigated the current mobile applications (apps) for the management of alcohol use disorder (AUD) and analyzed their functionality and quality.\n\nA comprehensive search of the Apple App Store and Google Play Store was conducted between August 1 and October 31, 2023, based on predefined inclusion and exclusion criteria, to identify apps specifically designed for patients with AUD. Two independent raters evaluated the apps using the Mobile App Rating Scale and the Institute for Healthcare Informatics functionality score.\n\nThis search resulted in the selection of 33 apps for assessment. The Mobile App Rating Scale quality assessment indicated that more than half of the selected apps were suitable for use, and the Institute for Healthcare Informatics functionality assessment determined that the apps had a 4.5 average for 11 possible functions. Additionally, a detailed analysis of the top three apps with the highest scores for both quality and functionality was conducted. This study highlighted the key features that apps for AUD management should incorporate and identified possible areas for improvement.\n\nBased on these results, we recommend that apps record and store data on the number of days to abstinence and the amount of alcohol consumed and display this information using graphs. In addition, we recommend that apps allow users to customize the timing and number of reminders and alarms and connect to a support system or professional immediately in high-risk situations."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Based on these results, we recommend that apps record and store data on the number of days to abstinence and the amount of alcohol consumed and display this information using graphs. In addition, we recommend that apps allow users to customize the timing and number of reminders and alarms and connect to a support system or professional immediately in high-risk situations.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "alcohol",
+        "digital"
+      ],
+      "mesh_major": [
+        "Alcoholism",
+        "Mobile Applications"
+      ],
+      "keywords": [
+        "Quality",
+        "Nurses",
+        "Republic Of Korea",
+        "Alcohol Use Disorder",
+        "Mobile Applications"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "mesh_major",
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572810",
+      "epmc_id": "PMC13572810",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572810",
+      "doi": null,
+      "title": "Childhood Trauma and Frontoparietal Network Connectivity During Working Memory Task Performance in Individuals With Schizophrenia and Healthy Participants",
+      "authors": "Warren A, Mothersill D, Corley E, Morris D, Hallahan B, McKernan D, McDonald C, Donohoe G.",
+      "journal": "The European journal of neuroscience",
+      "journal_abbrev": "Eur J Neurosci",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572810",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572810",
+        "pdf": "https://europepmc.org/articles/PMC13572810?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "ptsd",
+        "child_adolescent",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "Functional MRI",
+        "Working memory",
+        "Childhood Trauma",
+        "Frontoparietal Network"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13571948",
+      "epmc_id": "PMC13571948",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13571948",
+      "doi": null,
+      "title": "Suicide prevention training for pharmacy students in Ireland: A pre-post survey evaluation",
+      "authors": "O'Driscoll M, Gallagher K, Donovan M, Sahm L, Fleming A, O'Brien C, O'Neill A, Griffin E.",
+      "journal": "Exploratory research in clinical and social pharmacy",
+      "journal_abbrev": "Explor Res Clin Soc Pharm",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13571948",
+        "fulltext_html": "https://europepmc.org/articles/PMC13571948",
+        "pdf": "https://europepmc.org/articles/PMC13571948?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "suicide",
+        "medical_education"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Curriculum",
+        "Competency",
+        "Pharmacy Education",
+        "Uicide Prevention"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13573662",
+      "epmc_id": "PMC13573662",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13573662",
+      "doi": null,
+      "title": "Disruption of prefrontal and superior temporal gyrus white matter networks in antipsychotic-treated schizophrenia with comorbid metabolic syndrome",
+      "authors": "Li Y, Liu Q, Chen X, Peng S, Li H, Liao K, Yu R, Liu N.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13573662",
+        "fulltext_html": "https://europepmc.org/articles/PMC13573662",
+        "pdf": "https://europepmc.org/articles/PMC13573662?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "metabolic syndrome",
+        "White Matter",
+        "Diffusion Tensor Imaging",
+        "Structural Network"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572310",
+      "epmc_id": "PMC13572310",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572310",
+      "doi": null,
+      "title": "GLP-1 Receptor Agonist and GIP/GLP-1 Receptor Dual Agonist Therapeutics at the Intersection of Alcohol Use Disorder, Obesity, and Cardiometabolic Dysfunction",
+      "authors": "Reitz J, Rosoff D, Pacher P, Lohoff F.",
+      "journal": "Biological psychiatry global open science",
+      "journal_abbrev": "Biol Psychiatry Glob Open Sci",
+      "pub_year": 2026,
+      "first_publication_date": "2026-07-23",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572310",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572310",
+        "pdf": "https://europepmc.org/articles/PMC13572310?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "alcohol"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Psychiatry",
+        "Alcohol Use Disorder",
+        "Glucagon-like Peptide-1 Receptor Agonists",
+        "Metabolic Dysfunction",
+        "Alcohol-associated Liver Disease",
+        "Glucose-dependent Insulinotropic Polypeptide Receptor Agonists"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13574347",
+      "epmc_id": "PMC13574347",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13574347",
+      "doi": null,
+      "title": "Analysis of the Use of Duloxetine in the High-dose Range (90 to 120 mg) in the Psychiatric Clinic for the Treatment of Patients With Major Depressive Disorder",
+      "authors": "Martínez-Raga J, Soler-López B, Alcalá J.",
+      "journal": "Journal of psychiatric practice",
+      "journal_abbrev": "J Psychiatr Pract",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13574347",
+        "fulltext_html": "https://europepmc.org/articles/PMC13574347",
+        "pdf": "https://europepmc.org/articles/PMC13574347?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Comorbidity",
+        "Duloxetine",
+        "Major Depressive Disorder",
+        "Serotonin Norepinephrine Reuptake Inhibitor",
+        "Dual Monoamine Modulator",
+        "High Range Doses"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13573745",
+      "epmc_id": "PMC13573745",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13573745",
+      "doi": null,
+      "title": "An Epicenter-guided computational framework for personalized target of repetitive transcranial magnetic stimulation in schizophrenia",
+      "authors": "Tang Y, Jiang S, Huang H, Sun X, Mu C, Duan M, Rodríguez-Labrada R, Yao D, Luo C.",
+      "journal": "NeuroImage. Clinical",
+      "journal_abbrev": "Neuroimage Clin",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13573745",
+        "fulltext_html": "https://europepmc.org/articles/PMC13573745",
+        "pdf": "https://europepmc.org/articles/PMC13573745?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "rTMS",
+        "Epicenter",
+        "Personalized Target",
+        "Activity-flow Mapping"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13574114",
+      "epmc_id": "PMC13574114",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13574114",
+      "doi": null,
+      "title": "Association between depression severity, mental health recovery and dropout from behavioral health care treatment",
+      "authors": "Gibbons J, Cox S, Straub L, Au J, Wang P, Liu J, Albano A, Wood R, Ruble M, Peloquin J, Aldis R, Moran L.",
+      "journal": "Psychiatry research communications",
+      "journal_abbrev": "Psychiatry Res Commun",
+      "pub_year": 2024,
+      "first_publication_date": "2024-07-16",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13574114",
+        "fulltext_html": "https://europepmc.org/articles/PMC13574114",
+        "pdf": "https://europepmc.org/articles/PMC13574114?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42735383",
+      "epmc_id": "42735383",
+      "source": "MED",
+      "pmid": "42735383",
+      "pmcid": "PMC13574310",
+      "doi": "10.2196/87917",
+      "title": "\"Daily Growth\" Parenting Program Delivered via Ecological Momentary Intervention: Pilot Randomized Controlled Trial of a Prototype.",
+      "authors": "Ewald S, Berkowitz TS, Hiskens-Ravest S, Bufton K, Bates M, O E, Fuller-Tyszkiewicz M, King GL, Westrupp EM.",
+      "journal": "JMIR pediatrics and parenting",
+      "journal_abbrev": "JMIR Pediatr Parent",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-14",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.2196/87917",
+        "europepmc": "https://europepmc.org/article/MED/42735383",
+        "fulltext_html": "https://europepmc.org/articles/PMC13574310",
+        "pdf": "https://europepmc.org/articles/PMC13574310?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Despite evidence showing that parenting interventions reduce rates of child mental health problems, their reach and engagement remain low. Daily Growth is a digital parenting program designed to improve parent and child emotion regulation using an ecological momentary intervention (EMI) approach. Daily Growth sends twice-daily prompts and delivers 3-minute videos tailored to a recent parenting situation, offering 2 program types (Emotion Coaching and Active Play) to meet different parent preferences. EMI has rarely been tested with parenting programs."
+          },
+          {
+            "heading": "Objective",
+            "text": "This pilot aimed to assess the feasibility and acceptability of the EMI design and a prototype of Daily Growth, offering the 2 programs via 10 of 60 planned videos."
+          },
+          {
+            "heading": "Methods",
+            "text": "A pilot randomized controlled trial recruited 189 Australian parents of children aged 2-4 years, randomized to either intervention (n=94) or active control (n=95). Participants completed a 25-minute online survey at baseline and at conclusion of the program period. In the intervening 2 weeks, participants received twice-daily 1-minute pre-EMI surveys via email. Participants who reported any parent or child negative affect or emotion dysregulation received a resource. Participants in the intervention condition were randomized in the moment to receive a 3-minute Emotion Coaching or Active Play video, while participants in the control condition received a link to a parenting website. Participants were sent a 1-minute post-EMI survey. For both conditions, parenting support was tailored to 1 of 5 predefined parenting situations."
+          },
+          {
+            "heading": "Results",
+            "text": "Overall, 71% (135/189) of participants completed the 2-week post survey, and over two-thirds completed at least half of the daily pre-EMI surveys. Despite technical issues, most participants would recommend Daily Growth to other parents (53/67, 79%), use the skills learned (46/67, 69%), reported it as easy to use (45/67, 67%), and were satisfied with Daily Growth (40/67, 60%)."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "This pilot evaluated whether brief EMI resources could engage parents in real time. Findings suggest that the Daily Growth prototype was feasible and well received, supporting further implementation in a larger trial."
+          }
+        ],
+        "text": "Despite evidence showing that parenting interventions reduce rates of child mental health problems, their reach and engagement remain low. Daily Growth is a digital parenting program designed to improve parent and child emotion regulation using an ecological momentary intervention (EMI) approach. Daily Growth sends twice-daily prompts and delivers 3-minute videos tailored to a recent parenting situation, offering 2 program types (Emotion Coaching and Active Play) to meet different parent preferences. EMI has rarely been tested with parenting programs.\n\nThis pilot aimed to assess the feasibility and acceptability of the EMI design and a prototype of Daily Growth, offering the 2 programs via 10 of 60 planned videos.\n\nA pilot randomized controlled trial recruited 189 Australian parents of children aged 2-4 years, randomized to either intervention (n=94) or active control (n=95). Participants completed a 25-minute online survey at baseline and at conclusion of the program period. In the intervening 2 weeks, participants received twice-daily 1-minute pre-EMI surveys via email. Participants who reported any parent or child negative affect or emotion dysregulation received a resource. Participants in the intervention condition were randomized in the moment to receive a 3-minute Emotion Coaching or Active Play video, while participants in the control condition received a link to a parenting website. Participants were sent a 1-minute post-EMI survey. For both conditions, parenting support was tailored to 1 of 5 predefined parenting situations.\n\nOverall, 71% (135/189) of participants completed the 2-week post survey, and over two-thirds completed at least half of the daily pre-EMI surveys. Despite technical issues, most participants would recommend Daily Growth to other parents (53/67, 79%), use the skills learned (46/67, 69%), reported it as easy to use (45/67, 67%), and were satisfied with Daily Growth (40/67, 60%).\n\nThis pilot evaluated whether brief EMI resources could engage parents in real time. Findings suggest that the Daily Growth prototype was feasible and well received, supporting further implementation in a larger trial."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "This pilot evaluated whether brief EMI resources could engage parents in real time. Findings suggest that the Daily Growth prototype was feasible and well received, supporting further implementation in a larger trial.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "rct",
+        "confidence": "heuristic"
+      },
+      "sample_size": {
+        "value": 94,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "child_adolescent",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Daily growth",
+        "Child Development",
+        "intervention",
+        "Parenting",
+        "Emotion Regulation",
+        "Emotion Socialization",
+        "Active Play",
+        "Emotion Coaching",
+        "Ecological Momentary Intervention"
+      ],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:1",
+          "strong_design",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572214",
+      "epmc_id": "PMC13572214",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572214",
+      "doi": null,
+      "title": "Glucagon-like peptide-1 receptor agonists and tirzepatide are associated with reduced mortality, cardiovascular, and psychiatric risks in patients with hidradenitis suppurativa and type 2 diabetes and/or obesity: a retrospective cohort study",
+      "authors": "Brouer I, Zani A, Olbrich H, Ludwig R, Thaçi D.",
+      "journal": "Frontiers in medicine",
+      "journal_abbrev": "Front Med (Lausanne)",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572214",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572214",
+        "pdf": "https://europepmc.org/articles/PMC13572214?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cohort",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Diabetes mellitus",
+        "Obesity",
+        "Hidradenitis Suppurativa",
+        "Real-world",
+        "Glp-1 Receptor Agonist",
+        "Incretin-based Therapy",
+        "Tirzepatide",
+        "Trinetx"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "strong_design",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572590",
+      "epmc_id": "PMC13572590",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572590",
+      "doi": null,
+      "title": "The impact of non-invasive brain stimulation and digital intervention on social cognitive therapy in autism spectrum disorder: a systematic review and network meta-analysis",
+      "authors": "Hou J, Fang Y, Wang Y, Wen S.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "systematic-review",
+        "Review"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572590",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572590",
+        "pdf": "https://europepmc.org/articles/PMC13572590?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Transcranial magnetic stimulation",
+        "Virtual reality",
+        "Autism Spectrum Disorder",
+        "Social Cognition",
+        "Transcranial Direct Current Stimulation",
+        "Network Meta-analysis"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "strong_design",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572591",
+      "epmc_id": "PMC13572591",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572591",
+      "doi": null,
+      "title": "Applying an F-words lens to planning intervention for a child with autism: a retrospective case report with prospective follow-up",
+      "authors": "Govender P, Livingstone R, Hidalgo-Robles Á, Schomerus R, Leite H, Paleg G.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572591",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572591",
+        "pdf": "https://europepmc.org/articles/PMC13572591?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Masking",
+        "Hypermobility",
+        "Autism Spectrum Disorder",
+        "Hyperlexia",
+        "Riding",
+        "F-words",
+        "Developmental Central Hypotonia",
+        "F-Words Lens Tool"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572673",
+      "epmc_id": "PMC13572673",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572673",
+      "doi": null,
+      "title": "Autistic interests: wide-ranging and intellectually oriented",
+      "authors": "Caldwell-Harris C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572673",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572673",
+        "pdf": "https://europepmc.org/articles/PMC13572673?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Learning",
+        "discovery",
+        "Autism",
+        "Self-regulation",
+        "Academia",
+        "Interests",
+        "Careers"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572586",
+      "epmc_id": "PMC13572586",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572586",
+      "doi": null,
+      "title": "Internet addiction and psychological inflexibility in young adults: a parallel mediation analysis of alexithymia facets within an I-PACE framework",
+      "authors": "Mollaioli D, Lombardo C, Salvo B, Imbesi M, Sorrenti L, Zuccalà F, Mento C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572586",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572586",
+        "pdf": "https://europepmc.org/articles/PMC13572586?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Young Adults",
+        "Alexithymia",
+        "Emotion Regulation",
+        "Internet Addiction",
+        "Psychological Inflexibility"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572418",
+      "epmc_id": "PMC13572418",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572418",
+      "doi": null,
+      "title": "Multimodal generative AI for pre-practicum mental health support competency development: a human-supervised framework for education–childcare partnerships",
+      "authors": "Xie W, Xiang C, Wu F, Chen X.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572418",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572418",
+        "pdf": "https://europepmc.org/articles/PMC13572418?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Implementation Science",
+        "Multimodal Interaction",
+        "Responsive Caregiving",
+        "Generative Artificial Intelligence",
+        "Education-Childcare Partnerships",
+        "Mental Health Support Competence",
+        "Pre-Practicum Training",
+        "Pre-Service Childcare Professionals"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572607",
+      "epmc_id": "PMC13572607",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572607",
+      "doi": null,
+      "title": "The development and evaluation of the Patient-Controlled Admission Fidelity Checklist",
+      "authors": "Smitmanis Lyle M, Björkdahl A, Hellner C, Salomonsson S, Rozental A.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572607",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572607",
+        "pdf": "https://europepmc.org/articles/PMC13572607?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Psychiatric Care",
+        "Instrument Development",
+        "Implementation Fidelity",
+        "Patient-controlled Admission"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572584",
+      "epmc_id": "PMC13572584",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572584",
+      "doi": null,
+      "title": "Literary literacy and mental health in contemporary China: evidence from the China family panel studies",
+      "authors": "Shi H.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572584",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572584",
+        "pdf": "https://europepmc.org/articles/PMC13572584?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "China Family Panel Studies",
+        "Language-Cognitive Capacity",
+        "Literary Literacy",
+        "Reading Participation"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13572610",
+      "epmc_id": "PMC13572610",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13572610",
+      "doi": null,
+      "title": "Effects of the COVID-19 pandemic on working conditions and mental health among employees in health and social services",
+      "authors": "Peters C, Dulon M, Kersten J, Hartung C, Nienhaus A, Schablon A.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": null,
+      "first_publication_date": "2026-09-15",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13572610",
+        "fulltext_html": "https://europepmc.org/articles/PMC13572610",
+        "pdf": "https://europepmc.org/articles/PMC13572610?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Health Personnel",
+        "Work Ability",
+        "Covid-19",
+        "Post-Acute Covid-19"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13573014",
+      "epmc_id": "PMC13573014",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13573014",
+      "doi": null,
+      "title": "Assessing Care of Patients with Severe Mental Illness in the Era of Primary Angioplasty Pathways for ST-elevation MI Using Artificial Intelligence Methods",
+      "authors": "Gogarty E, Sweeney I, To B, Wu J, Shah A, Gaughran F, O’Gallagher K.",
+      "journal": "Interventional cardiology (London, England)",
+      "journal_abbrev": "Interv Cardiol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13573014",
+        "fulltext_html": "https://europepmc.org/articles/PMC13573014",
+        "pdf": "https://europepmc.org/articles/PMC13573014?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Artificial intelligence",
+        "Cardiovascular disease",
+        "acute coronary syndrome",
+        "Severe Mental Illness",
+        "Natural Language Processing",
+        "St-elevation Mi"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13574329",
+      "epmc_id": "PMC13574329",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13574329",
+      "doi": null,
+      "title": "Frameworks, Methodologies, and Tools for Evaluating Large Language Models in Digital Mental Health Interventions: Protocol for a Scoping Review",
+      "authors": "Salinas-Layana A, Jiménez-Molina Á, Lira D, Véliz-Montoya F, Venegas A, Muñoz N, Chandía M, Rojas R, Martínez V.",
+      "journal": "JMIR research protocols",
+      "journal_abbrev": "JMIR Res Protoc",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13574329",
+        "fulltext_html": "https://europepmc.org/articles/PMC13574329",
+        "pdf": "https://europepmc.org/articles/PMC13574329?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "protocol",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "public_mental_health",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Artificial intelligence",
+        "Mental disorders",
+        "Mental health",
+        "AI",
+        "Mental Health Services",
+        "Telemedicine",
+        "Scoping Review",
+        "Digital Health",
+        "Chatbot",
+        "Large Language Models",
+        "Therapy, Computer Assisted"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13573736",
+      "epmc_id": "PMC13573736",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13573736",
+      "doi": null,
+      "title": "Mental health outcomes relating to climate-sensitive extreme weather events: A scoping review of measures of mental health impact",
+      "authors": "Thomson D, Sebastianski M, O’Hearn K, Nuspl M, Bobier S, Abdul S, Pearce M, Ingole V, Glickman M, Webster R.",
+      "journal": "The journal of climate change and health",
+      "journal_abbrev": "J Clim Chang Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-15",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-16T05:50:43Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13573736",
+        "fulltext_html": "https://europepmc.org/articles/PMC13573736",
+        "pdf": "https://europepmc.org/articles/PMC13573736?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "scoping_review",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Climate change",
+        "Mental health",
+        "Extreme Weather Events",
+        "Mental Health Outcomes",
+        "Official Statistics",
+        "Mental Health Impact"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    }
+  ]
+}
