@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-09-16",
   "timezone": "America/Lima",
-  "fetched_at": "2026-09-17T20:34:31Z",
+  "fetched_at": "2026-09-17T20:47:37Z",
   "source": {
     "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
@@ -51,7 +51,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s12887-026-07543-6",
@@ -151,7 +151,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3346/jkms.2026.41.e239",
@@ -252,7 +252,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/jia2.70199",
@@ -354,7 +354,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s12887-026-07402-4",
@@ -458,7 +458,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s12888-026-08654-1",
@@ -558,7 +558,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpubh.2026.1877221",
@@ -649,7 +649,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s12939-026-02986-w",
@@ -753,7 +753,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/ijph.2026.1609841",
@@ -851,7 +851,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.2196/92646",
@@ -959,7 +959,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/jcop.70149",
@@ -1051,7 +1051,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0358536",
@@ -1140,7 +1140,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.34172/ahj.1646",
@@ -1239,7 +1239,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/brb3.71761",
@@ -1342,7 +1342,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/cns.71166",
@@ -1438,7 +1438,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114569",
@@ -1539,7 +1539,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1791689",
@@ -1636,7 +1636,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1915014",
@@ -1735,7 +1735,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpubh.2026.1896823",
@@ -1839,7 +1839,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3390/jcm15176792",
@@ -1925,7 +1925,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0357815",
@@ -2018,7 +2018,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.2196/86237",
@@ -2103,7 +2103,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s12888-026-08546-4",
@@ -2208,7 +2208,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114597",
@@ -2291,7 +2291,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114583",
@@ -2393,7 +2393,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114601",
@@ -2475,7 +2475,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114613",
@@ -2561,7 +2561,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1155/da/9599586",
@@ -2666,7 +2666,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.18332/ejm/225591",
@@ -2747,7 +2747,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/frcha.2026.1894705",
@@ -2842,7 +2842,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -2910,7 +2910,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1762324",
@@ -3006,7 +3006,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -3069,7 +3069,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -3131,7 +3131,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/hsr2.73210",
@@ -3222,7 +3222,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3390/jcm15176831",
@@ -3303,7 +3303,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -3368,7 +3368,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.18103/mra.2026.0389",
@@ -3455,7 +3455,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.31486/toj.26.0021",
@@ -3556,7 +3556,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pmen.0000715",
@@ -3633,7 +3633,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0355210",
@@ -3723,7 +3723,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1111/ejn.70691",
@@ -3806,7 +3806,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.2147/tacg.s625023",
@@ -3903,7 +3903,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/brb3.71766",
@@ -3992,7 +3992,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fncel.2026.1883287",
@@ -4072,7 +4072,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -4135,7 +4135,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -4196,7 +4196,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1812693",
@@ -4288,7 +4288,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1861633",
@@ -4380,7 +4380,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0357785",
@@ -4471,7 +4471,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.34172/ahj.1690",
@@ -4563,7 +4563,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s40359-026-05254-2",
@@ -4659,7 +4659,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.cpblue.2026.100080",
@@ -4729,7 +4729,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -4792,7 +4792,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/gps3.70059",
@@ -4850,7 +4850,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.jadr.2026.101102",
@@ -4929,7 +4929,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1155/nrp/5882178",
@@ -5022,7 +5022,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/alz.71856",
@@ -5124,7 +5124,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114599",
@@ -5214,7 +5214,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fnagi.2026.1877657",
@@ -5310,7 +5310,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/hsr2.73025",
@@ -5407,7 +5407,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1111/ene.70754",
@@ -5502,7 +5502,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fspor.2026.1832941",
@@ -5580,7 +5580,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1002/hsr2.73203",
@@ -5680,7 +5680,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.5588/ijtldopen.26.0098",
@@ -5776,7 +5776,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1111/inm.70356",
@@ -5858,7 +5858,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1111/inm.70351",
@@ -5941,7 +5941,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0357203",
@@ -6037,7 +6037,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1093/pcmedi/pbag025",
@@ -6120,7 +6120,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1186/s12913-026-15602-y",
@@ -6224,7 +6224,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.bpsgos.2026.100799",
@@ -6318,7 +6318,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.cacint.2026.100444",
@@ -6412,7 +6412,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114577",
@@ -6493,7 +6493,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3332/ecancer.2026.2154",
@@ -6572,7 +6572,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fdgth.2026.1945281",
@@ -6669,7 +6669,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/frhs.2026.1863653",
@@ -6755,7 +6755,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fimmu.2026.1809134",
@@ -6846,7 +6846,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fmed.2026.1820058",
@@ -6937,7 +6937,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fmed.2026.1889797",
@@ -7026,7 +7026,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -7089,7 +7089,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": null,
@@ -7152,7 +7152,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.2147/jmdh.s623146",
@@ -7249,7 +7249,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.2147/nss.s601462",
@@ -7332,7 +7332,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0358550",
@@ -7419,7 +7419,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0355693",
@@ -7508,7 +7508,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1093/sexmed/qfag086",
@@ -7608,7 +7608,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.7759/cureus.114565",
@@ -7691,7 +7691,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fneur.2026.1933196",
@@ -7785,7 +7785,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyt.2026.1872785",
@@ -7864,7 +7864,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1934264",
@@ -7953,7 +7953,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.3389/fpsyg.2026.1922858",
@@ -8045,7 +8045,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.gastha.2026.101091",
@@ -8133,7 +8133,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1016/j.ijnsa.2026.100661",
@@ -8242,7 +8242,7 @@
         "license": "cc by-nc-nd",
         "license_label": "CC BY-NC-ND",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1111/jnu.70137",
@@ -8345,7 +8345,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pmen.0000692",
@@ -8418,7 +8418,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pmen.0000717",
@@ -8492,7 +8492,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0354425",
@@ -8580,7 +8580,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1039/d6ra06259h",
@@ -8655,7 +8655,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0354342",
@@ -8732,7 +8732,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-09-17T20:34:31Z"
+        "checked_at": "2026-09-17T20:47:37Z"
       },
       "links": {
         "doi": "https://doi.org/10.1371/journal.pone.0342524",
