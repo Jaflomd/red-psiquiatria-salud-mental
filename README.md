@@ -124,7 +124,7 @@ Empaqueta el HTML, el CSS, el JS y los datos más recientes (resúmenes + los ú
 
 ## 6. Feed diario y backfill
 
-El feed se genera automáticamente todos los días por GitHub Actions (`.github/workflows/daily-feed.yml`, crons `41 3 * * *` y `23 6 * * *` = 22:41 y 01:23 hora de Lima). Cada noche se consultan ayer y hoy; hoy queda casi completo esa misma noche y se cierra en la corrida siguiente. PubMed amplía el descubrimiento; Europe PMC aplica el gate final de acceso abierto y licencia. En local:
+El feed se corre desde la Mac de Javier y se sube con push; la programación de GitHub Actions está desactivada y el workflow queda solo para lanzarlo a mano como respaldo. Cada noche se consultan ayer y hoy; hoy queda casi completo esa misma noche y se cierra en la corrida siguiente. PubMed amplía el descubrimiento; Europe PMC aplica el gate final de acceso abierto y licencia. En local:
 
 ```bash
 python3 scripts/fetch_daily.py --days 2      # uso diario normal
@@ -177,7 +177,7 @@ El repositorio público está en [GitHub](https://github.com/Jaflomd/red-psiquia
 - `.github/workflows/daily-feed.yml`: corre los tests, trae el feed del día, reconstruye `data/summaries.json` y, si hay cambios, los commitea.
 - `.github/workflows/pages.yml`: publica el sitio en GitHub Pages cuando cambia algo en `index.html`, `assets/`, `data/` o `content/` (o manualmente).
 
-El cron principal `41 3 * * *` corre a las 22:41 hora de Lima y el de respaldo `23 6 * * *` a la 01:23; ambos caen en la franja de baja carga de GitHub Actions, que retrasa o salta tareas programadas en horas pico. También puede lanzarse a mano desde **Actions → Feed diario Europe PMC + PubMed → Run workflow**. `ANTHROPIC_API_KEY` es opcional: sin ese secret, el feed funciona normalmente pero no genera `ai_summary`.
+La programación automática está desactivada (GitHub retrasaba o saltaba las tareas programadas). También puede lanzarse a mano desde **Actions → Feed diario Europe PMC + PubMed → Run workflow**. `ANTHROPIC_API_KEY` es opcional: sin ese secret, el feed funciona normalmente pero no genera `ai_summary`.
 
 ## 12. Limitaciones conocidas
 
