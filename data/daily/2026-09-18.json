@@ -1,0 +1,5114 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "timezone": "America/Lima",
+  "fetched_at": "2026-09-19T01:30:32Z",
+  "source": {
+    "name": "Europe PMC + PubMed",
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "date_field": "FIRST_IDATE",
+    "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-18 TO 2026-09-18] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "hit_count": 96,
+    "accepted": 82,
+    "query_version": "2026-09-14.2",
+    "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+    "europepmc": {
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-18 TO 2026-09-18] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+      "hit_count": 96
+    },
+    "pubmed": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "date_field": "edat",
+      "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
+      "hit_count": 217,
+      "unresolved_in_europepmc": 29
+    }
+  },
+  "items": [
+    {
+      "key": "PMC:PMC13582318",
+      "epmc_id": "PMC13582318",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582318",
+      "doi": null,
+      "title": "Pre-treatment serum extracellular vesicle-enriched microbiome profiles and SSRI treatment response in obsessive-compulsive disorder: a prospective naturalistic cohort study",
+      "authors": "Kang J, Park C, Seo J, Kang C, Kim Y, Kim S.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582318",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582318",
+        "pdf": "https://europepmc.org/articles/PMC13582318?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cohort",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "ocd",
+        "neuroscience",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Ocd",
+        "Treatment Response",
+        "Microbiome",
+        "Extracellular Vesicles",
+        "Prospective Design",
+        "Microbiota-brain Interactions"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581798",
+      "epmc_id": "PMC13581798",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581798",
+      "doi": null,
+      "title": "Early interventions in mental health services: a rapid review of systematic review",
+      "authors": "Adu R, Adu M, Agyapong B, Agyapong V.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "systematic-review",
+        "Review"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581798",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581798",
+        "pdf": "https://europepmc.org/articles/PMC13581798?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "child_adolescent",
+        "public_mental_health"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "early intervention",
+        "Mental Health Services",
+        "Cost-effectiveness",
+        "Systematic Reviews",
+        "Youth Mental Health",
+        "Early Psychosis",
+        "Service Accessibility"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581680",
+      "epmc_id": "PMC13581680",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581680",
+      "doi": null,
+      "title": "Agomelatine as augmentation therapy with second‐generation antipsychotics for negative symptoms of schizophrenia: An open‐label randomised clinical trial and electroencephalogram‐derived model for treatment response prediction",
+      "authors": "Zhou W, Liang F, Chen N, Zhang Y, Wang X, Li X, Lu D, Guo F, Yao Y, Zhu J, Shen C, Wang C, Zhang P, Zhao L, Wang Y, Han J, Li W, Wu H, Wang P, Yan Q, Zhang P, Lv Q, Yi Z.",
+      "journal": "General psychiatry",
+      "journal_abbrev": "Gen Psychiatr",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-16",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581680",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581680",
+        "pdf": "https://europepmc.org/articles/PMC13581680?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "rct",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "digital",
+        "psychopharmacology",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Electrophysiology",
+        "Biomarker",
+        "Functional Outcome",
+        "Machine Learning",
+        "Agomelatine",
+        "Negative Symptoms"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583873",
+      "epmc_id": "PMC13583873",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583873",
+      "doi": null,
+      "title": "Effect of dopamine partial agonist antipsychotics on suicide risk in persons with schizophrenia and schizoaffective disorders: A systematic review and meta-analysis",
+      "authors": "Jin J, Winkler C, Blunt H, Riblet N.",
+      "journal": "Schizophrenia research",
+      "journal_abbrev": "Schizophr Res",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-08",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583873",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583873",
+        "pdf": "https://europepmc.org/articles/PMC13583873?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review_meta",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "suicide",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "Suicide",
+        "Antipsychotic",
+        "Schizoaffective",
+        "Dopamine Partial Agonist"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583789",
+      "epmc_id": "PMC13583789",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583789",
+      "doi": null,
+      "title": "Acceptability, feasibility and perceived benefits of integrating mental health and psychosocial support (MHPSS) into disease outbreak response in Western Uganda: a qualitative process evaluation study",
+      "authors": "Yirdaw B, Kalani K, Alkasaby M, Zhao Y, Wang L, Kwagala C, Mfitundinda E, Abbo C, Haque F, Eaton J.",
+      "journal": "BMJ public health",
+      "journal_abbrev": "BMJ Public Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583789",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583789",
+        "pdf": "https://europepmc.org/articles/PMC13583789?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety",
+        "public_mental_health"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Anxiety",
+        "Mental health",
+        "Disease Outbreaks",
+        "Public Health Practice"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582463",
+      "epmc_id": "PMC13582463",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582463",
+      "doi": null,
+      "title": "Age-specific alterations in gut microbiota-plasma metabolome networks in first-episode, drug-naïve major depressive disorder: adolescent versus adult patients",
+      "authors": "Mo H, Chai D, Zhao L, Wang J, Zhang Q, Miaoyang H, Wang T, Lu W, Wang C.",
+      "journal": "Frontiers in microbiology",
+      "journal_abbrev": "Front Microbiol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582463",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582463",
+        "pdf": "https://europepmc.org/articles/PMC13582463?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "depression",
+        "child_adolescent",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Metabolomics",
+        "Gut Microbiota",
+        "Major Depressive Disorder",
+        "Microbiota-gut-brain Axis",
+        "Age Heterogeneity"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583672",
+      "epmc_id": "PMC13583672",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583672",
+      "doi": null,
+      "title": "Pharmaco-multiomics in major depressive disorder: a narrative review and proposed translational framework for difficult-to-treat and treatment-resistant depression",
+      "authors": "Baune B.",
+      "journal": "Frontiers in pharmacology",
+      "journal_abbrev": "Front Pharmacol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583672",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583672",
+        "pdf": "https://europepmc.org/articles/PMC13583672?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "digital",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Inflammation",
+        "Pharmacogenomics",
+        "epigenomics",
+        "Metabolomics",
+        "Machine Learning",
+        "Major Depressive Disorder",
+        "Microbiome",
+        "Difficult-to-treat Depression"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582255",
+      "epmc_id": "PMC13582255",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582255",
+      "doi": null,
+      "title": "Frequency analysis of mood, sleep, and alcohol and nicotine use: investigating instability in bipolar I and II disorder",
+      "authors": "Glastad S, Klungsøyr O, Aminoff S, Hagen R, Bjella T, Engen M, Lyngstad S, Melle I, Andreassen O, Høegh M, Lagerberg T.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582255",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582255",
+        "pdf": "https://europepmc.org/articles/PMC13582255?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "bipolar",
+        "alcohol",
+        "substances"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Sleep",
+        "Instability",
+        "Bipolar disorder",
+        "Mood",
+        "Alcohol Use",
+        "Time-series",
+        "Nicotine Use"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584916",
+      "epmc_id": "PMC13584916",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584916",
+      "doi": null,
+      "title": "Prevalence of physical comorbidities and multimorbidity in Borderline Personality Disorder: risk factors and comparisons with schizophrenia and healthy controls",
+      "authors": "Dias Ribeiro Junior M, Giguère C, Cailhol L.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584916",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584916",
+        "pdf": "https://europepmc.org/articles/PMC13584916?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "bpd",
+        "public_mental_health",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "risk factors",
+        "Chronic Illness",
+        "Borderline Personality Disorder",
+        "Multimorbidity"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582425",
+      "epmc_id": "PMC13582425",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582425",
+      "doi": null,
+      "title": "Prevalence, role impairment, and mental health service utilization of depressive disorders among community-dwelling older adults in China",
+      "authors": "Wang D, Hou X, Liu Z, Huang Y, Xiao S, Li L, Zhang T, Yan J, Yu Y, Xu X, Wang Z, Xu Y, Li T, Xu X, Wang L, Yan Y, Li M, Xu G, Yin H.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582425",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582425",
+        "pdf": "https://europepmc.org/articles/PMC13582425?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "older_adults",
+        "public_mental_health",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "epidemiology",
+        "Older Adults",
+        "Depressive Disorders",
+        "Health Service Utilization",
+        "Role Impairment"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582605",
+      "epmc_id": "PMC13582605",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582605",
+      "doi": null,
+      "title": "Psychiatric comorbidities in hoarding disorder: a structured clinical interview study",
+      "authors": "Nishida N, Murayama K, Tomiyama H, Kato K, Mingi K, Matsukuma K, Kawahito M, Tsunoda K, Kamio T, Shuto A, Nakao T.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582605",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582605",
+        "pdf": "https://europepmc.org/articles/PMC13582605?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "adhd",
+        "ocd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Major Depressive Disorder",
+        "Attention-deficit/hyperactivity Disorder (Adhd)",
+        "Hoarding Disorder",
+        "Obsessive-compulsive Disorder (Ocd)",
+        "Psychiatric Comorbidities",
+        "Structured Clinical Interview Diagnosis"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582397",
+      "epmc_id": "PMC13582397",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582397",
+      "doi": null,
+      "title": "Does artificial intelligence-supported rhythm-enhanced phonological awareness training improve early reading in children with attention-deficit/hyperactivity disorder? A randomised controlled intervention study",
+      "authors": "Zhang L, Huang F, Li P.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582397",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582397",
+        "pdf": "https://europepmc.org/articles/PMC13582397?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd",
+        "child_adolescent",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Rhythm",
+        "ADHD",
+        "AI",
+        "Reading",
+        "Phonological Awareness"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13585020",
+      "epmc_id": "PMC13585020",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13585020",
+      "doi": null,
+      "title": "Efficacy of A Virtual Agent–Based Digital Intervention (Echo App V2.0) for Patients With Alcohol Use Disorder: Randomized Controlled Trial",
+      "authors": "Li S, Zhang D, Sang W, Li R, Yuan W, Liu J, Li H, Liu M, Zhang Y, Zhang B, Wu Q, Huang C, Shan H, Du J, Jiang H, Zhong N, Chen T, Zhao M.",
+      "journal": "Journal of medical Internet research",
+      "journal_abbrev": "J Med Internet Res",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13585020",
+        "fulltext_html": "https://europepmc.org/articles/PMC13585020",
+        "pdf": "https://europepmc.org/articles/PMC13585020?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "rct",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "alcohol",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Randomized controlled trial",
+        "Alcohol Use Disorder",
+        "Conversational Agent",
+        "Digital Intervention",
+        "Virtual Digital Human"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:2",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584757",
+      "epmc_id": "PMC13584757",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584757",
+      "doi": null,
+      "title": "The Therapeutic Effect of Methylphenidate Hydrochloride in Conjunction with Sensory Integration Training in Children with Attention Deficit Hyperactivity Disorder",
+      "authors": "Zhang S, Li L.",
+      "journal": "Psychiatry and clinical psychopharmacology",
+      "journal_abbrev": "Psychiatry Clin Psychopharmacol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-14",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584757",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584757",
+        "pdf": "https://europepmc.org/articles/PMC13584757?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd",
+        "child_adolescent",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583855",
+      "epmc_id": "PMC13583855",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583855",
+      "doi": null,
+      "title": "Suicide across occupational groups in Australia, 2001–2022: a retrospective mortality study",
+      "authors": "Maheen H, King T.",
+      "journal": "BMJ public health",
+      "journal_abbrev": "BMJ Public Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583855",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583855",
+        "pdf": "https://europepmc.org/articles/PMC13583855?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "suicide",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Occupational Medicine",
+        "Sociodemographic Factors"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583597",
+      "epmc_id": "PMC13583597",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583597",
+      "doi": null,
+      "title": "When to quit: Calibration of voluntary persistence and attempted suicide in depression",
+      "authors": "Tsypes A, McGuire J, Dombrovski A.",
+      "journal": "Behaviour research and therapy",
+      "journal_abbrev": "Behav Res Ther",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-05",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583597",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583597",
+        "pdf": "https://europepmc.org/articles/PMC13583597?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "suicide"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "decision-making",
+        "Suicide",
+        "Voluntary Persistence Calibration",
+        "Willingness-to-wait Task"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583347",
+      "epmc_id": "PMC13583347",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583347",
+      "doi": null,
+      "title": "Depression and Suicidal Ideation Among Men who have sex with men and Transgender Women in Chiang Mai, Thailand [version 4; peer review: 2 approved",
+      "authors": "Lynn K, Aurpibul L, Chotirosniramit N, Kosashunhanan N, Srithanaviboonchai K, Oon-arom A.",
+      "journal": "F1000Research",
+      "journal_abbrev": "F1000Res",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583347",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583347",
+        "pdf": "https://europepmc.org/articles/PMC13583347?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "suicide"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Suicidal Ideation",
+        "Men Who Have Sex With Men",
+        "Transgender Women",
+        "Prep Users"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581556",
+      "epmc_id": "PMC13581556",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581556",
+      "doi": null,
+      "title": "Effects of a neo-functional psychotherapeutic approach on post-traumatic stress disorder following spontaneous coronary artery dissection: a case report",
+      "authors": "Solinas E, Gurgoglione F, Denegri A, Benatti G, Giacalone R, Noni M, Magnani G, Vignali L, Niccoli G, Viaro C, Pedrelli E, Pinetti R, Rosin R, Sabella L, Rizzi G, Rispoli L.",
+      "journal": "Frontiers in cardiovascular medicine",
+      "journal_abbrev": "Front Cardiovasc Med",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581556",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581556",
+        "pdf": "https://europepmc.org/articles/PMC13581556?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "ptsd",
+        "psychotherapy"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Autonomic nervous system",
+        "heart rate variability",
+        "Post-traumatic Stress Disorder",
+        "Case Report",
+        "Spontaneous Coronary Artery Dissection",
+        "Psychocardiology",
+        "Neo-Functional Approach"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581851",
+      "epmc_id": "PMC13581851",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581851",
+      "doi": null,
+      "title": "Plasma copeptin is coupled to resting-state frontoinsular-subgenual alpha dynamics in major depression with comorbid post-traumatic stress disorder",
+      "authors": "Hu H, Chandler B, Sloane J, Verbalis J, Zarate C, Ballard E, Gilbert J.",
+      "journal": "Frontiers in endocrinology",
+      "journal_abbrev": "Front Endocrinol (Lausanne)",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581851",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581851",
+        "pdf": "https://europepmc.org/articles/PMC13581851?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "ptsd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Magnetoencephalography",
+        "Depression",
+        "Vasopressin",
+        "Ptsd",
+        "Anterior Insula",
+        "Copeptin",
+        "Sgacc"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581976",
+      "epmc_id": "PMC13581976",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581976",
+      "doi": null,
+      "title": "A critical appraisal of integrating family constellation therapy with pharmacological treatment for depression",
+      "authors": "Zhong W, Rao M, Zhou Q, Leng Z, Zhang B, Lin Z.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581976",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581976",
+        "pdf": "https://europepmc.org/articles/PMC13581976?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Integrated treatment",
+        "Pharmacological Treatment",
+        "Systemic Therapy",
+        "Biopsychosocial Model",
+        "Psychosocial Intervention",
+        "Family System",
+        "Family Constellation Therapy"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581517",
+      "epmc_id": "PMC13581517",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581517",
+      "doi": null,
+      "title": "Anxiety- and depression-related somatic symptoms and atlantoaxial disorders: potential mechanistic links and clinical implications",
+      "authors": "Yang S, Li Q, Shi W, Liu X.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581517",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581517",
+        "pdf": "https://europepmc.org/articles/PMC13581517?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Anxiety",
+        "Psychosomatics",
+        "Atlantoaxial Joint",
+        "Somatic Symptom Disorder"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581858",
+      "epmc_id": "PMC13581858",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581858",
+      "doi": null,
+      "title": "Novel pharmacotherapies for opioid use disorder and opioid withdrawal",
+      "authors": "Shen M, Owusu-Boaitey K, Murphy Z, Rains A, Wang P, Zhou D, Suzuki J.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581858",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581858",
+        "pdf": "https://europepmc.org/articles/PMC13581858?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "substances",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Drug",
+        "Opioid",
+        "ketamine",
+        "Withdrawal",
+        "Addiction",
+        "Glp-1",
+        "Cannabinoid",
+        "Psychedelics"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581676",
+      "epmc_id": "PMC13581676",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581676",
+      "doi": null,
+      "title": "Pre‐planned reappraisal via implementation intention down‐regulates emotional experiences of youth with self‐reported depressive symptoms",
+      "authors": "Chen S, Luo L, Zhang X, Yang J, Wang T, Yuan J.",
+      "journal": "General psychiatry",
+      "journal_abbrev": "Gen Psychiatr",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-16",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581676",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581676",
+        "pdf": "https://europepmc.org/articles/PMC13581676?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depressive Symptoms",
+        "Sad",
+        "Cognitive Reappraisal",
+        "Emotional Experience",
+        "Pre‐Planned Emotion Regulation"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584031",
+      "epmc_id": "PMC13584031",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584031",
+      "doi": null,
+      "title": "Parenting style profiles in families of children with ADHD using a person-centred approach",
+      "authors": null,
+      "journal": "International journal of clinical and health psychology : IJCHP",
+      "journal_abbrev": "Int J Clin Health Psychol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584031",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584031",
+        "pdf": "https://europepmc.org/articles/PMC13584031?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd",
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "ADHD",
+        "Parental Styles",
+        "Person-centred Approach",
+        "Criticism-rejection",
+        "Affect-Communication"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584947",
+      "epmc_id": "PMC13584947",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584947",
+      "doi": null,
+      "title": "Chemotherapy-Induced Remodeling of the Gut Microbiota–Inflammation Axis: Implications for the Course of Bipolar Disorder",
+      "authors": "Li S, Wang S, Ren Y, Yan J.",
+      "journal": "Journal of multidisciplinary healthcare",
+      "journal_abbrev": "J Multidiscip Healthc",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584947",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584947",
+        "pdf": "https://europepmc.org/articles/PMC13584947?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "bipolar",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Cancer",
+        "Bipolar disorder",
+        "Gut Microbiota",
+        "Bd",
+        "Post-chemotherapy"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583616",
+      "epmc_id": "PMC13583616",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583616",
+      "doi": null,
+      "title": "Shrinking Back from Shrinks: Suicidal Youth Avoiding Professional Help in Shame and Fear, Finland 1960–1980s",
+      "authors": null,
+      "journal": "Social history of medicine : the journal of the Society for the Social History of Medicine",
+      "journal_abbrev": "Soc Hist Med",
+      "pub_year": 2025,
+      "first_publication_date": "2025-12-13",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583616",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583616",
+        "pdf": "https://europepmc.org/articles/PMC13583616?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "suicide",
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Media",
+        "Mental health",
+        "Suicide Prevention",
+        "Mental Health Professionals",
+        "Youth Suicidality"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584921",
+      "epmc_id": "PMC13584921",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584921",
+      "doi": null,
+      "title": "Maternal smoking during pregnancy in relation to adolescent anxiety and poor mental health: A cross-sectional study based on NHANES 2007–2012",
+      "authors": "Liu Y, Deng J, Zhang Y.",
+      "journal": "Tobacco induced diseases",
+      "journal_abbrev": "Tob Induc Dis",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584921",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584921",
+        "pdf": "https://europepmc.org/articles/PMC13584921?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "anxiety",
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Anxiety",
+        "Nhanes",
+        "Adolescent Mental Health",
+        "Maternal Smoking During Pregnancy",
+        "Poor Mental Health"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584677",
+      "epmc_id": "PMC13584677",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584677",
+      "doi": null,
+      "title": "Medicine Use Preceding Fatal Poisonings Among Individuals With Bipolar Disorder",
+      "authors": "Salmelainen J, Tiihonen M, Taipale H, Lieslehto J, Tanskanen A, Tiihonen J, Hamina A.",
+      "journal": "Basic & clinical pharmacology & toxicology",
+      "journal_abbrev": "Basic Clin Pharmacol Toxicol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-17",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584677",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584677",
+        "pdf": "https://europepmc.org/articles/PMC13584677?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "bipolar"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Poisoning",
+        "Drug therapy",
+        "Bipolar disorder",
+        "Drug Overdose",
+        "Case–control Studies"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581457",
+      "epmc_id": "PMC13581457",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581457",
+      "doi": null,
+      "title": "Factors Associated With Post-traumatic Stress Disorder Among Survivors of the Kamuina Nsapu Armed Conflict in the City of Kananga, Democratic Republic of the Congo",
+      "authors": "Tshitoko Ndawu J, Nsitu Mankubu A, Mbuyi Kalambayi E, Ndjukendi Omba A, Banzulu D, Mbuku Nguala S, Ntalaja Kabuayi P, Kamanga G, Tshibuabua Mutshipayi P, Sodi Magudigana A.",
+      "journal": "Cureus",
+      "journal_abbrev": "Cureus",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581457",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581457",
+        "pdf": "https://europepmc.org/articles/PMC13581457?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "ptsd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Post-traumatic Stress Disorder",
+        "Associated Factors",
+        "Armed Conflict",
+        "Kananga",
+        "Insurrectionary Movement"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13585360",
+      "epmc_id": "PMC13585360",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13585360",
+      "doi": null,
+      "title": "Periodic Catatonia in a Veteran With Post-traumatic Stress Disorder (PTSD) and Traumatic Brain Injury (TBI)",
+      "authors": "Paciotti C, Bojkovic K, Sullivan G, Fusick A.",
+      "journal": "Cureus",
+      "journal_abbrev": "Cureus",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13585360",
+        "fulltext_html": "https://europepmc.org/articles/PMC13585360",
+        "pdf": "https://europepmc.org/articles/PMC13585360?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "ptsd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Psychopharmacology",
+        "Catatonia",
+        "Ptsd",
+        "Tbi",
+        "Periodic Catatonia"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584870",
+      "epmc_id": "PMC13584870",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584870",
+      "doi": null,
+      "title": "The role of psychiatric nurses in nutritional care for treatment-resistant depression: a relapse-prevention perspective",
+      "authors": "Mechlińska A, Sudoł N, Pazda-Juda D, Cubała W.",
+      "journal": "Frontiers in nutrition",
+      "journal_abbrev": "Front Nutr",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584870",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584870",
+        "pdf": "https://europepmc.org/articles/PMC13584870?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Psychiatric Nursing",
+        "Relapse Prevention",
+        "Treatment-resistant Depression",
+        "Dietary Intervention",
+        "Nutritional Care"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581561",
+      "epmc_id": "PMC13581561",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581561",
+      "doi": null,
+      "title": "Factors associated with social support among older inpatients with schizophrenia: a cross-sectional study from a tertiary psychiatric hospital in Guangzhou, China",
+      "authors": "Li J, Ye J, Chen J, Liu D, Zheng X, Li Y, Ma N, Zhang Y, Wei Y, Zhou T, Guo J, Xiao A.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581561",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581561",
+        "pdf": "https://europepmc.org/articles/PMC13581561?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "psychosis"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "Cross-sectional study",
+        "Social Support",
+        "Older Patients",
+        "Social Support Rating Scale"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584118",
+      "epmc_id": "PMC13584118",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584118",
+      "doi": null,
+      "title": "Suicidal ideation across pregnancy and the postpartum: Trajectories and assessment with commonly used screening tools☆",
+      "authors": "Vanderkruik R, Louis C, Gaccione P, Gallop R, Grassi E, Killenberg P, Yoon H, Freeman M, Dimidjian S, Cohen L.",
+      "journal": "Journal of mood and anxiety disorders",
+      "journal_abbrev": "J Mood Anxiety Disord",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584118",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584118",
+        "pdf": "https://europepmc.org/articles/PMC13584118?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "suicide"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Pregnancy",
+        "Postpartum",
+        "Perinatal",
+        "Suicidal Ideation",
+        "Suicidality",
+        "Phq-9",
+        "Epds"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582364",
+      "epmc_id": "PMC13582364",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582364",
+      "doi": null,
+      "title": "ADHD coaching since the COVID-19 pandemic: Is there a new wave of ADHD coaches?",
+      "authors": "Graham E, Dvorsky M, Yeguez C, Holbrook J, Sibley M.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "brief-report",
+        "Brief Report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582364",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582364",
+        "pdf": "https://europepmc.org/articles/PMC13582364?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd",
+        "public_mental_health"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "ADHD",
+        "Secondary Data Analysis",
+        "Psychosocial Intervention",
+        "Public Health Trends",
+        "Covid-19 Pandemic",
+        "Adhd Coaching"
+      ],
+      "relevance": {
+        "score": 0,
+        "signals": [
+          "tags:2",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582536",
+      "epmc_id": "PMC13582536",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582536",
+      "doi": null,
+      "title": "Baseline amyloid burden and global cognitive change during a home-based tDCS protocol in late-life depression: an exploratory single-arm study",
+      "authors": "Li Y, Park J, Park J, Kim W.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582536",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582536",
+        "pdf": "https://europepmc.org/articles/PMC13582536?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "protocol",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "older_adults"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Cognitive impairment",
+        "Geriatric depression scale",
+        "Transcranial Direct Current Stimulation",
+        "Late-life Depression",
+        "Amyloid Pet"
+      ],
+      "relevance": {
+        "score": 0,
+        "signals": [
+          "tags:2",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582524",
+      "epmc_id": "PMC13582524",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582524",
+      "doi": null,
+      "title": "Gender differences in the effects of economic inequality on mental conditions: a multivariate meta-analysis of Gini index and relative income position in high-income OECD countries",
+      "authors": "Kalinowski O, Rössler W.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "systematic-review",
+        "Review"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582524",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582524",
+        "pdf": "https://europepmc.org/articles/PMC13582524?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Sex",
+        "Depression",
+        "Gender",
+        "Difference",
+        "Gini coefficient",
+        "Poverty",
+        "Inequality"
+      ],
+      "relevance": {
+        "score": 0,
+        "signals": [
+          "tags:1",
+          "strong_design",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584957",
+      "epmc_id": "PMC13584957",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584957",
+      "doi": null,
+      "title": "Group intervention for non-suicidal self-injury in college students guided by the Process Model of Emotional Regulation: a pilot randomized controlled trial",
+      "authors": "Yu M, Chen S, Yu C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584957",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584957",
+        "pdf": "https://europepmc.org/articles/PMC13584957?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "rct",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "suicide"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "College Students",
+        "Emotion Regulation Strategies",
+        "Group Intervention",
+        "Non-suicidal Self-injury",
+        "Process Model Of Emotional Regulation"
+      ],
+      "relevance": {
+        "score": 0,
+        "signals": [
+          "tags:1",
+          "strong_design",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582647",
+      "epmc_id": "PMC13582647",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582647",
+      "doi": null,
+      "title": "Psychometric validation and predictive efficacy of a comprehensive depression risk model for undergraduates",
+      "authors": "Liang X, Lu L, Liao Q, Long J, Wei B, Mo L, Qin Y, Lv C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582647",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582647",
+        "pdf": "https://europepmc.org/articles/PMC13582647?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Predictive model",
+        "Undergraduates",
+        "Machine Learning",
+        "Depressive Symptoms",
+        "Somatic Symptoms",
+        "Sleep Quality",
+        "Psychometric Validation",
+        "Social Connection"
+      ],
+      "relevance": {
+        "score": 0,
+        "signals": [
+          "tags:2",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584313",
+      "epmc_id": "PMC13584313",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584313",
+      "doi": null,
+      "title": "Short-term ketamine interventions for depressive disorders: practical best-practice recommendations for psychiatrists using oral, subcutaneous, and nasal formulations",
+      "authors": "Słupska A, Cubała W, Swieczkowski D, Szarmach J, Słupski J, Włodarczyk A.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584313",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584313",
+        "pdf": "https://europepmc.org/articles/PMC13584313?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "ketamine",
+        "Treatment-resistant Depression",
+        "Psychiatric Practice",
+        "Off-label Prescribing",
+        "Oral Ketamine",
+        "Esketamine",
+        "Intranasal Ketamine",
+        "Subcutaneous Ketamine"
+      ],
+      "relevance": {
+        "score": 0,
+        "signals": [
+          "tags:2",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582567",
+      "epmc_id": "PMC13582567",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582567",
+      "doi": null,
+      "title": "The relationship between emotional reactivity and adolescent non-suicidal self-injury: the mediating role of distress tolerance and gender differences",
+      "authors": "An Y, Song X, Ou J, Peng M.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582567",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582567",
+        "pdf": "https://europepmc.org/articles/PMC13582567?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "suicide",
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Adolescent",
+        "Gender Differences",
+        "Distress Tolerance",
+        "Emotional Reactivity",
+        "Non-suicidal Self-injury"
+      ],
+      "relevance": {
+        "score": 0,
+        "signals": [
+          "tags:2",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582383",
+      "epmc_id": "PMC13582383",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582383",
+      "doi": null,
+      "title": "Cross-modal conditional associations between psychometric and polysomnographic indicators in sleep center patients: a Gaussian graphical model",
+      "authors": "Wang Y, Ni N, Chen H, Zhao J, Xie Y, Zhao B, Zhang F.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582383",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582383",
+        "pdf": "https://europepmc.org/articles/PMC13582383?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "symptom_networks"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "polysomnography",
+        "Gaussian Graphical Model",
+        "Latent Profile Analysis",
+        "Psychometric Assessment",
+        "Subjective-objective Sleep Discrepancy",
+        "Multimodal Network Analysis",
+        "Cross-Modal Conditional Association"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584915",
+      "epmc_id": "PMC13584915",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584915",
+      "doi": null,
+      "title": "Design and evaluation of a group-based integrative expressive art therapy intervention for mental health among pregnant women in China: a pilot pre-post study",
+      "authors": "Feng X, Li Q, Huang L, Yan H, Lan C, Ling Y, Ling R, Li Y, Yu H.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584915",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584915",
+        "pdf": "https://europepmc.org/articles/PMC13584915?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "anxiety"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Pregnancy",
+        "Anxiety",
+        "Art Therapy",
+        "Willingness-to-pay",
+        "Expressive Art Therapy"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582466",
+      "epmc_id": "PMC13582466",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582466",
+      "doi": null,
+      "title": "Medication adherence and its clinical and psychosocial correlates in inpatients with bipolar disorder in Vietnam: a cross-sectional study",
+      "authors": "Tran N, Le T, Nguyen Q, Nguyen V.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582466",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582466",
+        "pdf": "https://europepmc.org/articles/PMC13582466?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "bipolar"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Vietnam",
+        "Medication Adherence",
+        "Family Support",
+        "inpatients",
+        "Bipolar Disorders",
+        "Insight Into Illness"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581912",
+      "epmc_id": "PMC13581912",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581912",
+      "doi": null,
+      "title": "Overlapping and distinct intrinsic connectivity of hippocampal and triple networks in autistic individuals with and without a comorbid condition of ADHD",
+      "authors": "Chen L, Riggs A, Luckenbach N.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581912",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581912",
+        "pdf": "https://europepmc.org/articles/PMC13581912?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Hippocampus",
+        "ADHD",
+        "Comorbidity",
+        "Functional Connectivity",
+        "Asd"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582601",
+      "epmc_id": "PMC13582601",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582601",
+      "doi": null,
+      "title": "Potentially inappropriate medications in older outpatients with depression: a cross-sectional study comparing the Beers criteria and the Chinese criteria",
+      "authors": "Jiang H, Zhou X, Feng P, Xia Z, Yang W, Han B, Zhang M, Zhao Q.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582601",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582601",
+        "pdf": "https://europepmc.org/articles/PMC13582601?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Beers Criteria",
+        "Older",
+        "Potentially Inappropriate Medications",
+        "Chinese Criteria"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584961",
+      "epmc_id": "PMC13584961",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584961",
+      "doi": null,
+      "title": "Prenatal stress selectively enhances locomotor hyperactivity in male mice with embryonic loss of Fgfr2",
+      "authors": "Chen M, Jager P, Sawyer A, Stevens H.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "brief-report",
+        "Brief Report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584961",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584961",
+        "pdf": "https://europepmc.org/articles/PMC13584961?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Neurodevelopment",
+        "ADHD",
+        "Gene-environment Interaction",
+        "Prenatal Stress",
+        "Fibroblast Growth Factor Receptor 2 (Fgfr2)"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582624",
+      "epmc_id": "PMC13582624",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582624",
+      "doi": null,
+      "title": "Psychosocial recovery and nutritional rehabilitation in residential treatment for anorexia nervosa: an exploratory longitudinal multi-frequency bioelectrical impedance analysis study",
+      "authors": "Monaco F, Vignapiano A, Landi S, Bonifacio R, Falchetta D, Ferrara E, Panarello E, Attianese B, Caputo A, Steardo L, Sosto G, Corrivetti G.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582624",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582624",
+        "pdf": "https://europepmc.org/articles/PMC13582624?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "eating"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Anorexia Nervosa",
+        "Residential Treatment",
+        "Bioelectrical Impedance Analysis",
+        "Psychiatric Rehabilitation",
+        "Exercise Dependence",
+        "Nutritional Rehabilitation",
+        "Body Image Disturbance",
+        "Eating Disorder Psychopathology"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582476",
+      "epmc_id": "PMC13582476",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582476",
+      "doi": null,
+      "title": "Speech features as potential objective assessment indicators in schizophrenia patients with violence-related symptoms",
+      "authors": "Wang J, Ling X, Wang S, Li W, Zhang Q, Cai W, Li N, Li H.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582476",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582476",
+        "pdf": "https://europepmc.org/articles/PMC13582476?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "Formant",
+        "Fundamental Frequency",
+        "Violent Behavior",
+        "Speech Feature"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584913",
+      "epmc_id": "PMC13584913",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584913",
+      "doi": null,
+      "title": "Speech-based early depressive symptom screening using MAX-Net: a multi-scale autoencoder-augmented xLSTM framework",
+      "authors": "Zheng Z, Liang L, Zhang J, Wang G, Xue C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584913",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584913",
+        "pdf": "https://europepmc.org/articles/PMC13584913?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depressive Symptoms",
+        "Speech Analysis",
+        "Data Augmentation",
+        "Deep Learning",
+        "Small-sample Learning"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:1",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583647",
+      "epmc_id": "PMC13583647",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583647",
+      "doi": null,
+      "title": "Potential Drug–Drug Interactions and Adverse Drug Reactions Among Elderly Psychiatric Outpatients Receiving Antipsychotics: A Cross-Sectional Study",
+      "authors": "Mahato S, Sree Sudha T, Kumari K, Thankachan J, Veena V, Mondal A.",
+      "journal": "Nigerian medical journal : journal of the Nigeria Medical Association",
+      "journal_abbrev": "Niger Med J",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-sa",
+        "license_label": "CC BY-NC-SA",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583647",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583647",
+        "pdf": "https://europepmc.org/articles/PMC13583647?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "older_adults",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Geriatric",
+        "Adverse drug reactions",
+        "Psychopharmacology",
+        "drug-drug interactions",
+        "Pharmacodynamic Interactions"
+      ],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:2",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582133",
+      "epmc_id": "PMC13582133",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582133",
+      "doi": null,
+      "title": "The Impact of COVID-19 on the Mental Health and Wellbeing of Children with Special Education Needs and Disabilities: A Systematic Review",
+      "authors": "Castle V, Sideropoulos V, Jones C, Zhang D, Van Herwegen J, Palikara O.",
+      "journal": "Review journal of autism and developmental disorders",
+      "journal_abbrev": "Rev J Autism Dev Disord",
+      "pub_year": 2024,
+      "first_publication_date": "2024-04-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582133",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582133",
+        "pdf": "https://europepmc.org/articles/PMC13582133?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent",
+        "public_mental_health"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Systematic review",
+        "Well-being",
+        "Covid-19",
+        "Special Educational Needs And Disabilities (Send)"
+      ],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:1",
+          "strong_design",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584278",
+      "epmc_id": "PMC13584278",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584278",
+      "doi": null,
+      "title": "Factors influencing the mental health of young people with disability in Australia: a systematic scoping review",
+      "authors": "Bailie J, Aitken Z, Mantilla S, Shields M, Dimov S, Bright T, Sully A, Folpp N, Ekanayake K, Llewellyn G.",
+      "journal": "BMC public health",
+      "journal_abbrev": "BMC Public Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584278",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584278",
+        "pdf": "https://europepmc.org/articles/PMC13584278?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "scoping_review",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Review",
+        "Youth",
+        "Mental health",
+        "Disability",
+        "Socio-ecological Model"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583858",
+      "epmc_id": "PMC13583858",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583858",
+      "doi": null,
+      "title": "Ethnic and income-related inequalities in mental health among adolescents: a cross-sectional study in Bradford, UK",
+      "authors": "Lewer D, Bhopal S, Dale H, Hammad M, McEachan R, Pierce M, Wright J.",
+      "journal": "BMJ public health",
+      "journal_abbrev": "BMJ Public Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583858",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583858",
+        "pdf": "https://europepmc.org/articles/PMC13583858?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent",
+        "public_mental_health"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Mental health",
+        "Public Health",
+        "Community Health",
+        "Sociodemographic Factors"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584892",
+      "epmc_id": "PMC13584892",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584892",
+      "doi": null,
+      "title": "A case of tic improvement following tipepidine administration in a boy with Tourette syndrome comorbid with attention‐deficit/hyperactivity disorder and autism spectrum disorder",
+      "authors": "Tachibana M, Sasaki T.",
+      "journal": "PCN reports : psychiatry and clinical neurosciences",
+      "journal_abbrev": "PCN Rep",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "case-study"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584892",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584892",
+        "pdf": "https://europepmc.org/articles/PMC13584892?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "adhd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Tourette syndrome",
+        "Motor Tics",
+        "Tipepidine",
+        "Vocal Tics"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581939",
+      "epmc_id": "PMC13581939",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581939",
+      "doi": null,
+      "title": "A comparative study on mental health outcomes in patients with rheumatoid arthritis and knee osteoarthritis",
+      "authors": "Jia M, Wang S, Yu C, Li P.",
+      "journal": "Frontiers in medicine",
+      "journal_abbrev": "Front Med (Lausanne)",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581939",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581939",
+        "pdf": "https://europepmc.org/articles/PMC13581939?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Rheumatoid arthritis",
+        "Osteoarthritis",
+        "Mental health",
+        "comparative study",
+        "Scl-90"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582577",
+      "epmc_id": "PMC13582577",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582577",
+      "doi": null,
+      "title": "Case Report: Unmasking catatonia in adolescents: a potential triggering role of corticosteroids in two clinical cases",
+      "authors": "De Biase M, Averna R, Sesso G, Labonia M, Vicari S.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582577",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582577",
+        "pdf": "https://europepmc.org/articles/PMC13582577?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Clozapine",
+        "Corticosteroids",
+        "neuroinflammation",
+        "Adolescents",
+        "Catatonia"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "tags:2",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582401",
+      "epmc_id": "PMC13582401",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582401",
+      "doi": null,
+      "title": "Motivational climate in school sport and adolescent mental health: a systematic review",
+      "authors": "Wei Y, Lai G, Ji C, Yang X, Tie C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "systematic-review",
+        "Review"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582401",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582401",
+        "pdf": "https://europepmc.org/articles/PMC13582401?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Systematic review",
+        "Physical Education",
+        "Adolescent Mental Health",
+        "Motivational Climate",
+        "School Sport"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "tags:1",
+          "strong_design",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582545",
+      "epmc_id": "PMC13582545",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582545",
+      "doi": null,
+      "title": "When chatbots are perceived as “understanding”: a study on how virtual agent persona styles and affective interaction promote mental health acceptance",
+      "authors": "Wu Q, Lu S, Yan Y, Liu L, Peng X.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582545",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582545",
+        "pdf": "https://europepmc.org/articles/PMC13582545?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Artificial intelligence",
+        "Psychological Acceptance",
+        "Affective Engagement",
+        "Human–Ai Interaction",
+        "Mental Health Chatbot",
+        "Virtual Agent Persona"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582621",
+      "epmc_id": "PMC13582621",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582621",
+      "doi": null,
+      "title": "“Did I look at the blackness, or did I look at the stars?” Meaning making in stories of spirituality, mental health and recovery",
+      "authors": "Milner K, Crawford P, Edgley A, Slade M.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582621",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582621",
+        "pdf": "https://europepmc.org/articles/PMC13582621?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Recovery",
+        "Mental health",
+        "Religion",
+        "Narrative",
+        "Mental Health And Illness",
+        "Meaning Making",
+        "Stories/storytelling",
+        "Spirituality (Mesh)"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582321",
+      "epmc_id": "PMC13582321",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582321",
+      "doi": null,
+      "title": "Behavioral intention to use mental health chatbots in Saudi Arabia: a cross-sectional UTAUT-based study",
+      "authors": "Alsalman Z, Almaqhawi A, Almulhim A, Alqadeep A, Almutawah G, Al Khalifa F, Alghadeer F, Aleid H, Alkhalifah W, Alabdullah Z, AlAmer S, Shafey M.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582321",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582321",
+        "pdf": "https://europepmc.org/articles/PMC13582321?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Artificial intelligence",
+        "stigma",
+        "Saudi Arabia",
+        "Treatment Gap",
+        "Technology Acceptance",
+        "Utaut Model",
+        "Privacy Risk",
+        "Mental Health Chatbots"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582530",
+      "epmc_id": "PMC13582530",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582530",
+      "doi": null,
+      "title": "They are all inter-related, like a cycle: an exploratory qualitative study of climate change, chronic stressors and mental health among displaced populations on the Thailand-Myanmar border",
+      "authors": "Fellmeth G, Thwin M, Aung J, Nosten S, Wai N, Nosten F, Angkurawaranon C, Plugge E, McGready R.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582530",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582530",
+        "pdf": "https://europepmc.org/articles/PMC13582530?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "qualitative",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Climate change",
+        "Migrant",
+        "Mental health",
+        "Refugee",
+        "Stressors"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581686",
+      "epmc_id": "PMC13581686",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581686",
+      "doi": null,
+      "title": "Towards precision medicine: Application of the structural causal model in psychiatry",
+      "authors": "Chen W, Sun L, Zhang F, Wang J, Li C, Qin S, Wan C, Chen F, Zhang C, Cai R.",
+      "journal": "General psychiatry",
+      "journal_abbrev": "Gen Psychiatr",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-16",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581686",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581686",
+        "pdf": "https://europepmc.org/articles/PMC13581686?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Psychiatry",
+        "Causal Inference",
+        "Precision Medicine",
+        "Multiomics",
+        "Structural Causal Model"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13585274",
+      "epmc_id": "PMC13585274",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13585274",
+      "doi": null,
+      "title": "Patterns and determinants of formal healthcare utilisation among individuals with and without proxy-identified mental health need in Tanzania: A cross-sectional analysis of the National Panel Survey",
+      "authors": "Mlenge G, Bilame O, Mwinuka L.",
+      "journal": "PLOS mental health",
+      "journal_abbrev": "PLOS Ment Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13585274",
+        "fulltext_html": "https://europepmc.org/articles/PMC13585274",
+        "pdf": "https://europepmc.org/articles/PMC13585274?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13585218",
+      "epmc_id": "PMC13585218",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13585218",
+      "doi": null,
+      "title": "Examining the mental health support needs of NHS staff exposed to patient pregnancy and neonatal loss: A qualitative study",
+      "authors": "Johnson D, Newell S, Family H, Holland M, Westby M, Franks E, Turner L, Harrison C.",
+      "journal": "PloS one",
+      "journal_abbrev": "PLoS One",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13585218",
+        "fulltext_html": "https://europepmc.org/articles/PMC13585218",
+        "pdf": "https://europepmc.org/articles/PMC13585218?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "qualitative",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13585219",
+      "epmc_id": "PMC13585219",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13585219",
+      "doi": null,
+      "title": "Sexual dysfunction after female genital mutilation/cutting: A retrospective cross-sectional study of associations with organ-specific genital anatomy, trauma history, and psychiatric comorbidity",
+      "authors": "Lock E, Ades V.",
+      "journal": "PloS one",
+      "journal_abbrev": "PLoS One",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13585219",
+        "fulltext_html": "https://europepmc.org/articles/PMC13585219",
+        "pdf": "https://europepmc.org/articles/PMC13585219?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583604",
+      "epmc_id": "PMC13583604",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583604",
+      "doi": null,
+      "title": "Sleep-disordered breathing and psychiatric comorbidities in narcolepsy: A 10-year retrospective study from Saudi Arabia",
+      "authors": "Alshahrani M, Bedaiwi N, Aljawder S, Allehebi R, Abdelbasit A, Alshehri A, Fallatah S, Alomani O, Alhomayin L, AlHoshan T.",
+      "journal": "Sleep medicine: X",
+      "journal_abbrev": "Sleep Med X",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-06",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583604",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583604",
+        "pdf": "https://europepmc.org/articles/PMC13583604?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "obstructive sleep apnea",
+        "Saudi Arabia",
+        "Cataplexy",
+        "Narcolepsy",
+        "Sleep Medicine",
+        "Diagnostic Delay",
+        "Rem-osa"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582533",
+      "epmc_id": "PMC13582533",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582533",
+      "doi": null,
+      "title": "Association between insufficient sleep and mental health in preschoolers: effect modification by low household income",
+      "authors": "Ren G, Wang J, Zhang X, Li S, Duan M.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582533",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582533",
+        "pdf": "https://europepmc.org/articles/PMC13582533?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Western China",
+        "Preschool children",
+        "Mental health",
+        "Socioeconomic Factors",
+        "Effect Modification",
+        "Insufficient Sleep"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "tags:1",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582332",
+      "epmc_id": "PMC13582332",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582332",
+      "doi": null,
+      "title": "Associations between objectively measured physical activity intensities and executive function in preschool children: a cross-sectional study",
+      "authors": "Xiong X, Lai J, Wang S, Li J, Pei X, Sun J, An Y, Wang Z.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582332",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582332",
+        "pdf": "https://europepmc.org/articles/PMC13582332?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Preschool children",
+        "Physical Activity",
+        "Inhibitory Control",
+        "Executive Function",
+        "Cognitive Flexibility",
+        "Accelerometry"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "tags:1",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582472",
+      "epmc_id": "PMC13582472",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582472",
+      "doi": null,
+      "title": "Clinical characteristics and neuropsychiatric profiles of young-onset dementia: a retrospective cross-sectional study at a tertiary care center in Northern Thailand",
+      "authors": "Jekpoo S, Booncharoen K, Prompila S, Wongpakaran T, Wang H, Wongpakaran N.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582472",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582472",
+        "pdf": "https://europepmc.org/articles/PMC13582472?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "older_adults"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Thailand",
+        "Vascular dementia",
+        "Alzheimer’s disease",
+        "Frontotemporal Dementia",
+        "Neuropsychiatric Symptoms",
+        "Young-onset Dementia"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "tags:1",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582508",
+      "epmc_id": "PMC13582508",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582508",
+      "doi": null,
+      "title": "Combined transcranial photobiomodulation and neurofeedback in PANS/PANDAS: a retrospective case series",
+      "authors": "Hill B.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "brief-report",
+        "Brief Report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582508",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582508",
+        "pdf": "https://europepmc.org/articles/PMC13582508?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Pans",
+        "Pandas",
+        "Cognitive function",
+        "Neurofeedback",
+        "neuroinflammation",
+        "Neuromodulation",
+        "Transcranial Photobiomodulation",
+        "Pediatric Neuropsychiatry"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "tags:1",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13583673",
+      "epmc_id": "PMC13583673",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13583673",
+      "doi": null,
+      "title": "Effect of traditional Chinese medicine on sleep and blood pressure in patients with comorbid hypertension-insomnia: a systematic review and meta-analysis",
+      "authors": "Fan Y, Li H, Ma Y, Yin S, Xu C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "systematic-review",
+        "Review"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13583673",
+        "fulltext_html": "https://europepmc.org/articles/PMC13583673",
+        "pdf": "https://europepmc.org/articles/PMC13583673?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Hypertension",
+        "Cardiovascular diseases",
+        "Circadian rhythm",
+        "Traditional Chinese medicine",
+        "Sleep disorders",
+        "Sleep Quality"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "strong_design",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584826",
+      "epmc_id": "PMC13584826",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584826",
+      "doi": null,
+      "title": "Motivational and emotional determinants of health goal progress in inflammatory bowel disease: a longitudinal study",
+      "authors": "Horvát B, Dávid A, Sallay V, Rafael B, Njers S, Orbán K, Molnár T, Csabai M, Tóth Á, Martos T.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584826",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584826",
+        "pdf": "https://europepmc.org/articles/PMC13584826?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cohort",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Chronic disease",
+        "Inflammatory Bowel Disease",
+        "Health Behavior",
+        "Self-concordance",
+        "Health-Related Personal Goals"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "strong_design",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13581523",
+      "epmc_id": "PMC13581523",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13581523",
+      "doi": null,
+      "title": "Physical exercise and social media addiction among adolescents: a chain mediation analysis of cognitive flexibility and negative attention bias",
+      "authors": "Luo J, Long S, Chen Y, Pan M, Liu Y, Ma X, Luo J.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13581523",
+        "fulltext_html": "https://europepmc.org/articles/PMC13581523",
+        "pdf": "https://europepmc.org/articles/PMC13581523?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Adolescents",
+        "Physical Exercise",
+        "Cognitive Flexibility",
+        "Social Media Addiction",
+        "Negative Attention Bias"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "tags:1",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582501",
+      "epmc_id": "PMC13582501",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582501",
+      "doi": null,
+      "title": "Prevention of postoperative delirium with transcranial alternating current stimulation: study protocol for a randomised controlled trial",
+      "authors": "Zeng L, Yu X, Yang T, Liao J, Ouyang Y, Zhou J.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "methods-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582501",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582501",
+        "pdf": "https://europepmc.org/articles/PMC13582501?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "protocol",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "older_adults"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Randomized controlled trial",
+        "Elderly patients",
+        "Neuromodulation",
+        "Postoperative Delirium",
+        "Non-cardiac Surgery",
+        "Transcranial Alternating Current Stimulation"
+      ],
+      "relevance": {
+        "score": -5,
+        "signals": [
+          "tags:1",
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584914",
+      "epmc_id": "PMC13584914",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584914",
+      "doi": null,
+      "title": "Association between post-intravenous thrombolysis delirium and 90-day functional outcomes in patients with acute ischemic stroke",
+      "authors": "Hao Y, Wu F, Tang Y, Shi X, Yang X, Zhang X.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584914",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584914",
+        "pdf": "https://europepmc.org/articles/PMC13584914?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Therapy",
+        "Reperfusion",
+        "Ischemic stroke",
+        "Delirium",
+        "Dysphagia",
+        "Intravenous Thrombolysis"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582338",
+      "epmc_id": "PMC13582338",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582338",
+      "doi": null,
+      "title": "Culture hidden in plain sight: a framework-based secondary qualitative analysis of clinicians’ experiences with the cultural formulation interview",
+      "authors": "Deshmukh A, Lakhani S, Paralikar V.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582338",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582338",
+        "pdf": "https://europepmc.org/articles/PMC13582338?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Cultural Competence",
+        "Cultural Psychiatry",
+        "Clinical Implementation",
+        "Clinician Perspectives",
+        "Secondary Qualitative Analysis",
+        "Cultural Formulation Interview",
+        "Person-centered Psychiatry",
+        "Sociocultural Assessment"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582347",
+      "epmc_id": "PMC13582347",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582347",
+      "doi": null,
+      "title": "Language-informed treatment recommendations in psychiatry: bridging the gap in individual predictability",
+      "authors": "Shui R, Zhang X, Cai Z, Zhao K, Siniatchkin M, Hou J.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "brief-report",
+        "Brief Report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582347",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582347",
+        "pdf": "https://europepmc.org/articles/PMC13582347?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Causal Inference",
+        "Machine Learning Methods",
+        "Precision Psychiatry",
+        "Individualized Treatment Effects",
+        "Treatment Recommendation Systems"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582445",
+      "epmc_id": "PMC13582445",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582445",
+      "doi": null,
+      "title": "Psychiatric emergency events and risk factors among patients with severe mental disorders: an 8-year retrospective analysis in an urban district of Beijing",
+      "authors": "Hu Y, Wang H, Zhang M, Yan H, Yan H, Tian Q, Jin S, Li Z, Zhang Z.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582445",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582445",
+        "pdf": "https://europepmc.org/articles/PMC13582445?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "public_mental_health"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Retrospective studies",
+        "Mental disorders",
+        "Severe",
+        "Physical Health",
+        "Community Mental Health Services"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582511",
+      "epmc_id": "PMC13582511",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582511",
+      "doi": null,
+      "title": "Shift work, sociodemographic factors, and sleep quality among nurses working in rotating and day shifts: a cross-sectional analysis",
+      "authors": "Algamdi M, Alamrani M.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582511",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582511",
+        "pdf": "https://europepmc.org/articles/PMC13582511?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Logistic regression",
+        "Saudi Arabia",
+        "Nurses",
+        "Psqi",
+        "Shift Work",
+        "Sleep Quality",
+        "Rotating Shifts",
+        "Cross-sectional Association"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13584859",
+      "epmc_id": "PMC13584859",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13584859",
+      "doi": null,
+      "title": "Symptom-based and self-identified pornography involvement: concordance, discordance, and multidomain correlates",
+      "authors": "Széll K, Pócs D, Kelemen O, Tőtös Á, Paulik E, Molnár R, Erdős C.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13584859",
+        "fulltext_html": "https://europepmc.org/articles/PMC13584859",
+        "pdf": "https://europepmc.org/articles/PMC13584859?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Concordance",
+        "Discordance",
+        "Problematic Pornography Use",
+        "Pornography Use Frequency",
+        "Self-perceived Addiction",
+        "Pornography-watching Disorder",
+        "Multidomain Correlates",
+        "Self-Identified Pornography Addiction"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582558",
+      "epmc_id": "PMC13582558",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582558",
+      "doi": null,
+      "title": "The relationship between the latent profiles of alexithymia and self-disclosure in female patients with pelvic floor dysfunction",
+      "authors": "Jiang L, Wang R, Luo Z, Wu T, Liu N, Guo X.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582558",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582558",
+        "pdf": "https://europepmc.org/articles/PMC13582558?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Female",
+        "Alexithymia",
+        "Self-disclosure",
+        "Latent Profile Analysis",
+        "Pelvic Floor Dysfunction"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13582548",
+      "epmc_id": "PMC13582548",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13582548",
+      "doi": null,
+      "title": "The role of metacognitive beliefs in impulse control disorders and addictive-like behaviors in Parkinson’s disease: an exploratory study",
+      "authors": "Triscari S, Lenzo V, Sardella A, Caponnetto P, Galati A, Lupica P, Tasca D, Muratore S, Marano P, Caraci F, Quattropani M.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-18",
+      "first_index_date": "2026-09-18",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-19T01:30:32Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13582548",
+        "fulltext_html": "https://europepmc.org/articles/PMC13582548",
+        "pdf": "https://europepmc.org/articles/PMC13582548?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Addiction",
+        "Metacognition",
+        "Parkinson",
+        "Impulse Control Disorder",
+        "Metacognitive Beliefs"
+      ],
+      "relevance": {
+        "score": -6,
+        "signals": [
+          "weak_topic",
+          "journal_overflow"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    }
+  ]
+}
