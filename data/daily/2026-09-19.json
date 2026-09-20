@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-19",
+  "timezone": "America/Lima",
+  "fetched_at": "2026-09-20T01:30:24Z",
+  "source": {
+    "name": "Europe PMC + PubMed",
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "date_field": "FIRST_IDATE",
+    "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-19 TO 2026-09-19] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "hit_count": 113,
+    "accepted": 1,
+    "query_version": "2026-09-14.2",
+    "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+    "europepmc": {
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-19 TO 2026-09-19] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+      "hit_count": 113
+    },
+    "pubmed": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "date_field": "edat",
+      "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
+      "hit_count": 34,
+      "unresolved_in_europepmc": 0
+    }
+  },
+  "items": [
+    {
+      "key": "MED:42757361",
+      "epmc_id": "42757361",
+      "source": "MED",
+      "pmid": "42757361",
+      "pmcid": "PMC13585154",
+      "doi": null,
+      "title": "Persons at High-Risk and Low-Risk for Chronic Obstructive Pulmonary Disease: Results from the BOLD Study in Iran.",
+      "authors": "Sharifi H, Sadr M, Akhtari M, Tavanarezaei M, Hesami Z, Eslaminejad A, Ghanei M.",
+      "journal": "Tanaffos",
+      "journal_abbrev": "Tanaffos",
+      "pub_year": 2025,
+      "first_publication_date": "2025-03-01",
+      "first_index_date": "2026-09-19",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-20T01:30:24Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/MED/42757361",
+        "fulltext_html": "https://europepmc.org/articles/PMC13585154",
+        "pdf": "https://europepmc.org/articles/PMC13585154?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Chronic obstructive pulmonary disease (COPD) is a common, heterogeneous, and largely preventable respiratory condition that is frequently undiagnosed until advanced stages. We estimated the prevalence of COPD risk categories in Iran and examined factors associated with high-risk status."
+          },
+          {
+            "heading": "Materials and methods",
+            "text": "A population-based survey using stratified cluster sampling was conducted in five major Iranian provinces, representing approximately 36% of the national population. Non-institutionalized adults aged ≥18 years completed standardized questionnaires, SF-12 health-related quality-of-life assessments, and pre- and post-bronchodilator spirometry under the tailored Burden of Lung Disease protocol. Participants were classified as diagnosed COPD (DN), high risk (HR; ≥10 years of tobacco use plus ≥1 respiratory symptom), or low risk (LR)."
+          },
+          {
+            "heading": "Results",
+            "text": "Among 533 participants (mean age, 53.2 ± 1.83 years; 43.9% men), 5.0% (95% CI: 3.17-6.83) had diagnosed COPD, 13.2% (95% CI: 12.92-13.48) were high risk, and 81.8% (95% CI: 78.55-85.05) were low risk. Dyspnea on exertion (43.6%), productive cough (27.1%), and frequent shortness of breath (32.1%) were common and occurred more frequently in DN and HR groups. High-risk status was more prevalent among men, current smokers, and adults aged >45 years. Tobacco use for ≥10 years was strongly associated with HR classification. Smoking patterns and symptom burden varied substantially across provinces. DN and HR participants had significantly poorer SF-12 physical and mental health scores than LR participants (P<0.001)."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "A substantial proportion of Iranian adults are at high risk for COPD, indicating an important burden of potentially undiagnosed disease. Targeted screening, smoking-cessation initiatives, and earlier primary-care intervention may improve COPD detection and prevention."
+          }
+        ],
+        "text": "Chronic obstructive pulmonary disease (COPD) is a common, heterogeneous, and largely preventable respiratory condition that is frequently undiagnosed until advanced stages. We estimated the prevalence of COPD risk categories in Iran and examined factors associated with high-risk status.\n\nA population-based survey using stratified cluster sampling was conducted in five major Iranian provinces, representing approximately 36% of the national population. Non-institutionalized adults aged ≥18 years completed standardized questionnaires, SF-12 health-related quality-of-life assessments, and pre- and post-bronchodilator spirometry under the tailored Burden of Lung Disease protocol. Participants were classified as diagnosed COPD (DN), high risk (HR; ≥10 years of tobacco use plus ≥1 respiratory symptom), or low risk (LR).\n\nAmong 533 participants (mean age, 53.2 ± 1.83 years; 43.9% men), 5.0% (95% CI: 3.17-6.83) had diagnosed COPD, 13.2% (95% CI: 12.92-13.48) were high risk, and 81.8% (95% CI: 78.55-85.05) were low risk. Dyspnea on exertion (43.6%), productive cough (27.1%), and frequent shortness of breath (32.1%) were common and occurred more frequently in DN and HR groups. High-risk status was more prevalent among men, current smokers, and adults aged >45 years. Tobacco use for ≥10 years was strongly associated with HR classification. Smoking patterns and symptom burden varied substantially across provinces. DN and HR participants had significantly poorer SF-12 physical and mental health scores than LR participants (P<0.001).\n\nA substantial proportion of Iranian adults are at high risk for COPD, indicating an important burden of potentially undiagnosed disease. Targeted screening, smoking-cessation initiatives, and earlier primary-care intervention may improve COPD detection and prevention."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "A substantial proportion of Iranian adults are at high risk for COPD, indicating an important burden of potentially undiagnosed disease. Targeted screening, smoking-cessation initiatives, and earlier primary-care intervention may improve COPD detection and prevention.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "substances",
+        "public_mental_health",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Iran",
+        "Prevalence",
+        "Smoking",
+        "COPD",
+        "Respiratory Symptoms",
+        "Risk Categories"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    }
+  ]
+}
