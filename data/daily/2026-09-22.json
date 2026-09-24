@@ -1,0 +1,1719 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-22",
+  "timezone": "America/Lima",
+  "fetched_at": "2026-09-24T01:30:18Z",
+  "source": {
+    "name": "Europe PMC + PubMed",
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "date_field": "FIRST_IDATE",
+    "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-22 TO 2026-09-22] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "hit_count": 25,
+    "accepted": 25,
+    "query_version": "2026-09-14.2",
+    "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+    "europepmc": {
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-09-22 TO 2026-09-22] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+      "hit_count": 25
+    },
+    "pubmed": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "date_field": "edat",
+      "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
+      "hit_count": 178,
+      "unresolved_in_europepmc": 0
+    }
+  },
+  "items": [
+    {
+      "key": "PMC:PMC13591921",
+      "epmc_id": "PMC13591921",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13591921",
+      "doi": null,
+      "title": "Characterization and correlation of gut microbiota in major depressive disorder patients with suicidal ideation",
+      "authors": "Li F, Jiang Z, Xing J, Guo F, Qu C, Zhang A, Yang C, Liu P, Sun N.",
+      "journal": "BMC psychiatry",
+      "journal_abbrev": "BMC Psychiatry",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13591921",
+        "fulltext_html": "https://europepmc.org/articles/PMC13591921",
+        "pdf": "https://europepmc.org/articles/PMC13591921?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "suicide",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "C-reactive Protein",
+        "Gut Microbiota",
+        "Major Depressive Disorder",
+        "Suicidal Ideation",
+        "Short-chain Fatty Acids"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13590736",
+      "epmc_id": "PMC13590736",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13590736",
+      "doi": null,
+      "title": "Differentiating the potential of continuum beliefs to reduce the public stigma of schizophrenia, depression, and alcohol dependence: associations with illness recognition and treatment recommendations",
+      "authors": "Speerforck S, Leonhard A, Angermeyer M, Schomerus G.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-22",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13590736",
+        "fulltext_html": "https://europepmc.org/articles/PMC13590736",
+        "pdf": "https://europepmc.org/articles/PMC13590736?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "depression",
+        "alcohol"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "stigma",
+        "Mental Health Literacy",
+        "Public Stigma",
+        "Illness Recognition",
+        "Continuum Beliefs"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42769039",
+      "epmc_id": "42769039",
+      "source": "MED",
+      "pmid": "42769039",
+      "pmcid": "PMC13590340",
+      "doi": "10.3389/fpsyg.2026.1889946",
+      "title": "Daily academic and sport-related strain and mental-health-related states among university students in sport-related majors: a 14-day ecological momentary assessment network study.",
+      "authors": "Wang A, Ao C, Guan N, Ma C.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-07",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fpsyg.2026.1889946",
+        "europepmc": "https://europepmc.org/article/MED/42769039",
+        "fulltext_html": "https://europepmc.org/articles/PMC13590340",
+        "pdf": "https://europepmc.org/articles/PMC13590340?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "University students enrolled in sport-related majors may simultaneously manage academic requirements and regular training or competition, yet the short-term organization of their physical, academic/performance-related, affective, and cognitive states remains insufficiently understood. This study used a 14-day ecological momentary assessment (EMA) design with three smartphone assessments per day and multilevel vector autoregressive modeling. The original recruitment pool included 72 students from one university in Chongqing, China. Five participants were excluded for repeated responses outside the designated EMA windows, and seven were excluded for broader protocol or response-quality failures, including discontinuation of EMA completion and/or repeated invariant, non-informative response patterns. The retained analytic sample comprised 60 students and a balanced panel of 2,520 observations. Eight brief, study-specific momentary indicators were modeled: fatigue, soreness/bodily pain, academic stress, performance worry, depressed mood, tension/anxiety/irritability, rumination, and concentration difficulty. The revised primary temporal model used population-level fixed lagged slopes and showed no singularity or convergence problems. Soreness and fatigue showed the largest temporal out-strength, whereas the tension/anxiety/irritability indicator showed the largest temporal in-strength. In the contemporaneous network, the tension/anxiety/irritability indicator and rumination showed the highest expected-influence and bridge-centrality estimates. Participant-level bootstrap and case-dropping analyses indicated high centrality stability within the retained sample, although between-person edge estimates were substantially less precise. Sensitivity analyses showed that the broad outgoing and contemporaneous structure was comparatively robust to measured training, academic, and time-of-day context, whereas several incoming temporal relations, particularly those involving academic stress, were context-sensitive. Poorer-than-usual sleep remained prospectively associated with higher next-morning levels of all eight states after adjustment for participants' mean sleep, the previous-evening value of the same outcome, study day, and participant-level clustering. These findings characterize conditional associations among the specific momentary indicators measured in this single-university sample; they do not establish causal pathways, comprehensive dual-career functioning, or intervention targets."
+          }
+        ],
+        "text": "University students enrolled in sport-related majors may simultaneously manage academic requirements and regular training or competition, yet the short-term organization of their physical, academic/performance-related, affective, and cognitive states remains insufficiently understood. This study used a 14-day ecological momentary assessment (EMA) design with three smartphone assessments per day and multilevel vector autoregressive modeling. The original recruitment pool included 72 students from one university in Chongqing, China. Five participants were excluded for repeated responses outside the designated EMA windows, and seven were excluded for broader protocol or response-quality failures, including discontinuation of EMA completion and/or repeated invariant, non-informative response patterns. The retained analytic sample comprised 60 students and a balanced panel of 2,520 observations. Eight brief, study-specific momentary indicators were modeled: fatigue, soreness/bodily pain, academic stress, performance worry, depressed mood, tension/anxiety/irritability, rumination, and concentration difficulty. The revised primary temporal model used population-level fixed lagged slopes and showed no singularity or convergence problems. Soreness and fatigue showed the largest temporal out-strength, whereas the tension/anxiety/irritability indicator showed the largest temporal in-strength. In the contemporaneous network, the tension/anxiety/irritability indicator and rumination showed the highest expected-influence and bridge-centrality estimates. Participant-level bootstrap and case-dropping analyses indicated high centrality stability within the retained sample, although between-person edge estimates were substantially less precise. Sensitivity analyses showed that the broad outgoing and contemporaneous structure was comparatively robust to measured training, academic, and time-of-day context, whereas several incoming temporal relations, particularly those involving academic stress, were context-sensitive. Poorer-than-usual sleep remained prospectively associated with higher next-morning levels of all eight states after adjustment for participants' mean sleep, the previous-evening value of the same outcome, study day, and participant-level clustering. These findings characterize conditional associations among the specific momentary indicators measured in this single-university sample; they do not establish causal pathways, comprehensive dual-career functioning, or intervention targets."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Poorer-than-usual sleep remained prospectively associated with higher next-morning levels of all eight states after adjustment for participants' mean sleep, the previous-evening value of the same outcome, study day, and participant-level clustering. These findings characterize conditional associations among the specific momentary indicators measured in this single-university sample; they do not establish causal pathways, comprehensive dual-career functioning, or intervention targets.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "modelling",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "anxiety",
+        "symptom_networks",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Sleep",
+        "Rumination",
+        "Ecological Momentary Assessment",
+        "Dynamic Network Analysis",
+        "Anxiety/Irritability"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "MED:42766849",
+      "epmc_id": "42766849",
+      "source": "MED",
+      "pmid": "42766849",
+      "pmcid": "PMC13592740",
+      "doi": "10.2196/93231",
+      "title": "Burden of Insomnia Among Individuals With Major Depressive Disorder: Cross-Sectional Observational Study.",
+      "authors": "Hamilton J, Pain E, Riise J, Zhang Z.",
+      "journal": "Interactive journal of medical research",
+      "journal_abbrev": "Interact J Med Res",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-21",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.2196/93231",
+        "europepmc": "https://europepmc.org/article/MED/42766849",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592740",
+        "pdf": "https://europepmc.org/articles/PMC13592740?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Insomnia is a common and persistent symptom in major depressive disorder (MDD), associated with poorer outcomes and reduced quality of life (QoL). Despite its prevalence, recent patient-reported data on the burden of insomnia symptoms in MDD remains limited."
+          },
+          {
+            "heading": "Objective",
+            "text": "This study aimed to assess the burden of insomnia among individuals with MDD experiencing insomnia symptoms (MDDIS) and its impact on patient-perceived disease burden and QoL."
+          },
+          {
+            "heading": "Methods",
+            "text": "A noninterventional, cross-sectional online study was conducted from October 2022 to February 2023 in adults with self-reported MDD and insomnia symptoms, residing in the United States or 1 of 5 European countries (EU5: France, Germany, Italy, Spain, and the United Kingdom). Participants completed validated questionnaires (Patient Health Questionnaire-9 [PHQ-9] for depression severity and Insomnia Severity Index [ISI] for insomnia severity) and provided data on demographics, clinical history, treatment experience, and perceptions. Descriptive statistics were used to summarize results, and subgroup analyses were conducted based on depression status and severity."
+          },
+          {
+            "heading": "Results",
+            "text": "Among 1250 participants (United States: 500; EU5: 750), most were cisgender women (United States: 363/500, 72%; EU5: 637/750, 85%), aged ~48 years, and on average 13.4 years in the United States and 11.2 years in EU5 had passed since being diagnosed with MDD. Around 60% (United States: 312/500; EU5: 439/750) reported having moderate to severe insomnia symptoms. Most had used antidepressants (United States: 460/500, 92%; EU5: 646/750, 86%) at least 40% (United States: 198/500; EU5: 343/750) in both regions reported using sleep-related medications (over-the-counter sleep aids, dual-purpose medication, or sleep-specific medication). However, insomnia symptoms persisted, with around half of participants reporting 8 to 15 insomnia nights over 2 weeks. Insomnia symptom severity differed significantly according to depression severity and current depressive episode status. Nearly all participants reported negative consequences for daily functioning, including irritability, cognitive impairment, and reduced productivity, and approximately two-thirds identified sleep disturbances as having a major impact on their daily lives. Satisfaction with current treatments, particularly their effectiveness on sleep, was low, and 65%-71% (488/750-354/500) of participants expressed a desire for alternative therapies."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Insomnia symptoms are highly prevalent and burdensome among patients with MDD, severely affecting daily life and perceived treatment success. Insomnia remains inadequately controlled despite high medication use. These findings emphasize the need for integrated treatment strategies targeting both mood and sleep symptoms. Given its role in depression relapse, suicidality, and treatment resistance, addressing insomnia symptoms in MDD should be a clinical priority."
+          }
+        ],
+        "text": "Insomnia is a common and persistent symptom in major depressive disorder (MDD), associated with poorer outcomes and reduced quality of life (QoL). Despite its prevalence, recent patient-reported data on the burden of insomnia symptoms in MDD remains limited.\n\nThis study aimed to assess the burden of insomnia among individuals with MDD experiencing insomnia symptoms (MDDIS) and its impact on patient-perceived disease burden and QoL.\n\nA noninterventional, cross-sectional online study was conducted from October 2022 to February 2023 in adults with self-reported MDD and insomnia symptoms, residing in the United States or 1 of 5 European countries (EU5: France, Germany, Italy, Spain, and the United Kingdom). Participants completed validated questionnaires (Patient Health Questionnaire-9 [PHQ-9] for depression severity and Insomnia Severity Index [ISI] for insomnia severity) and provided data on demographics, clinical history, treatment experience, and perceptions. Descriptive statistics were used to summarize results, and subgroup analyses were conducted based on depression status and severity.\n\nAmong 1250 participants (United States: 500; EU5: 750), most were cisgender women (United States: 363/500, 72%; EU5: 637/750, 85%), aged ~48 years, and on average 13.4 years in the United States and 11.2 years in EU5 had passed since being diagnosed with MDD. Around 60% (United States: 312/500; EU5: 439/750) reported having moderate to severe insomnia symptoms. Most had used antidepressants (United States: 460/500, 92%; EU5: 646/750, 86%) at least 40% (United States: 198/500; EU5: 343/750) in both regions reported using sleep-related medications (over-the-counter sleep aids, dual-purpose medication, or sleep-specific medication). However, insomnia symptoms persisted, with around half of participants reporting 8 to 15 insomnia nights over 2 weeks. Insomnia symptom severity differed significantly according to depression severity and current depressive episode status. Nearly all participants reported negative consequences for daily functioning, including irritability, cognitive impairment, and reduced productivity, and approximately two-thirds identified sleep disturbances as having a major impact on their daily lives. Satisfaction with current treatments, particularly their effectiveness on sleep, was low, and 65%-71% (488/750-354/500) of participants expressed a desire for alternative therapies.\n\nInsomnia symptoms are highly prevalent and burdensome among patients with MDD, severely affecting daily life and perceived treatment success. Insomnia remains inadequately controlled despite high medication use. These findings emphasize the need for integrated treatment strategies targeting both mood and sleep symptoms. Given its role in depression relapse, suicidality, and treatment resistance, addressing insomnia symptoms in MDD should be a clinical priority."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Insomnia symptoms are highly prevalent and burdensome among patients with MDD, severely affecting daily life and perceived treatment success. Insomnia remains inadequately controlled despite high medication use. These findings emphasize the need for integrated treatment strategies targeting both mood and sleep symptoms. Given its role in depression relapse, suicidality, and treatment resistance, addressing insomnia symptoms in MDD should be a clinical priority.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "suicide",
+        "public_mental_health",
+        "psychopharmacology",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Insomnia",
+        "Cross-sectional study",
+        "Depressive Disorder",
+        "Health-related Quality Of Life",
+        "Online Study"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13591716",
+      "epmc_id": "PMC13591716",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13591716",
+      "doi": null,
+      "title": "Untargeted metabolomics reveals plasma metabolic dysregulation in schizophrenia",
+      "authors": "Han B, Feng B, Ge Y, Wang T, Liu L, Sun P, Chu X, Zhang Y, Du X, Wang F, Shen T.",
+      "journal": "BMC psychiatry",
+      "journal_abbrev": "BMC Psychiatry",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13591716",
+        "fulltext_html": "https://europepmc.org/articles/PMC13591716",
+        "pdf": "https://europepmc.org/articles/PMC13591716?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Plasma",
+        "Schizophrenia",
+        "Biomarkers",
+        "Metabolomics"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42765861",
+      "epmc_id": "42765861",
+      "source": "MED",
+      "pmid": "42765861",
+      "pmcid": "PMC13592228",
+      "doi": "10.1002/cns.71158",
+      "title": "Universum Inspired Graph Contrast Learning for Major Depressive Disorder Identification: In Functional Brain Network View.",
+      "authors": "Qin H, Hong G, Ma D, Wang Z, Zhao L, Li W, Xu X.",
+      "journal": "CNS neuroscience & therapeutics",
+      "journal_abbrev": "CNS Neurosci Ther",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1002/cns.71158",
+        "europepmc": "https://europepmc.org/article/MED/42765861",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592228",
+        "pdf": "https://europepmc.org/articles/PMC13592228?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Major depressive disorder (MDD) is a serious psychological disorder marked by persistent feelings of sadness and a notable decline in daily functioning. Functional Brain Networks (FBNs) have become crucial biomarkers for the diagnosis of MDD, and Graph Convolutional Networks (GCNs) have demonstrated great potential in extracting FBN features. However, existing GCN methods typically depend on large-scale labeled datasets and lack clinical interpretability in MDD identification, which limits their application."
+          },
+          {
+            "heading": "Methods",
+            "text": "We introduce Universum Inspired Graph Contrast Learning (Uni-GCL), a novel graph-based self-supervised learning framework to relieve the demand for training sample size. Additionally, to enhance the clinical interpretability of GCNs, we optimized the Gradient-weighted Class Activation Mapping (Grad-CAM) method to enable it to effectively pinpoint the crucial nodes within the GCN."
+          },
+          {
+            "heading": "Results",
+            "text": "The Uni-GCL method outperformed previous state-of-the-art approaches. It improved accuracy by 3% at Site 21 and 5% at Site 1. Additionally, Uni-GCL identified that brain regions FGoperc. R, CAU. L, FFG. R, AMYG. L, PUT. L, AMYG. R, PUT. R, THA. L, IFGtriang. R, FFG. L, INS. L, INS. R, HIP. L and HIP. R make significant contributions to the diagnosis of MDD."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Uni-GCL can effectively reduce the sample size for model training and improve the diagnostic performance of MDD. Meanwhile, the adapted Grad-CAM provides an effective tool to enhance the interpretability of GCN."
+          }
+        ],
+        "text": "Major depressive disorder (MDD) is a serious psychological disorder marked by persistent feelings of sadness and a notable decline in daily functioning. Functional Brain Networks (FBNs) have become crucial biomarkers for the diagnosis of MDD, and Graph Convolutional Networks (GCNs) have demonstrated great potential in extracting FBN features. However, existing GCN methods typically depend on large-scale labeled datasets and lack clinical interpretability in MDD identification, which limits their application.\n\nWe introduce Universum Inspired Graph Contrast Learning (Uni-GCL), a novel graph-based self-supervised learning framework to relieve the demand for training sample size. Additionally, to enhance the clinical interpretability of GCNs, we optimized the Gradient-weighted Class Activation Mapping (Grad-CAM) method to enable it to effectively pinpoint the crucial nodes within the GCN.\n\nThe Uni-GCL method outperformed previous state-of-the-art approaches. It improved accuracy by 3% at Site 21 and 5% at Site 1. Additionally, Uni-GCL identified that brain regions FGoperc. R, CAU. L, FFG. R, AMYG. L, PUT. L, AMYG. R, PUT. R, THA. L, IFGtriang. R, FFG. L, INS. L, INS. R, HIP. L and HIP. R make significant contributions to the diagnosis of MDD.\n\nUni-GCL can effectively reduce the sample size for model training and improve the diagnostic performance of MDD. Meanwhile, the adapted Grad-CAM provides an effective tool to enhance the interpretability of GCN."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Uni-GCL can effectively reduce the sample size for model training and improve the diagnostic performance of MDD. Meanwhile, the adapted Grad-CAM provides an effective tool to enhance the interpretability of GCN.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "neuroscience"
+      ],
+      "mesh_major": [
+        "Brain",
+        "Nerve Net",
+        "Major Depressive Disorder"
+      ],
+      "keywords": [
+        "Functional magnetic resonance imaging",
+        "Major Depressive Disorder",
+        "Functional Brain Network",
+        "Clinical Interpretability",
+        "Graph Convolutional Network",
+        "Contrast Learning"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13591540",
+      "epmc_id": "PMC13591540",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13591540",
+      "doi": null,
+      "title": "EEG Microstate Alterations in Anhedonia Subtypes of Major Depressive Disorder and Their Modulation by Intermittent Theta‐Burst Stimulation",
+      "authors": "Wu J, Deng Z, Cheng X, Li S, Qiu N, Hu L, Chen Z, Yao D, Pu L, Yan H.",
+      "journal": "Depression and anxiety",
+      "journal_abbrev": "Depress Anxiety",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13591540",
+        "fulltext_html": "https://europepmc.org/articles/PMC13591540",
+        "pdf": "https://europepmc.org/articles/PMC13591540?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Major Depressive Disorder",
+        "Anhedonia",
+        "Eeg Microstates",
+        "Snaith–hamilton Pleasure Scale",
+        "Intermittent Theta-burst Stimulation"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13590559",
+      "epmc_id": "PMC13590559",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13590559",
+      "doi": null,
+      "title": "Risk of hyperprolactinemia and extrapyramidal symptoms in antipsychotic-treated schizophrenia: a retrospective single-center real-world study",
+      "authors": "Shao Y, Lu Z, Zhang Y, Wang X.",
+      "journal": "Frontiers in pharmacology",
+      "journal_abbrev": "Front Pharmacol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-22",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13590559",
+        "fulltext_html": "https://europepmc.org/articles/PMC13590559",
+        "pdf": "https://europepmc.org/articles/PMC13590559?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "EPS",
+        "hyperprolactinemia",
+        "Antipsychotics",
+        "Real-world Study"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42765678",
+      "epmc_id": "42765678",
+      "source": "MED",
+      "pmid": "42765678",
+      "pmcid": "PMC13592174",
+      "doi": "10.1002/hipo.70132",
+      "title": "Prenatal Stress Induced by Maternal Immune Activation Disrupts GABAergic Inhibition and Mossy Fiber Plasticity in the Rat Dentate Gyrus-CA3 Circuit.",
+      "authors": "Anguiano-Buenfil J, Sollozo-Dupont I, Márquez LA, Zepeda A, Galván EJ.",
+      "journal": "Hippocampus",
+      "journal_abbrev": "Hippocampus",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1002/hipo.70132",
+        "europepmc": "https://europepmc.org/article/MED/42765678",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592174",
+        "pdf": "https://europepmc.org/articles/PMC13592174?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Viral infections during critical periods of pregnancy trigger inflammatory responses that alter offspring brain development and behavior, resulting in psychiatric disorder-associated phenotypes. This condition is commonly referred to as prenatal stress induced by maternal immune activation (MIA). Here, we investigate the effects of MIA on the neurophysiological properties of the dentate gyrus-CA3 circuit, a hippocampal circuit critical for cortical input processing and memory formation, and increasingly implicated in psychiatric disorders. Pregnant Sprague-Dawley dams were systemically administered polyinosinic:polycytidylic acid (poly I:C), a synthetic double-stranded RNA that elicits a viral-like immune response by activating the Toll-like receptor 3 (TLR3)-NF-kB signaling pathway. Extracellular recordings were performed on acute slices of male offspring at postnatal days 61-80. MIA increased the antidromic population spike amplification at the mossy fiber (MF)-granule cell layer response without modifying the antidromic responses at the CA3-CA3 commissural-associational fibers. Paired pulses with short interstimulus intervals revealed decreased levels of phasic and tonic GABAergic inhibition. In addition, MIA reduced coupling between presynaptic fiber volleys and MF field excitatory postsynaptic potentials (MF fEPSP). At the level of synaptic plasticity, MIA impaired frequency-dependent facilitation and decreased MF fEPSP paired-pulse facilitation, two hallmark forms of short-term plasticity at the MF-CA3 synapse. Lastly, MF-mediated long-term potentiation (MF LTP) and long-term depression (MF LTD) showed altered magnitudes in MIA slices. Collectively, our results indicate that MIA alters neuronal processing and output in the DG-CA3 hippocampal network, supporting the contribution of maternal inflammation to long-term circuit dysfunction associated with viral infections during pregnancy."
+          }
+        ],
+        "text": "Viral infections during critical periods of pregnancy trigger inflammatory responses that alter offspring brain development and behavior, resulting in psychiatric disorder-associated phenotypes. This condition is commonly referred to as prenatal stress induced by maternal immune activation (MIA). Here, we investigate the effects of MIA on the neurophysiological properties of the dentate gyrus-CA3 circuit, a hippocampal circuit critical for cortical input processing and memory formation, and increasingly implicated in psychiatric disorders. Pregnant Sprague-Dawley dams were systemically administered polyinosinic:polycytidylic acid (poly I:C), a synthetic double-stranded RNA that elicits a viral-like immune response by activating the Toll-like receptor 3 (TLR3)-NF-kB signaling pathway. Extracellular recordings were performed on acute slices of male offspring at postnatal days 61-80. MIA increased the antidromic population spike amplification at the mossy fiber (MF)-granule cell layer response without modifying the antidromic responses at the CA3-CA3 commissural-associational fibers. Paired pulses with short interstimulus intervals revealed decreased levels of phasic and tonic GABAergic inhibition. In addition, MIA reduced coupling between presynaptic fiber volleys and MF field excitatory postsynaptic potentials (MF fEPSP). At the level of synaptic plasticity, MIA impaired frequency-dependent facilitation and decreased MF fEPSP paired-pulse facilitation, two hallmark forms of short-term plasticity at the MF-CA3 synapse. Lastly, MF-mediated long-term potentiation (MF LTP) and long-term depression (MF LTD) showed altered magnitudes in MIA slices. Collectively, our results indicate that MIA alters neuronal processing and output in the DG-CA3 hippocampal network, supporting the contribution of maternal inflammation to long-term circuit dysfunction associated with viral infections during pregnancy."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Lastly, MF-mediated long-term potentiation (MF LTP) and long-term depression (MF LTD) showed altered magnitudes in MIA slices. Collectively, our results indicate that MIA alters neuronal processing and output in the DG-CA3 hippocampal network, supporting the contribution of maternal inflammation to long-term circuit dysfunction associated with viral infections during pregnancy.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "neuroscience"
+      ],
+      "mesh_major": [
+        "Dentate Gyrus",
+        "Mossy Fibers, Hippocampal",
+        "Prenatal Exposure Delayed Effects",
+        "Neuronal Plasticity",
+        "CA3 Region, Hippocampal"
+      ],
+      "keywords": [
+        "Synaptic plasticity",
+        "Interneurons",
+        "Mia",
+        "Poly I:c",
+        "Mossy Fibers",
+        "Ca3 Pyramidal Cells",
+        "Long‐term Depression",
+        "Long‐term Potentiation"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13592388",
+      "epmc_id": "PMC13592388",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13592388",
+      "doi": null,
+      "title": "Supporting the Primary Outcomes of the Mirai Trial for the Adjunctive Digital Therapeutic Rejoyn (CT-152) in the Treatment of Major Depressive Disorder: Meaningful Change Analysis in the Montgomery-Åsberg Depression Rating Scale",
+      "authors": "Hudgens S, Purnajo I, Floden L, Hwang S, Ash J, Rothman B, Speier A, Forbes A.",
+      "journal": "JMIR formative research",
+      "journal_abbrev": "JMIR Form Res",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13592388",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592388",
+        "pdf": "https://europepmc.org/articles/PMC13592388?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Cognitive Therapy",
+        "Patient-reported Outcomes",
+        "Digital Health Intervention",
+        "Meaningful Within-patient Change",
+        "Psychopharmacological Augmentation Therapy"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13591217",
+      "epmc_id": "PMC13591217",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13591217",
+      "doi": null,
+      "title": "Suicide mortality and associated factors among university students in Japan: A 5‐year nationwide epidemiological study (FY 2020–2024)",
+      "authors": "Yasumi K, Ibaraki T, Fuse‐Nagase Y, Marutani T, Tachikawa H, Takahashi A, Ishii T, Odawara T, Kawanishi C.",
+      "journal": "PCN reports : psychiatry and clinical neurosciences",
+      "journal_abbrev": "PCN Rep",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13591217",
+        "fulltext_html": "https://europepmc.org/articles/PMC13591217",
+        "pdf": "https://europepmc.org/articles/PMC13591217?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "suicide",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Suicide Prevention",
+        "university students",
+        "Academic Failure",
+        "Suicide Mortality",
+        "Covid‐19 Pandemic"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13592444",
+      "epmc_id": "PMC13592444",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13592444",
+      "doi": null,
+      "title": "Frailty and its association with mental health and quality of life in multiple sclerosis: A cross-sectional study",
+      "authors": "Al Worikat N, Zanotto A, Lynch S, Thuringer A, Sosnoff J, Zanotto T.",
+      "journal": "Sage Open Chronic Disease",
+      "journal_abbrev": null,
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13592444",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592444",
+        "pdf": "https://europepmc.org/articles/PMC13592444?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Multiple sclerosis",
+        "Quality of life",
+        "Frailty",
+        "Anxiety"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13591895",
+      "epmc_id": "PMC13591895",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13591895",
+      "doi": null,
+      "title": "Indian rural women’s suicide beliefs and experiences: female suicidality as escape from and protest against a life usurped of agency",
+      "authors": "Ghosh D, Verma S, ALmerab M, Mamun M, Mandal S, Bhattacharya S, Raj S.",
+      "journal": "BMC women's health",
+      "journal_abbrev": "BMC Womens Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13591895",
+        "fulltext_html": "https://europepmc.org/articles/PMC13591895",
+        "pdf": "https://europepmc.org/articles/PMC13591895?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "suicide"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Suicide",
+        "Women's Rights",
+        "Rural Women",
+        "Narrative Inquiry",
+        "Cultural Scripts Of Suicide",
+        "Patriarchal Norms",
+        "Protest Suicidality"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13590564",
+      "epmc_id": "PMC13590564",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13590564",
+      "doi": null,
+      "title": "Attitudes towards Tourette syndrome and schizophrenia amongst psychology students",
+      "authors": "Cramer C, Kleine Büning A, Schmitt S, Müller-Vahl K, Wood N, Brandt V.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": null,
+      "first_publication_date": "2026-09-22",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13590564",
+        "fulltext_html": "https://europepmc.org/articles/PMC13590564",
+        "pdf": "https://europepmc.org/articles/PMC13590564?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Schizophrenia",
+        "Media",
+        "Tourette syndrome",
+        "stigma",
+        "Stereotypes",
+        "Psychology Students"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13592629",
+      "epmc_id": "PMC13592629",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13592629",
+      "doi": null,
+      "title": "Exploring sex-specific symptom trajectories in psychosis following metacognitive training (MCT): Evidence from a large-scale retrospective harmonized database",
+      "authors": "Lamarca M, Goncalves A, Moritz S, Gawęda Ł, Acuña V, König C, Berna F, Ochoa S.",
+      "journal": "PloS one",
+      "journal_abbrev": "PLoS One",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13592629",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592629",
+        "pdf": "https://europepmc.org/articles/PMC13592629?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "psychosis"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13590709",
+      "epmc_id": "PMC13590709",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13590709",
+      "doi": null,
+      "title": "Reciprocal relationship between boredom proneness and problematic social media use among Chinese adolescents: a random intercept cross-lagged panel model",
+      "authors": "Chen S, Xu F.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-22",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13590709",
+        "fulltext_html": "https://europepmc.org/articles/PMC13590709",
+        "pdf": "https://europepmc.org/articles/PMC13590709?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Longitudinal study",
+        "Adolescents",
+        "Boredom Proneness",
+        "Problematic Social Media Use",
+        "Ri-clpm"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42765767",
+      "epmc_id": "42765767",
+      "source": "MED",
+      "pmid": "42765767",
+      "pmcid": "PMC13592173",
+      "doi": "10.1002/jcop.70148",
+      "title": "Orchestral Musicians' Community Engagement as a Means for Flourishing: A Phenomenological Study.",
+      "authors": "Ascenso S.",
+      "journal": "Journal of community psychology",
+      "journal_abbrev": "J Community Psychol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1002/jcop.70148",
+        "europepmc": "https://europepmc.org/article/MED/42765767",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592173",
+        "pdf": "https://europepmc.org/articles/PMC13592173?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Recent decades have witnessed a rapid expansion of community music projects, and findings have highlighted their potential to build important psychological resources such as positive emotions, a sense of accomplishment, engagement, purpose and social skills. Despite the collaborative nature of this type of work, the experiences of the musicians who facilitate it remain largely undocumented. This study emerged from two innovative initiatives that brought together primary school children and musicians from two of London's major orchestras (London Philharmonic Orchestra and London Contemporary Orchestra) to work together to prepare and perform new music written by emerging composers. The aim was to investigate musicians' lived experiences of community engagement through these collaborations. Interpretative Phenomenological Analysis (IPA) was adopted as the research framework. Fifteen musicians (six females, nine males), ranging from 26 to 57 years of age, took part in one-to-one semi-structured interviews after experiencing a month of community-based work with the children. Data analyses revealed the experience of community engagement to be accounted for through three supraordinate themes, encapsulating 12 subordinate themes: (1) identity development (personal and collective), (2) well-being (positive emotions, engagement, accomplishment, purpose and social contribution) and (3) skill development (personal, interpersonal, musical, teaching and creativity). The role of community engagement in fostering professional orchestral musicians' mental health is discussed."
+          }
+        ],
+        "text": "Recent decades have witnessed a rapid expansion of community music projects, and findings have highlighted their potential to build important psychological resources such as positive emotions, a sense of accomplishment, engagement, purpose and social skills. Despite the collaborative nature of this type of work, the experiences of the musicians who facilitate it remain largely undocumented. This study emerged from two innovative initiatives that brought together primary school children and musicians from two of London's major orchestras (London Philharmonic Orchestra and London Contemporary Orchestra) to work together to prepare and perform new music written by emerging composers. The aim was to investigate musicians' lived experiences of community engagement through these collaborations. Interpretative Phenomenological Analysis (IPA) was adopted as the research framework. Fifteen musicians (six females, nine males), ranging from 26 to 57 years of age, took part in one-to-one semi-structured interviews after experiencing a month of community-based work with the children. Data analyses revealed the experience of community engagement to be accounted for through three supraordinate themes, encapsulating 12 subordinate themes: (1) identity development (personal and collective), (2) well-being (positive emotions, engagement, accomplishment, purpose and social contribution) and (3) skill development (personal, interpersonal, musical, teaching and creativity). The role of community engagement in fostering professional orchestral musicians' mental health is discussed."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Data analyses revealed the experience of community engagement to be accounted for through three supraordinate themes, encapsulating 12 subordinate themes: (1) identity development (personal and collective), (2) well-being (positive emotions, engagement, accomplishment, purpose and social contribution) and (3) skill development (personal, interpersonal, musical, teaching and creativity). The role of community engagement in fostering professional orchestral musicians' mental health is discussed.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [
+        "Music"
+      ],
+      "keywords": [],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42769066",
+      "epmc_id": "42769066",
+      "source": "MED",
+      "pmid": "42769066",
+      "pmcid": "PMC13590363",
+      "doi": "10.3389/fnut.2026.1929193",
+      "title": "Perceived awareness, objective nutrition knowledge, and health beliefs about probiotics and prebiotics among adults in the United Arab Emirates: a cross-sectional study.",
+      "authors": "Alkalbani N, Osaili TM, Obaid RS, Hasan H, Cheikh Ismail L, Karu S, Nasser A, Hameed AA, Mohamed E, Nasrin M, Akbiyik T.",
+      "journal": "Frontiers in nutrition",
+      "journal_abbrev": "Front Nutr",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-07",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fnut.2026.1929193",
+        "europepmc": "https://europepmc.org/article/MED/42769066",
+        "fulltext_html": "https://europepmc.org/articles/PMC13590363",
+        "pdf": "https://europepmc.org/articles/PMC13590363?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Probiotics and prebiotics are increasingly promoted as functional food components. This growing visibility has not been matched by consistent public understanding of their definitions, dietary sources, and scientifically supported health claims. Against this background, this study assessed perceived awareness, objective knowledge, information sources, and health beliefs related to probiotics and prebiotics among adults in the United Arab Emirates (UAE). It also examined factors associated with adequate objective knowledge."
+          },
+          {
+            "heading": "Methods",
+            "text": "A cross-sectional online survey was conducted among 744 adult UAE residents between April and May 2026. Perceived awareness was measured using a 10-point scale. Objective knowledge was assessed using four items on definitions and natural dietary sources, and adequate knowledge was defined as at least three correct answers. In addition, information sources and health beliefs were assessed, and multivariable logistic regression was used to identify factors associated with adequate objective knowledge."
+          },
+          {
+            "heading": "Results",
+            "text": "Mean perceived awareness was 4.6 ± 2.8, and 18.0% of participants reported high awareness. Mean objective knowledge was 1.9 ± 1.6, with 39.9% demonstrating adequate knowledge. Correct responses were highest for the probiotic definition (55.8%) and lowest for natural prebiotic sources (37.0%). High perceived awareness and high objective knowledge overlapped in only 10.1% of participants. In the multivariable model, internet/websites (90.3%) and social media (84.9%) were the most frequently reported information sources, but neither was independently associated with adequate knowledge. By contrast, receiving information from healthcare professionals was positively associated with adequate knowledge [adjusted odds ratio (aOR) 1.83, p = 0.009]. Health beliefs were strongest for gut health and immunity and less certain for detoxification, obesity, stress, and mental health."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "Perceived awareness did not consistently correspond to objective knowledge. These findings indicate a nutrition-related knowledge gap, particularly for prebiotics and their natural dietary sources. Digital nutrition communication should be strengthened by professional guidance and clearer messages that distinguish probiotic and prebiotic concepts, dietary sources, and scientifically supported health claims."
+          }
+        ],
+        "text": "Probiotics and prebiotics are increasingly promoted as functional food components. This growing visibility has not been matched by consistent public understanding of their definitions, dietary sources, and scientifically supported health claims. Against this background, this study assessed perceived awareness, objective knowledge, information sources, and health beliefs related to probiotics and prebiotics among adults in the United Arab Emirates (UAE). It also examined factors associated with adequate objective knowledge.\n\nA cross-sectional online survey was conducted among 744 adult UAE residents between April and May 2026. Perceived awareness was measured using a 10-point scale. Objective knowledge was assessed using four items on definitions and natural dietary sources, and adequate knowledge was defined as at least three correct answers. In addition, information sources and health beliefs were assessed, and multivariable logistic regression was used to identify factors associated with adequate objective knowledge.\n\nMean perceived awareness was 4.6 ± 2.8, and 18.0% of participants reported high awareness. Mean objective knowledge was 1.9 ± 1.6, with 39.9% demonstrating adequate knowledge. Correct responses were highest for the probiotic definition (55.8%) and lowest for natural prebiotic sources (37.0%). High perceived awareness and high objective knowledge overlapped in only 10.1% of participants. In the multivariable model, internet/websites (90.3%) and social media (84.9%) were the most frequently reported information sources, but neither was independently associated with adequate knowledge. By contrast, receiving information from healthcare professionals was positively associated with adequate knowledge [adjusted odds ratio (aOR) 1.83, p = 0.009]. Health beliefs were strongest for gut health and immunity and less certain for detoxification, obesity, stress, and mental health.\n\nPerceived awareness did not consistently correspond to objective knowledge. These findings indicate a nutrition-related knowledge gap, particularly for prebiotics and their natural dietary sources. Digital nutrition communication should be strengthened by professional guidance and clearer messages that distinguish probiotic and prebiotic concepts, dietary sources, and scientifically supported health claims."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "Perceived awareness did not consistently correspond to objective knowledge. These findings indicate a nutrition-related knowledge gap, particularly for prebiotics and their natural dietary sources. Digital nutrition communication should be strengthened by professional guidance and clearer messages that distinguish probiotic and prebiotic concepts, dietary sources, and scientifically supported health claims.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Probiotics",
+        "Prebiotics",
+        "Health Beliefs",
+        "Information Sources",
+        "Objective Nutrition Knowledge",
+        "Perceived Awareness"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc",
+        "pubmed"
+      ]
+    },
+    {
+      "key": "PMC:PMC13590752",
+      "epmc_id": "PMC13590752",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13590752",
+      "doi": null,
+      "title": "Development and psychometric evaluation of the AI emotional engagement scale",
+      "authors": "Xu J, Mao M, Yao Y, Li W, Dai Q.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-22",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "methods-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13590752",
+        "fulltext_html": "https://europepmc.org/articles/PMC13590752",
+        "pdf": "https://europepmc.org/articles/PMC13590752?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "AI",
+        "Scale Development",
+        "Human-computer Interaction",
+        "Emotional Engagement",
+        "Reliability And Validity Testing"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13592155",
+      "epmc_id": "PMC13592155",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13592155",
+      "doi": null,
+      "title": "The mitochondrial theory of sleep: an integrative framework for understanding sleep-wake regulation",
+      "authors": "Pandi-Perumal S, Paul S, Saravanan K, Mahalakshmi A, Chidambaram S, Namasivayam G.",
+      "journal": "Frontiers in psychiatry",
+      "journal_abbrev": "Front Psychiatry",
+      "pub_year": null,
+      "first_publication_date": "2026-09-22",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13592155",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592155",
+        "pdf": "https://europepmc.org/articles/PMC13592155?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Reactive oxygen species",
+        "Calcium homeostasis",
+        "Sleep Regulation",
+        "Mitochondrial Bioenergetics",
+        "Gene Expression Dynamics"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13591499",
+      "epmc_id": "PMC13591499",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13591499",
+      "doi": null,
+      "title": "SMHAT-1 mental health screening in Russian male professional soccer players: associations with age, competition level, and self-perceived team status",
+      "authors": "Bezuglov E, Kapralova E, Berdnikova A, Khaitin V, Rodionov A, Butovskiy M, Waśkiewicz Z, Volel B.",
+      "journal": "Frontiers in sports and active living",
+      "journal_abbrev": "Front Sports Act Living",
+      "pub_year": null,
+      "first_publication_date": "2026-09-22",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13591499",
+        "fulltext_html": "https://europepmc.org/articles/PMC13591499",
+        "pdf": "https://europepmc.org/articles/PMC13591499?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Psychological Strain",
+        "Professional Soccer",
+        "Apsq",
+        "Smhat-1",
+        "Mental-Health Screening"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13592238",
+      "epmc_id": "PMC13592238",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13592238",
+      "doi": null,
+      "title": "Clinical Implementation of Wearable-Derived Sleep and Activity Reporting for Inpatient Psychiatric Monitoring",
+      "authors": "Culhane B, Patterson R, Rahimi-Eichi H, Yip A, Huesman K, Kostick-Quenet K, Salvi J, Beauchamp P, Ressler K, Baker J.",
+      "journal": "JMIR formative research",
+      "journal_abbrev": "JMIR Form Res",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13592238",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592238",
+        "pdf": "https://europepmc.org/articles/PMC13592238?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Sleep",
+        "Inpatient",
+        "Implementation",
+        "Psychiatric",
+        "actigraphy",
+        "Wearable",
+        "Behavioral Measurement",
+        "Digital Health Technology"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:42765944",
+      "epmc_id": "42765944",
+      "source": "MED",
+      "pmid": "42765944",
+      "pmcid": "PMC13592149",
+      "doi": "10.2196/95456",
+      "title": "Development and Validation of the Professional Readiness in Diversity and Equity Scale: Protocol for a Scale Validation Study.",
+      "authors": "Sherriff N, Mirandola M, Zeeman L, Amaddeo F, Zumwalt AC, Coleman SM, Cesare N, Streed C, Huber J, Pratt-Chapman M, Nowaskie DZ, Bidell MP.",
+      "journal": "JMIR research protocols",
+      "journal_abbrev": "JMIR Res Protoc",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-21",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.2196/95456",
+        "europepmc": "https://europepmc.org/article/MED/42765944",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592149",
+        "pdf": "https://europepmc.org/articles/PMC13592149?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Lesbian, gay, bisexual, transgender, queer, and intersex (LGBTQI+) patients continue to experience stigma, discrimination, and inadequate knowledge among mental health and medical professionals. These barriers can negatively impact health care outcomes, leading to delayed treatment, mistrust, and unmet medical needs within LGBTQI+ communities. Providing culturally competent care to LGBTQI+ people remains a critical challenge within health and social care. The development and use of reliable and valid assessments examining LGBTQI+ health care professional competency continue to be important in understanding and ameliorating LGBTQI+ health inequalities."
+          },
+          {
+            "heading": "Objective",
+            "text": "The aim of the study is to develop and psychometrically validate a new multinational instrument designed to assess health care professionals' LGBTQI+ attitudes, awareness, general skills, and knowledge, as well as to examine LGBTQI+ workplace affirmative policies, support, and climate."
+          },
+          {
+            "heading": "Methods",
+            "text": "An initial pool of 100 new scale items was developed by reviewing existing LGBTQI+ health care scales and consulting with LGBTQI+ health care experts in the summer of 2023. Leading experts in LGBTQI+ health care were then asked to participate in the Delphi method to provide numeric and qualitative feedback on the 100 items. This process yielded a final primary survey comprising 39 test items. A cross-sectional multicenter, multicountry scale validation study using a web-based survey was administered to health care professionals and trainees in Italy, the United States, and the United Kingdom between October 2024 and December 2025 using a convenience sampling approach complemented by snowball recruitment. Research participants were asked to complete a demographic and professional survey, the 39 new test items, the 18-item Lesbian, Gay, Bisexual, and Transgender Development of Clinical Skills Scale (LGBT-DOCSS), and the 12-item Workplace Support subscale of the LGBT Climate Inventory (LGBTCI)."
+          },
+          {
+            "heading": "Results",
+            "text": "Funding commenced in May 2023, and data collection was conducted from October 2024 to December 2025. A total of 1339 eligible people completed the survey. Data analysis has started, and results will be reported in theautumn of 2026. It is anticipated that the Professional Readiness in Diversity and Equity (PRIDE) scale will emerge as a reliable and valid tool for assessing health care professionals' LGBTQI+ attitudes, awareness, general skills, and knowledge, as well as examining LGBTQI+ workplace affirmative policies, support, and climate. The instrument may also serve as a useful outcome measure in research evaluating professional practice and development."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "The development and validation of the new PRIDE scale represent a significant advancement toward improved cultural competence among health care professionals. Validating the scale in both English- and Italian-speaking populations will support the development of international interventions and, ultimately, treatment outcomes for LGBTQI+ people. The PRIDE scale has the potential to exert a far-reaching impact on the delivery of clinical care and public health services worldwide."
+          }
+        ],
+        "text": "Lesbian, gay, bisexual, transgender, queer, and intersex (LGBTQI+) patients continue to experience stigma, discrimination, and inadequate knowledge among mental health and medical professionals. These barriers can negatively impact health care outcomes, leading to delayed treatment, mistrust, and unmet medical needs within LGBTQI+ communities. Providing culturally competent care to LGBTQI+ people remains a critical challenge within health and social care. The development and use of reliable and valid assessments examining LGBTQI+ health care professional competency continue to be important in understanding and ameliorating LGBTQI+ health inequalities.\n\nThe aim of the study is to develop and psychometrically validate a new multinational instrument designed to assess health care professionals' LGBTQI+ attitudes, awareness, general skills, and knowledge, as well as to examine LGBTQI+ workplace affirmative policies, support, and climate.\n\nAn initial pool of 100 new scale items was developed by reviewing existing LGBTQI+ health care scales and consulting with LGBTQI+ health care experts in the summer of 2023. Leading experts in LGBTQI+ health care were then asked to participate in the Delphi method to provide numeric and qualitative feedback on the 100 items. This process yielded a final primary survey comprising 39 test items. A cross-sectional multicenter, multicountry scale validation study using a web-based survey was administered to health care professionals and trainees in Italy, the United States, and the United Kingdom between October 2024 and December 2025 using a convenience sampling approach complemented by snowball recruitment. Research participants were asked to complete a demographic and professional survey, the 39 new test items, the 18-item Lesbian, Gay, Bisexual, and Transgender Development of Clinical Skills Scale (LGBT-DOCSS), and the 12-item Workplace Support subscale of the LGBT Climate Inventory (LGBTCI).\n\nFunding commenced in May 2023, and data collection was conducted from October 2024 to December 2025. A total of 1339 eligible people completed the survey. Data analysis has started, and results will be reported in theautumn of 2026. It is anticipated that the Professional Readiness in Diversity and Equity (PRIDE) scale will emerge as a reliable and valid tool for assessing health care professionals' LGBTQI+ attitudes, awareness, general skills, and knowledge, as well as examining LGBTQI+ workplace affirmative policies, support, and climate. The instrument may also serve as a useful outcome measure in research evaluating professional practice and development.\n\nThe development and validation of the new PRIDE scale represent a significant advancement toward improved cultural competence among health care professionals. Validating the scale in both English- and Italian-speaking populations will support the development of international interventions and, ultimately, treatment outcomes for LGBTQI+ people. The PRIDE scale has the potential to exert a far-reaching impact on the delivery of clinical care and public health services worldwide."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "The development and validation of the new PRIDE scale represent a significant advancement toward improved cultural competence among health care professionals. Validating the scale in both English- and Italian-speaking populations will support the development of international interventions and, ultimately, treatment outcomes for LGBTQI+ people. The PRIDE scale has the potential to exert a far-reaching impact on the delivery of clinical care and public health services worldwide.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "protocol",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "public_mental_health"
+      ],
+      "mesh_major": [
+        "Psychometrics",
+        "Health Personnel",
+        "Sexual and Gender Minorities"
+      ],
+      "keywords": [
+        "Public Health",
+        "Cultural Competence",
+        "Health Professionals",
+        "Scale Validation",
+        "Lgbtqi+",
+        "Lesbian, Gay, Bisexual, Transgender, Queer, And Intersex"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13592608",
+      "epmc_id": "PMC13592608",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13592608",
+      "doi": null,
+      "title": "Mental health monitoring in the workplace using artificial intelligence: A scoping review",
+      "authors": "Jack K, Tian J, Kurkova V, Modanloo S, Dennett L, Noble J, Greenshaw A, Hayward J.",
+      "journal": "PLOS digital health",
+      "journal_abbrev": "PLOS Digit Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13592608",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592608",
+        "pdf": "https://europepmc.org/articles/PMC13592608?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": {
+        "id": "scoping_review",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "PMC:PMC13592593",
+      "epmc_id": "PMC13592593",
+      "source": "PMC",
+      "pmid": null,
+      "pmcid": "PMC13592593",
+      "doi": null,
+      "title": "Impact of multi-professional medication reviews (MPMRs) on medication prescriptions in psychiatry",
+      "authors": "Lebrat M, Cohen A, Megard R, Franck N, Dussart C, Perin-Dureau M.",
+      "journal": "PloS one",
+      "journal_abbrev": "PLoS One",
+      "pub_year": 2026,
+      "first_publication_date": "2026-01-01",
+      "first_index_date": "2026-09-22",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-09-24T01:30:18Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/PMC/PMC13592593",
+        "fulltext_html": "https://europepmc.org/articles/PMC13592593",
+        "pdf": "https://europepmc.org/articles/PMC13592593?pdf=render"
+      },
+      "abstract": null,
+      "summary": null,
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    }
+  ]
+}
