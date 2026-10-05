@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-10-03",
   "timezone": "America/Lima",
-  "fetched_at": "2026-10-04T01:30:35Z",
+  "fetched_at": "2026-10-05T01:30:16Z",
   "source": {
     "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
@@ -51,7 +51,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-04T01:30:34Z"
+        "checked_at": "2026-10-05T01:30:16Z"
       },
       "links": {
         "doi": "https://doi.org/10.1007/s11292-025-09667-8",
@@ -61,20 +61,32 @@
       },
       "abstract": {
         "lang": "en",
-        "structured": false,
+        "structured": true,
         "truncated": false,
         "sections": [
           {
-            "heading": null,
-            "text": "Explore why people react so strongly to procedural injustice experienced by others. One possibility is that people recognise the marginalisation and psychological harm that injustice can cause. An online experiment tested whether exposure to procedurally unjust police behaviour directed at crime victims would influence participants' assessments of the subject's marginalisation, mental health outcomes, and their overall perceptions of the police (N = 300). Exposure to procedurally unjust police behaviour led to more negative evaluations of its psychological impact on the victim. Procedural injustice was seen as harmful to mental health due to its link to social exclusion. Such exposure reduced trust, legitimacy, and identification with police. These negative perceptions were driven by recognition of the victim's psychological harm. Findings highlight the critical role of psychological harm in driving public responses to unjust policing. Addressing this harm is essential for fostering trust and repairing fractured relationships between police and the communities they serve."
+            "heading": "Objectives",
+            "text": "Explore why people react so strongly to procedural injustice experienced by others. One possibility is that people recognise the marginalisation and psychological harm that injustice can cause."
+          },
+          {
+            "heading": "Methods",
+            "text": "An online experiment tested whether exposure to procedurally unjust police behaviour directed at crime victims would influence participants' assessments of the subject's marginalisation, mental health outcomes, and their overall perceptions of the police ( N  = 300)."
+          },
+          {
+            "heading": "Results",
+            "text": "Exposure to procedurally unjust police behaviour led to more negative evaluations of its psychological impact on the victim. Procedural injustice was seen as harmful to mental health due to its link to social exclusion. Such exposure reduced trust, legitimacy, and identification with police. These negative perceptions were driven by recognition of the victim's psychological harm."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "Findings highlight the critical role of psychological harm in driving public responses to unjust policing. Addressing this harm is essential for fostering trust and repairing fractured relationships between police and the communities they serve."
           }
         ],
-        "text": "Explore why people react so strongly to procedural injustice experienced by others. One possibility is that people recognise the marginalisation and psychological harm that injustice can cause. An online experiment tested whether exposure to procedurally unjust police behaviour directed at crime victims would influence participants' assessments of the subject's marginalisation, mental health outcomes, and their overall perceptions of the police (N = 300). Exposure to procedurally unjust police behaviour led to more negative evaluations of its psychological impact on the victim. Procedural injustice was seen as harmful to mental health due to its link to social exclusion. Such exposure reduced trust, legitimacy, and identification with police. These negative perceptions were driven by recognition of the victim's psychological harm. Findings highlight the critical role of psychological harm in driving public responses to unjust policing. Addressing this harm is essential for fostering trust and repairing fractured relationships between police and the communities they serve."
+        "text": "Explore why people react so strongly to procedural injustice experienced by others. One possibility is that people recognise the marginalisation and psychological harm that injustice can cause.\n\nAn online experiment tested whether exposure to procedurally unjust police behaviour directed at crime victims would influence participants' assessments of the subject's marginalisation, mental health outcomes, and their overall perceptions of the police ( N  = 300).\n\nExposure to procedurally unjust police behaviour led to more negative evaluations of its psychological impact on the victim. Procedural injustice was seen as harmful to mental health due to its link to social exclusion. Such exposure reduced trust, legitimacy, and identification with police. These negative perceptions were driven by recognition of the victim's psychological harm.\n\nFindings highlight the critical role of psychological harm in driving public responses to unjust policing. Addressing this harm is essential for fostering trust and repairing fractured relationships between police and the communities they serve."
       },
       "summary": {
         "origin": "authors",
         "lang": "en",
-        "section": "abstract_tail",
+        "section": "Conclusion",
         "text": "Findings highlight the critical role of psychological harm in driving public responses to unjust policing. Addressing this harm is essential for fostering trust and repairing fractured relationships between police and the communities they serve.",
         "truncated": false
       },
@@ -86,7 +98,14 @@
       },
       "tags": [],
       "mesh_major": [],
-      "keywords": [],
+      "keywords": [
+        "Identification",
+        "Exclusion",
+        "Mental health",
+        "TRUST",
+        "Legitimacy",
+        "Procedural Injustice"
+      ],
       "relevance": {
         "score": -4,
         "signals": [
