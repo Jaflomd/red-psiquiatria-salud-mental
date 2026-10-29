@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-10-27",
   "timezone": "America/Lima",
-  "fetched_at": "2026-10-28T01:30:32Z",
+  "fetched_at": "2026-10-29T01:30:44Z",
   "source": {
     "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
@@ -21,8 +21,8 @@
       "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
       "date_field": "edat",
       "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
-      "hit_count": 322,
-      "unresolved_in_europepmc": 40
+      "hit_count": 361,
+      "unresolved_in_europepmc": 79
     }
   },
   "items": [
@@ -51,7 +51,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -117,7 +117,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -188,7 +188,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -257,7 +257,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -320,7 +320,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -383,7 +383,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -445,7 +445,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -511,7 +511,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -575,7 +575,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -640,7 +640,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -709,7 +709,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -771,7 +771,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -833,7 +833,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -902,7 +902,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -964,7 +964,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1024,7 +1024,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1089,7 +1089,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1158,7 +1158,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1223,7 +1223,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1289,7 +1289,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1353,7 +1353,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1434,7 +1434,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1496,7 +1496,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1557,7 +1557,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1619,7 +1619,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1681,7 +1681,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1739,7 +1739,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1803,7 +1803,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1869,7 +1869,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1931,7 +1931,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -1994,7 +1994,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2054,7 +2054,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2119,7 +2119,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2180,7 +2180,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2242,7 +2242,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2302,7 +2302,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2363,7 +2363,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2431,7 +2431,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2493,7 +2493,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2553,7 +2553,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2613,7 +2613,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2674,7 +2674,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2740,7 +2740,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2800,7 +2800,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2861,7 +2861,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2924,7 +2924,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -2985,7 +2985,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3048,7 +3048,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3114,7 +3114,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3175,7 +3175,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3237,7 +3237,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3298,7 +3298,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3363,7 +3363,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3428,7 +3428,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3494,7 +3494,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3555,7 +3555,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3620,7 +3620,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3684,7 +3684,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3744,7 +3744,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3811,7 +3811,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3874,7 +3874,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3934,7 +3934,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -3994,7 +3994,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4055,7 +4055,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4115,7 +4115,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4174,7 +4174,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4236,7 +4236,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4300,7 +4300,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4365,7 +4365,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4426,7 +4426,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4485,7 +4485,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4547,7 +4547,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4612,7 +4612,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4674,7 +4674,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4736,7 +4736,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4796,7 +4796,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4856,7 +4856,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4918,7 +4918,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -4979,7 +4979,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5041,7 +5041,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5101,7 +5101,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5163,7 +5163,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5223,7 +5223,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5284,7 +5284,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5347,7 +5347,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5409,7 +5409,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5474,7 +5474,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5536,7 +5536,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5598,7 +5598,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5660,7 +5660,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5722,7 +5722,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5786,7 +5786,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5846,7 +5846,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5910,7 +5910,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -5970,7 +5970,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6031,7 +6031,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6091,7 +6091,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6152,7 +6152,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6212,7 +6212,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6272,7 +6272,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6292,9 +6292,9 @@
       "keywords": [
         "Clinical Staging",
         "Diary Data",
+        "Intensive Longitudinal Data Analyses",
         "S-gimme",
-        "Cs-Gimme",
-        "Intensive Longitudinal Data Analyses"
+        "Cs-Gimme"
       ],
       "relevance": {
         "score": -1,
@@ -6332,7 +6332,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6393,7 +6393,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6454,7 +6454,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6514,7 +6514,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6574,7 +6574,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6628,7 +6628,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6688,7 +6688,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6749,7 +6749,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6809,7 +6809,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6870,7 +6870,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6928,7 +6928,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -6982,7 +6982,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7041,7 +7041,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7103,7 +7103,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7169,7 +7169,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7231,7 +7231,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7294,7 +7294,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7356,7 +7356,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7422,7 +7422,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7485,7 +7485,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7549,7 +7549,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7615,7 +7615,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7683,7 +7683,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7744,7 +7744,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7809,7 +7809,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7869,7 +7869,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7929,7 +7929,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -7987,7 +7987,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8048,7 +8048,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8103,7 +8103,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8161,7 +8161,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8223,7 +8223,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8286,7 +8286,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8349,7 +8349,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8410,7 +8410,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8474,7 +8474,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8542,7 +8542,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8604,7 +8604,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8663,7 +8663,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8724,7 +8724,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8786,7 +8786,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8849,7 +8849,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8914,7 +8914,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -8977,7 +8977,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -9040,7 +9040,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -9099,7 +9099,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -9157,7 +9157,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -9219,7 +9219,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
@@ -9278,7 +9278,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-10-28T01:30:31Z"
+        "checked_at": "2026-10-29T01:30:44Z"
       },
       "links": {
         "doi": null,
