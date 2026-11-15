@@ -2,28 +2,2315 @@
   "schema_version": 1,
   "date": "2026-11-13",
   "timezone": "America/Lima",
-  "fetched_at": "2026-11-14T01:30:22Z",
+  "fetched_at": "2026-11-15T01:30:57Z",
   "source": {
     "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
     "date_field": "FIRST_IDATE",
     "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-11-13 TO 2026-11-13] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
-    "hit_count": 0,
-    "accepted": 0,
+    "hit_count": 59,
+    "accepted": 25,
     "query_version": "2026-09-14.2",
     "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
     "europepmc": {
       "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
       "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-11-13 TO 2026-11-13] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
-      "hit_count": 0
+      "hit_count": 59
     },
     "pubmed": {
       "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
       "date_field": "edat",
       "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
       "hit_count": 170,
-      "unresolved_in_europepmc": 95
+      "unresolved_in_europepmc": 0
     }
   },
-  "items": []
+  "items": [
+    {
+      "key": "MED:43017996",
+      "epmc_id": "43017996",
+      "source": "MED",
+      "pmid": "43017996",
+      "pmcid": "PMC13747274",
+      "doi": "10.1590/1984-0462/2026/44/2026001",
+      "title": "Association between problematic smartphone use and mental health among high school students in southern Brazil.",
+      "authors": "Almeida BP, Martins RC, Azevedo LW, Alexandrino EG, Volz PM, Silva MPD, Dumith SC.",
+      "journal": "Revista paulista de pediatria : orgao oficial da Sociedade de Pediatria de Sao Paulo",
+      "journal_abbrev": "Rev Paul Pediatr",
+      "pub_year": 2026,
+      "first_publication_date": "2026-11-09",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1590/1984-0462/2026/44/2026001",
+        "europepmc": "https://europepmc.org/article/MED/43017996",
+        "fulltext_html": "https://europepmc.org/articles/PMC13747274",
+        "pdf": "https://europepmc.org/articles/PMC13747274?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Objective",
+            "text": "To investigate the association between problematic smartphone use (PSU) and mental health symptoms among high school students in the south of Brazil."
+          },
+          {
+            "heading": "Methods",
+            "text": "A cross-sectional study was conducted in 2022 to assess mental health symptoms using the Depression Anxiety Stress Scale. PSU was assessed using the Smartphone Addiction Scale - Short Version, with scores ≥33 indicating PSU. Dichotomous variables were created to assess the presence of symptoms of depression, anxiety, and stress. Associations were tested using Fisher's exact test and Poisson regression with robust variance."
+          },
+          {
+            "heading": "Results",
+            "text": "Most participants were boys (55.2%), and 52.5% aged ≥18 years. PSU prevalence was 35.5%, while depression, anxiety, and stress symptoms had prevalence values of 37.1, 44.7, and 45.7%, respectively, and 62.7% of the students exhibited at least one symptom. Among students with PSU, the proportion of symptoms was significntly higher: 44.8% for anxiety (p=0.017), 57.1% for depression (p<0.001), and 58.2% for stress (p<0.001). As per the adjusted analysis, students with PSU had higher prevalence of depression (prevalence ratio [PR] 1.26; 95% confidence interval [CI] 1.02-1.56) and stress (PR 1.34; 95%CI 1.09-1.64) symptoms, and at least one of the three symptoms (PR 1.24; 95%CI 1.08-1.43), when compared to those without PSU."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "In this study, PSU was associated with higher prevalence of mental health symptoms among high school students in the south of Brazil. These results provide evidence that can guide clinical practice and public health policies aimed at promoting mental health."
+          }
+        ],
+        "text": "To investigate the association between problematic smartphone use (PSU) and mental health symptoms among high school students in the south of Brazil.\n\nA cross-sectional study was conducted in 2022 to assess mental health symptoms using the Depression Anxiety Stress Scale. PSU was assessed using the Smartphone Addiction Scale - Short Version, with scores ≥33 indicating PSU. Dichotomous variables were created to assess the presence of symptoms of depression, anxiety, and stress. Associations were tested using Fisher's exact test and Poisson regression with robust variance.\n\nMost participants were boys (55.2%), and 52.5% aged ≥18 years. PSU prevalence was 35.5%, while depression, anxiety, and stress symptoms had prevalence values of 37.1, 44.7, and 45.7%, respectively, and 62.7% of the students exhibited at least one symptom. Among students with PSU, the proportion of symptoms was significntly higher: 44.8% for anxiety (p=0.017), 57.1% for depression (p<0.001), and 58.2% for stress (p<0.001). As per the adjusted analysis, students with PSU had higher prevalence of depression (prevalence ratio [PR] 1.26; 95% confidence interval [CI] 1.02-1.56) and stress (PR 1.34; 95%CI 1.09-1.64) symptoms, and at least one of the three symptoms (PR 1.24; 95%CI 1.08-1.43), when compared to those without PSU.\n\nIn this study, PSU was associated with higher prevalence of mental health symptoms among high school students in the south of Brazil. These results provide evidence that can guide clinical practice and public health policies aimed at promoting mental health."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "In this study, PSU was associated with higher prevalence of mental health symptoms among high school students in the south of Brazil. These results provide evidence that can guide clinical practice and public health policies aimed at promoting mental health.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety",
+        "public_mental_health",
+        "peru_latam",
+        "digital",
+        "epidemiology"
+      ],
+      "mesh_major": [
+        "Depression",
+        "Stress, Psychological",
+        "Anxiety",
+        "Mental Health",
+        "Students",
+        "Smartphone",
+        "Internet Addiction Disorder"
+      ],
+      "keywords": [],
+      "relevance": {
+        "score": 5,
+        "signals": [
+          "mesh_major",
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43019215",
+      "epmc_id": "43019215",
+      "source": "MED",
+      "pmid": "43019215",
+      "pmcid": "PMC13745279",
+      "doi": "10.1038/s41598-026-61219-w",
+      "title": "Transdiagnostic symptoms of psychopathology interact with changes in environmental uncertainty.",
+      "authors": "Hedley FE, Lage C, Hertz-Palmor N, Sandhu TR, Schweizer S, Lawson RP.",
+      "journal": "Scientific reports",
+      "journal_abbrev": "Sci Rep",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-08",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1038/s41598-026-61219-w",
+        "europepmc": "https://europepmc.org/article/MED/43019215",
+        "fulltext_html": "https://europepmc.org/articles/PMC13745279",
+        "pdf": "https://europepmc.org/articles/PMC13745279?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Uncertainty is a potential driver of poor mental health outcomes, and uncertainty is mounting across domains of daily life. It remains unclear how symptoms of anxiety and depression emerge in response to uncertainty in real-life contexts. The current study investigated how heightened environmental uncertainty interacts with intolerance of uncertainty (IU) to influence mental health symptoms. A total of 301 participants concurrently reported current symptoms of anxiety, depression and IU during higher environmental uncertainty ( t 2) and retrospectively recalled symptoms from a prior period of lower environmental uncertainty ( t 1). Cross-sectional and cross-lagged panel networks were used to identify influential contributors and examine associations across the two reported timepoints. Anxiety, depression and IU symptoms were elevated when environmental uncertainty was higher relative to when it was lower. Three symptom clusters were stable for the two timepoints, but worry became more central to the network at t 2. IU symptoms exhibited the highest autoregressive effects, indicating strong consistency between levels at t 1 and t 2. The item \"inhibition of behaviour due to doubt\" positively predicted both anxiety and anhedonia. These findings highlight the relevance of worry during periods of increased environmental uncertainty, the predictive value of predispositional IU, and the importance of behavioural inhibition as a potential target to alleviate internalising psychopathology."
+          },
+          {
+            "heading": "Supplementary information",
+            "text": "The online version contains supplementary material available at https://doi.org/10.1038/s41598-026-61219-w."
+          }
+        ],
+        "text": "Uncertainty is a potential driver of poor mental health outcomes, and uncertainty is mounting across domains of daily life. It remains unclear how symptoms of anxiety and depression emerge in response to uncertainty in real-life contexts. The current study investigated how heightened environmental uncertainty interacts with intolerance of uncertainty (IU) to influence mental health symptoms. A total of 301 participants concurrently reported current symptoms of anxiety, depression and IU during higher environmental uncertainty ( t 2) and retrospectively recalled symptoms from a prior period of lower environmental uncertainty ( t 1). Cross-sectional and cross-lagged panel networks were used to identify influential contributors and examine associations across the two reported timepoints. Anxiety, depression and IU symptoms were elevated when environmental uncertainty was higher relative to when it was lower. Three symptom clusters were stable for the two timepoints, but worry became more central to the network at t 2. IU symptoms exhibited the highest autoregressive effects, indicating strong consistency between levels at t 1 and t 2. The item \"inhibition of behaviour due to doubt\" positively predicted both anxiety and anhedonia. These findings highlight the relevance of worry during periods of increased environmental uncertainty, the predictive value of predispositional IU, and the importance of behavioural inhibition as a potential target to alleviate internalising psychopathology.\n\nThe online version contains supplementary material available at https://doi.org/10.1038/s41598-026-61219-w."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "The item \"inhibition of behaviour due to doubt\" positively predicted both anxiety and anhedonia. These findings highlight the relevance of worry during periods of increased environmental uncertainty, the predictive value of predispositional IU, and the importance of behavioural inhibition as a potential target to alleviate internalising psychopathology.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety",
+        "symptom_networks"
+      ],
+      "mesh_major": [
+        "Depression",
+        "Anxiety"
+      ],
+      "keywords": [
+        "Depression",
+        "Anxiety",
+        "Network Analysis",
+        "Environmental Uncertainty",
+        "Intolerance Of Uncertainty",
+        "Cross-Lagged Panel Network"
+      ],
+      "relevance": {
+        "score": 5,
+        "signals": [
+          "mesh_major",
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43019210",
+      "epmc_id": "43019210",
+      "source": "MED",
+      "pmid": "43019210",
+      "pmcid": "PMC13736701",
+      "doi": "10.1038/s41598-026-61827-6",
+      "title": "A controlled trial of a co-designed virtual reality experience to support wellbeing in students.",
+      "authors": "O'Brien A, Sheba B, Simnett R, Smith JG, Mantovani N, White S, Riches S, Bell D, Abbott M, Collisson A, Edginton T, Gillies M, Pan X.",
+      "journal": "Scientific reports",
+      "journal_abbrev": "Sci Rep",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-07",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1038/s41598-026-61827-6",
+        "europepmc": "https://europepmc.org/article/MED/43019210",
+        "fulltext_html": "https://europepmc.org/articles/PMC13736701",
+        "pdf": "https://europepmc.org/articles/PMC13736701?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Increasing rates of mental health problems among university students require innovative interventions. This study evaluated a multi-sensory, virtual reality (VR) intervention aimed at reducing stress and exam anxiety among students at a healthcare university in the UK. Participants ( n  = 131) were randomised to either the VR condition or the same experience on their smartphones as Video, with both groups engaging over five consecutive days. Pre- and post-session measures were collected for perceived stress, well-being, and depressive symptoms, alongside qualitative assessments of the experiences. Both VR and Video participants reported statistically significant reductions in perceived stress levels at follow-up. Immediate positive affective changes were greater in the VR than Video condition, with high levels of immersion, which correlated with improved emotional outcomes. Themes within the qualitative data highlighted the therapeutic impact of VR, with participants expressing increased calmness and concentration. These findings suggest that this intervention may serve as an effective and engaging tool to reduce student stress and exam anxiety. This study contributes to the growing literature on digital mental health and emphasises the need for institutions to explore immersive technologies as part of mental health support services. Further research is warranted to determine long-term efficacy and optimal usage strategies for VR in academic environments."
+          },
+          {
+            "heading": "Supplementary information",
+            "text": "The online version contains supplementary material available at https://doi.org/10.1038/s41598-026-61827-6."
+          }
+        ],
+        "text": "Increasing rates of mental health problems among university students require innovative interventions. This study evaluated a multi-sensory, virtual reality (VR) intervention aimed at reducing stress and exam anxiety among students at a healthcare university in the UK. Participants ( n  = 131) were randomised to either the VR condition or the same experience on their smartphones as Video, with both groups engaging over five consecutive days. Pre- and post-session measures were collected for perceived stress, well-being, and depressive symptoms, alongside qualitative assessments of the experiences. Both VR and Video participants reported statistically significant reductions in perceived stress levels at follow-up. Immediate positive affective changes were greater in the VR than Video condition, with high levels of immersion, which correlated with improved emotional outcomes. Themes within the qualitative data highlighted the therapeutic impact of VR, with participants expressing increased calmness and concentration. These findings suggest that this intervention may serve as an effective and engaging tool to reduce student stress and exam anxiety. This study contributes to the growing literature on digital mental health and emphasises the need for institutions to explore immersive technologies as part of mental health support services. Further research is warranted to determine long-term efficacy and optimal usage strategies for VR in academic environments.\n\nThe online version contains supplementary material available at https://doi.org/10.1038/s41598-026-61827-6."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "This study contributes to the growing literature on digital mental health and emphasises the need for institutions to explore immersive technologies as part of mental health support services. Further research is warranted to determine long-term efficacy and optimal usage strategies for VR in academic environments.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "rct",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety",
+        "digital"
+      ],
+      "mesh_major": [
+        "Stress, Psychological",
+        "Students",
+        "Virtual Reality"
+      ],
+      "keywords": [
+        "Health care",
+        "Psychology"
+      ],
+      "relevance": {
+        "score": 4,
+        "signals": [
+          "tags:3",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017510",
+      "epmc_id": "43017510",
+      "source": "MED",
+      "pmid": "43017510",
+      "pmcid": "PMC13753568",
+      "doi": "10.1016/j.focus.2026.100544",
+      "title": "Increases in Overdose Deaths Among People With HIV Across 14 U.S. Jurisdictions, 2014-2023.",
+      "authors": "Zlot AI, Erly S, Lawson L, Drezner K, Barber CA, Kuncio DE, Omoike OE, Benning J, Jatta A, Mbugua J, Nicholas A, Garlow E, Gulbronson R, Kersanske L, Short M, Collura R, Duffy M, Kim MM, Brady KA, Capizzi J.",
+      "journal": "AJPM focus",
+      "journal_abbrev": "AJPM Focus",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-12",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1016/j.focus.2026.100544",
+        "europepmc": "https://europepmc.org/article/MED/43017510",
+        "fulltext_html": "https://europepmc.org/articles/PMC13753568",
+        "pdf": "https://europepmc.org/articles/PMC13753568?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Introduction",
+            "text": "Although overall overdose deaths in the U.S. have plateaued in recent years, there is limited information about how recent changes in the drug landscape have affected people with HIV at regional and national levels. The purpose of this analysis was to describe trends in the cause of death among people with HIV, with a focus on drug-related mortality in this population."
+          },
+          {
+            "heading": "Methods",
+            "text": "The authors aggregated cause of death data from HIV surveillance systems in 14 jurisdictions across the U.S. to compare regional trends among people with HIV from 2014 to 2023. Causes of death were categorized as fatal overdose, HIV-related disease, or all other causes based on the underlying ICD-10 codes. Demographic characteristics, HIV care indicators, and substance use trends were also evaluated."
+          },
+          {
+            "heading": "Results",
+            "text": "Among people with HIV, the number of overdose deaths increased from 225 in 2014 to 993 in 2023, accounting for 15.6% of all deaths, whereas HIV-related deaths declined from 1,904 to 1,312, representing 20.6% of all deaths in 2023. In the Pacific Northwest and on the East Coast, overdose deaths surpassed HIV-related deaths in 2023. The proportion of overdose deaths among people with HIV attributable to opioids increased in nearly all regions."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Fatal overdose was a major contributor to mortality among people with HIV and, in some regions, exceeded HIV-related mortality. These findings underscore the importance of overdose prevention for people with HIV, who may benefit from syndemic approaches that integrate HIV care with mental health services, social support, and harm reduction interventions."
+          }
+        ],
+        "text": "Although overall overdose deaths in the U.S. have plateaued in recent years, there is limited information about how recent changes in the drug landscape have affected people with HIV at regional and national levels. The purpose of this analysis was to describe trends in the cause of death among people with HIV, with a focus on drug-related mortality in this population.\n\nThe authors aggregated cause of death data from HIV surveillance systems in 14 jurisdictions across the U.S. to compare regional trends among people with HIV from 2014 to 2023. Causes of death were categorized as fatal overdose, HIV-related disease, or all other causes based on the underlying ICD-10 codes. Demographic characteristics, HIV care indicators, and substance use trends were also evaluated.\n\nAmong people with HIV, the number of overdose deaths increased from 225 in 2014 to 993 in 2023, accounting for 15.6% of all deaths, whereas HIV-related deaths declined from 1,904 to 1,312, representing 20.6% of all deaths in 2023. In the Pacific Northwest and on the East Coast, overdose deaths surpassed HIV-related deaths in 2023. The proportion of overdose deaths among people with HIV attributable to opioids increased in nearly all regions.\n\nFatal overdose was a major contributor to mortality among people with HIV and, in some regions, exceeded HIV-related mortality. These findings underscore the importance of overdose prevention for people with HIV, who may benefit from syndemic approaches that integrate HIV care with mental health services, social support, and harm reduction interventions."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Fatal overdose was a major contributor to mortality among people with HIV and, in some regions, exceeded HIV-related mortality. These findings underscore the importance of overdose prevention for people with HIV, who may benefit from syndemic approaches that integrate HIV care with mental health services, social support, and harm reduction interventions.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "substances",
+        "public_mental_health",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "HIV",
+        "Overdose Mortality",
+        "Opioids, Psychostimulants",
+        "Multi-jurisdictional"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017194",
+      "epmc_id": "43017194",
+      "source": "MED",
+      "pmid": "43017194",
+      "pmcid": "PMC13753637",
+      "doi": null,
+      "title": "PROPOFOL VERSUS WITH PROPOFOL-KETAMINE MIXTURE AS ANAESTHETIC AGENT FOR ELECTROCONVULSIVE THERAPY: A RANDOMIZED CONTROLLED TRIAL.",
+      "authors": "Koleosho-Ademua OA, Sanusi AA, Sonaike MT, Lasebikan V.",
+      "journal": "Annals of Ibadan postgraduate medicine",
+      "journal_abbrev": "Ann Ib Postgrad Med",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-01",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/MED/43017194",
+        "fulltext_html": "https://europepmc.org/articles/PMC13753637",
+        "pdf": "https://europepmc.org/articles/PMC13753637?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Ketamine either alone or as an adjuvant is associated with an acute reduction in the severity of depression, while its effect on cognitive profile is is equivocal."
+          },
+          {
+            "heading": "Objectives",
+            "text": "This study compared the mood-elevating and cognitive outcomes of ketamine in combination with propofol versus propofol alone as anaesthetic agents in ECT."
+          },
+          {
+            "heading": "Methods",
+            "text": "In this randomised-controlled study, 70 patients, aged 18-65years, undergoing ECT for DSM-V major depressive disorder were randomised into two groups. The ketamine-propofol group received intravenous propofol 0.6mg/kg and ketamine 0.6mg/kg, while the second group received intravenous propofol 1.2mg/kg only. Hamilton Depression Rating Scale (HAM-D) was used to assess the severity of depression, the Mini-Mental State Examination (MMSE) was used to assess cognitive performance, pre-ECT (T1), post-1st ECT (T2) and post-3rd ECT course (T3). The Analysis of Covariance and the mixed model linear regression were used to analyse the effect of the intervention. Analyses were by SPSS at 95% CI, p < 0.05."
+          },
+          {
+            "heading": "Results",
+            "text": "There was a significant reduction in HAM-D score post-3rd ECT in the ketamine-propofol group versus propofol group, F (1,58) = 23.24, p = 0.000, h = 0.286. There was no significant group difference on post-ECT course HAM-D score, F (1) = 0.004, p = 0.9. There was no significant group difference on post-ECT course MMSE scores, F (1) = 2.3, p = 0.1. There was no significant group difference on post-3rd ECT MMSE score, F (1,56) = 0.382, P = 0.5, 5?2 = 0.007, no significant group difference on post-ECT course MMSE scores, (F(1) = 2.3, p = 0.1."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "Ketamine-propofol anaesthesia in ECT is associated with temporary improvement of depressive symptoms, without any superiority to propofol in cognitive outcome at any level of ECT treatment."
+          }
+        ],
+        "text": "Ketamine either alone or as an adjuvant is associated with an acute reduction in the severity of depression, while its effect on cognitive profile is is equivocal.\n\nThis study compared the mood-elevating and cognitive outcomes of ketamine in combination with propofol versus propofol alone as anaesthetic agents in ECT.\n\nIn this randomised-controlled study, 70 patients, aged 18-65years, undergoing ECT for DSM-V major depressive disorder were randomised into two groups. The ketamine-propofol group received intravenous propofol 0.6mg/kg and ketamine 0.6mg/kg, while the second group received intravenous propofol 1.2mg/kg only. Hamilton Depression Rating Scale (HAM-D) was used to assess the severity of depression, the Mini-Mental State Examination (MMSE) was used to assess cognitive performance, pre-ECT (T1), post-1st ECT (T2) and post-3rd ECT course (T3). The Analysis of Covariance and the mixed model linear regression were used to analyse the effect of the intervention. Analyses were by SPSS at 95% CI, p < 0.05.\n\nThere was a significant reduction in HAM-D score post-3rd ECT in the ketamine-propofol group versus propofol group, F (1,58) = 23.24, p = 0.000, h = 0.286. There was no significant group difference on post-ECT course HAM-D score, F (1) = 0.004, p = 0.9. There was no significant group difference on post-ECT course MMSE scores, F (1) = 2.3, p = 0.1. There was no significant group difference on post-3rd ECT MMSE score, F (1,56) = 0.382, P = 0.5, 5?2 = 0.007, no significant group difference on post-ECT course MMSE scores, (F(1) = 2.3, p = 0.1.\n\nKetamine-propofol anaesthesia in ECT is associated with temporary improvement of depressive symptoms, without any superiority to propofol in cognitive outcome at any level of ECT treatment."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "Ketamine-propofol anaesthesia in ECT is associated with temporary improvement of depressive symptoms, without any superiority to propofol in cognitive outcome at any level of ECT treatment.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "rct",
+        "confidence": "heuristic"
+      },
+      "sample_size": {
+        "value": 70,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "depression",
+        "psychopharmacology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Propofol",
+        "ECT",
+        "Major Depression",
+        "Cognitive-impairment",
+        "Ketamine-Propofol Combination"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:2",
+          "strong_design"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016770",
+      "epmc_id": "43016770",
+      "source": "MED",
+      "pmid": "43016770",
+      "pmcid": "PMC13752071",
+      "doi": "10.3389/fgwh.2026.1814117",
+      "title": "Persistence and remission of depressive and generalized anxiety symptoms among adolescent mothers in Mwanza, Tanzania: a longitudinal observational study embedded within a non-pharmacological intervention cohort.",
+      "authors": "Mwita M, Dewey D, Konje ET, Patten S.",
+      "journal": "Frontiers in global women's health",
+      "journal_abbrev": "Front Glob Womens Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fgwh.2026.1814117",
+        "europepmc": "https://europepmc.org/article/MED/43016770",
+        "fulltext_html": "https://europepmc.org/articles/PMC13752071",
+        "pdf": "https://europepmc.org/articles/PMC13752071?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "There is paucity of literature on the persistence and remission rates of depressive and anxiety symptoms during pregnancy and to our knowledge, no studies have examined these trajectories among adolescent mothers. Moreover, associated psychosocial risk and protective factors remain largely underexplored. To begin to address these gaps, we used longitudinal data from a cohort of pregnant adolescents in Mwanza, Tanzania, who participated in a non-pharmacological intervention to examine the remission and persistence of depressive and generalized anxiety symptoms from pregnancy through to three months postpartum."
+          },
+          {
+            "heading": "Methods",
+            "text": "A total of 533 pregnant adolescents were enrolled during their second trimester using a convenience sampling approach from selected antenatal care clinics in Mwanza, Tanzania, between 5 August 2023 and 30 June 2024. Depressive symptoms were assessed using the Edinburgh Postnatal Depression Scale (EPDS) and generalized anxiety symptoms were assessed using the Generalized Anxiety Disorder-7 (GAD-7) scale. Assessments were conducted at four time points: second trimester (Time 1), third trimester (Time 2), four weeks postpartum (Time 3), and three months postpartum (Time 4). Participants who screened positive for depressive and/or anxiety symptoms at Time 1, the initial assessment were followed longitudinally to three months post-delivery."
+          },
+          {
+            "heading": "Results",
+            "text": "Approximately one-third of adolescent mothers who screened positive for depressive or anxiety symptoms at Time 1, continued to report symptoms in the third trimester. Symptom remission rates were high postpartum, with more than 97% of participants who screened positive for depressive and anxiety symptoms at Time 1 reporting remission at three months post-delivery."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Maternal depressive and anxiety symptoms in adolescent mothers were dynamic, showing moderate persistence during pregnancy and marked remission in the postpartum period. These findings support the importance of integrating routine mental health screening alongside sustained psychosocial interventions into antenatal and postnatal care to reduce the burden of perinatal mental disorders among adolescent mothers in low-resource settings."
+          }
+        ],
+        "text": "There is paucity of literature on the persistence and remission rates of depressive and anxiety symptoms during pregnancy and to our knowledge, no studies have examined these trajectories among adolescent mothers. Moreover, associated psychosocial risk and protective factors remain largely underexplored. To begin to address these gaps, we used longitudinal data from a cohort of pregnant adolescents in Mwanza, Tanzania, who participated in a non-pharmacological intervention to examine the remission and persistence of depressive and generalized anxiety symptoms from pregnancy through to three months postpartum.\n\nA total of 533 pregnant adolescents were enrolled during their second trimester using a convenience sampling approach from selected antenatal care clinics in Mwanza, Tanzania, between 5 August 2023 and 30 June 2024. Depressive symptoms were assessed using the Edinburgh Postnatal Depression Scale (EPDS) and generalized anxiety symptoms were assessed using the Generalized Anxiety Disorder-7 (GAD-7) scale. Assessments were conducted at four time points: second trimester (Time 1), third trimester (Time 2), four weeks postpartum (Time 3), and three months postpartum (Time 4). Participants who screened positive for depressive and/or anxiety symptoms at Time 1, the initial assessment were followed longitudinally to three months post-delivery.\n\nApproximately one-third of adolescent mothers who screened positive for depressive or anxiety symptoms at Time 1, continued to report symptoms in the third trimester. Symptom remission rates were high postpartum, with more than 97% of participants who screened positive for depressive and anxiety symptoms at Time 1 reporting remission at three months post-delivery.\n\nMaternal depressive and anxiety symptoms in adolescent mothers were dynamic, showing moderate persistence during pregnancy and marked remission in the postpartum period. These findings support the importance of integrating routine mental health screening alongside sustained psychosocial interventions into antenatal and postnatal care to reduce the burden of perinatal mental disorders among adolescent mothers in low-resource settings."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Maternal depressive and anxiety symptoms in adolescent mothers were dynamic, showing moderate persistence during pregnancy and marked remission in the postpartum period. These findings support the importance of integrating routine mental health screening alongside sustained psychosocial interventions into antenatal and postnatal care to reduce the burden of perinatal mental disorders among adolescent mothers in low-resource settings.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "anxiety",
+        "child_adolescent",
+        "psychopharmacology",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Anxiety",
+        "Mental health",
+        "Perinatal",
+        "Adolescent Pregnancy",
+        "Remission"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016894",
+      "epmc_id": "43016894",
+      "source": "MED",
+      "pmid": "43016894",
+      "pmcid": "PMC13751934",
+      "doi": "10.3389/fmicb.2026.1979681",
+      "title": "Study on Gardeniae Fructus for treating depression with combination of network pharmacology, metabolomics and gut microbiota.",
+      "authors": "Dong Y, Deng P, Zhan D, Li Y, Liu QE.",
+      "journal": "Frontiers in microbiology",
+      "journal_abbrev": "Front Microbiol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fmicb.2026.1979681",
+        "europepmc": "https://europepmc.org/article/MED/43016894",
+        "fulltext_html": "https://europepmc.org/articles/PMC13751934",
+        "pdf": "https://europepmc.org/articles/PMC13751934?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Depression is a prevalent and disabling mental disorder with limited therapeutic efficacy and delayed response to conventional antidepressants, highlighting the urgent need for safe and effective alternatives. Gardeniae Fructus (GF), a traditional Chinese medicine with documented neuroprotective properties, has shown rapid antidepressant-like effects, yet its mechanisms remain incompletely understood."
+          },
+          {
+            "heading": "Methods",
+            "text": "Depression-like behaviors were induced by reserpine in adult Sprague-Dawley rats. Thirty-five rats were randomly and evenly divided into five groups: control (CON), Model, low-dose GF (GFL, 1.2 g/kg·d), high-dose GF (GFH, 2.4 g/kg·d), and fluoxetine (FLU, 10 mg/kg·d). Depressive behaviors were assessed by sucrose preference test, forced swimming test, open field test, body temperature, and eyelid ptosis tests. Differential metabolites were identified through serum untargeted metabolomics, and metabolic pathways were analyzed using MetaboAnalyst. The anti-depression targets of GF were determined by network pharmacology. A network pharmacology-metabolomics network was constructed in Cytoscape, and interactions between key components and key targets were verified by molecular docking. Gut microbiota of rats in different groups was analyzed by 16S rDNA sequencing, and multi-omics integration analysis was performed."
+          },
+          {
+            "heading": "Results",
+            "text": "11 active components of GF and 140 potential targets associated with depression were identified, with quercetin emerging as a key compound. Protein-protein interaction analysis highlighted AKT1, TNF, IL6, VEGFA, and TP53 as core targets. In reserpine-induced depressive rats, GF treatment significantly ameliorated depressive-like behaviors, involving shortened immobility time and enhanced sucrose preference, improved body temperature, and alleviated eyelid ptosis. 16S rRNA sequencing revealed that GF modulated gut microbiota composition, and altering functional pathways including thiamine, butanoate, and fatty acid metabolism. Untargeted metabolomics identified 28 differentially expressed metabolites between GF-treated and model groups, predominantly involving lipids and amino acids. Integrated network and metabolomic analyses pinpointed glycosphingolipid metabolism as a critical pathway, with PTEN as a key target and sphinganine and phytosphingosine as principal metabolites. Molecular docking confirmed stable binding between quercetin and PTEN (binding energy: -7.2 kcal/mol). Correlation analyses demonstrated that Bifidobacterium and Turicibacter exhibited pronounced associations with multiple metabolic alterations."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "This integrative approach reveals that GF alleviates depression through multi-target, multi-pathway mechanisms involving regulation of gut microbiota, modulation of glycosphingolipid metabolism, and targeting of PTEN, providing a comprehensive basis for its neuroprotective effects and offering novel insights into Traditional Chinese Medicine-based antidepressant strategies."
+          }
+        ],
+        "text": "Depression is a prevalent and disabling mental disorder with limited therapeutic efficacy and delayed response to conventional antidepressants, highlighting the urgent need for safe and effective alternatives. Gardeniae Fructus (GF), a traditional Chinese medicine with documented neuroprotective properties, has shown rapid antidepressant-like effects, yet its mechanisms remain incompletely understood.\n\nDepression-like behaviors were induced by reserpine in adult Sprague-Dawley rats. Thirty-five rats were randomly and evenly divided into five groups: control (CON), Model, low-dose GF (GFL, 1.2 g/kg·d), high-dose GF (GFH, 2.4 g/kg·d), and fluoxetine (FLU, 10 mg/kg·d). Depressive behaviors were assessed by sucrose preference test, forced swimming test, open field test, body temperature, and eyelid ptosis tests. Differential metabolites were identified through serum untargeted metabolomics, and metabolic pathways were analyzed using MetaboAnalyst. The anti-depression targets of GF were determined by network pharmacology. A network pharmacology-metabolomics network was constructed in Cytoscape, and interactions between key components and key targets were verified by molecular docking. Gut microbiota of rats in different groups was analyzed by 16S rDNA sequencing, and multi-omics integration analysis was performed.\n\n11 active components of GF and 140 potential targets associated with depression were identified, with quercetin emerging as a key compound. Protein-protein interaction analysis highlighted AKT1, TNF, IL6, VEGFA, and TP53 as core targets. In reserpine-induced depressive rats, GF treatment significantly ameliorated depressive-like behaviors, involving shortened immobility time and enhanced sucrose preference, improved body temperature, and alleviated eyelid ptosis. 16S rRNA sequencing revealed that GF modulated gut microbiota composition, and altering functional pathways including thiamine, butanoate, and fatty acid metabolism. Untargeted metabolomics identified 28 differentially expressed metabolites between GF-treated and model groups, predominantly involving lipids and amino acids. Integrated network and metabolomic analyses pinpointed glycosphingolipid metabolism as a critical pathway, with PTEN as a key target and sphinganine and phytosphingosine as principal metabolites. Molecular docking confirmed stable binding between quercetin and PTEN (binding energy: -7.2 kcal/mol). Correlation analyses demonstrated that Bifidobacterium and Turicibacter exhibited pronounced associations with multiple metabolic alterations.\n\nThis integrative approach reveals that GF alleviates depression through multi-target, multi-pathway mechanisms involving regulation of gut microbiota, modulation of glycosphingolipid metabolism, and targeting of PTEN, providing a comprehensive basis for its neuroprotective effects and offering novel insights into Traditional Chinese Medicine-based antidepressant strategies."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "This integrative approach reveals that GF alleviates depression through multi-target, multi-pathway mechanisms involving regulation of gut microbiota, modulation of glycosphingolipid metabolism, and targeting of PTEN, providing a comprehensive basis for its neuroprotective effects and offering novel insights into Traditional Chinese Medicine-based antidepressant strategies.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "psychopharmacology",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Metabolomics",
+        "Gut Microbiota",
+        "Network Pharmacology",
+        "Gardeniae Fructus"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017210",
+      "epmc_id": "43017210",
+      "source": "MED",
+      "pmid": "43017210",
+      "pmcid": "PMC13753894",
+      "doi": "10.2147/ndt.s643705",
+      "title": "Bidirectional Microbiota-Gut-Brain Communication in Anorexia Nervosa: Mechanistic Insights and Therapeutic Perspectives.",
+      "authors": "Li R, Tang J, Zhou M, Yang B, Zhang X, Jing F.",
+      "journal": "Neuropsychiatric disease and treatment",
+      "journal_abbrev": "Neuropsychiatr Dis Treat",
+      "pub_year": 2026,
+      "first_publication_date": "2026-11-07",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.2147/ndt.s643705",
+        "europepmc": "https://europepmc.org/article/MED/43017210",
+        "fulltext_html": "https://europepmc.org/articles/PMC13753894",
+        "pdf": "https://europepmc.org/articles/PMC13753894?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "The gut-brain axis (GBA), particularly communication between the gut microbiota (GM) and the brain, has become a major focus in neuropsychiatric research because of its role in appetite regulation, energy metabolism, immune function, and behavior. Anorexia nervosa (AN) is a severe eating disorder with high morbidity and mortality, but the contribution of GBA dysfunction to its pathogenesis remains incompletely defined. This review synthesizes evidence linking GM dysbiosis with AN and organizes the current literature around neural, endocrine, immune, and metabolic pathways. It also summarizes altered brain regions and circuits implicated in AN and discusses how peripheral microbial changes may interact with central regulatory systems. Current evidence supports a multidirectional model in which GM alterations, intestinal barrier function, vagal signaling, hypothalamic-pituitary-adrenal (HPA) axis activity, immune activation, microbial metabolites, and neurocircuit dysfunction may reinforce disordered appetite and weight regulation. Microbiota-targeted strategies, including probiotics, prebiotics, fermented foods, dietary modulation, and lifestyle interventions, may offer adjunctive therapeutic potential, but clinical evidence remains preliminary. Future studies should use longitudinal multi-omics designs, mechanistic animal models, and rigorously controlled clinical trials to determine whether microbiome changes are drivers, consequences, or modifiers of AN."
+          }
+        ],
+        "text": "The gut-brain axis (GBA), particularly communication between the gut microbiota (GM) and the brain, has become a major focus in neuropsychiatric research because of its role in appetite regulation, energy metabolism, immune function, and behavior. Anorexia nervosa (AN) is a severe eating disorder with high morbidity and mortality, but the contribution of GBA dysfunction to its pathogenesis remains incompletely defined. This review synthesizes evidence linking GM dysbiosis with AN and organizes the current literature around neural, endocrine, immune, and metabolic pathways. It also summarizes altered brain regions and circuits implicated in AN and discusses how peripheral microbial changes may interact with central regulatory systems. Current evidence supports a multidirectional model in which GM alterations, intestinal barrier function, vagal signaling, hypothalamic-pituitary-adrenal (HPA) axis activity, immune activation, microbial metabolites, and neurocircuit dysfunction may reinforce disordered appetite and weight regulation. Microbiota-targeted strategies, including probiotics, prebiotics, fermented foods, dietary modulation, and lifestyle interventions, may offer adjunctive therapeutic potential, but clinical evidence remains preliminary. Future studies should use longitudinal multi-omics designs, mechanistic animal models, and rigorously controlled clinical trials to determine whether microbiome changes are drivers, consequences, or modifiers of AN."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Microbiota-targeted strategies, including probiotics, prebiotics, fermented foods, dietary modulation, and lifestyle interventions, may offer adjunctive therapeutic potential, but clinical evidence remains preliminary. Future studies should use longitudinal multi-omics designs, mechanistic animal models, and rigorously controlled clinical trials to determine whether microbiome changes are drivers, consequences, or modifiers of AN.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "eating",
+        "public_mental_health",
+        "neuroscience",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Public Health",
+        "Anorexia Nervosa",
+        "Eating Disorders",
+        "Gut Microbiota",
+        "Gut-brain Axis"
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017427",
+      "epmc_id": "43017427",
+      "source": "MED",
+      "pmid": "43017427",
+      "pmcid": "PMC13754380",
+      "doi": "10.1097/ms9.0000000000005766",
+      "title": "Acute intentional emamectin benzoate poisoning combined with alcohol and carbonated beverage: a rare case report.",
+      "authors": "Yadav A, Jha S, Basel R, Jha S, Karki S, Acharya CP.",
+      "journal": "Annals of medicine and surgery (2012)",
+      "journal_abbrev": "Ann Med Surg (Lond)",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-06",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "Journal Article",
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1097/ms9.0000000000005766",
+        "europepmc": "https://europepmc.org/article/MED/43017427",
+        "fulltext_html": "https://europepmc.org/articles/PMC13754380",
+        "pdf": "https://europepmc.org/articles/PMC13754380?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Human poisoning with emamectin benzoate is rare and its clinical spectrum remains poorly characterized because of the limited number of reported cases. Intentional co-ingestion with alcohol and a carbonated beverage has not previously been reported, and their influence of these co-ingestants on toxicity remains uncertain."
+          },
+          {
+            "heading": "Case presentation",
+            "text": "An 18-year-old male with no previously diagnosed psychiatric illness intentionally ingested approximately 250 mg of emamectin benzoate (5 g of a 5% soluble granules formulation) mixed with 100 mL of locally brewed alcohol and 100 mL of a carbonated beverage following acute psychosocial distress. He presented 1 hour later with agitation, recurrent vomiting, and epigastric discomfort. He received supportive care comprising intravenous fluids, gastroprotective therapy, antiemetics, thiamine supplementation, serial clinical, and biochemical monitoring, and early psychiatric evaluation. Agitation was managed with olanzapine after careful consideration of the theoretical risk of additive central nervous system depression associated with benzodiazepines."
+          },
+          {
+            "heading": "Outcome",
+            "text": "The patient developed transient, isolated hepatocellular injury (peak aspartate transaminase 130 U/L, alanine transaminase 110 U/L) without multi-organ dysfunction. Liver enzyme abnormalities resolved with conservative management, and he achieved complete clinical recovery. Psychiatric evaluation established alcohol use disorder with stress-related impulsivity, and he remained abstinent from alcohol and compliant with psychiatric care at the 2-week follow-up."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "This case describes a previously unreported pattern of intentional emamectin benzoate co-ingestion with alcohol and a carbonated beverage that was associated with transient, isolated hepatocellular injury. Although causality cannot be established from a single case, the favorable outcome and temporal association provide clinically relevant observations that warrant further investigation."
+          }
+        ],
+        "text": "Human poisoning with emamectin benzoate is rare and its clinical spectrum remains poorly characterized because of the limited number of reported cases. Intentional co-ingestion with alcohol and a carbonated beverage has not previously been reported, and their influence of these co-ingestants on toxicity remains uncertain.\n\nAn 18-year-old male with no previously diagnosed psychiatric illness intentionally ingested approximately 250 mg of emamectin benzoate (5 g of a 5% soluble granules formulation) mixed with 100 mL of locally brewed alcohol and 100 mL of a carbonated beverage following acute psychosocial distress. He presented 1 hour later with agitation, recurrent vomiting, and epigastric discomfort. He received supportive care comprising intravenous fluids, gastroprotective therapy, antiemetics, thiamine supplementation, serial clinical, and biochemical monitoring, and early psychiatric evaluation. Agitation was managed with olanzapine after careful consideration of the theoretical risk of additive central nervous system depression associated with benzodiazepines.\n\nThe patient developed transient, isolated hepatocellular injury (peak aspartate transaminase 130 U/L, alanine transaminase 110 U/L) without multi-organ dysfunction. Liver enzyme abnormalities resolved with conservative management, and he achieved complete clinical recovery. Psychiatric evaluation established alcohol use disorder with stress-related impulsivity, and he remained abstinent from alcohol and compliant with psychiatric care at the 2-week follow-up.\n\nThis case describes a previously unreported pattern of intentional emamectin benzoate co-ingestion with alcohol and a carbonated beverage that was associated with transient, isolated hepatocellular injury. Although causality cannot be established from a single case, the favorable outcome and temporal association provide clinically relevant observations that warrant further investigation."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "This case describes a previously unreported pattern of intentional emamectin benzoate co-ingestion with alcohol and a carbonated beverage that was associated with transient, isolated hepatocellular injury. Although causality cannot be established from a single case, the favorable outcome and temporal association provide clinically relevant observations that warrant further investigation.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "alcohol"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Liver injury",
+        "alcohol consumption",
+        "Emamectin Benzoate",
+        "Pesticide Poisoning"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017381",
+      "epmc_id": "43017381",
+      "source": "MED",
+      "pmid": "43017381",
+      "pmcid": "PMC13754335",
+      "doi": "10.1097/ms9.0000000000005716",
+      "title": "Dismissed for drinking without drinking: confirmed auto-brewery syndrome in a law-enforcement officer - a case report.",
+      "authors": "Arko SB, Reza SN, Tumpa SM, Chowdhury D.",
+      "journal": "Annals of medicine and surgery (2012)",
+      "journal_abbrev": "Ann Med Surg (Lond)",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-22",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "Journal Article",
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1097/ms9.0000000000005716",
+        "europepmc": "https://europepmc.org/article/MED/43017381",
+        "fulltext_html": "https://europepmc.org/articles/PMC13754335",
+        "pdf": "https://europepmc.org/articles/PMC13754335?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Introduction",
+            "text": "Auto-brewery syndrome, or gut fermentation syndrome, is a rare and underrecognized disorder in which gastrointestinal microorganisms ferment ingested carbohydrates into ethanol, causing intoxication without alcohol consumption. Because its clinical presentation mimics alcohol use disorder, affected patients may experience stigma, disbelief, occupational harm, and medicolegal consequences."
+          },
+          {
+            "heading": "Case details",
+            "text": "We report a case of confirmed auto-brewery syndrome (ABS) in a law-enforcement officer who developed episodes of dizziness, slurred speech, ataxia, confusion, drowsiness, altered behavior, brain fog, mood changes, hangover-like symptoms, and alcoholic breath odor. Despite denial of alcohol intake, corroborated by his wife, colleagues, friends, and extended family, he was suspected of alcoholism and dismissed from service. During symptomatic episodes, serum ethanol levels were elevated at 62, 106, and 113 mg/dL, with paired breath-alcohol positivity. Repeat testing under chain-of-custody procedures reproduced the same pattern. Urine toxicology was negative; neurologic differentials were excluded; and hepatic encephalopathy was unlikely, with normal liver function tests, international normalized ratio, albumin, and ammonia. A supervised carbohydrate challenge performed in a controlled setting reproduced ethanol elevations and symptoms. Endoscopic cultures grew Candida albicans and Saccharomyces cerevisiae, while Klebsiella pneumoniae was not isolated."
+          },
+          {
+            "heading": "Discussion",
+            "text": "This case demonstrates the diagnostic complexity of ABS and emphasizes the importance of correlating symptoms with ethanol measurements, supervised provocation testing, microbiologic evidence, and exclusion of toxicologic, neurologic, hepatic, and laboratory-artifact mimics."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "ABS should be considered in patients with recurrent intoxication-like episodes and unexplained ethanol positivity despite credible abstinence. Early recognition is essential to prevent misdiagnosis, stigma, occupational loss, and medico-legal harm."
+          }
+        ],
+        "text": "Auto-brewery syndrome, or gut fermentation syndrome, is a rare and underrecognized disorder in which gastrointestinal microorganisms ferment ingested carbohydrates into ethanol, causing intoxication without alcohol consumption. Because its clinical presentation mimics alcohol use disorder, affected patients may experience stigma, disbelief, occupational harm, and medicolegal consequences.\n\nWe report a case of confirmed auto-brewery syndrome (ABS) in a law-enforcement officer who developed episodes of dizziness, slurred speech, ataxia, confusion, drowsiness, altered behavior, brain fog, mood changes, hangover-like symptoms, and alcoholic breath odor. Despite denial of alcohol intake, corroborated by his wife, colleagues, friends, and extended family, he was suspected of alcoholism and dismissed from service. During symptomatic episodes, serum ethanol levels were elevated at 62, 106, and 113 mg/dL, with paired breath-alcohol positivity. Repeat testing under chain-of-custody procedures reproduced the same pattern. Urine toxicology was negative; neurologic differentials were excluded; and hepatic encephalopathy was unlikely, with normal liver function tests, international normalized ratio, albumin, and ammonia. A supervised carbohydrate challenge performed in a controlled setting reproduced ethanol elevations and symptoms. Endoscopic cultures grew Candida albicans and Saccharomyces cerevisiae, while Klebsiella pneumoniae was not isolated.\n\nThis case demonstrates the diagnostic complexity of ABS and emphasizes the importance of correlating symptoms with ethanol measurements, supervised provocation testing, microbiologic evidence, and exclusion of toxicologic, neurologic, hepatic, and laboratory-artifact mimics.\n\nABS should be considered in patients with recurrent intoxication-like episodes and unexplained ethanol positivity despite credible abstinence. Early recognition is essential to prevent misdiagnosis, stigma, occupational loss, and medico-legal harm."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "ABS should be considered in patients with recurrent intoxication-like episodes and unexplained ethanol positivity despite credible abstinence. Early recognition is essential to prevent misdiagnosis, stigma, occupational loss, and medico-legal harm.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "alcohol",
+        "neuroscience"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Saccharomyces cerevisiae",
+        "Candida albicans",
+        "Case Report",
+        "Auto-brewery Syndrome",
+        "Gut Fermentation Syndrome",
+        "Endogenous Ethanol Production",
+        "Alcohol-Use Disorder Mimic",
+        "Medicolegal Consequences"
+      ],
+      "relevance": {
+        "score": 2,
+        "signals": [
+          "tags:2"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016468",
+      "epmc_id": "43016468",
+      "source": "MED",
+      "pmid": "43016468",
+      "pmcid": "PMC13751393",
+      "doi": "10.3389/fmed.2026.1974555",
+      "title": "TSCNet: transformer-simplicial convolutional network for functional brain network classification.",
+      "authors": "Bai L, Zhang G, Feng L, Shen L, Zhou B, Hu F.",
+      "journal": "Frontiers in medicine",
+      "journal_abbrev": "Front Med (Lausanne)",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fmed.2026.1974555",
+        "europepmc": "https://europepmc.org/article/MED/43016468",
+        "fulltext_html": "https://europepmc.org/articles/PMC13751393",
+        "pdf": "https://europepmc.org/articles/PMC13751393?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Functional brain network modeling provides an important tool for analyzing disease-related abnormalities in functional connectivity. Conventional graph models, however, treat nodes and edges as their basic objects and mainly encode pairwise relationships between brain regions, making it difficult to explicitly represent higher-order topological units jointly formed by multiple regions. We therefore propose TSCNet, a functional brain network classification framework that integrates simplicial convolution with a Transformer. TSCNet first maps multi-site-harmonized functional connectivity matrices to hierarchical simplicial complexes containing 0-, 1-, and 2-simplices. Hodge-Laplacian-driven simplicial convolutions then extract local topological features separately at each order. These order-specific features are projected into a shared representation space and passed to a Transformer to model global dependencies across simplices and brain regions. We evaluated TSCNet on three public fMRI datasets, ABIDE, ADHD-200, and Haxby, using stratified 10-fold cross-validation repeated five times. The complete model achieved classification accuracies of 81.23% on ABIDE and 82.42% on ADHD-200. Removing either the SCNN or Transformer component reduced performance, indicating that local higher-order topology and global information integration provide complementary information. Parameter-sensitivity analyses and topological-pattern visualizations further characterized the model's responses to simplex order and construction threshold. TSCNet provides a framework for jointly analyzing local higher-order topology and whole-brain dependencies, although its generalization to unseen scanners and the clinical specificity of the identified higher-order patterns require validation in independent cohorts."
+          }
+        ],
+        "text": "Functional brain network modeling provides an important tool for analyzing disease-related abnormalities in functional connectivity. Conventional graph models, however, treat nodes and edges as their basic objects and mainly encode pairwise relationships between brain regions, making it difficult to explicitly represent higher-order topological units jointly formed by multiple regions. We therefore propose TSCNet, a functional brain network classification framework that integrates simplicial convolution with a Transformer. TSCNet first maps multi-site-harmonized functional connectivity matrices to hierarchical simplicial complexes containing 0-, 1-, and 2-simplices. Hodge-Laplacian-driven simplicial convolutions then extract local topological features separately at each order. These order-specific features are projected into a shared representation space and passed to a Transformer to model global dependencies across simplices and brain regions. We evaluated TSCNet on three public fMRI datasets, ABIDE, ADHD-200, and Haxby, using stratified 10-fold cross-validation repeated five times. The complete model achieved classification accuracies of 81.23% on ABIDE and 82.42% on ADHD-200. Removing either the SCNN or Transformer component reduced performance, indicating that local higher-order topology and global information integration provide complementary information. Parameter-sensitivity analyses and topological-pattern visualizations further characterized the model's responses to simplex order and construction threshold. TSCNet provides a framework for jointly analyzing local higher-order topology and whole-brain dependencies, although its generalization to unseen scanners and the clinical specificity of the identified higher-order patterns require validation in independent cohorts."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Parameter-sensitivity analyses and topological-pattern visualizations further characterized the model's responses to simplex order and construction threshold. TSCNet provides a framework for jointly analyzing local higher-order topology and whole-brain dependencies, although its generalization to unseen scanners and the clinical specificity of the identified higher-order patterns require validation in independent cohorts.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "modelling",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "adhd"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Transformer",
+        "Functional Brain Network",
+        "Simplicial Complex",
+        "Higher-order Network",
+        "Simplicial Convolutional Network"
+      ],
+      "relevance": {
+        "score": 1,
+        "signals": [
+          "tags:1"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016686",
+      "epmc_id": "43016686",
+      "source": "MED",
+      "pmid": "43016686",
+      "pmcid": "PMC13751960",
+      "doi": "10.3389/fpsyg.2026.1917064",
+      "title": "Multidimensional transdiagnostic inventory of psychopathology: development and initial validation.",
+      "authors": "Blais MA, Cai H, Adam TJ, Correll CU.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fpsyg.2026.1917064",
+        "europepmc": "https://europepmc.org/article/MED/43016686",
+        "fulltext_html": "https://europepmc.org/articles/PMC13751960",
+        "pdf": "https://europepmc.org/articles/PMC13751960?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Traditional diagnostic systems, such as the DSM-5 and ICD-11, suffer from well-documented limitations, including high comorbidity rates, arbitrary diagnostic thresholds, and within-disorder heterogeneity. Consequently, the field is evolving towards hierarchical, transdiagnostic, dimensional models of psychopathology. This study reports on the development and initial validation of the Multidimensional Transdiagnostic Inventory of Psychopathology (MTIP). This new broadband inventory aligns traditional DSM disorders with contemporary dimensional models of psychopathology. We conducted initial development and basic psychometric analyses in a mixed sample of 301 adults. We then validated the MTIP in a second independent sample (N = 826), of which 640 who self-reported no history of past mental health treatment were used as our normative/reference sample. The final MTIP contained 13 clinical scales and seven supplemental scales. All the MTIP scales met core psychometric assumptions at the item, scale, and transdiagnostic levels. A series of exploratory and second-order factor analyses supported the MTIP hierarchical dimensional structure. Concurrent validity correlations with the DSM-5 level 1 cross-cutting symptom measure were strong, ranging from 0.89 (depression) to 0.51 (drug misuse). Regression analyses supported the construct validity of the higher-order transdiagnostic scales. Twelve of the 13 clinical scales differentiated individuals with a history of mental health care from those without past care, with effect sizes ranging from 0.20 (Alcohol Misuse) to 1.06 (Anxiety). Effect sizes for the transdiagnostic scales ranged from 0.33 (Thought Dysregulation) to 1.07 (Emotion Dysregulation). The clinical implications and potential applications of the MTIP are discussed."
+          }
+        ],
+        "text": "Traditional diagnostic systems, such as the DSM-5 and ICD-11, suffer from well-documented limitations, including high comorbidity rates, arbitrary diagnostic thresholds, and within-disorder heterogeneity. Consequently, the field is evolving towards hierarchical, transdiagnostic, dimensional models of psychopathology. This study reports on the development and initial validation of the Multidimensional Transdiagnostic Inventory of Psychopathology (MTIP). This new broadband inventory aligns traditional DSM disorders with contemporary dimensional models of psychopathology. We conducted initial development and basic psychometric analyses in a mixed sample of 301 adults. We then validated the MTIP in a second independent sample (N = 826), of which 640 who self-reported no history of past mental health treatment were used as our normative/reference sample. The final MTIP contained 13 clinical scales and seven supplemental scales. All the MTIP scales met core psychometric assumptions at the item, scale, and transdiagnostic levels. A series of exploratory and second-order factor analyses supported the MTIP hierarchical dimensional structure. Concurrent validity correlations with the DSM-5 level 1 cross-cutting symptom measure were strong, ranging from 0.89 (depression) to 0.51 (drug misuse). Regression analyses supported the construct validity of the higher-order transdiagnostic scales. Twelve of the 13 clinical scales differentiated individuals with a history of mental health care from those without past care, with effect sizes ranging from 0.20 (Alcohol Misuse) to 1.06 (Anxiety). Effect sizes for the transdiagnostic scales ranged from 0.33 (Thought Dysregulation) to 1.07 (Emotion Dysregulation). The clinical implications and potential applications of the MTIP are discussed."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Effect sizes for the transdiagnostic scales ranged from 0.33 (Thought Dysregulation) to 1.07 (Emotion Dysregulation). The clinical implications and potential applications of the MTIP are discussed.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": {
+        "value": 826,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "depression",
+        "anxiety",
+        "alcohol"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Psychopathology",
+        "Comorbidity",
+        "Hierarchical Taxonomy Of Psychopathology (Hitop)",
+        "General Psychopathology Factor (P-Factor)",
+        "Multidimensional Psychological Assessment",
+        "Transdiagnostic Dimensional Models"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:3",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016627",
+      "epmc_id": "43016627",
+      "source": "MED",
+      "pmid": "43016627",
+      "pmcid": "PMC13751447",
+      "doi": "10.3389/fpsyg.2026.1959681",
+      "title": "Paternal facilitation of maternal role usurpation and mother-child bond rupture in stepfamilies: a proposal for early detection and protective measures.",
+      "authors": "Fernández AB.",
+      "journal": "Frontiers in psychology",
+      "journal_abbrev": "Front Psychol",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "brief-report",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fpsyg.2026.1959681",
+        "europepmc": "https://europepmc.org/article/MED/43016627",
+        "fulltext_html": "https://europepmc.org/articles/PMC13751447",
+        "pdf": "https://europepmc.org/articles/PMC13751447?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Divorced parents frequently begin new relationships during the early stages of family reorganization, and their new partners may become involved with the children before any formal stepfamily exists. Yet family law barely regulates the role of these new partners. This Perspective focuses on one specific configuration: a father who repartners under shared custody, and a mother who is not informed of the new partner's involvement with children under 12. I describe how, with the father's active or passive facilitation, the new partner progressively assumes maternal functions, to the point of usurping the maternal role and breaking the mother-child bond. Children, as active participants whose responses vary with age, may become caught in loyalty conflict and in a grief for their mother that they do not recognize as such, sustained by a rescue narrative that presents the new partner as the one who gave them the affection their mother could not. For the mother, the loss is ambiguous, lacks social recognition and may lead to a state of shock and paralysis and to severe cumulative trauma, with symptoms compatible with complex post-traumatic stress disorder, that is difficult to resolve and has devastating consequences for her health, including suicide risk. I propose a preventive circuit linked to the divorce agreement: a universal, judicially enforceable clause requiring disclosure of the new partner's involvement and definition of that partner's role, and risk screening at separation that triggers mandatory psychoeducation, mediation and monitoring in at-risk families. The circuit may also contribute to the early detection of vicarious violence, and its effectiveness depends on professionals trained in these dynamics."
+          }
+        ],
+        "text": "Divorced parents frequently begin new relationships during the early stages of family reorganization, and their new partners may become involved with the children before any formal stepfamily exists. Yet family law barely regulates the role of these new partners. This Perspective focuses on one specific configuration: a father who repartners under shared custody, and a mother who is not informed of the new partner's involvement with children under 12. I describe how, with the father's active or passive facilitation, the new partner progressively assumes maternal functions, to the point of usurping the maternal role and breaking the mother-child bond. Children, as active participants whose responses vary with age, may become caught in loyalty conflict and in a grief for their mother that they do not recognize as such, sustained by a rescue narrative that presents the new partner as the one who gave them the affection their mother could not. For the mother, the loss is ambiguous, lacks social recognition and may lead to a state of shock and paralysis and to severe cumulative trauma, with symptoms compatible with complex post-traumatic stress disorder, that is difficult to resolve and has devastating consequences for her health, including suicide risk. I propose a preventive circuit linked to the divorce agreement: a universal, judicially enforceable clause requiring disclosure of the new partner's involvement and definition of that partner's role, and risk screening at separation that triggers mandatory psychoeducation, mediation and monitoring in at-risk families. The circuit may also contribute to the early detection of vicarious violence, and its effectiveness depends on professionals trained in these dynamics."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "I propose a preventive circuit linked to the divorce agreement: a universal, judicially enforceable clause requiring disclosure of the new partner's involvement and definition of that partner's role, and risk screening at separation that triggers mandatory psychoeducation, mediation and monitoring in at-risk families. The circuit may also contribute to the early detection of vicarious violence, and its effectiveness depends on professionals trained in these dynamics.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "suicide",
+        "ptsd",
+        "child_adolescent",
+        "psychotherapy"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Ambiguous Loss",
+        "Mother–child Bond",
+        "Vicarious Violence",
+        "Stepfamily Formation",
+        "Parenting Plans",
+        "Maternal Role Usurpation",
+        "Parental Repartnering",
+        "Paternal Facilitation"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "tags:3",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43019175",
+      "epmc_id": "43019175",
+      "source": "MED",
+      "pmid": "43019175",
+      "pmcid": "PMC13745281",
+      "doi": "10.1038/s41598-026-51298-0",
+      "title": "Extending eFall risk prediction to working-age adults within mental health and learning disability services: a clinical validation study.",
+      "authors": "Chen T, Marino LV, Best K, Bhatnagar-Knox S, Humble V, Garnham M, Greenbank K, Relton S, Lim S, Clegg A.",
+      "journal": "Scientific reports",
+      "journal_abbrev": "Sci Rep",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-10",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Validation Study",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1038/s41598-026-51298-0",
+        "europepmc": "https://europepmc.org/article/MED/43019175",
+        "fulltext_html": "https://europepmc.org/articles/PMC13745281",
+        "pdf": "https://europepmc.org/articles/PMC13745281?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Most fall risk tools are developed for older adults; evidence in working-age populations receiving mental health services is limited. To externally validate the existing eFalls prediction model in working-age adults (18-65 years) within a UK integrated teaching National Health Service (NHS) foundation trust and assess the impact of simple recalibration. We conducted a retrospective validation using routinely collected electronic health records from a large integrated teaching NHS foundation trust in the north of England. The published eFalls coefficients were applied to derive 12-month fall/fracture risk. Performance was evaluated using discrimination (C-statistic), calibration-in-the-large (CITL), calibration slope, observed-to-expected (O/E) ratio, calibration plots, and decision curve analysis (DCA). A logistic recalibration (intercept and slope) using the original linear predictor was then fitted on the full cohort and applied uniformly to subgroups (sex; mental health, learning disability). Among 32,410 adults (fall rate 2.07%), the model showed good discrimination (C-statistic = 0.777). Before recalibration, calibration was suboptimal (CITL = 1.36; O/E = 1.60; slope = 1.22). Recalibration restored alignment (CITL ≈ 0; O/E ≈ 1; slope ≈ 1) without changing discrimination. Subgroup analyses revealed degraded performance in learning disability groups (e.g., AUC 0.696-0.739; marked underprediction), whereas sex and mental-health-only groups were closer to overall performance. DCA indicated positive net benefit across clinically relevant thresholds (10-25%). The eFalls model showed reasonable performance in working-age adults receiving mental health or learning disability services following simple recalibration. However, discrimination was lower among individuals with learning disabilities, suggesting that recalibration alone may be insufficient and that further model refinement and validation in this subgroup are warranted."
+          },
+          {
+            "heading": "Supplementary information",
+            "text": "The online version contains supplementary material available at https://doi.org/10.1038/s41598-026-51298-0."
+          }
+        ],
+        "text": "Most fall risk tools are developed for older adults; evidence in working-age populations receiving mental health services is limited. To externally validate the existing eFalls prediction model in working-age adults (18-65 years) within a UK integrated teaching National Health Service (NHS) foundation trust and assess the impact of simple recalibration. We conducted a retrospective validation using routinely collected electronic health records from a large integrated teaching NHS foundation trust in the north of England. The published eFalls coefficients were applied to derive 12-month fall/fracture risk. Performance was evaluated using discrimination (C-statistic), calibration-in-the-large (CITL), calibration slope, observed-to-expected (O/E) ratio, calibration plots, and decision curve analysis (DCA). A logistic recalibration (intercept and slope) using the original linear predictor was then fitted on the full cohort and applied uniformly to subgroups (sex; mental health, learning disability). Among 32,410 adults (fall rate 2.07%), the model showed good discrimination (C-statistic = 0.777). Before recalibration, calibration was suboptimal (CITL = 1.36; O/E = 1.60; slope = 1.22). Recalibration restored alignment (CITL ≈ 0; O/E ≈ 1; slope ≈ 1) without changing discrimination. Subgroup analyses revealed degraded performance in learning disability groups (e.g., AUC 0.696-0.739; marked underprediction), whereas sex and mental-health-only groups were closer to overall performance. DCA indicated positive net benefit across clinically relevant thresholds (10-25%). The eFalls model showed reasonable performance in working-age adults receiving mental health or learning disability services following simple recalibration. However, discrimination was lower among individuals with learning disabilities, suggesting that recalibration alone may be insufficient and that further model refinement and validation in this subgroup are warranted.\n\nThe online version contains supplementary material available at https://doi.org/10.1038/s41598-026-51298-0."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "The eFalls model showed reasonable performance in working-age adults receiving mental health or learning disability services following simple recalibration. However, discrimination was lower among individuals with learning disabilities, suggesting that recalibration alone may be insufficient and that further model refinement and validation in this subgroup are warranted.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "older_adults",
+        "public_mental_health",
+        "epidemiology"
+      ],
+      "mesh_major": [
+        "Mental Health",
+        "Mental Health Services",
+        "Accidental Falls",
+        "Learning Disabilities"
+      ],
+      "keywords": [
+        "Logistic regression",
+        "Mental health",
+        "Learning Disability",
+        "Electronic Health Records",
+        "External Validation",
+        "Model Recalibration",
+        "Fall Risk Prediction",
+        "Working-age Adults"
+      ],
+      "relevance": {
+        "score": -1,
+        "signals": [
+          "mesh_major",
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017632",
+      "epmc_id": "43017632",
+      "source": "MED",
+      "pmid": "43017632",
+      "pmcid": "PMC13754308",
+      "doi": "10.1097/ms9.0000000000005735",
+      "title": "Fatal acute respiratory distress syndrome following intentional ingestion of glyphosate-surfactant herbicide (Glyfield^®): a case report and literature review.",
+      "authors": "Baral U, Shah S, Niraula O, Timalsina S, Sah U, Jha A.",
+      "journal": "Annals of medicine and surgery (2012)",
+      "journal_abbrev": "Ann Med Surg (Lond)",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-12",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "Journal Article",
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1097/ms9.0000000000005735",
+        "europepmc": "https://europepmc.org/article/MED/43017632",
+        "fulltext_html": "https://europepmc.org/articles/PMC13754308",
+        "pdf": "https://europepmc.org/articles/PMC13754308?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Introduction",
+            "text": "Glyphosate surfactant herbicide (GlySH) is the most commonly used broad-spectrum, non-selective herbicide in the world. Toxicity in human poisoning is a property of the formulation rather than of glyphosate alone, with experimental data implicating the surfactant co-formulant as a major contributor. The clinical features of this herbicide poisoning are varied, ranging from asymptomatic presentation to death. Acute respiratory distress syndrome (ARDS), as a fatal complication of intentional GlySH ingestion, has been infrequently reported."
+          },
+          {
+            "heading": "Case presentation",
+            "text": "We present a 50-year-old male patient with no comorbidities who attempted suicide by ingesting approximately 400 mL of Glyfield^® [41% isopropyl amine salt of glyphosate + 15% polyoxyethylene amine (POEA) surfactant] while under the influence of alcohol. Initially, intravenous fluids were given, and supportive management was provided; later, he developed acute kidney injury with pulmonary edema and acute liver failure, which were corrected after timely intervention, but he later developed ARDS and aspiration pneumonia. We report a fatal case in which, despite timely aggressive management, the patient gradually deteriorated and finally died due to ARDS."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "This case report emphasizes that glyphosate-surfactant herbicide poisoning can be life-threatening and can lead to MODS and mortality if ingested in high amounts, despite early management. Renal recovery with hemodialysis did not prevent fatal pulmonary failure, underscoring ARDS as the dominant determinant of mortality in high-volume GlySH ingestion. There is no antidote for this herbicide poisoning."
+          }
+        ],
+        "text": "Glyphosate surfactant herbicide (GlySH) is the most commonly used broad-spectrum, non-selective herbicide in the world. Toxicity in human poisoning is a property of the formulation rather than of glyphosate alone, with experimental data implicating the surfactant co-formulant as a major contributor. The clinical features of this herbicide poisoning are varied, ranging from asymptomatic presentation to death. Acute respiratory distress syndrome (ARDS), as a fatal complication of intentional GlySH ingestion, has been infrequently reported.\n\nWe present a 50-year-old male patient with no comorbidities who attempted suicide by ingesting approximately 400 mL of Glyfield^® [41% isopropyl amine salt of glyphosate + 15% polyoxyethylene amine (POEA) surfactant] while under the influence of alcohol. Initially, intravenous fluids were given, and supportive management was provided; later, he developed acute kidney injury with pulmonary edema and acute liver failure, which were corrected after timely intervention, but he later developed ARDS and aspiration pneumonia. We report a fatal case in which, despite timely aggressive management, the patient gradually deteriorated and finally died due to ARDS.\n\nThis case report emphasizes that glyphosate-surfactant herbicide poisoning can be life-threatening and can lead to MODS and mortality if ingested in high amounts, despite early management. Renal recovery with hemodialysis did not prevent fatal pulmonary failure, underscoring ARDS as the dominant determinant of mortality in high-volume GlySH ingestion. There is no antidote for this herbicide poisoning."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "This case report emphasizes that glyphosate-surfactant herbicide poisoning can be life-threatening and can lead to MODS and mortality if ingested in high amounts, despite early management. Renal recovery with hemodialysis did not prevent fatal pulmonary failure, underscoring ARDS as the dominant determinant of mortality in high-volume GlySH ingestion. There is no antidote for this herbicide poisoning.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "suicide",
+        "alcohol",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Acute respiratory distress syndrome",
+        "hemodialysis",
+        "Glyphosate-surfactant Herbicide"
+      ],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:2",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016902",
+      "epmc_id": "43016902",
+      "source": "MED",
+      "pmid": "43016902",
+      "pmcid": "PMC13752403",
+      "doi": "10.3389/fpubh.2026.1854138",
+      "title": "A multilevel evaluation of the development and implementation of a promotora-led nature-based intervention.",
+      "authors": "Aragula SS, Saw A, Rodriguez J, Vazquez YA, Gonzalez V, Zohar M, Game C, Abboud D.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-27",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fpubh.2026.1854138",
+        "europepmc": "https://europepmc.org/article/MED/43016902",
+        "fulltext_html": "https://europepmc.org/articles/PMC13752403",
+        "pdf": "https://europepmc.org/articles/PMC13752403?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Latine communities in the U. S. face persistent barriers to mental health care, exacerbated by inequities and trauma, requiring accessible and culturally congruent care. Simultaneously, these communities also possess profound strengths. To address these needs, Transforming Internal Experiences for Resilience and Restoration through Acceptance (TIERRA), an intervention led by Community Health Workers (CHWs, promotoras in Spanish) that combines third-wave cognitive behavioral therapy with Forest Bathing, was co-developed. The purpose of this paper is to detail the collaborative processes of TIERRA's intervention development and implementation, and to report initial contextual evaluation outcomes."
+          },
+          {
+            "heading": "Methods",
+            "text": "The subsequent pilot development and implementation was evaluated using the Practical Robust Implementation and Sustainability Model (PRISM) and the embedded Reach, Effectiveness, Adoption, Implementation, and Maintenance (RE-AIM) framework to assess capacity building, implementation, and preliminary outcomes."
+          },
+          {
+            "heading": "Results",
+            "text": "TIERRA was developed utilizing Community-Based Participatory Research (CBPR) to center local community needs and assets. Its pilot demonstrated high feasibility and engagement (86% completion rate; n  = 43). Evaluation of the implementation process revealed strong adoption and sustainability. Contextual evaluation with qualitative insights on effectiveness revealed the cultivation of radical hope, and that healing occurred through individual, interpersonal, community, and environmental pathways. Quantitative effectiveness outcomes showed significant reductions in stress ( p  = 0.026) and depression ( p  = 0.031), and significant increases in sense of community ( p  < 0.001) and sense of belongingness ( p  = 0.009)."
+          },
+          {
+            "heading": "Discussion",
+            "text": "TIERRA is a promising culturally relevant, CHW-led mental health intervention that promotes healing among Latine Americans. This study also shows that intervention development and implementation that centers community participation and attends to cultural contextual factors can build community capacity and is sustainable."
+          }
+        ],
+        "text": "Latine communities in the U. S. face persistent barriers to mental health care, exacerbated by inequities and trauma, requiring accessible and culturally congruent care. Simultaneously, these communities also possess profound strengths. To address these needs, Transforming Internal Experiences for Resilience and Restoration through Acceptance (TIERRA), an intervention led by Community Health Workers (CHWs, promotoras in Spanish) that combines third-wave cognitive behavioral therapy with Forest Bathing, was co-developed. The purpose of this paper is to detail the collaborative processes of TIERRA's intervention development and implementation, and to report initial contextual evaluation outcomes.\n\nThe subsequent pilot development and implementation was evaluated using the Practical Robust Implementation and Sustainability Model (PRISM) and the embedded Reach, Effectiveness, Adoption, Implementation, and Maintenance (RE-AIM) framework to assess capacity building, implementation, and preliminary outcomes.\n\nTIERRA was developed utilizing Community-Based Participatory Research (CBPR) to center local community needs and assets. Its pilot demonstrated high feasibility and engagement (86% completion rate; n  = 43). Evaluation of the implementation process revealed strong adoption and sustainability. Contextual evaluation with qualitative insights on effectiveness revealed the cultivation of radical hope, and that healing occurred through individual, interpersonal, community, and environmental pathways. Quantitative effectiveness outcomes showed significant reductions in stress ( p  = 0.026) and depression ( p  = 0.031), and significant increases in sense of community ( p  < 0.001) and sense of belongingness ( p  = 0.009).\n\nTIERRA is a promising culturally relevant, CHW-led mental health intervention that promotes healing among Latine Americans. This study also shows that intervention development and implementation that centers community participation and attends to cultural contextual factors can build community capacity and is sustainable."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Discussion",
+        "text": "TIERRA is a promising culturally relevant, CHW-led mental health intervention that promotes healing among Latine Americans. This study also shows that intervention development and implementation that centers community participation and attends to cultural contextual factors can build community capacity and is sustainable.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "psychotherapy"
+      ],
+      "mesh_major": [
+        "Community Health Workers",
+        "Cognitive Behavioral Therapy",
+        "Hispanic or Latino"
+      ],
+      "keywords": [
+        "Community-based Participatory Research",
+        "Implementation Science",
+        "Community Health Workers",
+        "Health Equity",
+        "Nature-based Interventions",
+        "Third-Wave Cognitive Behavioral Therapy",
+        "Latine Mental Health"
+      ],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:2",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016547",
+      "epmc_id": "43016547",
+      "source": "MED",
+      "pmid": "43016547",
+      "pmcid": "PMC13751291",
+      "doi": "10.1038/s44437-026-00013-2",
+      "title": "Physical activity, fitness, sedentary behaviour, and brain health: a systematic review of Mendelian Randomisation studies.",
+      "authors": "Túnez A, van de Weijer MP, Firth J, Verweij KJH, Treur JL.",
+      "journal": "Npj exercise medicine and health",
+      "journal_abbrev": "Npj Exerc Med Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-11-10",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1038/s44437-026-00013-2",
+        "europepmc": "https://europepmc.org/article/MED/43016547",
+        "fulltext_html": "https://europepmc.org/articles/PMC13751291",
+        "pdf": "https://europepmc.org/articles/PMC13751291?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "While observational and interventional research has linked physical activity (PA) to better psychological and neurocognitive outcomes (termed 'brain health'), the causal impact of day-to-day PA on brain health remains unclear. We systematically reviewed Mendelian Randomisation (MR) studies testing causal effects of PA, sedentary behaviour and physical fitness on brain health outcomes. Searches in PubMed and medRxiv identified 1114 articles. Sixty-one met the inclusion criteria, with low (52%) to moderate (46%) study quality scores. Thirty studies found only null or directionally opposite effects of PA on brain health outcomes, although with promising evidence emerging for aerobic exercise reducing depression risk (3/3 studies), physical fitness improving mental health (6/8 studies) and cognitive (9/12 studies) outcomes. Results were partially influenced by pleiotropy inherent to complex phenotypes. Overall, the MR evidence for causal effects of PA on brain health remains limited and mixed, highlighting the need for improved phenotyping and triangulation with complementary causal designs."
+          }
+        ],
+        "text": "While observational and interventional research has linked physical activity (PA) to better psychological and neurocognitive outcomes (termed 'brain health'), the causal impact of day-to-day PA on brain health remains unclear. We systematically reviewed Mendelian Randomisation (MR) studies testing causal effects of PA, sedentary behaviour and physical fitness on brain health outcomes. Searches in PubMed and medRxiv identified 1114 articles. Sixty-one met the inclusion criteria, with low (52%) to moderate (46%) study quality scores. Thirty studies found only null or directionally opposite effects of PA on brain health outcomes, although with promising evidence emerging for aerobic exercise reducing depression risk (3/3 studies), physical fitness improving mental health (6/8 studies) and cognitive (9/12 studies) outcomes. Results were partially influenced by pleiotropy inherent to complex phenotypes. Overall, the MR evidence for causal effects of PA on brain health remains limited and mixed, highlighting the need for improved phenotyping and triangulation with complementary causal designs."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Results were partially influenced by pleiotropy inherent to complex phenotypes. Overall, the MR evidence for causal effects of PA on brain health remains limited and mixed, highlighting the need for improved phenotyping and triangulation with complementary causal designs.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Neuroscience",
+        "Diseases",
+        "Neurology"
+      ],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:1",
+          "strong_design",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017986",
+      "epmc_id": "43017986",
+      "source": "MED",
+      "pmid": "43017986",
+      "pmcid": "PMC13742972",
+      "doi": "10.1590/0034-7167-2025-0143",
+      "title": "Prevalence and factors associated with sleep deprivation in nursing technicians working in shifts.",
+      "authors": "Silva RCDD, Oliveira ACM, Teixeira NJ, Camargo Júnior EB, Guerra HS, Machado LCS, Dutra YKC, Schäfer AA.",
+      "journal": "Revista brasileira de enfermagem",
+      "journal_abbrev": "Rev Bras Enferm",
+      "pub_year": 2026,
+      "first_publication_date": "2026-11-06",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1590/0034-7167-2025-0143",
+        "europepmc": "https://europepmc.org/article/MED/43017986",
+        "fulltext_html": "https://europepmc.org/articles/PMC13742972",
+        "pdf": "https://europepmc.org/articles/PMC13742972?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Objectives",
+            "text": "to estimate the prevalence of sleep deprivation among nursing technicians working in hospital shifts and identify the associated factors."
+          },
+          {
+            "heading": "Methods",
+            "text": "a cross-sectional study was conducted at a municipal university hospital in Goiás, Brazil, between March and May 2022, with 198 participants. Sleep deprivation was assessed using the Pittsburgh Sleep Quality Index, defined as less than five hours of sleep per night. Multivariate analysis was used to identify factors associated with sleep deprivation."
+          },
+          {
+            "heading": "Results",
+            "text": "the prevalence of sleep deprivation was 43.9%. The main factors associated with sleep deprivation included prolonged daily work hours (OR=3.60/p=0.001), inadequate consumption of fruits, vegetables and greens (OR=2.25/p=0.024), coffee consumption (OR=3.14/p=0.031), high Body Mass Index (OR=1.27/p=0.001) and presence of anxiety symptoms (OR=6.58/p=0.001)."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "intervention strategies should consider occupational and mental health factors to improve nursing technicians' sleep quality."
+          }
+        ],
+        "text": "to estimate the prevalence of sleep deprivation among nursing technicians working in hospital shifts and identify the associated factors.\n\na cross-sectional study was conducted at a municipal university hospital in Goiás, Brazil, between March and May 2022, with 198 participants. Sleep deprivation was assessed using the Pittsburgh Sleep Quality Index, defined as less than five hours of sleep per night. Multivariate analysis was used to identify factors associated with sleep deprivation.\n\nthe prevalence of sleep deprivation was 43.9%. The main factors associated with sleep deprivation included prolonged daily work hours (OR=3.60/p=0.001), inadequate consumption of fruits, vegetables and greens (OR=2.25/p=0.024), coffee consumption (OR=3.14/p=0.031), high Body Mass Index (OR=1.27/p=0.001) and presence of anxiety symptoms (OR=6.58/p=0.001).\n\nintervention strategies should consider occupational and mental health factors to improve nursing technicians' sleep quality."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "intervention strategies should consider occupational and mental health factors to improve nursing technicians' sleep quality.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "cross_sectional",
+        "confidence": "heuristic"
+      },
+      "sample_size": {
+        "value": 198,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "anxiety",
+        "public_mental_health",
+        "peru_latam",
+        "epidemiology"
+      ],
+      "mesh_major": [
+        "Sleep Deprivation",
+        "Work Schedule Tolerance",
+        "Nursing Assistants"
+      ],
+      "keywords": [],
+      "relevance": {
+        "score": -2,
+        "signals": [
+          "tags:2",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017082",
+      "epmc_id": "43017082",
+      "source": "MED",
+      "pmid": "43017082",
+      "pmcid": "PMC13753048",
+      "doi": null,
+      "title": "HEALTH AND SOCIAL IMPACT OF THE INTERNET AND SOCIAL MEDIA ON AFRICAN CHILDREN: A NARRATIVE REVIEW AND A CALL TO ACTION.",
+      "authors": "Alao MA, Fagbohun AO, Ogunbosi BO, Folayan OS, Ashubu OF, Akinseinde JA, Adeniyi FT, Alejo JN, Fasina KF, Adebayo BE, Akindolire AE, Ademola AD, Tongo OO, Ayede AI, Asinobi AO, Brown BJ, Oladokun RE, Lagunju IA, Falade AG, Akinyinka OO.",
+      "journal": "Annals of Ibadan postgraduate medicine",
+      "journal_abbrev": "Ann Ib Postgrad Med",
+      "pub_year": 2026,
+      "first_publication_date": "2026-08-01",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": null,
+        "europepmc": "https://europepmc.org/article/MED/43017082",
+        "fulltext_html": "https://europepmc.org/articles/PMC13753048",
+        "pdf": "https://europepmc.org/articles/PMC13753048?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Internet and social media are increasingly embedded in children's education, relationships, and leisure. For African children, this expansion is occurring alongside marked inequalities in connectivity, digital literacy, parental mediation, and online protection."
+          },
+          {
+            "heading": "Aim",
+            "text": "To synthesise evidence on the health and social effects of internet and social media use among African children and derive practical multilevel actions."
+          },
+          {
+            "heading": "Materials and methods",
+            "text": "PubMed/MEDLINE, Embase, PubMed Central, Google Scholar, and African Journals Online were searched for literature published from January 2016 to June 2025. African studies and relevant reviews or policy reports involving persons younger than 18 years were narratively synthesised. Findings were mapped to a social ecological framework."
+          },
+          {
+            "heading": "Results",
+            "text": "Digital technologies support learning, access to information, social connection, and creativity. However, excessive or poorly supervised use is associated with sleep disruption, mental health symptoms, problematic internet use, sedentary behaviour, visual complaints, cyberbullying, exploitation, privacy harms, and academic disruption. Exposure and risk differ substantially by age, sex, residence, household resources, and parental support. Much of the available evidence is cross-sectional and does not establish causality."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "African responses should protect children without excluding them from digital opportunities. Coordinated action by families, schools, health professionals, communities, governments, and technology companies is required."
+          }
+        ],
+        "text": "Internet and social media are increasingly embedded in children's education, relationships, and leisure. For African children, this expansion is occurring alongside marked inequalities in connectivity, digital literacy, parental mediation, and online protection.\n\nTo synthesise evidence on the health and social effects of internet and social media use among African children and derive practical multilevel actions.\n\nPubMed/MEDLINE, Embase, PubMed Central, Google Scholar, and African Journals Online were searched for literature published from January 2016 to June 2025. African studies and relevant reviews or policy reports involving persons younger than 18 years were narratively synthesised. Findings were mapped to a social ecological framework.\n\nDigital technologies support learning, access to information, social connection, and creativity. However, excessive or poorly supervised use is associated with sleep disruption, mental health symptoms, problematic internet use, sedentary behaviour, visual complaints, cyberbullying, exploitation, privacy harms, and academic disruption. Exposure and risk differ substantially by age, sex, residence, household resources, and parental support. Much of the available evidence is cross-sectional and does not establish causality.\n\nAfrican responses should protect children without excluding them from digital opportunities. Coordinated action by families, schools, health professionals, communities, governments, and technology companies is required."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "African responses should protect children without excluding them from digital opportunities. Coordinated action by families, schools, health professionals, communities, governments, and technology companies is required.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "narrative_review",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Internet",
+        "Social Media",
+        "Digital Media",
+        "Online Safety",
+        "African Children"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016862",
+      "epmc_id": "43016862",
+      "source": "MED",
+      "pmid": "43016862",
+      "pmcid": "PMC13752188",
+      "doi": "10.3389/fdgth.2026.1939519",
+      "title": "Developing a multi-level human-centered design framework for digital health implementation: a cross-project methodological synthesis.",
+      "authors": "Jabin MSR, Danny Nyatuka R, Macharia P.",
+      "journal": "Frontiers in digital health",
+      "journal_abbrev": "Front Digit Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "methods-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fdgth.2026.1939519",
+        "europepmc": "https://europepmc.org/article/MED/43016862",
+        "fulltext_html": "https://europepmc.org/articles/PMC13752188",
+        "pdf": "https://europepmc.org/articles/PMC13752188?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Digital health interventions have considerable potential to improve healthcare access, quality, and efficiency. Despite increasing adoption, many interventions fail to achieve sustainable implementation or progress beyond pilot phases because they are insufficiently integrated with user needs, organizational workflows, and health system contexts. Although human-centered design (HCD) has improved the usability and acceptability of digital health technologies, its application frequently remains confined to early design activities and is rarely integrated with implementation science throughout the implementation lifecycle."
+          },
+          {
+            "heading": "Objective",
+            "text": "This study aimed to develop a multi-level, human-centered design framework informed by a cross-project methodological synthesis integrating participatory design and implementation science to support the design, implementation, evaluation, and scale-up of digital health interventions."
+          },
+          {
+            "heading": "Methods",
+            "text": "A cross-project methodological synthesis was conducted using complementary digital health implementation studies undertaken in Kenya. The empirical corpus included studies spanning adolescent mental health, neonatal clinical decision support, digital health infrastructure, generative artificial intelligence, and frugal digital health innovation. Framework development followed an iterative analytical process combining thematic synthesis, constant comparative analysis, and abductive reasoning. The synthesis organized recurring methodological themes into an integrated framework spanning user, workflow, and system perspectives across the digital health implementation lifecycle."
+          },
+          {
+            "heading": "Results",
+            "text": "The synthesis identified recurring methodological processes that consistently contributed to successful digital health implementation, including contextual understanding, participatory stakeholder engagement, iterative refinement, workflow integration, organizational readiness, governance, and sustainability. These findings informed the development of a multi-level framework structured around six iterative implementation phases: Understand, Co-design, Prototype, Evaluate, Implement, and Scale, and three interconnected analytical levels: user (micro), workflow (meso), and system (macro). The framework conceptualizes digital health implementation as a continuous sociotechnical process in which sustained adoption and scale-up depend upon coordinated alignment among these three levels throughout the implementation lifecycle."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "This study advances human-centered design by integrating it with implementation science through an empirically derived, lifecycle-oriented methodological framework for digital health implementation. The proposed framework may provide researchers, developers, practitioners, and policymakers with a structured approach for designing, implementing, evaluating, and scaling digital health interventions while supporting sustainable, context-responsive, and equitable digital health transformation."
+          }
+        ],
+        "text": "Digital health interventions have considerable potential to improve healthcare access, quality, and efficiency. Despite increasing adoption, many interventions fail to achieve sustainable implementation or progress beyond pilot phases because they are insufficiently integrated with user needs, organizational workflows, and health system contexts. Although human-centered design (HCD) has improved the usability and acceptability of digital health technologies, its application frequently remains confined to early design activities and is rarely integrated with implementation science throughout the implementation lifecycle.\n\nThis study aimed to develop a multi-level, human-centered design framework informed by a cross-project methodological synthesis integrating participatory design and implementation science to support the design, implementation, evaluation, and scale-up of digital health interventions.\n\nA cross-project methodological synthesis was conducted using complementary digital health implementation studies undertaken in Kenya. The empirical corpus included studies spanning adolescent mental health, neonatal clinical decision support, digital health infrastructure, generative artificial intelligence, and frugal digital health innovation. Framework development followed an iterative analytical process combining thematic synthesis, constant comparative analysis, and abductive reasoning. The synthesis organized recurring methodological themes into an integrated framework spanning user, workflow, and system perspectives across the digital health implementation lifecycle.\n\nThe synthesis identified recurring methodological processes that consistently contributed to successful digital health implementation, including contextual understanding, participatory stakeholder engagement, iterative refinement, workflow integration, organizational readiness, governance, and sustainability. These findings informed the development of a multi-level framework structured around six iterative implementation phases: Understand, Co-design, Prototype, Evaluate, Implement, and Scale, and three interconnected analytical levels: user (micro), workflow (meso), and system (macro). The framework conceptualizes digital health implementation as a continuous sociotechnical process in which sustained adoption and scale-up depend upon coordinated alignment among these three levels throughout the implementation lifecycle.\n\nThis study advances human-centered design by integrating it with implementation science through an empirically derived, lifecycle-oriented methodological framework for digital health implementation. The proposed framework may provide researchers, developers, practitioners, and policymakers with a structured approach for designing, implementing, evaluating, and scaling digital health interventions while supporting sustainable, context-responsive, and equitable digital health transformation."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "This study advances human-centered design by integrating it with implementation science through an empirically derived, lifecycle-oriented methodological framework for digital health implementation. The proposed framework may provide researchers, developers, practitioners, and policymakers with a structured approach for designing, implementing, evaluating, and scaling digital health interventions while supporting sustainable, context-responsive, and equitable digital health transformation.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [
+        "child_adolescent",
+        "public_mental_health",
+        "digital"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Participatory Design",
+        "Implementation Science",
+        "Health Systems Strengthening",
+        "Implementation Research",
+        "Low-resource Settings",
+        "Lifecycle Methodology",
+        "Socio-technical Systems",
+        "Digital Health Implementation"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017189",
+      "epmc_id": "43017189",
+      "source": "MED",
+      "pmid": "43017189",
+      "pmcid": "PMC13752214",
+      "doi": "10.3389/fpubh.2026.1940042",
+      "title": "Experiences of maternal distress and early childhood development amid climate-related stress in Benue state, Nigeria: a qualitative study.",
+      "authors": "Idemili-Aronu N, Jemisenia J, Aluh D, Ezeanolue EE, Ravindrarajah R, Blakemore A, Mulla Z, Le T, Maharani A, Miah J.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fpubh.2026.1940042",
+        "europepmc": "https://europepmc.org/article/MED/43017189",
+        "fulltext_html": "https://europepmc.org/articles/PMC13752214",
+        "pdf": "https://europepmc.org/articles/PMC13752214?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Climate-related flooding and extreme heat affect maternal and child wellbeing in low-and middle-income countries. Although evidence suggests that climate-related events can affect mental health and child wellbeing, little is known about how these experiences are described in flood-prone settings. This study explores participants' accounts of flooding, extreme heat, and household vulnerability in Benue State and their perceived implications for maternal mental health and early childhood development."
+          },
+          {
+            "heading": "Methods",
+            "text": "A qualitative descriptive design was used. Data were collected through six focus group discussions and six semi-structured interviews with 54 mothers, health workers, community leaders, and policymakers and analysed using reflexive thematic analysis."
+          },
+          {
+            "heading": "Results",
+            "text": "Participants described flooding as a recurrent threat shaped by spatial vulnerability, poor drainage, and inadequate land-use planning. Participants described flooding in relation to disrupted routines, livelihoods, food and water security, and caregiving; mothers and health workers also described extreme heat as disrupting sleep and caregiving. Participants described maternal psychological distress associated with uncertainty, household disruption, economic losses, and caregiving demands. Participants described challenges affecting children's nutrition, healthcare access, immunisation, learning, safety, and social development. Community coping strategies included collective action and social support, while participants described gaps in formal responses."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "The findings highlight interconnected experiences of climate-related disruption, maternal distress, caregiving, and conditions relevant to early childhood wellbeing. Responses could support continuity of health services, nutrition, early learning, safe environments, psychosocial support, and community participation."
+          }
+        ],
+        "text": "Climate-related flooding and extreme heat affect maternal and child wellbeing in low-and middle-income countries. Although evidence suggests that climate-related events can affect mental health and child wellbeing, little is known about how these experiences are described in flood-prone settings. This study explores participants' accounts of flooding, extreme heat, and household vulnerability in Benue State and their perceived implications for maternal mental health and early childhood development.\n\nA qualitative descriptive design was used. Data were collected through six focus group discussions and six semi-structured interviews with 54 mothers, health workers, community leaders, and policymakers and analysed using reflexive thematic analysis.\n\nParticipants described flooding as a recurrent threat shaped by spatial vulnerability, poor drainage, and inadequate land-use planning. Participants described flooding in relation to disrupted routines, livelihoods, food and water security, and caregiving; mothers and health workers also described extreme heat as disrupting sleep and caregiving. Participants described maternal psychological distress associated with uncertainty, household disruption, economic losses, and caregiving demands. Participants described challenges affecting children's nutrition, healthcare access, immunisation, learning, safety, and social development. Community coping strategies included collective action and social support, while participants described gaps in formal responses.\n\nThe findings highlight interconnected experiences of climate-related disruption, maternal distress, caregiving, and conditions relevant to early childhood wellbeing. Responses could support continuity of health services, nutrition, early learning, safe environments, psychosocial support, and community participation."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "The findings highlight interconnected experiences of climate-related disruption, maternal distress, caregiving, and conditions relevant to early childhood wellbeing. Responses could support continuity of health services, nutrition, early learning, safe environments, psychosocial support, and community participation.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "qualitative",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "child_adolescent"
+      ],
+      "mesh_major": [
+        "Stress, Psychological",
+        "Child Development",
+        "Mothers",
+        "Floods",
+        "Climate Change"
+      ],
+      "keywords": [
+        "Climate change",
+        "Flooding",
+        "Heat",
+        "Nigeria",
+        "Early Childhood Development",
+        "Maternal Mental Health"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017571",
+      "epmc_id": "43017571",
+      "source": "MED",
+      "pmid": "43017571",
+      "pmcid": "PMC13753942",
+      "doi": "10.25646/14469",
+      "title": "What Is There to Gain? A Systematic Review on Psychosocial Co-Benefits of Climate Policies.",
+      "authors": "Kip A, Tschorn M, Vogel S, Birtel MD, Hendricks CL, Voigt A, Rooß S, Asbrand J.",
+      "journal": "Journal of health monitoring",
+      "journal_abbrev": "J Health Monit",
+      "pub_year": 2026,
+      "first_publication_date": "2026-11-04",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.25646/14469",
+        "europepmc": "https://europepmc.org/article/MED/43017571",
+        "fulltext_html": "https://europepmc.org/articles/PMC13753942",
+        "pdf": "https://europepmc.org/articles/PMC13753942?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Climate change poses major risks to psychosocial health, yet little is known about potential psychosocial co-benefits of climate policies. This systematic review examines (A) psychosocial co-benefits associated with climate policy measures and (B) moderating factors shaping these effects."
+          },
+          {
+            "heading": "Methods",
+            "text": "Following PRISMA guidelines, k = 21 studies were identified and analysed using a PICOS framework and narrative synthesis."
+          },
+          {
+            "heading": "Results",
+            "text": "Climate policies, particularly air pollution control, environmental taxation, and nature-based urban interventions, were associated with improvements in subjective well-being, mental health, and social cohesion. Effects were moderated by environmental improvements and physical health gains, and varied by socioeconomic status, age, and contexts such as schools or rural vs. urban locations. Access to and actual use of interventions emerged as relevant but understudied mechanisms. Some studies indicated trade-offs, including unequal distribution of benefits and unintended social effects."
+          },
+          {
+            "heading": "Conclusions",
+            "text": "Overall, climate policies can generate psychosocial co-benefits, but evidence remains heterogeneous and methodologically limited. Future research should strengthen causal inference, standardise outcome measures, and examine long-term and distributional effects."
+          }
+        ],
+        "text": "Climate change poses major risks to psychosocial health, yet little is known about potential psychosocial co-benefits of climate policies. This systematic review examines (A) psychosocial co-benefits associated with climate policy measures and (B) moderating factors shaping these effects.\n\nFollowing PRISMA guidelines, k = 21 studies were identified and analysed using a PICOS framework and narrative synthesis.\n\nClimate policies, particularly air pollution control, environmental taxation, and nature-based urban interventions, were associated with improvements in subjective well-being, mental health, and social cohesion. Effects were moderated by environmental improvements and physical health gains, and varied by socioeconomic status, age, and contexts such as schools or rural vs. urban locations. Access to and actual use of interventions emerged as relevant but understudied mechanisms. Some studies indicated trade-offs, including unequal distribution of benefits and unintended social effects.\n\nOverall, climate policies can generate psychosocial co-benefits, but evidence remains heterogeneous and methodologically limited. Future research should strengthen causal inference, standardise outcome measures, and examine long-term and distributional effects."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusions",
+        "text": "Overall, climate policies can generate psychosocial co-benefits, but evidence remains heterogeneous and methodologically limited. Future research should strengthen causal inference, standardise outcome measures, and examine long-term and distributional effects.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "systematic_review",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Climate change",
+        "Mental health",
+        "Well-being",
+        "Social Cohesion",
+        "Psychosocial Health",
+        "Climate Policy"
+      ],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "strong_design",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017309",
+      "epmc_id": "43017309",
+      "source": "MED",
+      "pmid": "43017309",
+      "pmcid": "PMC13754312",
+      "doi": "10.1097/ms9.0000000000005673",
+      "title": "Severe upper gastrointestinal corrosive injury following intentional muriatic acid (HCl) ingestion: a case report.",
+      "authors": "Acharya B, Yadhav AK, Tamrakar K, Kharel K, Karki S, Bogati S.",
+      "journal": "Annals of medicine and surgery (2012)",
+      "journal_abbrev": "Ann Med Surg (Lond)",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-06",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "Journal Article",
+        "Case Reports",
+        "case-report"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc-nd",
+        "license_label": "CC BY-NC-ND",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1097/ms9.0000000000005673",
+        "europepmc": "https://europepmc.org/article/MED/43017309",
+        "fulltext_html": "https://europepmc.org/articles/PMC13754312",
+        "pdf": "https://europepmc.org/articles/PMC13754312?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Introduction and importance",
+            "text": "Corrosive poisonings usually occur from accidental or intentional ingestion of acidic solutions, with hydrochloric acid (HCl) being the most commonly misused acid. A case study from a teaching hospital in Spain reported on 21 patients who developed massive necrosis of the upper gastrointestinal tract following acid ingestion over a 14-year period. Although HCl ingestion resulting in death is rare, the morbidity associated with survival is significant."
+          },
+          {
+            "heading": "Case presentation",
+            "text": "A 22-year-old female presented with a history of intentional ingestion of approximately 375 mL of Harpic (containing 10% hydrochloric acid) following a domestic quarrel. She presented with hematemesis, nausea, and severe burning epigastric pain radiating to the chest. Endoscopy revealed extensive necrotic mucosa and ulceration consistent with Zargar Grade IIIA corrosive injury. Laboratory findings showed neutrophilic leukocytosis (white blood cell count: 22 950 cells/mm^3)."
+          },
+          {
+            "heading": "Clinical discussion",
+            "text": "Severe upper gastrointestinal injury from hydrochloric acid ingestion can lead to life-threatening complications, including Zargar Grade IIIA damage. Early endoscopic evaluation within 12-24 hours aids diagnosis and guides management. Supportive therapy, endoscopic dilation for stricture, and long-term surveillance are essential to prevent and monitor late complications such as stricture formation and malignant transformation."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "This case highlights the severe gastrointestinal damage caused by acid ingestion and underscores the importance of early endoscopic evaluation, comprehensive supportive care, psychiatric assessment, and long-term follow-up in managing corrosive acid injuries."
+          }
+        ],
+        "text": "Corrosive poisonings usually occur from accidental or intentional ingestion of acidic solutions, with hydrochloric acid (HCl) being the most commonly misused acid. A case study from a teaching hospital in Spain reported on 21 patients who developed massive necrosis of the upper gastrointestinal tract following acid ingestion over a 14-year period. Although HCl ingestion resulting in death is rare, the morbidity associated with survival is significant.\n\nA 22-year-old female presented with a history of intentional ingestion of approximately 375 mL of Harpic (containing 10% hydrochloric acid) following a domestic quarrel. She presented with hematemesis, nausea, and severe burning epigastric pain radiating to the chest. Endoscopy revealed extensive necrotic mucosa and ulceration consistent with Zargar Grade IIIA corrosive injury. Laboratory findings showed neutrophilic leukocytosis (white blood cell count: 22 950 cells/mm^3).\n\nSevere upper gastrointestinal injury from hydrochloric acid ingestion can lead to life-threatening complications, including Zargar Grade IIIA damage. Early endoscopic evaluation within 12-24 hours aids diagnosis and guides management. Supportive therapy, endoscopic dilation for stricture, and long-term surveillance are essential to prevent and monitor late complications such as stricture formation and malignant transformation.\n\nThis case highlights the severe gastrointestinal damage caused by acid ingestion and underscores the importance of early endoscopic evaluation, comprehensive supportive care, psychiatric assessment, and long-term follow-up in managing corrosive acid injuries."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "This case highlights the severe gastrointestinal damage caused by acid ingestion and underscores the importance of early endoscopic evaluation, comprehensive supportive care, psychiatric assessment, and long-term follow-up in managing corrosive acid injuries.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "case_report",
+        "confidence": "pubtype"
+      },
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [
+        "Poisoning",
+        "Endoscopy",
+        "hydrochloric acid",
+        "Case Report",
+        "Esophageal Stricture"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43016474",
+      "epmc_id": "43016474",
+      "source": "MED",
+      "pmid": "43016474",
+      "pmcid": "PMC13751408",
+      "doi": "10.3389/fpubh.2026.1945703",
+      "title": "Across days and levels: psychological richness and perceived social support in stress-related social inhibition.",
+      "authors": "Meng Z, Qu M, Qi S.",
+      "journal": "Frontiers in public health",
+      "journal_abbrev": "Front Public Health",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fpubh.2026.1945703",
+        "europepmc": "https://europepmc.org/article/MED/43016474",
+        "fulltext_html": "https://europepmc.org/articles/PMC13751408",
+        "pdf": "https://europepmc.org/articles/PMC13751408?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Background",
+            "text": "Everyday stress and social inhibition are relevant to mental health during emerging adulthood. Daily psychological richness may help explain the temporal association between perceived stress and subsequent social inhibition."
+          },
+          {
+            "heading": "Methods",
+            "text": "In a 15-day diary study, 186 emerging adults provided 2,790 observations of perceived stress, psychological richness, and social inhibition. Perceived social support was assessed at the person level. Two-level dynamic structural equation modeling (DSEM) was used to examine lagged associations and cross-level moderation."
+          },
+          {
+            "heading": "Results",
+            "text": "Higher perceived stress was associated with lower psychological richness the following day [estimate = -0.588, 95% highest posterior density credible interval (HPD CrI) (-0.672, -0.501)]. Psychological richness was negatively associated with social inhibition on the subsequent day [estimate = -0.093, 95% HPD CrI (-0.108, -0.079)], and perceived stress showed a positive direct association with social inhibition 2 days later [estimate = 0.224, 95% HPD CrI (0.192, 0.257)]. Higher perceived social support was associated with weaker stress-richness and direct stress-inhibition associations. The credible interval for moderation of the richness-inhibition path included zero. The conditional indirect association was smaller at high than low support [difference = -0.040, 95% HPD CrI (-0.065, -0.016)]."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "The findings identify a temporally ordered indirect association involving daily psychological richness and support-related differences in stress-linked pathways. They inform further research on everyday psychosocial experiences and social functioning among emerging adults."
+          }
+        ],
+        "text": "Everyday stress and social inhibition are relevant to mental health during emerging adulthood. Daily psychological richness may help explain the temporal association between perceived stress and subsequent social inhibition.\n\nIn a 15-day diary study, 186 emerging adults provided 2,790 observations of perceived stress, psychological richness, and social inhibition. Perceived social support was assessed at the person level. Two-level dynamic structural equation modeling (DSEM) was used to examine lagged associations and cross-level moderation.\n\nHigher perceived stress was associated with lower psychological richness the following day [estimate = -0.588, 95% highest posterior density credible interval (HPD CrI) (-0.672, -0.501)]. Psychological richness was negatively associated with social inhibition on the subsequent day [estimate = -0.093, 95% HPD CrI (-0.108, -0.079)], and perceived stress showed a positive direct association with social inhibition 2 days later [estimate = 0.224, 95% HPD CrI (0.192, 0.257)]. Higher perceived social support was associated with weaker stress-richness and direct stress-inhibition associations. The credible interval for moderation of the richness-inhibition path included zero. The conditional indirect association was smaller at high than low support [difference = -0.040, 95% HPD CrI (-0.065, -0.016)].\n\nThe findings identify a temporally ordered indirect association involving daily psychological richness and support-related differences in stress-linked pathways. They inform further research on everyday psychosocial experiences and social functioning among emerging adults."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Conclusion",
+        "text": "The findings identify a temporally ordered indirect association involving daily psychological richness and support-related differences in stress-linked pathways. They inform further research on everyday psychosocial experiences and social functioning among emerging adults.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "modelling",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "public_mental_health"
+      ],
+      "mesh_major": [
+        "Stress, Psychological",
+        "Social Support"
+      ],
+      "keywords": [
+        "Perceived Social Support",
+        "Daily Stress",
+        "Social Inhibition",
+        "Emerging Adulthood",
+        "Public Mental Health",
+        "Diary Study",
+        "Dynamic Structural Equation Modeling",
+        "Psychological Richness"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43017023",
+      "epmc_id": "43017023",
+      "source": "MED",
+      "pmid": "43017023",
+      "pmcid": "PMC13752063",
+      "doi": "10.3389/fspor.2026.1910200",
+      "title": "Active duty service members' experiences navigating musculoskeletal health throughout their military careers: a qualitative interview study.",
+      "authors": "Hollis BF, Gregory AB, Ricker EA.",
+      "journal": "Frontiers in sports and active living",
+      "journal_abbrev": "Front Sports Act Living",
+      "pub_year": 2026,
+      "first_publication_date": "2026-10-28",
+      "first_index_date": "2026-11-13",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-15T01:30:56Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.3389/fspor.2026.1910200",
+        "europepmc": "https://europepmc.org/article/MED/43017023",
+        "fulltext_html": "https://europepmc.org/articles/PMC13752063",
+        "pdf": "https://europepmc.org/articles/PMC13752063?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": true,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": "Introduction",
+            "text": "Musculoskeletal injury (MSK-I) and pain (MSK-P) pose a substantial burden to Active Duty Service Members (ADSM) and are a leading cause of medical encounters and lost duty days. Evidence indicates that barriers exist to musculoskeletal (MSK) health care-seeking, which can result in exacerbation of MSK conditions (e.g., MSK-I, MSK-P), chronic pain, and greater healthcare costs. The objective of this qualitative study was to interview ADSM about their experiences navigating MSK health during their military careers to inform the development of tools and resources that better equip ADSM and military medical providers to prevent and manage MSK conditions."
+          },
+          {
+            "heading": "Methods",
+            "text": "Semi-structured individual interviews were conducted with male and female ADSM ( n  = 60). Interviews assessed ADSMs' experiences with MSK-I/P during military service, the use of military resources to maintain MSK health, and barriers and facilitators to seeking care for MSK-I/P. Interviews lasted 20-60 min, were conducted in-person or over video conference, and were audio recorded and transcribed. Transcript data were analyzed using applied thematic analysis (ATA)."
+          },
+          {
+            "heading": "Results",
+            "text": "Participants included male ( n  = 31) and female ( n  = 29) ADSM (age=38 ± 10 years, 16 ± 9 years of service) representing all military branches except for the Space Force. The ATA resulted in seven themes: military impact, care-seeking, Military Health System (MHS), prevention and optimization, leadership, mental health, and gender."
+          },
+          {
+            "heading": "Discussion",
+            "text": "ADSM revealed that while the military culture promotes physical fitness, it also encourages a \"push through pain\" mentality, leading to delayed care due to fears of career repercussions or being seen as weak or a burden to one's unit. Additionally, ADSM pointed to certain challenges within the MHS, including long wait times, inconsistent access to specialized care, and a perception that some providers dismiss ADSM pain. Results revealed additional areas of investigation and intervention, such as a bidirectional link between MSK-P and mental health, and identified gender-specific challenges, such as a lack of resources for women's health issues like postpartum MSK conditions. Overall, the findings identified opportunities for systemic and cultural changes to destigmatize MSK issues, prioritize prevention and proactive care-seeking, and improve healthcare access for MSK conditions during military service."
+          }
+        ],
+        "text": "Musculoskeletal injury (MSK-I) and pain (MSK-P) pose a substantial burden to Active Duty Service Members (ADSM) and are a leading cause of medical encounters and lost duty days. Evidence indicates that barriers exist to musculoskeletal (MSK) health care-seeking, which can result in exacerbation of MSK conditions (e.g., MSK-I, MSK-P), chronic pain, and greater healthcare costs. The objective of this qualitative study was to interview ADSM about their experiences navigating MSK health during their military careers to inform the development of tools and resources that better equip ADSM and military medical providers to prevent and manage MSK conditions.\n\nSemi-structured individual interviews were conducted with male and female ADSM ( n  = 60). Interviews assessed ADSMs' experiences with MSK-I/P during military service, the use of military resources to maintain MSK health, and barriers and facilitators to seeking care for MSK-I/P. Interviews lasted 20-60 min, were conducted in-person or over video conference, and were audio recorded and transcribed. Transcript data were analyzed using applied thematic analysis (ATA).\n\nParticipants included male ( n  = 31) and female ( n  = 29) ADSM (age=38 ± 10 years, 16 ± 9 years of service) representing all military branches except for the Space Force. The ATA resulted in seven themes: military impact, care-seeking, Military Health System (MHS), prevention and optimization, leadership, mental health, and gender.\n\nADSM revealed that while the military culture promotes physical fitness, it also encourages a \"push through pain\" mentality, leading to delayed care due to fears of career repercussions or being seen as weak or a burden to one's unit. Additionally, ADSM pointed to certain challenges within the MHS, including long wait times, inconsistent access to specialized care, and a perception that some providers dismiss ADSM pain. Results revealed additional areas of investigation and intervention, such as a bidirectional link between MSK-P and mental health, and identified gender-specific challenges, such as a lack of resources for women's health issues like postpartum MSK conditions. Overall, the findings identified opportunities for systemic and cultural changes to destigmatize MSK issues, prioritize prevention and proactive care-seeking, and improve healthcare access for MSK conditions during military service."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "Discussion",
+        "text": "ADSM revealed that while the military culture promotes physical fitness, it also encourages a \"push through pain\" mentality, leading to delayed care due to fears of career repercussions or being seen as weak or a burden to one's unit. Additionally, ADSM pointed to certain challenges within the MHS, including long wait times, inconsistent access to specialized care, and a perception that some providers dismiss ADSM pain. Results revealed additional areas of investigation and intervention, such as a bidirectional link between MSK-P and mental health, and identified gender-specific challenges, such as a lack of resources for women's health issues like postpartum MSK conditions.",
+        "truncated": true
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "qualitative",
+        "confidence": "heuristic"
+      },
+      "sample_size": {
+        "value": 60,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "public_mental_health"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Military Personnel",
+        "Qualitative Research",
+        "Care-seeking",
+        "Musculoskeletal Health",
+        "Military Health System"
+      ],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    }
+  ]
 }
