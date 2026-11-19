@@ -1,11 +1,27 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T01:30:18Z",
+  "generated_at": "2026-11-19T01:31:14Z",
   "timezone": "America/Lima",
   "query_version": "2026-09-14.2",
   "latest": "2026-11-13",
   "total_items": 1993,
   "days": [
+    {
+      "date": "2026-11-18",
+      "count": 0,
+      "ai_count": 0,
+      "file": "daily/2026-11-18.json",
+      "fetched_at": "2026-11-19T01:31:14Z",
+      "complete": true
+    },
+    {
+      "date": "2026-11-17",
+      "count": 0,
+      "ai_count": 0,
+      "file": "daily/2026-11-17.json",
+      "fetched_at": "2026-11-19T01:30:25Z",
+      "complete": true
+    },
     {
       "date": "2026-11-16",
       "count": 0,
