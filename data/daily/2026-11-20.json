@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "timezone": "America/Lima",
+  "fetched_at": "2026-11-21T01:31:11Z",
+  "source": {
+    "name": "Europe PMC + PubMed",
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "date_field": "FIRST_IDATE",
+    "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-11-20 TO 2026-11-20] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+    "hit_count": 1,
+    "accepted": 1,
+    "query_version": "2026-09-14.2",
+    "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
+    "europepmc": {
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-11-20 TO 2026-11-20] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
+      "hit_count": 1
+    },
+    "pubmed": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "date_field": "edat",
+      "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
+      "hit_count": 248,
+      "unresolved_in_europepmc": 77
+    }
+  },
+  "items": [
+    {
+      "key": "MED:43053960",
+      "epmc_id": "43053960",
+      "source": "MED",
+      "pmid": "43053960",
+      "pmcid": "PMC13774734",
+      "doi": "10.12688/f1000research.75010.1",
+      "title": "Treatment profiles and trajectories surrounding the diagnosis of major depressive disorder: a research protocol for a Danish register-based study.",
+      "authors": "Herold Jeberg P, Overgaard Nielsen AMC, Osler M, Kim Wirum-Andersen M, Jacobsen R, Almarsdóttir AB, Jarlov Jensen K, Petersen J.",
+      "journal": "F1000Research",
+      "journal_abbrev": "F1000Res",
+      "pub_year": 2022,
+      "first_publication_date": "2022-02-16",
+      "first_index_date": "2026-11-20",
+      "pub_types": [
+        "other",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-21T01:31:10Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.12688/f1000research.75010.1",
+        "europepmc": "https://europepmc.org/article/MED/43053960",
+        "fulltext_html": "https://europepmc.org/articles/PMC13774734",
+        "pdf": "https://europepmc.org/articles/PMC13774734?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "Background: Major depressive disorder (MDD) is a prevalent illness that causes significant suffering and expenses at the personal and societal levels. The disorder is subject to heterogeneity reflected by diverse clinical phenotypes and assorted responses to treatment. Research on MDD treatments have focused on one treatment at a time, however many patients receive several different treatments. Considering the number of available treatment options, we hypothesize that it is possible to identify clinically meaningful groups of patients based on their psychiatric treatment. The objective of this study is therefore to identify psychiatric treatment profiles and trajectories of patients with major depressive disorder and, for the identified profiles and trajectories, to assess clinical and sociodemographic factors. Method: The study will be a population-based register study of patients with major depressive disorder in the Danish National Patient Register between 2011 and 2015. Using latent class analyses, we will identify homogenous groups of patients based on their psychiatric treatment patterns. These patterns constitute psychiatric treatment profiles which will be identified at six time-intervals, from 1.5 years before to 3 years after diagnosis of major depressive disorder. By cross-tabulating the identified treatment profiles, we will establish psychiatric treatment trajectories. Patients sharing profiles and trajectories will be characterized. Discussion: Identification of psychiatric treatment profiles and trajectories based on an unsupervised learning algorithm have the potential to reveal hidden patterns of psychiatric treatment. This will potentially pave the way for future studies of treatment combinations and a larger insight into the different courses of treatment. Furthermore, the assessment of clinical and sociodemographic factors may indicate different patient characteristics across treatment profiles and trajectories."
+          }
+        ],
+        "text": "Background: Major depressive disorder (MDD) is a prevalent illness that causes significant suffering and expenses at the personal and societal levels. The disorder is subject to heterogeneity reflected by diverse clinical phenotypes and assorted responses to treatment. Research on MDD treatments have focused on one treatment at a time, however many patients receive several different treatments. Considering the number of available treatment options, we hypothesize that it is possible to identify clinically meaningful groups of patients based on their psychiatric treatment. The objective of this study is therefore to identify psychiatric treatment profiles and trajectories of patients with major depressive disorder and, for the identified profiles and trajectories, to assess clinical and sociodemographic factors. Method: The study will be a population-based register study of patients with major depressive disorder in the Danish National Patient Register between 2011 and 2015. Using latent class analyses, we will identify homogenous groups of patients based on their psychiatric treatment patterns. These patterns constitute psychiatric treatment profiles which will be identified at six time-intervals, from 1.5 years before to 3 years after diagnosis of major depressive disorder. By cross-tabulating the identified treatment profiles, we will establish psychiatric treatment trajectories. Patients sharing profiles and trajectories will be characterized. Discussion: Identification of psychiatric treatment profiles and trajectories based on an unsupervised learning algorithm have the potential to reveal hidden patterns of psychiatric treatment. This will potentially pave the way for future studies of treatment combinations and a larger insight into the different courses of treatment. Furthermore, the assessment of clinical and sociodemographic factors may indicate different patient characteristics across treatment profiles and trajectories."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "This will potentially pave the way for future studies of treatment combinations and a larger insight into the different courses of treatment. Furthermore, the assessment of clinical and sociodemographic factors may indicate different patient characteristics across treatment profiles and trajectories.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": {
+        "id": "protocol",
+        "confidence": "heuristic"
+      },
+      "sample_size": null,
+      "tags": [
+        "depression",
+        "public_mental_health",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [
+        "Depression",
+        "Denmark",
+        "Latent Class Analysis",
+        "Treatment Profile",
+        "Treatment Trajectory."
+      ],
+      "relevance": {
+        "score": 3,
+        "signals": [
+          "tags:3"
+        ]
+      },
+      "discovered_via": [
+        "europepmc"
+      ]
+    }
+  ]
+}
