@@ -2,14 +2,14 @@
   "schema_version": 1,
   "date": "2026-11-22",
   "timezone": "America/Lima",
-  "fetched_at": "2026-11-23T01:30:24Z",
+  "fetched_at": "2026-11-24T01:30:41Z",
   "source": {
     "name": "Europe PMC + PubMed",
     "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
     "date_field": "FIRST_IDATE",
     "query": "(((TITLE_ABS:\"mental health\" OR TITLE_ABS:\"mental illness\" OR TITLE_ABS:\"mental disorder*\" OR TITLE_ABS:psychiatr* OR TITLE_ABS:psychosis OR TITLE_ABS:psychotic OR TITLE_ABS:schizophren* OR TITLE_ABS:\"major depressive\" OR TITLE_ABS:suicid* OR TITLE_ABS:\"bipolar disorder\" OR TITLE_ABS:\"borderline personality\" OR TITLE_ABS:\"attention-deficit\" OR TITLE_ABS:\"attention deficit\" OR TITLE_ABS:adhd OR TITLE_ABS:\"alcohol use disorder\" OR TITLE_ABS:\"alcohol dependence\" OR TITLE_ABS:\"substance use disorder\" OR TITLE_ABS:\"eating disorder*\" OR TITLE_ABS:\"post-traumatic stress\" OR TITLE_ABS:ptsd OR TITLE_ABS:\"obsessive-compulsive\" OR TITLE_ABS:\"self-harm\" OR TITLE_ABS:\"self harm\") OR (JOURNAL:\"JAMA Psychiatry\" OR JOURNAL:\"World Psychiatry\" OR JOURNAL:\"Schizophrenia Bulletin\" OR JOURNAL:\"Bipolar Disorders\" OR JOURNAL:\"Depression and Anxiety\" OR JOURNAL:\"Journal of Affective Disorders\" OR JOURNAL:\"Psychological Medicine\" OR JOURNAL:\"Acta Psychiatrica Scandinavica\" OR JOURNAL:\"American Journal of Psychiatry\" OR JOURNAL:\"Molecular Psychiatry\" OR JOURNAL:\"BMC Psychiatry\" OR JOURNAL:\"Frontiers in Psychiatry\" OR JOURNAL:\"General Psychiatry\" OR JOURNAL:\"BJPsych Open\" OR JOURNAL:\"Journal of Psychiatric Research\" OR JOURNAL:\"Comprehensive Psychiatry\" OR JOURNAL:\"European Psychiatry\" OR JOURNAL:\"Social Psychiatry and Psychiatric Epidemiology\") OR (ISSN:\"2215-0366\" OR ISSN:\"0007-1250\") OR (TITLE_ABS:Peru* AND (TITLE_ABS:depress* OR TITLE_ABS:anxiety OR TITLE_ABS:\"mental disorders\" OR TITLE_ABS:alcohol)))) AND OPEN_ACCESS:y AND FIRST_IDATE:[2026-11-22 TO 2026-11-22] AND NOT (PUB_TYPE:\"abstract\" OR PUB_TYPE:\"editorial\" OR PUB_TYPE:\"comment\" OR PUB_TYPE:\"letter\" OR PUB_TYPE:\"erratum\" OR PUB_TYPE:\"retraction\" OR PUB_TYPE:\"news\" OR PUB_TYPE:\"article-commentary\")",
     "hit_count": 4,
-    "accepted": 4,
+    "accepted": 6,
     "query_version": "2026-09-14.2",
     "oa_gate": "Europe PMC isOpenAccess=Y + licencia CC declarada",
     "europepmc": {
@@ -21,8 +21,8 @@
       "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
       "date_field": "edat",
       "query": "((\"mental health\"[Title/Abstract] OR \"mental illness\"[Title/Abstract] OR \"mental disorder\"[Title/Abstract] OR psychiatry[Title/Abstract] OR psychiatric[Title/Abstract] OR psychosis[Title/Abstract] OR psychotic[Title/Abstract] OR schizophrenia[Title/Abstract] OR schizophrenic[Title/Abstract] OR \"major depressive\"[Title/Abstract] OR suicide[Title/Abstract] OR suicidal[Title/Abstract] OR \"bipolar disorder\"[Title/Abstract] OR \"borderline personality\"[Title/Abstract] OR \"attention deficit\"[Title/Abstract] OR ADHD[Title/Abstract] OR \"alcohol use disorder\"[Title/Abstract] OR \"substance use disorder\"[Title/Abstract] OR \"eating disorder\"[Title/Abstract] OR \"post-traumatic stress\"[Title/Abstract] OR PTSD[Title/Abstract] OR \"obsessive-compulsive\"[Title/Abstract] OR \"self-harm\"[Title/Abstract]) OR (\"JAMA Psychiatry\"[Journal] OR \"World Psychiatry\"[Journal] OR \"Schizophrenia Bulletin\"[Journal] OR \"Bipolar Disorders\"[Journal] OR \"Depression and Anxiety\"[Journal] OR \"Journal of Affective Disorders\"[Journal] OR \"Psychological Medicine\"[Journal] OR \"Acta Psychiatrica Scandinavica\"[Journal] OR \"American Journal of Psychiatry\"[Journal] OR \"Molecular Psychiatry\"[Journal] OR \"BMC Psychiatry\"[Journal] OR \"Frontiers in Psychiatry\"[Journal] OR \"General Psychiatry\"[Journal] OR \"BJPsych Open\"[Journal] OR \"Journal of Psychiatric Research\"[Journal] OR \"Comprehensive Psychiatry\"[Journal] OR \"European Psychiatry\"[Journal] OR \"Social Psychiatry and Psychiatric Epidemiology\"[Journal]) OR (\"2215-0366\"[ISSN] OR \"0007-1250\"[ISSN]) OR (Peru[Title/Abstract] AND (depression[Title/Abstract] OR anxiety[Title/Abstract] OR \"mental disorders\"[Title/Abstract] OR alcohol[Title/Abstract]))) NOT (\"Editorial\"[Publication Type] OR \"Comment\"[Publication Type] OR \"Letter\"[Publication Type] OR \"Published Erratum\"[Publication Type] OR \"Retracted Publication\"[Publication Type] OR \"Retraction of Publication\"[Publication Type] OR \"News\"[Publication Type])",
-      "hit_count": 108,
-      "unresolved_in_europepmc": 108
+      "hit_count": 136,
+      "unresolved_in_europepmc": 4
     }
   },
   "items": [
@@ -51,7 +51,7 @@
         "license": "cc by-nc",
         "license_label": "CC BY-NC",
         "source": "europepmc",
-        "checked_at": "2026-11-23T01:30:24Z"
+        "checked_at": "2026-11-24T01:30:41Z"
       },
       "links": {
         "doi": null,
@@ -115,7 +115,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-11-23T01:30:24Z"
+        "checked_at": "2026-11-24T01:30:41Z"
       },
       "links": {
         "doi": null,
@@ -179,7 +179,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-11-23T01:30:24Z"
+        "checked_at": "2026-11-24T01:30:41Z"
       },
       "links": {
         "doi": null,
@@ -217,6 +217,82 @@
       ]
     },
     {
+      "key": "MED:43066588",
+      "epmc_id": "43066588",
+      "source": "MED",
+      "pmid": "43066588",
+      "pmcid": "PMC13789003",
+      "doi": "10.1177/07067437261509817",
+      "title": "Mortality and causes of death among forensic psychiatric patients in Alberta: A matched cohort comparison with civil psychiatric and general population groups: Mortalité et causes de décès chez les patients psychiatriques médico-légaux en Alberta: une étude de cohorte appariée comparant des patients psychiatriques civils et des groupes de population générale.",
+      "authors": "Farrell C, Haag AM, Choy AL, Greenshaw AJ.",
+      "journal": "Canadian journal of psychiatry. Revue canadienne de psychiatrie",
+      "journal_abbrev": "Can J Psychiatry",
+      "pub_year": 2026,
+      "first_publication_date": "2026-11-21",
+      "first_index_date": "2026-11-23",
+      "pub_types": [
+        "IM",
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by-nc",
+        "license_label": "CC BY-NC",
+        "source": "europepmc",
+        "checked_at": "2026-11-24T01:30:41Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1177/07067437261509817",
+        "europepmc": "https://europepmc.org/article/MED/43066588",
+        "fulltext_html": "https://europepmc.org/articles/PMC13789003",
+        "pdf": "https://europepmc.org/articles/PMC13789003?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "IntroductionIndividuals with severe mental illness (SMI) experience increased mortality compared to the general population. Within this group, forensic psychiatric patients represent a subgroup for which mortality has been relatively understudied. Prior literature suggests forensic psychiatric patients experience excess mortality; however, there is limited research comparing mortality among forensic and civil psychiatric patients in a Canadian context. This study examined mortality rates and causes of death among forensic psychiatric patients in Alberta and compared rates with matched comparisons of civil psychiatric and general population cohorts.MethodsThis study employed a retrospective matched cohort design and used data from the Alberta Not Criminally Responsible Project. The sample included 571 individuals found Not Criminally Responsible on Account of Mental Disorder in Alberta. Each forensic psychiatric patient was matched by age and sex to three civil psychiatric patients and three individuals from the general population. Mortality data were obtained through Alberta Health (e.g. Vital Statistics). Descriptive analyses, crude mortality rates, standardized mortality ratios (SMRs), and chi-square tests compared mortality and causes of death across groups.ResultsBoth forensic and civil psychiatric cohorts demonstrated significantly higher mortality compared to the general Albertan population. The overall SMR was 2.73 for the forensic cohort and 2.08 for the civil psychiatric group. Forensic women showed greater mortality than men (SMR = 4.55 compared to 2.53). Both psychiatric groups died more often from unnatural causes, including suicide, while the general population died more often from natural causes.ConclusionMortality among forensic and civil psychiatric patients in Alberta remains elevated compared to the general population, reflecting shared vulnerabilities across psychiatric groups. The higher relative mortality among forensic and civil psychiatric women highlights the need for gender-responsive interventions that integrate both physical and mental health care needs for psychiatric patients and improved care following discharge from hospital."
+          }
+        ],
+        "text": "IntroductionIndividuals with severe mental illness (SMI) experience increased mortality compared to the general population. Within this group, forensic psychiatric patients represent a subgroup for which mortality has been relatively understudied. Prior literature suggests forensic psychiatric patients experience excess mortality; however, there is limited research comparing mortality among forensic and civil psychiatric patients in a Canadian context. This study examined mortality rates and causes of death among forensic psychiatric patients in Alberta and compared rates with matched comparisons of civil psychiatric and general population cohorts.MethodsThis study employed a retrospective matched cohort design and used data from the Alberta Not Criminally Responsible Project. The sample included 571 individuals found Not Criminally Responsible on Account of Mental Disorder in Alberta. Each forensic psychiatric patient was matched by age and sex to three civil psychiatric patients and three individuals from the general population. Mortality data were obtained through Alberta Health (e.g. Vital Statistics). Descriptive analyses, crude mortality rates, standardized mortality ratios (SMRs), and chi-square tests compared mortality and causes of death across groups.ResultsBoth forensic and civil psychiatric cohorts demonstrated significantly higher mortality compared to the general Albertan population. The overall SMR was 2.73 for the forensic cohort and 2.08 for the civil psychiatric group. Forensic women showed greater mortality than men (SMR = 4.55 compared to 2.53). Both psychiatric groups died more often from unnatural causes, including suicide, while the general population died more often from natural causes.ConclusionMortality among forensic and civil psychiatric patients in Alberta remains elevated compared to the general population, reflecting shared vulnerabilities across psychiatric groups. The higher relative mortality among forensic and civil psychiatric women highlights the need for gender-responsive interventions that integrate both physical and mental health care needs for psychiatric patients and improved care following discharge from hospital."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "Both psychiatric groups died more often from unnatural causes, including suicide, while the general population died more often from natural causes.ConclusionMortality among forensic and civil psychiatric patients in Alberta remains elevated compared to the general population, reflecting shared vulnerabilities across psychiatric groups. The higher relative mortality among forensic and civil psychiatric women highlights the need for gender-responsive interventions that integrate both physical and mental health care needs for psychiatric patients and improved care following discharge from hospital.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": {
+        "value": 571,
+        "confidence": "heuristic"
+      },
+      "tags": [
+        "suicide",
+        "epidemiology"
+      ],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -3,
+        "signals": [
+          "tags:1",
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
+      ]
+    },
+    {
       "key": "PMC:PMC13786644",
       "epmc_id": "PMC13786644",
       "source": "PMC",
@@ -241,7 +317,7 @@
         "license": "cc by",
         "license_label": "CC BY",
         "source": "europepmc",
-        "checked_at": "2026-11-23T01:30:24Z"
+        "checked_at": "2026-11-24T01:30:41Z"
       },
       "links": {
         "doi": null,
@@ -276,6 +352,74 @@
       },
       "discovered_via": [
         "europepmc"
+      ]
+    },
+    {
+      "key": "MED:43066187",
+      "epmc_id": "43066187",
+      "source": "MED",
+      "pmid": "43066187",
+      "pmcid": "PMC7619749",
+      "doi": "10.1007/s11097-026-10215-6",
+      "title": "Ground empathy.",
+      "authors": "Byrne EA, Køster A.",
+      "journal": "Phenomenology and the cognitive sciences",
+      "journal_abbrev": "Phenomenol Cogn Sci",
+      "pub_year": 2026,
+      "first_publication_date": "2026-09-30",
+      "first_index_date": "2026-11-23",
+      "pub_types": [
+        "research-article",
+        "Journal Article"
+      ],
+      "language": "eng",
+      "is_preprint": false,
+      "open_access": {
+        "status": "verified",
+        "license": "cc by",
+        "license_label": "CC BY",
+        "source": "europepmc",
+        "checked_at": "2026-11-24T01:30:41Z"
+      },
+      "links": {
+        "doi": "https://doi.org/10.1007/s11097-026-10215-6",
+        "europepmc": "https://europepmc.org/article/MED/43066187",
+        "fulltext_html": "https://europepmc.org/articles/PMC7619749",
+        "pdf": "https://europepmc.org/articles/PMC7619749?pdf=render"
+      },
+      "abstract": {
+        "lang": "en",
+        "structured": false,
+        "truncated": false,
+        "sections": [
+          {
+            "heading": null,
+            "text": "This paper introduces an under-theorised dimension of empathy which we propose to call ground empathy. Ground empathy consists in empathically relating to the other by attending to the foundational facts of our human existential condition which are always shared with the other: embodied vulnerability, non-permanence and finitude. Ground empathy, we argue, is always in principle available to us regardless of the particulars of the other person's situation. Ground empathy can be lost, however. This we suggest is a common feature of alienating interpersonal interactions in times of profound suffering. In terms of the contemporary debate about empathy, we position ground empathy as an under-theorised existential layer of empathy. In particular, we take ground empathy to challenge recent critiques of phenomenological accounts of empathy which claim that attempts to empathise with experiences of severe psychiatric illness are epistemically and ethically untenable. While we agree that more complex forms of empathy developed in the phenomeno-logical tradition can elude us in some circumstances, we resist the conclusion that this is sufficient to undermine the role and value of empathy altogether provided that we maintain some conceptual clarity about different forms of empathy and their components. This paper contributes to that conceptual clarity, and provides a useful concept to our toolkit when it comes to empathically relating to experiences of profound suffering such as illness, grief and trauma."
+          }
+        ],
+        "text": "This paper introduces an under-theorised dimension of empathy which we propose to call ground empathy. Ground empathy consists in empathically relating to the other by attending to the foundational facts of our human existential condition which are always shared with the other: embodied vulnerability, non-permanence and finitude. Ground empathy, we argue, is always in principle available to us regardless of the particulars of the other person's situation. Ground empathy can be lost, however. This we suggest is a common feature of alienating interpersonal interactions in times of profound suffering. In terms of the contemporary debate about empathy, we position ground empathy as an under-theorised existential layer of empathy. In particular, we take ground empathy to challenge recent critiques of phenomenological accounts of empathy which claim that attempts to empathise with experiences of severe psychiatric illness are epistemically and ethically untenable. While we agree that more complex forms of empathy developed in the phenomeno-logical tradition can elude us in some circumstances, we resist the conclusion that this is sufficient to undermine the role and value of empathy altogether provided that we maintain some conceptual clarity about different forms of empathy and their components. This paper contributes to that conceptual clarity, and provides a useful concept to our toolkit when it comes to empathically relating to experiences of profound suffering such as illness, grief and trauma."
+      },
+      "summary": {
+        "origin": "authors",
+        "lang": "en",
+        "section": "abstract_tail",
+        "text": "While we agree that more complex forms of empathy developed in the phenomeno-logical tradition can elude us in some circumstances, we resist the conclusion that this is sufficient to undermine the role and value of empathy altogether provided that we maintain some conceptual clarity about different forms of empathy and their components. This paper contributes to that conceptual clarity, and provides a useful concept to our toolkit when it comes to empathically relating to experiences of profound suffering such as illness, grief and trauma.",
+        "truncated": false
+      },
+      "ai_summary": null,
+      "study_design": null,
+      "sample_size": null,
+      "tags": [],
+      "mesh_major": [],
+      "keywords": [],
+      "relevance": {
+        "score": -4,
+        "signals": [
+          "weak_topic"
+        ]
+      },
+      "discovered_via": [
+        "pubmed"
       ]
     }
   ]
